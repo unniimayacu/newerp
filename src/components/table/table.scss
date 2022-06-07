@@ -1,0 +1,46 @@
+.table__nav-btn {
+    border: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    span {
+        color: #493480 !important;
+        cursor: pointer;
+    }
+}
+
+.cif__table-wrapper {
+    table {
+        color: #493480 !important;
+        font-size: 12px;
+        tr {
+            border-bottom: 1px solid #e5e5e5 !important;
+        }
+    }
+    @media only screen and(max-width: 767px) {
+        table {
+            color: white !important;
+        }
+    }
+}
+
+.cif__table-table-container {
+    padding: 1rem;
+    background-color: white;
+    // @media only screen and(max-width: 767px) {
+    //     @include cm.bg-gradient;
+    // }
+}
+
+.table__nav-btn-wrapper {
+    height: 50px;
+}
+
+.table__nav-btn-group {
+    position: absolute;
+    right: 0;
+}
