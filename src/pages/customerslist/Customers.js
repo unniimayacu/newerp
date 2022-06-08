@@ -12,6 +12,14 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
 import Dataas from "components/dummydata/Dataas";
 
+const actionIcons = () => {
+  return (
+    <div className="d-flex align-items-center">
+      <span>a</span><span>b</span><span>c</span>
+    </div>
+  );
+}
+
 function Customers() {
   const data = useMemo(
     () => [
@@ -29,7 +37,7 @@ function Customers() {
         col10: "Invoiced Amount",
         col11: "Risk Category",
         col12: "RoI",
-        col13: {},
+        col13: actionIcons(),
         col14: "Active",
       },
       // {
