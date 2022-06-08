@@ -21,7 +21,8 @@ export default function Table({
      pageCount,
      nextPage,
      previousPage,
-     state: { pageIndex },
+     gotopage,
+     state: { pageIndex, pageSize },
    } = useTable(
      {
        columns,

@@ -13,7 +13,7 @@ function Header() {
   return (
     <>
       <Navbar expand="lg" className="navbar__color  p-4">
-        <Container>
+        {/* <Container> */}
           <Navbar.Brand href="#home" className="">
             <AiOutlineMenu className="header_icon__size" />{" "}
           </Navbar.Brand>
@@ -27,7 +27,7 @@ function Header() {
                   <div className="headerinputsearch">
                     {/* <GrSearch /> */}
                     <input
-                      className="form-control search__border p-3 px-5 "
+                      className="form-control search__border  "
                       placeholder="Search"
                     />
                   </div>
@@ -55,7 +55,7 @@ function Header() {
               </div>
             </Nav>
           </Navbar.Collapse>
-        </Container>
+        {/* </Container> */}
       </Navbar>
     </>
   );

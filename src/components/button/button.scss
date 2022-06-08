@@ -1,0 +1,41 @@
+
+
+.erp__btn_primary {
+    background-color: #1a90b4;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    color: white;
+    border: none;
+}
+
+.erp__btn-prepend-icon {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.erp__btn-append-icon-wrapper {
+    margin-left: 0.5rem;
+}
+
+.erp__btn-prepend-icon-wrapper {
+    margin-right: 0.5rem;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.erp__btn-rounded {
+    border-radius: 50px !important;
+}
+
+// .cif__btn-sharp {
+//     border-radius: 0 !important;
+// }
+
+
+
