@@ -29,7 +29,9 @@ export default function Table({
        data,
        initialState: { pageIndex: 0, pageSize: 5 },
      },
-     usePagination
+    
+     useSortBy,
+      usePagination,
    );
 
 
@@ -71,8 +73,19 @@ export default function Table({
                       <th
                         className={`${responsive ? "whitespace-nowrap" : ""}`}
                         {...column.getHeaderProps()}
+                        {...column.getHeaderProps(
+                          column.getSortByToggleProps()
+                        )}
                       >
                         {column.render("Header")}
+                        {/* {column.render("Header")} */}
+                        <span>
+                          {column.isSorted
+                            ? column.isSortedDesc
+                              ? " 🔽"
+                              : " 🔼"
+                            : ""}
+                        </span>
                       </th>
                     ))}
                   </tr>

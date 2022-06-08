@@ -6,25 +6,92 @@ import React, { useMemo } from "react";
 import {
   useTable,
   usePagination,
+  useSortBy
 } from "react-table/dist/react-table.development";
 import "./customers.scss";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
-import Dataas from "components/dummydata/Dataas";
+import { RiFileSearchFill } from "react-icons/ri";
+import { BsPencilSquare } from "react-icons/bs";
+import { AiFillPrinter } from "react-icons/ai";
+import {Form } from "react-bootstrap"
+
+
 
 const actionIcons = () => {
   return (
     <div className="d-flex align-items-center">
-      <span>a</span><span>b</span><span>c</span>
+      <span className="cust_icon_edit ms-2">
+        <BsPencilSquare />
+      </span>
+      <span className="cust_icon_edit ms-2">
+        <RiFileSearchFill />{" "}
+      </span>
+      <span className="cust_icon_edit ms-2">
+        <AiFillPrinter />{" "}
+      </span>
+    </div>
+  );
+}
+const activeSwitch =() =>{
+  return (
+    <div className="custswitch_color">
+      <Form.Check type="switch" id="custom-switch"  />
     </div>
   );
 }
 
+const riskcategoryred = () => {
+  return <div className="cust_riskred_color  "></div>;
+};
+const riskcategorygreen = () => {
+  return <div className="cust_riskgreen_color  "></div>;
+};
+const riskcategoryyellow = () => {
+  return <div className=" cust_riskyellow_color"></div>;
+};
+
+
 function Customers() {
+
   const data = useMemo(
     () => [
       {
         slno: 1,
+        col1: "ann",
+        col2: "Contact Person",
+        col3: "Email",
+        col4: "Phone",
+        col5: "Payment Period",
+        col6: "Tax Number",
+        col7: "Credit Limit",
+        col8: "Payment Type",
+        col9: "Ue Amount",
+        col10: "Invoiced Amount",
+        col11: riskcategoryred(),
+        col12: "RoI",
+        col13: actionIcons(),
+        col14: activeSwitch(),
+      },
+      {
+        slno: 2,
+        col1: "anna",
+        col2: "Contact Person",
+        col3: "Email",
+        col4: "Phone",
+        col5: "Payment Period",
+        col6: "Tax Number",
+        col7: "Credit Limit",
+        col8: "Payment Type",
+        col9: "Ue Amount",
+        col10: "Invoiced Amount",
+        col11: riskcategorygreen(),
+        col12: "RoI",
+        col13: actionIcons(),
+        col14: activeSwitch(),
+      },
+      {
+        slno: 3,
         col1: "Name",
         col2: "Contact Person",
         col3: "Email",
@@ -35,28 +102,11 @@ function Customers() {
         col8: "Payment Type",
         col9: "Ue Amount",
         col10: "Invoiced Amount",
-        col11: "Risk Category",
+        col11: riskcategoryyellow(),
         col12: "RoI",
         col13: actionIcons(),
-        col14: "Active",
+        col14: activeSwitch(),
       },
-      // {
-      //   slno: 2,
-      //   col1: "Name",
-      //   col2: "Contact Person",
-      //   col3: "Email",
-      //   col4: "Phone",
-      //   col5: "Payment Period",
-      //   col6: "Tax Number",
-      //   col7: "Credit Limit",
-      //   col8: "Payment Type",
-      //   col9: "Ue Amount",
-      //   col10: "Invoiced Amount",
-      //   col11: "Risk Category",
-      //   col12: "RoI",
-      //   col13: "Action",
-      //   col14: "Active",
-      // },
     ],
     []
   );
@@ -184,7 +234,9 @@ function Customers() {
               </select>
             </div>
 
-            <Table data={data} columns={columns} />
+            <Table data={data} columns={columns} 
+            issorted={true}
+            />
           </div>
           <div className="row">
             <div className="d-flex  justify-content-center">
@@ -238,3 +290,5 @@ export default Customers;
 //BsPencilSquare
 
   // <Form.Check type="switch" id="custom-switch" label="Check this switch" />;
+  //green ? "$cust_riskgreen_color" : "cust_riskred_color"
+  // yellow ? "$cust_riskgreen_color" : "cust_riskred_color"
