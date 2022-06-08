@@ -1,0 +1,48 @@
+.fileuploader{
+    padding: 10px;
+    color: white;
+
+}
+
+.filerow{
+    margin: auto;
+    width: 400px;
+    border: 1px solid rgb(48, 44, 44);
+    border-radius: 5px;
+    border-style: dashed;
+    margin-top: 200px;
+    padding: 50px;
+}
+.uploadchoose{
+      margin-top: 20px;
+    padding: 8px;
+    width: 100px;
+    color: white;
+    border: 1.0px solid #0092ce;
+    background-color: #0092ce;
+    border-radius: 5px;
+    
+
+}
+.buttonsdiv{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    margin: auto;
+}
+
+.uploadbutton{
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 7px;
+    width: 100px;
+    color:#0092ce;
+    border: 1.0px solid #0092ce;
+    background-color: white;
+    border-radius: 5px;
+}
+.plus{
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 22px;
+}
