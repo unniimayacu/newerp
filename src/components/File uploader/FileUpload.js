@@ -15,8 +15,9 @@ function FileUpload() {
                   <img src={img} alt="" height={100} width={200} />
                 </div>
               </div>
-
-              <p>Drop your Document</p>
+              <div className="row">
+                <p>Drop your Document</p>
+              </div>
             </div>
             <input
               type="file"

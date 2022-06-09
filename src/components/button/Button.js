@@ -31,7 +31,9 @@ import "./button.scss";
     if (rounded) {
       classNames += " erp_btn-rounded";
     }
-
+    if (btnType === "white") {
+      classNames += " erp__btn_white "
+    }
     return (
       <>
         <button
