@@ -29,13 +29,21 @@
     justify-content: center;
 }
 
-.erp__btn-rounded {
-    border-radius: 50px !important;
+.erp_btn-rounded {
+    border-radius: 10px !important;
 }
 
 // .cif__btn-sharp {
 //     border-radius: 0 !important;
 // }
 
-
+.erp__btn_white{
+    background-color: white;
+    border: 1px solid #0092ce;
+    color:#0092ce;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 0;
+    padding-right: 0;
+}
 
