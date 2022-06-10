@@ -1,0 +1,23 @@
+.inputdropdown{ 
+    // display: flex;
+      // margin-top: 20px;
+    border: 0;
+    border-radius: 5px;
+    // width: 250px;
+    padding: 10px;
+    outline: none;
+    // background-color: whitesmoke;
+    
+      font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+.dropdowndiv{
+  margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    // text-align: center;
+    // margin: auto;
+}
