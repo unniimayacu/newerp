@@ -1,9 +1,9 @@
 .profilecard{
     background-color: whitesmoke;
 }
-.columndiv{
-    width: fit-content;
-}
+// .columndiv{
+//     width: fit-content;
+// }
 .ptype{
     font-weight: 400;
     // color: gray;
@@ -15,7 +15,7 @@
 }
 .bankheading{
      color: #0092ce;
-     margin-left: 150px;
+    //  margin-left: 150px;
 }
 .multipledocument{
     font-weight: 100;
@@ -26,7 +26,7 @@
 .inputtype{
        border: 0;
     border-radius: 5px;
-    width: 600px;
+    width: 100%;
     padding: 10px;
     outline: none;
     background-color: whitesmoke;
@@ -37,18 +37,19 @@
 .contactinput{
       border: 0;
     border-radius: 5px;
-    width: 250px;
+    width: 100%;
     padding: 5px;
     outline: none;
     background-color: whitesmoke;
-      font-size: 17px;
+    font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
     color: gray;
 }
 .contactphone{
-    width: 150px;
+    width: 100%;
 }
 .setdefault{
     text-align: right;
     padding-right: 120px;
 }
+

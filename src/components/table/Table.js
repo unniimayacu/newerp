@@ -28,6 +28,7 @@ export default function Table({
        columns,
        data,
        initialState: { pageIndex: 0, pageSize: 5 },
+
      },
     
      useSortBy,
@@ -71,7 +72,7 @@ export default function Table({
                   <tr {...headerGroup.getHeaderGroupProps()}>
                     {headerGroup.headers.map((column) => (
                       <th
-                        className={`${responsive ? "whitespace-nowrap" : ""}`}
+                        className={`${responsive ? "whitespace-nowrap" : ""}  `}
                         {...column.getHeaderProps()}
                         {...column.getHeaderProps(
                           column.getSortByToggleProps()

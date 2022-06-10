@@ -30,7 +30,7 @@
 }
 
 .erp_btn-rounded {
-    border-radius: 10px !important;
+    border-radius: 50px !important;
 }
 
 // .cif__btn-sharp {
@@ -47,3 +47,18 @@
     padding-right: 0;
 }
 
+.erp__half-rounded{
+    border-radius: 10px !important;
+}
+.erp__btn-blue{
+    background-color: #0092ce ;
+    // padding-top: 5px;
+    // padding-bottom: 0px;
+    // padding-left: 0;
+    // padding-right: 0;
+    padding: 8px;
+    width: 100px;
+    font-size: 15px;
+    color: white;
+    border: 1px solid #0092ce;
+}

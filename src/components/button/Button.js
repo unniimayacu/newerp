@@ -6,6 +6,7 @@ import "./button.scss";
     const {
       btnType = "primary",
       rounded = false,
+      halfrounded = false,
       prependIcon = null,
       appendIcon = null,
       onClick,
@@ -33,6 +34,12 @@ import "./button.scss";
     }
     if (btnType === "white") {
       classNames += " erp__btn_white "
+    }
+    if (btnType === "blue") {
+      classNames += " erp__btn-blue"
+    }
+    if (halfrounded) {
+      classNames += " erp__half-rounded"
     }
     return (
       <>
