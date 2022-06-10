@@ -7,6 +7,7 @@ import AddNewCustomer from "pages/AddNewCustomer/AddNewCustomer";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
+const Products = lazy(()=> import ("./pages/productlist/Product") )
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Suspense fallback={<p>loading...</p>}>
           <Routes>
             <Route path={ROUTES.CUSTOMERS } element={<Customers/> }  />
+            <Route path={ROUTES.PRODUCTS} element={<Products/>}  />
             <Route path={ROUTES.ADDNEWCUSTOMER} element={<AddNewCustomer />} />
           </Routes>
         </Suspense>
