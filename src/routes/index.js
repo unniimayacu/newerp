@@ -1,4 +1,5 @@
 
 export const ROUTES=Object.freeze({
-    CUSTOMERS:"/customers"
+    CUSTOMERS:"/customers",
+    PRODUCTS:"/products"
 })
