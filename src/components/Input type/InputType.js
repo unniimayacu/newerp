@@ -5,7 +5,7 @@ function InputType(props) {
   return (
     <div>
       <div>
-        <input type="text" placeholder="" className={`${styles.input_type} ${props.className}`}  />
+        <input type="text" placeholder={props.placeholder} className={`${styles.input_type} ${props.className}`}  />
       </div>
     </div>
   );

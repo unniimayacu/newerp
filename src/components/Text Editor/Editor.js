@@ -20,7 +20,7 @@ const modules = {
   ],
 };
 
-function Editor() {
+function Editor(props) {
   // const CustomButton = () => <span className="octicon octicon-star" >fdgwywegdgefue</span>;
   // const CustomToolbar = () => (
   //   <div id="toolbar">
@@ -55,7 +55,8 @@ function Editor() {
         <ReactQuill
           theme={"snow"}
           modules={modules}
-          className={`${styles.quill}`}
+          
+          className={`${styles.quill} ${props.className}`}
         />
       </div>
     </div>

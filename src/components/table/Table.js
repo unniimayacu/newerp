@@ -13,27 +13,27 @@ export default function Table({
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    prepareRow,
     page,
     rows,
+    prepareRow,
     canPreviousPage,
     canNextPage,
-    // pageOptions,
     pageCount,
-    gotoPage,
     nextPage,
     previousPage,
-    setPageSize,
-    state: { pageSize },
+    gotopage,
+    state: { pageIndex, pageSize },
   } = useTable(
     {
       columns,
       data,
-      initialState: { pageIndex: 2 },
+      initialState: { pageIndex: 0, pageSize: 5 },
     },
+
     useSortBy,
     usePagination
   );
+
   return (
     <>
       {/* <pre>
@@ -100,7 +100,7 @@ export default function Table({
                   <tr {...headerGroup.getHeaderGroupProps()}>
                     {headerGroup.headers.map((column) => (
                       <th
-                        className={`${responsive ? "whitespace-nowrap" : ""}`}
+                        className={`${responsive ? "whitespace-nowrap" : ""}  `}
                         {...column.getHeaderProps()}
                         {...column.getHeaderProps(
                           column.getSortByToggleProps()
@@ -218,12 +218,12 @@ export default function Table({
 }
 
 // export default Table
-  {
-    /* {pageCount} / {pageIndex + 1} */
-  }
+{
+  /* {pageCount} / {pageIndex + 1} */
+}
 
-  {
-    /* <div className="d-flex  justify-content-center">
+{
+  /* <div className="d-flex  justify-content-center">
                 <span
                   onClick={() => gotoPage(0)}
                   disabled={canPreviousPage}
@@ -260,4 +260,4 @@ export default function Table({
                   chevron_right
                 </span>
               </div> */
-  }
+}

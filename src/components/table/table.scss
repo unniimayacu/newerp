@@ -1,60 +1,60 @@
 .table__nav-btn {
-    border: none !important;
-    outline: none !important;
-    padding: 0 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  span {
+    color: #493480 !important;
     cursor: pointer;
-    span {
-        color: #493480 !important;
-        cursor: pointer;
-    }
+  }
 }
 
 .cif__table-wrapper {
+  table {
+    color: #493480 !important;
+    font-size: 12px;
+    tr {
+      border-bottom: 1px solid #e5e5e5 !important;
+    }
+  }
+  @media only screen and(max-width: 767px) {
     table {
-        color: #493480 !important;
-        font-size: 12px;
-        tr {
-            border-bottom: 1px solid #e5e5e5 !important;
-        }
+      color: white !important;
     }
-    @media only screen and(max-width: 767px) {
-        table {
-            color: white !important;
-        }
-    }
+  }
 }
 
 .cif__table-table-container {
-    padding: 1rem;
-    background-color: white;
-    // @media only screen and(max-width: 767px) {
-    //     @include cm.bg-gradient;
-    // }
+  padding: 1rem;
+  background-color: white;
+  // @media only screen and(max-width: 767px) {
+  //     @include cm.bg-gradient;
+  // }
 }
 
 .table__nav-btn-wrapper {
-    height: 50px;
+  height: 50px;
 }
 
 .table__nav-btn-group {
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
-.cust__icon{
-    background-color: rgb(42, 154, 228);
-    border-radius: 50%;
-    padding: 7px ;
-    color: white;
+.cust__icon {
+  background-color: rgb(42, 154, 228);
+  border-radius: 50%;
+  padding: 7px;
+  color: white;
 }
-.prod_select__custom{
-      border-radius: 35px;
-    // background-color: rgb(35, 112, 156);
-    border-color: rgb(0, 162, 255);
-    color:  rgb(0, 162, 255);
+.prod_select__custom {
+  border-radius: 35px;
+  // background-color: rgb(35, 112, 156);
+  border-color: rgb(0, 162, 255);
+  color: rgb(0, 162, 255);
 }
 // .pagination {
 //     padding: 0.5rem;
