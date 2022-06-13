@@ -1,51 +1,45 @@
-import DatePicker from 'components/Datepicker/DatePicker';
-import FileUpload from 'components/File uploader/FileUpload';
-import Header from 'components/header/Header'
-import InputDropdown from 'components/Input dropdown/InputDropdown';
-import InputType from 'components/Input type/InputType'
-import Table from 'components/table/Table';
-import TextArea from 'components/Text Area/TextArea';
-import React,{useMemo} from 'react'
-import styles from './AddNewQuotation.module.scss'
-import {MdDelete} from 'react-icons/md'
-import Editor from 'components/Text Editor/Editor';
-import Button from 'components/button/Button';
-
+import DatePicker from "components/Datepicker/DatePicker";
+import FileUpload from "components/File uploader/FileUpload";
+import Header from "components/header/Header";
+import InputDropdown from "components/Input dropdown/InputDropdown";
+import InputType from "components/Input type/InputType";
+import Table from "components/table/Table";
+import TextArea from "components/Text Area/TextArea";
+import React, { useMemo } from "react";
+import styles from "./AddNewQuotation.module.scss";
+import { MdDelete } from "react-icons/md";
+import Editor from "components/Text Editor/Editor";
+import Button from "components/button/Button";
 
 const AddNetRate = () => {
-    return(
-        <div>
-            1000 <button type='delete' className={`${styles.AddNetRate}`}><MdDelete color='gray' fontSize={17}/></button>
-        </div>
-    )
-}
-
-
+  return (
+    <div>
+      1000{" "}
+      <button type="delete" className={`ms-3 ${styles.AddNetRate}`}>
+        <MdDelete color="gray" fontSize={17} />
+      </button>
+    </div>
+  );
+};
 
 function AddNewQuotation() {
-
-
-
-     const data = useMemo(
-       () => [
-         {
-           slno: 1,
-           col1: "Product name",
-           col2: "20",
-           col3: "Kg",
-           col4: "1000",
-           col5: "10/Kg",
-           col6: "N/A",
-           col7: "3%",
-           col8: "30",
-           col9: AddNetRate(),
-           
-           
-         },
-         
-       ],
-       []
-     );
+  const data = useMemo(
+    () => [
+      {
+        slno: 1,
+        col1: "Product name",
+        col2: "20",
+        col3: "Kg",
+        col4: "1000",
+        col5: "10/Kg",
+        col6: "N/A",
+        col7: "3%",
+        col8: "30",
+        col9: AddNetRate(),
+      },
+    ],
+    []
+  );
 
   const columns = useMemo(
     () => [
@@ -89,29 +83,9 @@ function AddNewQuotation() {
         Header: "NET RATE",
         accessor: "col9",
       },
-     
-     
     ],
     []
   );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   return (
     <div>
@@ -132,13 +106,13 @@ function AddNewQuotation() {
             </div>
             <div className="col-4 ">
               <div>
-                <p className="mb-2 pb-0">Select Customer</p>
+                <p className="mb-2 pb-2">Select Customer</p>
                 <InputDropdown />
               </div>
             </div>
             <div className="col-4 ">
               <div>
-                <p className="mb-2 pb-0">Branch / WareHouse</p>
+                <p className="mb-2 pb-2">Branch / WareHouse</p>
                 <InputDropdown />
               </div>
             </div>
@@ -160,7 +134,7 @@ function AddNewQuotation() {
                 <DatePicker className={`${styles.datepicker}`} />
               </div>
               <div className="mt-3">
-                <p className="mb-2 pb-0">Shipping Policy</p>
+                <p className="mb-2 pb-2">Shipping Policy</p>
                 <InputDropdown />
               </div>
             </div>
@@ -180,7 +154,7 @@ function AddNewQuotation() {
             </div>
             <div className="col-8 ">
               <div>
-                <p className="mb-2 pb-0">Payment Method</p>
+                <p className="mb-2 pb-2">Payment Method</p>
                 <InputDropdown className={`${styles.inputdropdown}`} />
               </div>
             </div>
@@ -274,7 +248,7 @@ function AddNewQuotation() {
           </div>
           <div className="row justify-content-center">
             <div>
-              <Table data={data} columns={columns} issorted={true} />
+              <Table data={data} columns={columns} PageSize={false} Pagination={false} Sorted={false} className={true} responsive={true} />
             </div>
           </div>
           <div className="row mt-4 justify-content-center">
@@ -298,4 +272,4 @@ function AddNewQuotation() {
   );
 }
 
-export default AddNewQuotation
+export default AddNewQuotation;

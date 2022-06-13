@@ -2,12 +2,17 @@ import React from "react";
 import { useTable, usePagination, useSortBy } from "react-table";
 import "./table.scss";
 
-export default function Table({
+export default function Table(  {
   columns,
   data,
   headerVisible = true,
   paginate = true,
   responsive = false,
+  PageSize=true,
+  Pagination=true,
+  Sorted=true,
+  className=false,
+  
 }) {
   const {
     getTableProps,
@@ -21,7 +26,8 @@ export default function Table({
     pageCount,
     nextPage,
     previousPage,
-    gotopage,
+    setPageSize,
+    gotoPage,
     state: { pageIndex, pageSize },
   } = useTable(
     {
@@ -52,19 +58,21 @@ export default function Table({
         </code>
       </pre> */}
       <div className="col-4  ">
-        <select
-          className="p-2 px-3 prod_select__custom "
-          value={pageSize}
-          onChange={(e) => {
-            setPageSize(Number(e.target.value));
-          }}
-        >
-          {[10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize}>
-              Show Entries | {pageSize}
-            </option>
-          ))}
-        </select>
+        {PageSize && (
+          <select
+            className="p-2 px-3 prod_select__custom "
+            value={pageSize}
+            onChange={(e) => {
+              setPageSize(Number(e.target.value));
+            }}
+          >
+            {[10, 20, 30, 40, 50].map((pageSize) => (
+              <option key={pageSize} value={pageSize}>
+                Show Entries | {pageSize}
+              </option>
+            ))}
+          </select>
+        )}
       </div>
       <div className="cif__table-wrapper">
         {/* {paginate && (
@@ -97,7 +105,10 @@ export default function Table({
             {headerVisible && (
               <thead>
                 {headerGroups.map((headerGroup) => (
-                  <tr {...headerGroup.getHeaderGroupProps()}>
+                  <tr
+                    {...headerGroup.getHeaderGroupProps()}
+                    className={`${className && 'table_header_color'}`}
+                  >
                     {headerGroup.headers.map((column) => (
                       <th
                         className={`${responsive ? "whitespace-nowrap" : ""}  `}
@@ -108,13 +119,15 @@ export default function Table({
                       >
                         {column.render("Header")}
                         {/* {column.render("Header")} */}
-                        <span>
-                          {column.isSorted
-                            ? column.isSortedDesc
-                              ? " 🔽"
-                              : " 🔼"
-                            : ""}
-                        </span>
+                        {Sorted && (
+                          <span>
+                            {column.isSorted
+                              ? column.isSortedDesc
+                                ? " 🔽"
+                                : " 🔼"
+                              : ""}
+                          </span>
+                        )}
                       </th>
                     ))}
                   </tr>
@@ -175,41 +188,46 @@ export default function Table({
             >
               {">>"}
             </button>{" "} */}
-            <span
-              onClick={() => gotoPage(0)}
-              disabled={canPreviousPage}
-              className="material-icons p-2 "
-            >
-              chevron_left
-            </span>
-            <span
-              onClick={() => previousPage()}
-              disabled={canPreviousPage}
-              className="cust__icon  p-2 px-3"
-            >
-              1
-            </span>
-            <span
-              onClick={(cust__icon) => nextPage()}
-              disabled={canNextPage}
-              className="  p-2 px-3"
-            >
-              2
-            </span>
-            <span
-              onClick={() => nextPage()}
-              disabled={canNextPage}
-              className="p-2  px-3"
-            >
-              3
-            </span>
-            <span
-              onClick={() => gotoPage(pageCount - 1)}
-              disabled={!canNextPage}
-              className="material-icons p-2"
-            >
-              chevron_right
-            </span>
+
+            {Pagination && (
+              <div>
+                <span
+                  onClick={() => gotoPage(0)}
+                  disabled={canPreviousPage}
+                  className="material-icons p-2 "
+                >
+                  chevron_left
+                </span>
+                <span
+                  onClick={() => previousPage()}
+                  disabled={canPreviousPage}
+                  className="cust__icon  p-2 px-3"
+                >
+                  1
+                </span>
+                <span
+                  onClick={(cust__icon) => nextPage()}
+                  disabled={canNextPage}
+                  className="  p-2 px-3"
+                >
+                  2
+                </span>
+                <span
+                  onClick={() => nextPage()}
+                  disabled={canNextPage}
+                  className="p-2  px-3"
+                >
+                  3
+                </span>
+                <span
+                  onClick={() => gotoPage(pageCount - 1)}
+                  disabled={!canNextPage}
+                  className="material-icons p-2"
+                >
+                  chevron_right
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </div>
