@@ -8,6 +8,7 @@ import AddNewQuotation from "pages/AddNewQuotation/AddNewQuotation";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
+const Products = lazy(()=> import ("./pages/productlist/Product") )
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Suspense fallback={<p>loading...</p>}>
           <Routes>
             <Route path={ROUTES.CUSTOMERS } element={<Customers/> }  />
+            <Route path={ROUTES.PRODUCTS} element={<Products/>}  />
             <Route path={ROUTES.ADDNEWCUSTOMER} element={<AddNewCustomer />} />
             <Route path={ROUTES.ADDNEWQUOTATION} element={<AddNewQuotation />} />
           </Routes>
