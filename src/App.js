@@ -5,6 +5,7 @@ import { BrowserRouter, Routes,Route } from "react-router-dom";
 import {ROUTES} from "./routes"
 import AddNewCustomer from "pages/AddNewCustomer/AddNewCustomer";
 import AddNewQuotation from "pages/AddNewQuotation/AddNewQuotation";
+import Category from "pages/Category/Category";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -20,6 +21,7 @@ function App() {
             <Route path={ROUTES.PRODUCTS} element={<Products/>}  />
             <Route path={ROUTES.ADDNEWCUSTOMER} element={<AddNewCustomer />} />
             <Route path={ROUTES.ADDNEWQUOTATION} element={<AddNewQuotation />} />
+            <Route path={ROUTES.CATEGORY} element={<Category />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
