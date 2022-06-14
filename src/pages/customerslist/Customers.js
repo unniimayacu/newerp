@@ -11,10 +11,10 @@ import {
 import "./customers.scss";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
-import { RiFileSearchFill } from "react-icons/ri";
-import { BsPencilSquare } from "react-icons/bs";
-import { AiFillPrinter } from "react-icons/ai";
-import {Form } from "react-bootstrap"
+// import { RiFileSearchFill } from "react-icons/ri";
+// import { BsPencilSquare } from "react-icons/bs";
+// import { AiFillPrinter } from "react-icons/ai";
+// import {Form } from "react-bootstrap"
 import Makedata from "components/ddatas/Customerdatas";
 
 
@@ -238,6 +238,7 @@ const data = React.useMemo(() => Makedata(), []);
             </div> */}
           <div className="col-xl-12 col-xl-12  col-12" ></div>
             <Table data={data} columns={columns} 
+            // paginate={true}
             issorted={true}
             />
           </div>
@@ -292,6 +293,4 @@ export default Customers;
 //RiFileSearchFill
 //BsPencilSquare
 
-  // <Form.Check type="switch" id="custom-switch" label="Check this switch" />;
-  //green ? "$cust_riskgreen_color" : "cust_riskred_color"
-  // yellow ? "$cust_riskgreen_color" : "cust_riskred_color"
+  

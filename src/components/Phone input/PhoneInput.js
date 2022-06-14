@@ -1,16 +1,10 @@
-import {React,useState} from 'react'
+import { React, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import styles from './PhoneInput.module.scss'
-
-
+import styles from "./PhoneInput.module.scss";
 
 function PhoneInputt(props) {
-     const [value, setValue] = useState();
-
-
-  
-
+  const [value, setValue] = useState();
 
   return (
     <div>
@@ -18,15 +12,14 @@ function PhoneInputt(props) {
         <PhoneInput
           country={"in"}
           countryCodeEditable={false}
-          inputClass='w-100 border-0 '
-          
+          inputClass="w-100 border-1px-solid  "
           value={value}
           onChange={setValue}
           className={`${styles.phoneinput} ${styles.className}`}
-        />
-      </div>
+        />{" "}
+      </div>{" "}
     </div>
   );
 }
 
-export default PhoneInputt
+export default PhoneInputt;

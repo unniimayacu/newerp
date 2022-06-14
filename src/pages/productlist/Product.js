@@ -176,7 +176,7 @@ function Product() {
               <Table
                 data={data}
                 columns={columns}
-               
+              //  paginate={true}
                 issorted={true}
               />
             </div>
