@@ -26,6 +26,12 @@
       color: white !important;
     }
   }
+  @media only screen and(max-width:320px),(max-width:425px),(max-width:768px) {
+    table {
+      color: black !important;
+    }
+    
+  }
 }
 
 .cif__table-table-container {
@@ -49,6 +55,14 @@
   border-radius: 50%;
   padding: 7px;
   color: white;
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .prod_select__custom {
   border-radius: 35px;
@@ -63,4 +77,10 @@
 .table_header_color{
   border-radius: 100%;
   background-color: rgb(245, 255, 255);
+}
+
+.page_div_center{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }

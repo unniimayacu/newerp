@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTable, usePagination, useSortBy } from "react-table";
 import "./table.scss";
 
-export default function Table(  {
+export default function Table({
   columns,
   data,
   headerVisible = true,
   paginate = true,
   responsive = false,
-  PageSize=true,
-  Pagination=true,
-  Sorted=true,
-  className=false,
-  
+  PageSize = true,
+  Pagination = true,
+  Sorted = true,
+  className = false,
+  pagecenter = false,
 }) {
   const {
     getTableProps,
@@ -40,6 +40,22 @@ export default function Table(  {
     usePagination
   );
 
+  console.log(data);
+
+  // const [pagevalue, setPagevalue] = useState(0);
+
+  const PaginateBtn = ({ pageNum, children, onClick }) => {
+    return (
+      <span
+        onClick={onClick}
+        disabled={canPreviousPage}
+        className="cust__icon p-2 px-3"
+      >
+        {children}
+      </span>
+    );
+  };
+
   return (
     <>
       {/* <pre>
@@ -63,7 +79,8 @@ export default function Table(  {
             className="p-2 px-3 prod_select__custom "
             value={pageSize}
             onChange={(e) => {
-              setPageSize(Number(e.target.value));
+              let tmpVal = data / e.target.value;
+              setPageSize(tmpVal);
             }}
           >
             {[10, 20, 30, 40, 50].map((pageSize) => (
@@ -107,7 +124,7 @@ export default function Table(  {
                 {headerGroups.map((headerGroup) => (
                   <tr
                     {...headerGroup.getHeaderGroupProps()}
-                    className={`${className && 'table_header_color'}`}
+                    className={`${className && "table_header_color"}`}
                   >
                     {headerGroup.headers.map((column) => (
                       <th
@@ -137,6 +154,8 @@ export default function Table(  {
             <tbody {...getTableBodyProps()}>
               {paginate
                 ? page.map((row, i) => {
+                    console.log(page);
+                    // console.log(i);
                     prepareRow(row);
                     return (
                       <tr {...row.getRowProps()}>
@@ -167,7 +186,7 @@ export default function Table(  {
             </tbody>
           </table>
 
-          <div className="pagination">
+          <div className={`${pagecenter && "page_div_center"}`}>
             {/* <button
               onClick={() => gotoPage(0)}
               disabled={!canPreviousPage}
@@ -190,25 +209,35 @@ export default function Table(  {
             </button>{" "} */}
 
             {Pagination && (
-              <div>
+              <div className="d-flex algn-items-center" >
                 <span
-                  onClick={() => gotoPage(0)}
+                  onClick={() => gotoPage(1)}
                   disabled={canPreviousPage}
                   className="material-icons p-2 "
                 >
                   chevron_left
                 </span>
-                <span
-                  onClick={() => previousPage()}
-                  disabled={canPreviousPage}
-                  className="cust__icon  p-2 px-3"
-                >
-                  1
-                </span>
+                {
+                  // Array.from(Array(pageCount).map((item,index) => {
+                  //   return <returnBtn>{index+1}</returnBtn>;
+                  // }))
+                  [...Array(pageCount).keys()].map((item, index) => {
+                    return (
+                      <PaginateBtn
+                        onClick={() => gotoPage(index + 1)}
+                        pageNum={index + 1}
+                      >
+                        {index + 1}
+                      </PaginateBtn>
+                    );
+                  })
+                }
+
+                {/*                 
                 <span
                   onClick={(cust__icon) => nextPage()}
                   disabled={canNextPage}
-                  className="  p-2 px-3"
+                  className=" active p-2 px-3"
                 >
                   2
                 </span>
@@ -218,7 +247,10 @@ export default function Table(  {
                   className="p-2  px-3"
                 >
                   3
-                </span>
+             
+             
+             
+                </span> */}
                 <span
                   onClick={() => gotoPage(pageCount - 1)}
                   disabled={!canNextPage}
