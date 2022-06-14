@@ -19,6 +19,9 @@ import "./button.scss";
     if (btnType === "primary") {
       classNames += " erp__btn_primary";
     }
+      if (btnType ==="secondary" ) {
+        classNames += " erp__btn_secondary";
+      }
 
     if (prependIcon) {
       classNames += " erp__btn-prepend-icon";

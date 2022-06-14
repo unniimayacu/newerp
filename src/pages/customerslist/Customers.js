@@ -238,6 +238,7 @@ const data = React.useMemo(() => Makedata(), []);
             </div> */}
           <div className="col-xl-12 col-xl-12  col-12" ></div>
             <Table data={data} columns={columns} 
+            // paginate={true}
             issorted={true}
             />
           </div>

@@ -67,7 +67,7 @@ export default function Table({
         </select>
       </div>
       <div className="cif__table-wrapper">
-        {/* {paginate && (
+        {paginate && (
           <div className="w-100 position-relative table__nav-btn-wrapper">
             <div className="table__nav-btn-group d-flex align-items-center text-right mt-2">
               <button
@@ -87,7 +87,7 @@ export default function Table({
               </button>
             </div>
           </div>
-        )} */}
+        )}
         <div
           className={`cif__table-table-container ${
             responsive ? "table-responsive" : ""
@@ -222,42 +222,3 @@ export default function Table({
     /* {pageCount} / {pageIndex + 1} */
   }
 
-  {
-    /* <div className="d-flex  justify-content-center">
-                <span
-                  onClick={() => gotoPage(0)}
-                  disabled={canPreviousPage}
-                  className="material-icons p-2 "
-                >
-                  chevron_left
-                </span>
-                <span
-                  onClick={() => previousPage()}
-                  disabled={canPreviousPage}
-                  className="cust__icon  p-2 px-3"
-                >
-                  1
-                </span>
-                <span
-                  onClick={() => nextPage()}
-                  disabled={canNextPage}
-                  className="  p-2 px-3"
-                >
-                  2
-                </span>
-                <span
-                  onClick={() => nextPage()}
-                  disabled={canNextPage}
-                  className="p-2  px-3"
-                >
-                  3
-                </span>
-                <span
-                  onClick={() => gotoPage(pageCount - 1)}
-                  disabled={!canNextPage}
-                  className="material-icons p-2"
-                >
-                  chevron_right
-                </span>
-              </div> */
-  }
