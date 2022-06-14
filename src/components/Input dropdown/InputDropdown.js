@@ -4,9 +4,9 @@ import styles from "./input.module.scss";
 import DropdownList from "react-widgets/DropdownList";
 import "react-widgets/styles.css";
 
-function InputDropdown() {
+function InputDropdown( props ) {
   return (
-    <div className={`${styles.dropdowndiv}`}>
+    <div className={`${styles.dropdowndiv} ${props.className}`}>
       {/* <Select
         value=''
         // onChange={this.handleChange}
@@ -14,7 +14,7 @@ function InputDropdown() {
         options=" "
         className={`${styles.inputdropdown}`}
       /> */}
-      <DropdownList className={`${styles.inputdropdown}`} />
+      <DropdownList className={`${styles.inputdropdown}`}  />
     </div>
   );
 }
