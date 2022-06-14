@@ -18,7 +18,11 @@ function PhoneInputt(props) {
         <PhoneInput
           country={"in"}
           countryCodeEditable={false}
+<<<<<<< HEAD
+          inputClass="w-100"
+=======
           inputClass='w-100 border-1px-solid  '
+>>>>>>> b4c2c99688d06b31294aaa601eaea1371cd0bbd9
           value={value}
           onChange={setValue}
           className={`${styles.phoneinput} ${styles.className}`}
