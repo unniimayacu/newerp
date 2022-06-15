@@ -92,7 +92,7 @@ export default function Table({
         )}
       </div>
       <div className="cif__table-wrapper">
-        {paginate && (
+        {/* {paginate && (
           <div className="w-100 position-relative table__nav-btn-wrapper">
             <div className="table__nav-btn-group d-flex align-items-center text-right mt-2">
               <button
@@ -112,7 +112,7 @@ export default function Table({
               </button>
             </div>
           </div>
-        )}
+        )} */}
         <div
           className={`cif__table-table-container ${
             responsive ? "table-responsive" : ""

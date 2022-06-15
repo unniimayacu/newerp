@@ -37,9 +37,8 @@ const AddContact = () => (
   </div>
 );
 
-
 function Supplier() {
-   const [contact, setContact] = useState(0);
+  const [contact, setContact] = useState(0);
   return (
     <>
       <div className="container-fluid">
@@ -62,9 +61,31 @@ function Supplier() {
                 <InputDropdown />
               </div>
               <div className="col-xl-2 col-lg-2 col-12">
-                <div className=" d-flex justify-content-evenly">
-                  {" "}
-                  <p className={` mb-1 ms-0 pt-5  `}>
+                <div className=" d-flex justify-content-evenly mt-4">
+                  <div class="form-check mb-0 ms-0   ">
+                    <input
+                      class="form-check-input  "
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Individual
+                    </label>
+                  </div>
+                  <div class="form-check mb-0 ms-0   ">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Company
+                    </label>
+                  </div>
+                  {/* <p className={` mb-1 ms-0 pt-5  `}>
                     {" "}
                     Individual
                     <input type="radio" className={`ms-2  `} />
@@ -73,14 +94,14 @@ function Supplier() {
                     {" "}
                     Company
                     <input type="radio" className={`ms-2`} />
-                  </p>
+                  </p> */}
                 </div>
               </div>
-              <div className="col-xl-4 col-lg-4 col-12">
+              <div className="col-xl-3 col-lg-3 col-12">
                 <p className={`mb-0 ms-0`}>Name</p>
                 <InputType placeholder="Name" />
               </div>
-              <div className="col-xl-2 col-xl-2 col-12 mt-2 px-3">
+              <div className="col-xl-3 col-xl-3 col-12 mt-2 ">
                 <div className="profile__custom_size">
                   <Profileupload />
                 </div>
