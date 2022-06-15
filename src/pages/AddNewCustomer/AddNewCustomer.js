@@ -15,10 +15,12 @@ const AddContact = () => (
   <p>
     <div className="row mt-3 justify-content-center">
       <div className={`${styles.setdefault}`}>
-        <p>
-          <input type="radio" className="me-2" />
-          Set default
-        </p>
+        <label htmlFor="radioo">
+          <p>
+            <input type="radio" name="setdefault" id="radioo" className="me-2" />
+            Set default
+          </p>
+        </label>
       </div>
       <div className="row ">
         <div className={`col-3  mt-3 ${styles.columndiv}`}>
@@ -53,15 +55,15 @@ const AddContact = () => (
 
 const AddElement = () => (
   <p>
-    <div className="row justify-content-center">
-      <div className={`col-4  mt-3 ${styles.columndiv}`}>
+    <div className="row justify-content-start">
+      <div className={`col-5  mt-3 ${styles.columndiv}`}>
         <div className="mt-2  ">
           <p className={`mb-1  ${styles.ptype}`}>Address</p>
           <TextArea />
         </div>
       </div>
-      <div className={`col-4  mt-3 ${styles.columndiv}`}>
-        <div className="mt-2   me-4">
+      <div className={`col-5  mt-3 ${styles.columndiv}`}>
+        <div className="mt-2   ">
           <p className={`mb-1  ${styles.ptype}`}>Shipping Address</p>
           <TextArea />
         </div>
@@ -108,16 +110,30 @@ function AddNewCustomer() {
               <div className="d-flex justify-content-evenly ">
                 <div className="mt-5 pt-5 d-flex justify-content-evenly">
                   {" "}
-                  <p className={`mb-1 pt-3  ${styles.ptype}`}>
-                    {" "}
-                    Individual
-                    <input type="radio" className={`ms-2`} />
-                  </p>
-                  <p className={`mb-1 ms-2 pt-3  ${styles.ptype}`}>
-                    {" "}
-                    Company
-                    <input type="radio" className={`ms-2`} />
-                  </p>
+                  <label htmlFor="individual">
+                    <p className={`mb-1 pt-3  ${styles.ptype}`}>
+                      {" "}
+                      Individual
+                      <input
+                        type="radio"
+                        id="individual"
+                        name="radio"
+                        className={`ms-2`}
+                      />
+                    </p>
+                  </label>
+                  <label htmlFor="company">
+                    <p className={`mb-1 ms-2 pt-3  ${styles.ptype}`}>
+                      {" "}
+                      Company
+                      <input
+                        type="radio"
+                        id="company"
+                        name="radio"
+                        className={`ms-2`}
+                      />
+                    </p>
+                  </label>
                 </div>
                 <div className=" ">
                   <p className={`  ${styles.ptype}`}>Profile Picture</p>
@@ -218,19 +234,20 @@ function AddNewCustomer() {
               </div>
             </div>
             <div className="row justify-content-center">
-              <div className={`col-4  mt-3 ${styles.columndiv}`}>
+              <div className={`col-5  mt-3 ${styles.columndiv}`}>
                 <div className="mt-2 ">
                   <p className={`mb-1  ${styles.ptype}`}>Address</p>
                   <TextArea />
                 </div>
               </div>
-              <div className={`col-4  mt-3 ${styles.columndiv}`}>
+              <div className={`col-5  mt-3 ${styles.columndiv}`}>
                 <div className="mt-2">
                   <p className={`mb-1  ${styles.ptype}`}>Shipping Address</p>
                   <TextArea />
                 </div>
               </div>
-              <div className={`col-4  mt-5 ${styles.columndiv}`}>
+              <div className="col-1"></div>
+              <div className={`col-1  mt-5  justify-content-center mb-0  ${styles.columndiv}`}>
                 <Button
                   // appendIcon={}
                   btnType="white"
@@ -316,7 +333,7 @@ function AddNewCustomer() {
               <div className={`col-12  mt-3  ${styles.columndiv}`}>
                 <div className="mt-2">
                   <p className={`mb-1  ${styles.ptype}`}>Note</p>
-                  <Editor className='mt-5'/>
+                  <Editor className="mt-5" />
                 </div>
               </div>
             </div>
@@ -325,10 +342,17 @@ function AddNewCustomer() {
             </div>
             <div className="row mt-3  justify-content-center">
               <div className={`${styles.setdefault}`}>
-                <p>
-                  <input type="radio" className="me-2" />
-                  Set default
-                </p>
+                <label htmlFor="radio">
+                  <p>
+                    <input
+                      type="radio"
+                      name="setdefault"
+                      id="radio"
+                      className="me-2"
+                    />
+                    Set default
+                  </p>
+                </label>
               </div>
               <div className="row justify-content-center">
                 <div className={`col-3  mt-3 ${styles.columndiv}`}>
