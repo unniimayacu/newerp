@@ -8,6 +8,9 @@ import Newcontact from 'components/customersnewcontact/Newcontact';
 import Table from 'components/table/Table';
 
 import Categorydata from 'components/ddatas/Categorydata';
+import Slidebar from 'components/Slidebar/Slidebar';
+
+
 
 
 
@@ -47,18 +50,7 @@ function Category() {
         Header: "ACTIVE",
         accessor: "col6",
       },
-      // {
-      //   Header: "TAX%",
-      //   accessor: "col7",
-      // },
-      // {
-      //   Header: "TAX AMOUNT",
-      //   accessor: "col8",
-      // },
-      // {
-      //   Header: "NET RATE",
-      //   accessor: "col9",
-      // },
+
     ],
     []
   );
@@ -69,6 +61,8 @@ function Category() {
       <div className="container-fluid">
         <div className="row justify-content-center">
           <Header />
+          <Slidebar />
+         
         </div>
         <div className="container mt-5 justify-content-center">
           <div className="row justify-content-center">
@@ -76,11 +70,15 @@ function Category() {
               <div className="col-2">
                 <h4>Category</h4>
               </div>
-              <div className=" col-2">
-                <Button appendIcon={<AiOutlinePlus />}>New Category</Button>
+              <div className=" col-2 m-0 p-0">
+                <Button 
+                //  appendIcon={}
+                 >New Category <AiOutlinePlus /></Button>
               </div>
               <div className="col-2 ">
-                <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+                <Button 
+                // appendIcon={}
+                >Upload Via CSV <FiUpload /></Button>
               </div>
 
               <div className="d-flex justify-content-end col-6 ">
