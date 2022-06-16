@@ -206,22 +206,23 @@ const data = React.useMemo(() => Makedata(), []);
             <Header />
             {/* </div> */}
           </div>
-          <div className="row mt-5 border-bottom ">
-            <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
-              <h5 className="ms-0">Customers</h5>
-              <div className="ms-3 ">
-                <Button appendIcon={<AiOutlinePlus />}>New Contact</Button>
+          <div className="container">
+            <div className="row mt-5 border-bottom ">
+              <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
+                <h5 className="ms-0">Customers</h5>
+                <div className="ms-3 ">
+                  <Button appendIcon={<AiOutlinePlus />}>New Contact</Button>
+                </div>
+                <div className="ms-3 ">
+                  <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+                </div>
               </div>
-              <div className="ms-3 ">
-                <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+              <div className="d-flex justify-content-end col-xl-6 col-lg-6 col-12 py-3">
+                <Newcontact />
               </div>
             </div>
-            <div className="d-flex col-xl-6 col-lg-6 col-12 py-3">
-              <Newcontact />
-            </div>
-          </div>
-          <div className="row mt-5">
-            {/* <div className="col-4  ">
+            <div className="row mt-5">
+              {/* <div className="col-4  ">
               <select
                 className="p-2 px-3 select__custom "
                 value={pageSize}
@@ -236,11 +237,20 @@ const data = React.useMemo(() => Makedata(), []);
                 ))}
               </select>
             </div> */}
-          <div className="col-xl-12 col-xl-12  col-12" ></div>
-            <Table data={data} columns={columns} 
-            // paginate={true}
-            issorted={true}
-            />
+              <div className="container">
+                <div className="row ">
+                  {/* <div className="col-xl-12 col-xl-12  col-12"> */}
+                  <Table
+                    data={data}
+                    columns={columns}
+                    // paginate={true}
+                    issorted={true}
+                    // responsive={true}
+                  />
+                  {/* </div> */}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="row">
             {/* <div className="d-flex  justify-content-center">
@@ -280,7 +290,6 @@ const data = React.useMemo(() => Makedata(), []);
                 chevron_right
               </span>
             </div> */}
-            
           </div>
         </div>
       </div>
