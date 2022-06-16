@@ -207,10 +207,10 @@ export default function Table({
                   [...Array(pageCount).keys()].map((item, index) => {
                     return (
                       <PaginateBtn
-                        onClick={() => gotoPage(index + 1)}
-                        pageNum={index + 1}
+                        onClick={() => gotoPage(index)}
+                        pageNum={index }
                       >
-                        {index + 1}
+                        {index}
                       </PaginateBtn>
                     );
                   })

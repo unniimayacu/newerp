@@ -10,5 +10,6 @@ export const ROUTES=Object.freeze({
     VIEWSUPPLIER:"/viewsupplier",
     // ADDNEWCUSTOMER:"/AddNew"
     CATEGORY:"/category",
+    LAYOUT:"/layout",
 
 })
