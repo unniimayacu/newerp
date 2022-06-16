@@ -33,7 +33,7 @@ export default function Table({
     {
       columns,
       data,
-      initialState: { pageIndex: 0, pageSize: 5 },
+      initialState: { pageIndex: 0, pageSize: 10 },
     },
 
     useSortBy,
@@ -76,19 +76,21 @@ export default function Table({
       <div className="col-4  ">
         {PageSize && (
           <select
-            className="p-2 px-3 prod_select__custom "
+            className="p-2 px-2 prod_select__custom "
             value={pageSize}
             onChange={(e) => {
-              let tmpVal = data / e.target.value;
-              setPageSize(tmpVal);
+               setPageSize(Number(e.target.value));
+              // let tmpVal = data / e.target.value;
+              // setPageSize(tmpVal);
             }}
           >
             {[10, 20, 30, 40, 50].map((pageSize) => (
               <option key={pageSize} value={pageSize}>
-                Show Entries | {pageSize}
+                Show Entries |{pageSize}
               </option>
             ))}
           </select>
+       
         )}
       </div>
       <div className="cif__table-wrapper">
@@ -187,31 +189,12 @@ export default function Table({
           </table>
 
           <div className={`${pagecenter && "page_div_center"}`}>
-            {/* <button
-              onClick={() => gotoPage(0)}
-              disabled={!canPreviousPage}
-              className="material-icons p-2 "
-            >
-              chevron_left
-              {"<<"}
-            </button>{" "}
-            <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-              {"<"}
-            </button>{" "}
-            <button onClick={() => nextPage()} disabled={!canNextPage}>
-              {">"}
-            </button>{" "}
-            <button
-              onClick={() => gotoPage(pageCount - 1)}
-              disabled={!canNextPage}
-            >
-              {">>"}
-            </button>{" "} */}
+         
 
             {Pagination && (
               <div className="d-flex algn-items-center" >
                 <span
-                  onClick={() => gotoPage(1)}
+                  onClick={() => gotoPage(0)}
                   disabled={canPreviousPage}
                   className="material-icons p-2 "
                 >
@@ -233,24 +216,7 @@ export default function Table({
                   })
                 }
 
-                {/*                 
-                <span
-                  onClick={(cust__icon) => nextPage()}
-                  disabled={canNextPage}
-                  className=" active p-2 px-3"
-                >
-                  2
-                </span>
-                <span
-                  onClick={() => nextPage()}
-                  disabled={canNextPage}
-                  className="p-2  px-3"
-                >
-                  3
-             
-             
-             
-                </span> */}
+           
                 <span
                   onClick={() => gotoPage(pageCount - 1)}
                   disabled={!canNextPage}
@@ -273,3 +239,57 @@ export default function Table({
 }
 
 
+     {
+       /*                 
+                <span
+                  onClick={(cust__icon) => nextPage()}
+                  disabled={canNextPage}
+                  className=" active p-2 px-3"
+                >
+                  2
+                </span>
+                <span
+                  onClick={() => nextPage()}
+                  disabled={canNextPage}
+                  className="p-2  px-3"
+                >
+                  3
+             
+             
+             
+                </span> */
+     }
+        {
+          /* <button
+              onClick={() => gotoPage(0)}
+              disabled={!canPreviousPage}
+              className="material-icons p-2 "
+            >
+              chevron_left
+              {"<<"}
+            </button>{" "}
+            <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+              {"<"}
+            </button>{" "}
+            <button onClick={() => nextPage()} disabled={!canNextPage}>
+              {">"}
+            </button>{" "}
+            <button
+              onClick={() => gotoPage(pageCount - 1)}
+              disabled={!canNextPage}
+            >
+              {">>"}
+            </button>{" "} */
+        }
+         //     <select
+        //   value={pageSize}
+        //   onChange={e => {
+        //     setPageSize(Number(e.target.value))
+        //   }}
+        // >
+        //   {[10, 20, 30, 40, 50].map(pageSize => (
+        //     <option key={pageSize} value={pageSize}>
+        //       Show {pageSize}
+        //     </option>
+        //   ))}
+        // </select>
