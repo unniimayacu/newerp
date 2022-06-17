@@ -79,8 +79,9 @@ export default function Table({
             className="p-2 px-3 prod_select__custom "
             value={pageSize}
             onChange={(e) => {
-              let tmpVal = data / e.target.value;
-              setPageSize(tmpVal);
+              // let tmpVal = data / e.target.value;
+              // setPageSize(tmpVal);
+              setPageSize(Number(e.target.value));
             }}
           >
             {[10, 20, 30, 40, 50].map((pageSize) => (
@@ -211,7 +212,7 @@ export default function Table({
             {Pagination && (
               <div className="d-flex algn-items-center" >
                 <span
-                  onClick={() => gotoPage(1)}
+                  onClick={() => gotoPage(0)}
                   disabled={canPreviousPage}
                   className="material-icons p-2 "
                 >
@@ -225,9 +226,9 @@ export default function Table({
                     return (
                       <PaginateBtn
                         onClick={() => gotoPage(index)}
-                        pageNum={index }
+                        pageNum={index + 1 }
                       >
-                        {index}
+                        {index + 1 }
                       </PaginateBtn>
                     );
                   })
