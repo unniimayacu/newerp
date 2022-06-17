@@ -450,40 +450,60 @@ function AddNewCustomer() {
                   </Accordion>
                 </div>
               </div>
+              <div className="row mt-3 justify-content-center">
+                <div className="col-12">
+                  <Accordion defaultActiveKey={0} flush>
+                    <Accordion.Item>
+                      <Accordion.Header>
+                        <h6 className={`${styles.bankheading}`}>
+                          Bank Account Details
+                        </h6>
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <div className="container-fluid">
+                          <div className="row justify-content-center">
+                            <div className={`col-3 mt-3 ${styles.columndiv}`}>
+                              <div className="mt-2 ">
+                                <p className={`mb-1  ${styles.ptype}`}>
+                                  Account Name
+                                </p>
+                                <InputType />
+                              </div>
+                            </div>
+                            <div className={`col-3  mt-3 ${styles.columndiv}`}>
+                              <div className="mt-2">
+                                <p className={`mb-1  ${styles.ptype}`}>
+                                  Account Number
+                                </p>
+                                <InputType />
+                              </div>
+                            </div>
+                            <div className={`col-3 mt-3 ${styles.columndiv}`}>
+                              <div className="mt-2">
+                                <p className={`mb-1  ${styles.ptype}`}>
+                                  Bank Name
+                                </p>
+                                <InputType />
+                              </div>
+                            </div>
+                            <div className={`col-3  mt-3 ${styles.columndiv}`}>
+                              <div className="mt-2 ">
+                                <p className={`mb-1  ${styles.ptype}`}>
+                                  IBAN Code
+                                </p>
+                                <InputType />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+                </div>
+              </div>
+              {/* <div className="row mt-3  justify-content-center"></div> */}
 
-              <div className="row mt-3  justify-content-center">
-                <h6 className={`${styles.bankheading}`}>
-                  Bank Account Details
-                </h6>
-              </div>
-              <div className="row justify-content-center">
-                <div className={`col-4  mt-3 ${styles.columndiv}`}>
-                  <div className="mt-2 ">
-                    <p className={`mb-1  ${styles.ptype}`}>Account Name</p>
-                    <InputType />
-                  </div>
-                </div>
-                <div className={`col-4  mt-3 ${styles.columndiv}`}>
-                  <div className="mt-2">
-                    <p className={`mb-1  ${styles.ptype}`}>Account Number</p>
-                    <InputType />
-                  </div>
-                </div>
-                <div className={`col-4 mt-3 ${styles.columndiv}`}>
-                  <div className="mt-2">
-                    <p className={`mb-1  ${styles.ptype}`}>Bank Name</p>
-                    <InputType />
-                  </div>
-                </div>
-              </div>
-              <div className="row ">
-                <div className={`col-4  mt-3 ${styles.columndiv}`}>
-                  <div className="mt-2 ">
-                    <p className={`mb-1  ${styles.ptype}`}>IBAN Code</p>
-                    <InputType />
-                  </div>
-                </div>
-              </div>
+              <div className="row "></div>
               <div className="row d-flex justify-content-center">
                 <div
                   className={`col-12 d-flex justify-content-center mt-5 ${styles.columndiv}`}
