@@ -55,6 +55,10 @@ function Category() {
           <Slidebar />
         </div> */}
         <Layout>
+          {/* <div className="row justify-content-center">
+            <Header />
+          </div> */}
+
           <div className="container mt-5 justify-content-center">
             <div className="row justify-content-center">
               <div className="d-flex justify-content-start pb-3  border-bottom">
