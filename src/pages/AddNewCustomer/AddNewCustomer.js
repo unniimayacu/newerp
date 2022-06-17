@@ -12,6 +12,7 @@ import FileUpload from "components/File uploader/FileUpload";
 import Editor from "components/Text Editor/Editor";
 import Layout from "Layout/Layout";
 import { BsFillPlusCircleFill } from "react-icons/bs";
+import { Accordion } from "react-bootstrap";
 
 const AddContact = () => (
   <p>
@@ -203,6 +204,27 @@ function AddNewCustomer() {
                 </div>
               </div>
               <div className="row justify-content-center">
+                <div className={`col-4  mt-3 ${styles.columndiv}`}>
+                  <div className="mt-2">
+                    <p className={`mb-1  ${styles.ptype}`}>Country</p>
+                    <InputDropdown dropdown={`${styles.drop}`} />
+                  </div>
+                </div>
+                <div className={`col-4  mt-3 ${styles.columndiv}`}>
+                  <div className="mt-2">
+                    <p className={`mb-1  ${styles.ptype}`}>State</p>
+                    <InputDropdown dropdown={`${styles.drop}`} />
+                  </div>
+                </div>
+
+                <div className={`col-4  mt-3 ${styles.columndiv}`}>
+                  <div className="mt-2 ">
+                    <p className={`mb-2  ${styles.ptype}`}>City</p>
+                    <InputType />
+                  </div>
+                </div>
+              </div>
+              <div className="row justify-content-center">
                 <div className={`col-4 mt-3 ${styles.columndiv}`}>
                   <div className="mt-2">
                     <p className={`mb-1  ${styles.ptype}`}>Email</p>
@@ -275,7 +297,7 @@ function AddNewCustomer() {
                   <AddElement key={i} />
                 ))}
               </div>
-              <div className="row justify-content-center">
+              {/* <div className="row justify-content-center">
                 <div className={`col-4  mt-3 ${styles.columndiv}`}>
                   <div className="mt-2 ">
                     <p className={`mb-2  ${styles.ptype}`}>City</p>
@@ -294,11 +316,116 @@ function AddNewCustomer() {
                     <InputDropdown dropdown={`${styles.drop}`} />
                   </div>
                 </div>
+              </div> */}
+              <div className="row mt-3 justify-content-center">
+                <div className="col-12">
+                  <Accordion defaultActiveKey={0} flush>
+                    <Accordion.Item>
+                      <Accordion.Header>
+                        <h6 className={`${styles.bankheading}`}>
+                          Payment Type
+                        </h6>
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <div className={`row`}>
+                          <div className="col-4">
+                            <label htmlFor="radio">
+                              <div className=" d-flex justify-content-center ">
+                                <p>
+                                  Credit
+                                  <input
+                                    type="radio"
+                                    id="radio"
+                                    name="payment_type"
+                                    className=" ms-2 "
+                                  />
+                                </p>
+                              </div>
+                            </label>
+                          </div>
+                          <div className="col-4">
+                            <label htmlFor="radio1">
+                              <div className=" d-flex justify-content-center ">
+                                <p>
+                                  Cash
+                                  <input
+                                    type="radio"
+                                    id="radio1"
+                                    name="payment_type"
+                                    className=" ms-2 "
+                                  />
+                                </p>
+                              </div>
+                            </label>
+                          </div>
+                          <div className="col-4">
+                            <label htmlFor="radio2">
+                              <div className=" d-flex justify-content-center ">
+                                <p>
+                                  Cheque on Delivery
+                                  <input
+                                    type="radio"
+                                    id="radio2"
+                                    name="payment_type"
+                                    className=" ms-2 "
+                                  />
+                                </p>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+                </div>
               </div>
               <div className="row mt-3 justify-content-center">
-                
+                <div className="col-12">
+                  <Accordion defaultActiveKey={0} flush>
+                    <Accordion.Item>
+                      <Accordion.Header>
+                        <h6 className={`ms-0 ps-0 ${styles.bankheading}`}>
+                          Trade Type
+                        </h6>
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <div className={`row`}>
+                          <div className="col-6">
+                            <label htmlFor="non_export">
+                              <div className=" d-flex justify-content-center ">
+                                <p>
+                                  Non Export
+                                  <input
+                                    type="radio"
+                                    id="non_export"
+                                    name="Trade_type"
+                                    className=" ms-2 "
+                                  />
+                                </p>
+                              </div>
+                            </label>
+                          </div>
+                          <div className="col-6">
+                            <label htmlFor="export">
+                              <div className=" d-flex justify-content-center ">
+                                <p>
+                                  Export
+                                  <input
+                                    type="radio"
+                                    id="export"
+                                    name="Trade_type"
+                                    className=" ms-2 "
+                                  />
+                                </p>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+                </div>
               </div>
-
 
               <div className="row mt-3  justify-content-center">
                 <h6 className={`${styles.bankheading}`}>
