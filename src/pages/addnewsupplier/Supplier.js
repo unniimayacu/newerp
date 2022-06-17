@@ -11,34 +11,40 @@ import Editor from "components/Text Editor/Editor";
 import Button from "components/button/Button";
 import { PlusCircleFilled } from "@ant-design/icons";
 import Profileupload from "components/profilepicture/Profileupload";
+import { Table } from "react-bootstrap";
 
-const AddContact = () => (
-  <div className="col-12 mx-5 ">
-    <div className=" d-flex justify-content-end p-5 ">
-      <p>
-        <input type="radio" className="" />
-        <span className="ms-1"> Set default</span>
-      </p>
-    </div>
-    <div className="row mx-5 py-3">
-      <div className="col-xl-3 col-lg-3 col-12">
-        <InputType placeholder="Name" />
-      </div>
-      <div className="col-xl-3 col-lg-3 col-12">
-        <PhoneInputt />
-      </div>
-      <div className="col-xl-3 col-lg-3 col-12">
-        <InputType placeholder="Email" />
-      </div>
-      <div className="col-xl-3 col-lg-3 col-12">
-        <InputType placeholder="Department" />
-      </div>
-    </div>
-  </div>
-);
+// const AddContact = () => (
+//   <div className="col-12 mx-5 ">
+//     <div className=" d-flex justify-content-end p-5 ">
+//       <p>
+//         <input type="radio" className="" />
+//         <span className="ms-1"> Set default</span>
+//       </p>
+//     </div>
+//     <div className="row mx-5 py-3">
+//       <div className="col-xl-3 col-lg-3 col-12">
+//         <InputType placeholder="Name" />
+//       </div>
+//       <div className="col-xl-3 col-lg-3 col-12">
+//         <PhoneInputt />
+//       </div>
+//       <div className="col-xl-3 col-lg-3 col-12">
+//         <InputType placeholder="Email" />
+//       </div>
+//       <div className="col-xl-3 col-lg-3 col-12">
+//         <InputType placeholder="Department" />
+//       </div>
+//     </div>
+//   </div>
+// );
+
+
 
 function Supplier() {
   const [contact, setContact] = useState(0);
+  const [noofRows, setNoofRows] = useState(0)
+
+  
   return (
     <>
       <div className="container-fluid">
@@ -166,7 +172,7 @@ function Supplier() {
                 <TextArea />
               </div>
             </div>
-            <div className="row mx-5 py-4 ">
+            <div className="row mx-5 py-5 ">
               <div className="col-xl-4 col-lg-4 col-12">
                 <p className={`mb-0 ms-0`}>City</p>
                 <InputType />
@@ -180,6 +186,72 @@ function Supplier() {
                 <PhoneInputt />
               </div>
             </div>
+
+            <div className="">
+              <div className="row mx-5">
+                <div className="col-xl-12 col-lg-12 col-12">
+                  <h5>Product Details</h5>
+                </div>
+                <Table responsive bordered size="sm">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Product SKU</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>dghd</td>
+                      <td>def</td>
+                      <td>333</td>
+                    </tr>
+                    {[...Array(noofRows)].map((elementInArray, index, text) => {
+                      return (
+                        <tr>
+                          {/* <th scope="row">{index}</th> */}
+                          <td>
+                            <input
+                              className="supplier_input__style"
+                              type={text} onChange={(event)=>event.target.n}
+                            />{" "}
+                          </td>
+                          <td>
+                            <input
+                              className="supplier_input__style"
+                              type={text}
+                            />{" "}
+                          </td>
+                          <td>
+                            <input
+                              className="supplier_input__style"
+                              type={text}
+                            />{" "}
+                          </td>
+                        </tr>
+
+
+
+                      );
+                    })}
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+
+            <div className="row ">
+              <div className="col-xl-12 col-lg-12 col-12 ">
+                <div className="d-flex justify-content-center">
+                  {/* <Button>Add Product</Button> */}
+
+                  <Button onClick={() => setNoofRows(noofRows + 1)}>
+                    Add New Row
+                  </Button>
+                </div>
+              </div>
+            </div>
+
             <div className="row mx-5  ">
               <div className="col-12">
                 <h5>Bank Account Details</h5>
@@ -215,7 +287,7 @@ function Supplier() {
               </div>
             </div>
             <div className="row mx-5 py-5">
-              <div className="col-12 d-flex justify-content-center">
+              <div className="col-xl-12 col-lg-12 col-12 ">
                 <Editor />
               </div>
             </div>
@@ -250,12 +322,12 @@ function Supplier() {
             </div>
 
             <div className="row justify-content-center">
-              {[...Array(contact)].map((_, i) => (
+              {/* {[...Array(contact)].map((_, i) => (
                 <AddContact key={i} />
-              ))}
+              ))} */}
             </div>
 
-            <div className="row mx-4 ">
+            <div className="row mx-4 py-4">
               <div className="col-12 d-flex justify-content-end ">
                 <div className="ms-1">
                   <Button
@@ -264,12 +336,60 @@ function Supplier() {
                       <PlusCircleFilled className="ms-2 supplier_plusicon__size" />
                     }
                     rounded={true}
-                    onClick={() => setContact(contact + 1)}
+                    // onClick={() => setContact(contact + 1)}
                   >
                     Add
                   </Button>
                 </div>
               </div>
+            </div>
+
+            <div className="row mx-5">
+              <div className="col-xl-12 col-lg-12 col-12"></div>
+              <Table responsive bordered size="sm">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Mobile Number</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Default</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>dghd</td>
+                    <td>def</td>
+                    <td>333</td>
+                  </tr>
+                  {/* {[...Array(noofRows)].map((elementInArray, index, text) => {
+                    return (
+                      <tr>
+                      
+                        <td>
+                          <input
+                            className="supplier_input__style"
+                            type={text}
+                          />{" "}
+                        </td>
+                        <td>
+                          <input
+                            className="supplier_input__style"
+                            type={text}
+                          />{" "}
+                        </td>
+                        <td>
+                          <input
+                            className="supplier_input__style"
+                            type={text}
+                          />{" "}
+                        </td>
+                      </tr>
+                    );
+                  })} */}
+                </tbody>
+              </Table>
             </div>
 
             <div className="row py-3">

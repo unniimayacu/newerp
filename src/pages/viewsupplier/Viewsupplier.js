@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import Button from "components/button/Button";
 import Header from "components/header/Header";
-import Profileupload from "components/profilepicture/Profileupload";
+import Profile from "components/Add profile/Profile";
 // import React, { useState } from "react";
 import "./viewsupplier.scss";
 import { Accordion, Card } from "react-bootstrap";
@@ -126,13 +126,19 @@ function Viewsupplier() {
               <Header />
             </div>
 
-            <div className="row mt-5 mx-5">
-              <div className="col-xl-3 col-lg-3 col-12">
-                <div className="border-end">
-                  <Profileupload />
+            <div className="row mt-4 mx-5">
+              
+              <div className="col-xl-3 col-lg-3 col-12 mt-0 p-0">
+                <div className="border-end ">
+                  <Profile />
+                  <div>
+                    <h4>Savtest Name</h4>
+                    <p>Reon technologies</p>
+                    <p>savtest@gmail.com</p>
+                  </div>
                 </div>
               </div>
-              <div className="col-xl-9 col-lg-9 col-12">
+              <div className="col-xl-9 col-lg-9 col-12 mt-5 p-4">
                 <div className="viewprof_btn__radius">
                   <Button btnType="secondary" rounded={true}>
                     Supplier Info
@@ -305,8 +311,6 @@ function Viewsupplier() {
                 </Accordion>
               </div>
             </div>
-
-         
 
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-12">
