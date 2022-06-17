@@ -13,47 +13,48 @@ import Editor from "components/Text Editor/Editor";
 import Layout from "Layout/Layout";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { Accordion } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 
-const AddContact = () => (
-  <p>
-    <div className="row mt-3 justify-content-center">
-      <div className={`${styles.setdefault}`}>
-        <label htmlFor="radioo">
-          <p>
-            <input type="radio" name="setdefault" id="radioo" className="me-2" />
-            Set default
-          </p>
-        </label>
-      </div>
-      <div className="row ">
-        <div className={`col-3  mt-3 ${styles.columndiv}`}>
-          <div className="mt-2">
-            <p className={`mb-1  ${styles.ptype}`}>Name</p>
-            <InputType className={`${styles.contactinput}`} />
-          </div>
-        </div>
-        <div className={`col-3  mt-3 ${styles.columndiv}`}>
-          <div className="mt-2">
-            <p className={`mb-1  ${styles.ptype}`}>Mobile</p>
-            <PhoneInputt className={`${styles.contactphone}`} />
-          </div>
-        </div>
-        <div className={`col-3   mt-3 ${styles.columndiv}`}>
-          <div className="mt-2">
-            <p className={`mb-1  ${styles.ptype}`}>Email</p>
-            <InputType className={`${styles.contactinput}`} />
-          </div>
-        </div>
-        <div className={`col-3   mt-3 ${styles.columndiv}`}>
-          <div className="mt-2">
-            <p className={`mb-1  ${styles.ptype}`}>Department</p>
-            <InputType className={`${styles.contactinput}`} />
-          </div>
-        </div>
-      </div>
-    </div>
-  </p>
-);
+// const AddContact = () => (
+//   <p>
+//     <div className="row mt-3 justify-content-center">
+//       <div className={`${styles.setdefault}`}>
+//         <label htmlFor="radioo">
+//           <p>
+//             <input type="radio" name="setdefault" id="radioo" className="me-2" />
+//             Set default
+//           </p>
+//         </label>
+//       </div>
+//       <div className="row ">
+//         <div className={`col-3  mt-3 ${styles.columndiv}`}>
+//           <div className="mt-2">
+//             <p className={`mb-1  ${styles.ptype}`}>Name</p>
+//             <InputType className={`${styles.contactinput}`} />
+//           </div>
+//         </div>
+//         <div className={`col-3  mt-3 ${styles.columndiv}`}>
+//           <div className="mt-2">
+//             <p className={`mb-1  ${styles.ptype}`}>Mobile</p>
+//             <PhoneInputt className={`${styles.contactphone}`} />
+//           </div>
+//         </div>
+//         <div className={`col-3   mt-3 ${styles.columndiv}`}>
+//           <div className="mt-2">
+//             <p className={`mb-1  ${styles.ptype}`}>Email</p>
+//             <InputType className={`${styles.contactinput}`} />
+//           </div>
+//         </div>
+//         <div className={`col-3   mt-3 ${styles.columndiv}`}>
+//           <div className="mt-2">
+//             <p className={`mb-1  ${styles.ptype}`}>Department</p>
+//             <InputType className={`${styles.contactinput}`} />
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </p>
+// );
 
 
 const AddElement = () => (
@@ -84,6 +85,29 @@ function AddNewCustomer() {
  const [contact, setContact] = useState(0);
 
 
+  const [noofRows, setNoofRows] = useState(0);
+  const [name, setName] = useState("");
+  const [phone, setphone] = useState("");
+  const [email, setemail] = useState("");
+  const [department, setDepartment] = useState("");
+
+  const [contactPersonData, setContactPersonData] = useState([]);
+
+  const addData = () => {
+    console.log(name);
+    setContactPersonData([
+      ...contactPersonData,
+      {
+        name: name,
+        phone,
+        email,
+        department,
+      },
+    ]);
+  };
+  console.log("contact person data : ", contactPersonData);
+
+
   return (
     <div>
       <div className="container-fluid">
@@ -100,9 +124,9 @@ function AddNewCustomer() {
 
             <div className="row  justify-content-center">
               <div className={`col-4  ${styles.columndiv}`}>
-                <div className="mt-5 pt-4">
+                <div className="mt-5 pt-4 ms-2">
                   <p className={`mb-0  ${styles.ptype}`}>Contact Type</p>
-                  <InputDropdown dropdown={`${styles.drop}`} />
+                  <InputDropdown dropdown={` ${styles.drop}`} />
                 </div>
               </div>
               <div className={`col-4  ${styles.columndiv}`}>
@@ -486,7 +510,7 @@ function AddNewCustomer() {
                 </h6>
               </div>
               <div className="row mt-3  justify-content-center">
-                <div className={`${styles.setdefault}`}>
+                {/* <div className={`${styles.setdefault}`}>
                   <label htmlFor="radio">
                     <p>
                       <input
@@ -498,45 +522,62 @@ function AddNewCustomer() {
                       Set default
                     </p>
                   </label>
-                </div>
+                </div> */}
                 <div className="row justify-content-center">
                   <div className={`col-3  mt-3 ${styles.columndiv}`}>
                     <div className="mt-2">
                       <p className={`mb-1  ${styles.ptype}`}>Name</p>
-                      <InputType className={`${styles.contactinput}`} />
+                      <InputType
+                        className={`${styles.contactinput}`}
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
+                      />
                     </div>
                   </div>
                   <div className={`col-3  mt-3 ${styles.columndiv}`}>
                     <div className="mt-2">
                       <p className={`mb-1  ${styles.ptype}`}>Mobile</p>
-                      <PhoneInputt className={`${styles.contactphone}`} />
+                      <PhoneInputt
+                        className={`${styles.contactphone}`}
+                        value={phone.phone}
+                        onChange={(phone) => setphone(phone)}
+                      />
                     </div>
                   </div>
                   <div className={`col-3  mt-3 ${styles.columndiv}`}>
                     <div className="mt-2">
                       <p className={`mb-1  ${styles.ptype}`}>Email</p>
-                      <InputType className={`${styles.contactinput}`} />
+                      <InputType
+                        className={`${styles.contactinput}`}
+                        value={email}
+                        onChange={(event) => setemail(event.target.value)}
+                      />
                     </div>
                   </div>
                   <div className={`col-3   mt-3 ${styles.columndiv}`}>
                     <div className="mt-2">
                       <p className={`mb-1  ${styles.ptype}`}>Department</p>
-                      <InputType className={`${styles.contactinput}`} />
+                      <InputType
+                        className={`${styles.contactinput}`}
+                        value={department}
+                        onChange={(event) => setDepartment(event.target.value)}
+                      />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="row justify-content-center">
-                {[...Array(contact)].map((_, i) => (
+                {/* {[...Array(contact)].map((_, i) => (
                   <AddContact key={i} />
-                ))}
+                ))} */}
               </div>
               <div className="row mt-3 justify-content-center">
                 <div className={`${styles.setdefault}`}>
                   <Button
                     btnType="white"
                     halfrounded={true}
-                    onClick={() => setContact(contact + 1)}
+                    // onClick={() => setContact(contact + 1)}
+                    onClick={() => addData()}
                   >
                     <div className="d-flex  m-0 p-0">
                       <p className="mt-1 mb-2 p-1">Add</p>
@@ -546,6 +587,49 @@ function AddNewCustomer() {
                       />
                     </div>
                   </Button>
+                </div>
+              </div>
+              <div className="row mt-3 justify-content-center">
+                <div className="col-12">
+                  <Table responsive bordered size="sm">
+                    <thead className={`${styles.tablethread}`}>
+                      <tr className={`${styles.tablerow}`}>
+                        <th className={`${styles.tablehead}`}>Name</th>
+                        <th className={`${styles.tablehead}`}>Mobile Number</th>
+                        <th className={`${styles.tablehead}`}>Email</th>
+                        <th className={`${styles.tablehead}`}>Department</th>
+                        <th className={`${styles.tablehead}`}>Default</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      {contactPersonData &&
+                        contactPersonData.length > 0 &&
+                        contactPersonData.map((item, index) => {
+                          return (
+                            <tr
+                              className={`${styles.tablebody} ${styles.tablethread}`}
+                            >
+                              <td className={`${styles.tablerow}`}>
+                                {item.name}
+                              </td>
+                              <td className={`${styles.tablerow}`}>
+                                {item.phone}
+                              </td>
+                              <td className={`${styles.tablerow}`}>
+                                {item.email}{" "}
+                              </td>
+                              <td className={`${styles.tablerow}`}>
+                                {item.department}{" "}
+                              </td>
+                              <td className={`${styles.tablerow}`}>
+                                <input type="radio" name="radio" />{" "}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </Table>
                 </div>
               </div>
 
