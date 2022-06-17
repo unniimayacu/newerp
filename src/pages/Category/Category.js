@@ -9,6 +9,7 @@ import Table from 'components/table/Table';
 
 import Categorydata from 'components/ddatas/Categorydata';
 import Slidebar from 'components/Slidebar/Slidebar';
+import Layout from 'Layout/Layout';
 
 
 
@@ -59,48 +60,53 @@ function Category() {
   return (
     <div>
       <div className="container-fluid">
-        <div className="row justify-content-center">
+        {/* <div className="row justify-content-center">
           <Header />
           <Slidebar />
-         
-        </div>
-        <div className="container mt-5 justify-content-center">
-          <div className="row justify-content-center">
-            <div className="d-flex justify-content-start pb-3  border-bottom">
-              <div className="col-2">
-                <h4>Category</h4>
-              </div>
-              <div className=" col-2 m-0 p-0">
-                <Button 
-                //  appendIcon={}
-                 >New Category <AiOutlinePlus /></Button>
-              </div>
-              <div className="col-2 ">
-                <Button 
-                // appendIcon={}
-                >Upload Via CSV <FiUpload /></Button>
-              </div>
+        </div> */}
+        <Layout>
+          <div className="container mt-5 justify-content-center">
+            <div className="row justify-content-center">
+              <div className="d-flex justify-content-start pb-3  border-bottom">
+                <div className="col-2 m-0 p-0">
+                  <h4>Category</h4>
+                </div>
+                <div className=" col-2 m-0 p-0">
+                  <Button
+                  //  appendIcon={}
+                  >
+                    New Category <AiOutlinePlus />
+                  </Button>
+                </div>
+                <div className="col-2 m-0 p-0">
+                  <Button
+                  // appendIcon={}
+                  >
+                    Upload Via CSV <FiUpload />
+                  </Button>
+                </div>
 
-              <div className="d-flex justify-content-end col-6 ">
-                <Newcontact />
+                <div className="d-flex justify-content-end col-6 m-0 p-0">
+                  <Newcontact />
+                </div>
+              </div>
+            </div>
+            <div className="row mt-5 justify-content-center">
+              <div>
+                <Table
+                  data={data}
+                  columns={columns}
+                  PageSize={true}
+                  Pagination={true}
+                  Sorted={true}
+                  className={true}
+                  responsive={true}
+                  pagecenter={true}
+                />
               </div>
             </div>
           </div>
-          <div className="row mt-5 justify-content-center">
-            <div>
-              <Table
-                data={data}
-                columns={columns}
-                PageSize={true}
-                Pagination={true}
-                Sorted={true}
-                className={true}
-                responsive={true}
-                pagecenter={true}
-              />
-            </div>
-          </div>
-        </div>
+        </Layout>
       </div>
     </div>
   );

@@ -18,8 +18,8 @@ const showSidebar = () => setSidebar(!sidebar)
 
 
   return (
-    <div>
-      <div>
+    <>
+      <div className='row'>
         {/* <ProSidebar>
           <Menu iconShape="square">
             <Link to="/category" clasName="menu-bars">
@@ -31,11 +31,11 @@ const showSidebar = () => setSidebar(!sidebar)
             </SubMenu>
           </Menu>
         </ProSidebar> */}
-        <div className="navbar">
+        {/* <div className="navbar">
           <Link to="#" className="menu_bars">
             <FaBars onClick={showSidebar} />
           </Link>
-        </div>
+        </div> */}
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items">
             <li className="navbar-toggle">
@@ -55,7 +55,7 @@ const showSidebar = () => setSidebar(!sidebar)
           </ul>
         </nav>
       </div>
-    </div>
+    </>
   );
 }
 
