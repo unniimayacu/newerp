@@ -15,13 +15,20 @@ function PhoneInputt(props) {
 
   return (
     <div>
-      <div>
+      <div className={`${styles.phonein}`}>
         <PhoneInput
           country={"in"}
           countryCodeEditable={false}
           // inputClass="w-100"
-          inputClass="w-100 border-1px-solid  "
+          inputClass="w-100 border-0  "
+          
+          buttonClass="border-0 "
           // inputClass="w-100 border-1px-solid  "
+          inputStyle={{
+            backgroundColor:"whitesmoke",
+            
+            color:"black"
+          }}
           value={value}
           onChange={onChange}
           
