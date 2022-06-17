@@ -15,9 +15,9 @@ function InputDropdown(props) {
         className={`${styles.inputdropdown}`}
       /> */}
       <DropdownList
-        defaultValue="Yellow"
-        data={["Red", "Yellow", "Blue", "Orange"]}
-        className={`${styles.inputdropdown}`}
+        defaultValue=" "
+        data={[" ", " ", " ", " "]}
+        className={`${styles.inputdropdown} ${props.dropdown}`}
       />
     </div>
   );

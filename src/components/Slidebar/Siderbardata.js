@@ -3,17 +3,17 @@ import React from 'react'
 export  const Siderbardata = [
   {
     title: "Category",
-    path: "/cat",
+    path: "/category",
     cName: "nav-text",
   },
   {
     title: "Add New Customer",
-    path: "/addnewcustomer1",
+    path: "/AddNew",
     cName: "nav-text",
   },
   {
     title: "Add New Quotation",
-    path: "/addnewquotation1",
+    path: "/addnewquotation",
     cName: "nav-text",
   },
 ];

@@ -79,9 +79,9 @@ export default function Table({
             className="p-2 px-2 prod_select__custom "
             value={pageSize}
             onChange={(e) => {
-               setPageSize(Number(e.target.value));
               // let tmpVal = data / e.target.value;
               // setPageSize(tmpVal);
+              setPageSize(Number(e.target.value));
             }}
           >
             {[10, 20, 30, 40, 50].map((pageSize) => (
@@ -208,9 +208,9 @@ export default function Table({
                     return (
                       <PaginateBtn
                         onClick={() => gotoPage(index)}
-                        pageNum={index }
+                        pageNum={index + 1 }
                       >
-                        {index}
+                        {index + 1 }
                       </PaginateBtn>
                     );
                   })
