@@ -38,13 +38,45 @@ import { Table } from "react-bootstrap";
 //   </div>
 // );
 
-
-
 function Supplier() {
-  const [contact, setContact] = useState(0);
-  const [noofRows, setNoofRows] = useState(0)
+  const [product, setProduct] = useState("");
+  const [productsku, setProductsku] = useState("");
+  const [productprice, setProductprice] = useState("");
+
+  const [noofRows, setNoofRows] = useState(0);
+  const [name, setName] = useState("");
+  const [phone, setphone] = useState("");
+  const [email, setemail] = useState("");
+  const [department, setDepartment] = useState("");
+
+  const [contactPersonData, setContactPersonData] = useState([]);
+
+  const addData = () => {
+    console.log(name)
+    setContactPersonData([...contactPersonData, {
+      name:name,
+      phone,
+      email,
+      department,
+     
+    }])
+    
+  };
+  console.log("contact person data : ", contactPersonData);
+  // const tableRows = data.map((item) => {});
+
+  // return item (
+  //   <tr>
+  //     <td>{item.name}</td>
+  //     <td>{item.phone}</td>
+  //     <td>{item.email}</td>
+  //     <td>{item.department}</td>
+  //   </tr>
+  // );
+ 
 
   
+
   return (
     <>
       <div className="container-fluid">
@@ -66,7 +98,7 @@ function Supplier() {
                 <p className={`mb-0 ms-2`}>Contact Type</p>
                 <InputDropdown />
               </div>
-              <div className="col-xl-2 col-lg-2 col-12">
+              <div className="col-xl-3 col-lg-3 col-12">
                 <div className=" d-flex justify-content-evenly mt-4">
                   <div class="form-check mb-0 ms-0   ">
                     <input
@@ -107,7 +139,7 @@ function Supplier() {
                 <p className={`mb-0 ms-0`}>Name</p>
                 <InputType placeholder="Name" />
               </div>
-              <div className="col-xl-3 col-xl-3 col-12 mt-2 ">
+              <div className="col-xl-2 col-xl-2 col-12 pt-3 d-flex justify-content-end  ">
                 <div className="profile__custom_size">
                   <Profileupload />
                 </div>
@@ -203,9 +235,9 @@ function Supplier() {
 
                   <tbody>
                     <tr>
-                      <td>dghd</td>
+                      {/* <td>dghd</td>
                       <td>def</td>
-                      <td>333</td>
+                      <td>333</td> */}
                     </tr>
                     {[...Array(noofRows)].map((elementInArray, index, text) => {
                       return (
@@ -214,25 +246,55 @@ function Supplier() {
                           <td>
                             <input
                               className="supplier_input__style"
-                              type={text} onChange={(event)=>event.target.n}
-                            />{" "}
-                          </td>
-                          <td>
-                            <input
-                              className="supplier_input__style"
+                              onKeyDown={(event) => {
+                                console.log(event);
+                                if (event.keyCode === 9) {
+                                  setProduct(
+                                    { message: event.target.value },
+                                    () => {
+                                      alert(product.message);
+                                    }
+                                  );
+                                }
+                              }}
                               type={text}
                             />{" "}
                           </td>
                           <td>
                             <input
                               className="supplier_input__style"
+                              onKeyDown={(event) => {
+                                console.log(event);
+                                if (event.keyCode === 9) {
+                                  setProductsku(
+                                    { message: event.target.value },
+                                    () => {
+                                      alert(productsku.message);
+                                    }
+                                  );
+                                }
+                              }}
+                              type={text}
+                            />{" "}
+                          </td>
+                          <td>
+                            <input
+                              className="supplier_input__style"
+                              onKeyDown={(event) => {
+                                console.log(event);
+                                if (event.keyCode === 9) {
+                                  setProductprice(
+                                    { message: event.target.value },
+                                    () => {
+                                      alert(productprice.message);
+                                    }
+                                  );
+                                }
+                              }}
                               type={text}
                             />{" "}
                           </td>
                         </tr>
-
-
-
                       );
                     })}
                   </tbody>
@@ -297,27 +359,48 @@ function Supplier() {
               </div>
             </div>
 
-            <div className="row px-5 ">
+            {/* <div className="row px-5 ">
               <div className="col-12 d-flex justify-content-end ">
                 <p>
                   <input type="radio" className="" />
-                  <span className="ms-1"> Set default</span>
+                  <span className="ms-1" value="" checked='checked' > Set default</span>
                 </p>
               </div>
-            </div>
+            </div> */}
 
             <div className="row mx-5 py-3">
               <div className="col-xl-3 col-lg-3 col-12">
-                <InputType placeholder="Name" />
+                <InputType
+                  placeholder="Name"
+                  value={name}
+                  onChange={(event) => setName(event.target.value)}
+                />
               </div>
               <div className="col-xl-3 col-lg-3 col-12">
-                <PhoneInputt />
+                <PhoneInputt
+                  // value={phone}
+                  // onChange={(event) => setphone(event.target.value)}
+                  value={phone.phone}
+                  onChange={(phone) => setphone(phone)}
+                />
               </div>
               <div className="col-xl-3 col-lg-3 col-12">
-                <InputType placeholder="Email" />
+                <InputType
+                  placeholder="Email"
+                  value={email}
+                  onChange={(event) =>
+                    setemail(event.target.value)
+                  }
+                />
               </div>
               <div className="col-xl-3 col-lg-3 col-12">
-                <InputType placeholder="Department" />
+                <InputType
+                  placeholder="Department"
+                  value={department}
+                  onChange={(event) =>
+                    setDepartment(event.target.value)
+                  }
+                />
               </div>
             </div>
 
@@ -336,10 +419,12 @@ function Supplier() {
                       <PlusCircleFilled className="ms-2 supplier_plusicon__size" />
                     }
                     rounded={true}
-                    // onClick={() => setContact(contact + 1)}
+                    onClick={() => addData()}
+                    // onClick={addData}
                   >
                     Add
                   </Button>
+                  {/* submitted: {submitted} */}
                 </div>
               </div>
             </div>
@@ -358,36 +443,25 @@ function Supplier() {
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td>dghd</td>
-                    <td>def</td>
-                    <td>333</td>
-                  </tr>
-                  {/* {[...Array(noofRows)].map((elementInArray, index, text) => {
-                    return (
-                      <tr>
-                      
-                        <td>
-                          <input
-                            className="supplier_input__style"
-                            type={text}
-                          />{" "}
-                        </td>
-                        <td>
-                          <input
-                            className="supplier_input__style"
-                            type={text}
-                          />{" "}
-                        </td>
-                        <td>
-                          <input
-                            className="supplier_input__style"
-                            type={text}
-                          />{" "}
-                        </td>
-                      </tr>
-                    );
-                  })} */}
+                  {contactPersonData && contactPersonData.length > 0 &&
+                    contactPersonData.map((item,index) => {
+                      return (
+                        <tr>
+                          <td>{item.name}</td>
+                          <td>{item.phone}</td>
+                          <td>{item.email} </td>
+                          <td>{item.department} </td>
+                          <td>
+                            <input
+                              type="radio"
+                              name="radio"
+                              
+                            />{" "}
+                          </td>
+                        </tr>
+                      );
+                    })
+                  }
                 </tbody>
               </Table>
             </div>
@@ -405,3 +479,20 @@ function Supplier() {
 }
 
 export default Supplier;
+
+ {
+   /* <tr>
+                    <td>{name}</td>
+                    <td>{phone}</td>
+                    <td>{email} </td>
+                    <td>{department} </td>
+                    <td> </td>
+                  </tr>
+                  
+                  {[...Array(submitted)].map((_, i, data,item) => (
+                <addData key={i} />
+                
+              ))} 
+                  
+                  */
+ }
