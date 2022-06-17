@@ -23,7 +23,9 @@ import "./button.scss";
       if (btnType ==="secondary" ) {
         classNames += " erp__btn_secondary";
       }
-
+if (btnType === "ternary") {
+  classNames += " erp__btn_ternary";
+}
     if (prependIcon) {
       classNames += " erp__btn-prepend-icon";
     }
