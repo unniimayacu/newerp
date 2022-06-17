@@ -11,7 +11,7 @@ import Editor from "components/Text Editor/Editor";
 import Button from "components/button/Button";
 import { PlusCircleFilled } from "@ant-design/icons";
 import Profileupload from "components/profilepicture/Profileupload";
-import { Table } from "react-bootstrap";
+import { Table,Modal } from "react-bootstrap";
 
 // const AddContact = () => (
 //   <div className="col-12 mx-5 ">
@@ -43,6 +43,11 @@ function Supplier() {
   const [productsku, setProductsku] = useState("");
   const [productprice, setProductprice] = useState("");
 
+ const [show, setShow] = useState(false);
+
+ const handleClose = () => setShow(false);
+ const handleShow = () => setShow(true);
+
   const [noofRows, setNoofRows] = useState(0);
   const [name, setName] = useState("");
   const [phone, setphone] = useState("");
@@ -52,15 +57,16 @@ function Supplier() {
   const [contactPersonData, setContactPersonData] = useState([]);
 
   const addData = () => {
-    console.log(name)
-    setContactPersonData([...contactPersonData, {
-      name:name,
-      phone,
-      email,
-      department,
-     
-    }])
-    
+    console.log(name);
+    setContactPersonData([
+      ...contactPersonData,
+      {
+        name: name,
+        phone,
+        email,
+        department,
+      },
+    ]);
   };
   console.log("contact person data : ", contactPersonData);
   // const tableRows = data.map((item) => {});
@@ -73,9 +79,6 @@ function Supplier() {
   //     <td>{item.department}</td>
   //   </tr>
   // );
- 
-
-  
 
   return (
     <>
@@ -306,11 +309,61 @@ function Supplier() {
               <div className="col-xl-12 col-lg-12 col-12 ">
                 <div className="d-flex justify-content-center">
                   {/* <Button>Add Product</Button> */}
-
-                  <Button onClick={() => setNoofRows(noofRows + 1)}>
-                    Add New Row
+                  <Button
+                    btnType="ternary"
+                    appendIcon={
+                      <PlusCircleFilled className="ms-2 supplier_plusicon__size" />
+                    }
+                    onClick={handleShow}
+                  >
+                    Add New product
                   </Button>
+
+                  <div className="ms-2">
+                    <Button
+                      onClick={() => setNoofRows(noofRows + 1)}
+                      btnType="ternary"
+                      appendIcon={
+                        <PlusCircleFilled className="ms-2 supplier_plusicon__size" />
+                      }
+                    >
+                      Add New Row
+                    </Button>
+                  </div>
                 </div>
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title> Add new products </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <div className="row py-2">
+                      <input
+                        className="supplier_input__style"
+                        placeholder=" product"
+                      />
+                    </div>
+                    <div className="row py-2">
+                      <input
+                        className="supplier_input__style"
+                        placeholder=" productsku"
+                      />
+                    </div>
+                    <div className="row py-2">
+                      <input
+                        className="supplier_input__style"
+                        placeholder=" price"
+                      />
+                    </div>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                      Save
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
               </div>
             </div>
 
@@ -388,18 +441,14 @@ function Supplier() {
                 <InputType
                   placeholder="Email"
                   value={email}
-                  onChange={(event) =>
-                    setemail(event.target.value)
-                  }
+                  onChange={(event) => setemail(event.target.value)}
                 />
               </div>
               <div className="col-xl-3 col-lg-3 col-12">
                 <InputType
                   placeholder="Department"
                   value={department}
-                  onChange={(event) =>
-                    setDepartment(event.target.value)
-                  }
+                  onChange={(event) => setDepartment(event.target.value)}
                 />
               </div>
             </div>
@@ -443,8 +492,9 @@ function Supplier() {
                 </thead>
 
                 <tbody>
-                  {contactPersonData && contactPersonData.length > 0 &&
-                    contactPersonData.map((item,index) => {
+                  {contactPersonData &&
+                    contactPersonData.length > 0 &&
+                    contactPersonData.map((item, index) => {
                       return (
                         <tr>
                           <td>{item.name}</td>
@@ -452,16 +502,11 @@ function Supplier() {
                           <td>{item.email} </td>
                           <td>{item.department} </td>
                           <td>
-                            <input
-                              type="radio"
-                              name="radio"
-                              
-                            />{" "}
+                            <input type="radio" name="radio" />{" "}
                           </td>
                         </tr>
                       );
-                    })
-                  }
+                    })}
                 </tbody>
               </Table>
             </div>
@@ -480,8 +525,8 @@ function Supplier() {
 
 export default Supplier;
 
- {
-   /* <tr>
+{
+  /* <tr>
                     <td>{name}</td>
                     <td>{phone}</td>
                     <td>{email} </td>
@@ -495,4 +540,4 @@ export default Supplier;
               ))} 
                   
                   */
- }
+}
