@@ -24,8 +24,7 @@ function PhoneInputt(props) {
           // inputClass="w-100 border-1px-solid  "
           value={value}
           onChange={onChange}
-          // onChange={onChange}
-          // value={value.phone}
+          
           // onChange={(phone) => setValue({ phone })}
           className={`${styles.phoneinput} ${styles.className}`}
           {...rest}
