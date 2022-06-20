@@ -1,26 +1,17 @@
-import Header from 'components/header/Header'
-import {React,useMemo} from 'react'
-import Button from 'components/button/Button';
-import {AiOutlinePlus} from "react-icons/ai"
+import Header from "components/header/Header";
+import { React, useMemo } from "react";
+import Button from "components/button/Button";
+import { AiOutlinePlus } from "react-icons/ai";
 
-import {FiUpload} from 'react-icons/fi'
-import Newcontact from 'components/customersnewcontact/Newcontact';
-import Table from 'components/table/Table';
+import { FiUpload } from "react-icons/fi";
+import Newcontact from "components/customersnewcontact/Newcontact";
+import Table from "components/table/Table";
 
-import Categorydata from 'components/ddatas/Categorydata';
-import Slidebar from 'components/Slidebar/Slidebar';
-import Layout from 'Layout/Layout';
-
-
-
-
-
-
+import Categorydata from "components/ddatas/Categorydata";
+import Slidebar from "components/Slidebar/Slidebar";
+import Layout from "Layout/Layout";
 
 function Category() {
-
-
-
   const columns = useMemo(
     () => [
       {
@@ -51,20 +42,23 @@ function Category() {
         Header: "ACTIVE",
         accessor: "col6",
       },
-
     ],
     []
   );
-  const data = useMemo(() => Categorydata(), []); 
+  const data = useMemo(() => Categorydata(), []);
 
   return (
     <div>
-      <div className="container-fluid">
+      <div className="">
         {/* <div className="row justify-content-center">
           <Header />
           <Slidebar />
         </div> */}
         <Layout>
+          {/* <div className="row justify-content-center">
+            <Header />
+          </div> */}
+
           <div className="container mt-5 justify-content-center">
             <div className="row justify-content-center">
               <div className="d-flex justify-content-start pb-3  border-bottom">
@@ -112,4 +106,4 @@ function Category() {
   );
 }
 
-export default Category
+export default Category;

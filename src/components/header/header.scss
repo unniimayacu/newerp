@@ -1,40 +1,33 @@
 .navbar__color {
-  background: rgb(56, 162, 201);
-  background: linear-gradient(
-    157deg,
-    rgb(66, 77, 230) 30%,
-    rgb(105, 98, 206) 39%,
-    rgb(44, 84, 196) 44%,
-    rgb(52, 90, 204) 58%,
-    rgb(65, 78, 194) 72%,
-    rgb(90, 77, 211) 81%,
-    rgb(66, 63, 223) 89%
-  );
+    max-height: 80px !important;
+    background-color: #007bc1;
 }
+
 .search__border {
-  border-radius: 25px;
-  // background-color: white;
-  padding-right: 17rem;
-  height: 40px;
-  width: 100%;
-  border: none;
+    border-radius: 25px;
+    // background-color: white;
+    padding-right: 17rem;
+    height: 40px;
+    width: 100%;
+    border: none;
 }
+
 .header_icon__size {
-  font-size: 35px;
-  color: white;
+    font-size: 25px;
+    color: white;
 }
+
 // .headersearch__size{
 // // position: relative;
 // }
 // .headerinputsearch{
-
 // }
-.plusicon_size{
+.plusicon_size {
     font-size: 22px;
     color: white;
 }
-.profileicon_size{
+
+.profileicon_size {
     font-size: 40px;
-       color: white;
-      
+    color: white;
 }
