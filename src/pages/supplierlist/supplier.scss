@@ -1,0 +1,38 @@
+.select__custom{
+      border-radius: 35px;
+    // background-color: rgb(35, 112, 156);
+    border-color: rgb(0, 162, 255);
+    color:  rgb(0, 162, 255);
+}
+.cust_icon_edit{
+  font-size: 17px;
+  color: rgb(162, 173, 202);
+}
+.custswitch_color{
+  font-size: 20px;
+}
+.cust_riskgreen_color{
+  height: 18px;
+  width: 18px;
+  background-color: green;
+  border-radius: 50%;
+  border: none;
+  margin: auto;
+  
+}
+.cust_riskred_color{
+   height: 18px;
+  width: 18px;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+   margin: auto;
+}
+.cust_riskyellow_color{
+   height: 18px;
+  width: 18px;
+  background-color: yellow;
+  border-radius: 50%;
+  border: none;
+   margin: auto;
+}
