@@ -253,43 +253,7 @@ const data = React.useMemo(() => Makedata(), []);
             </div>
           </div>
           <div className="row">
-            {/* <div className="d-flex  justify-content-center">
-              <span
-                onClick={() => gotoPage(0)}
-                disabled={canPreviousPage}
-                className="material-icons p-2 "
-              >
-                chevron_left
-              </span>
-              <span
-                onClick={() => previousPage()}
-                disabled={canPreviousPage}
-                className="cust__icon  p-2 px-3"
-              >
-                1
-              </span>
-              <span
-                onClick={() => nextPage()}
-                disabled={canNextPage}
-                className="  p-2 px-3"
-              >
-                2
-              </span>
-              <span
-                onClick={() => nextPage()}
-                disabled={canNextPage}
-                className="p-2  px-3"
-              >
-                3
-              </span>
-              <span
-                onClick={() => gotoPage(pageCount - 1)}
-                disabled={!canNextPage}
-                className="material-icons p-2"
-              >
-                chevron_right
-              </span>
-            </div> */}
+            
           </div>
         </div>
       </div>

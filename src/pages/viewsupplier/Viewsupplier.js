@@ -127,7 +127,6 @@ function Viewsupplier() {
             </div>
 
             <div className="row mt-4 mx-5">
-              
               <div className="col-xl-3 col-lg-3 col-12 mt-0 p-0">
                 <div className="border-end ">
                   <Profile />
@@ -175,7 +174,7 @@ function Viewsupplier() {
               </div>
             </div>
 
-            <div className="row py-3">
+            <div className="row py-3 mx-4">
               <div className="col-xl-12 col-lg-12 col-12 ">
                 <Accordion defaultActiveKey="0" flush>
                   <Accordion.Item eventKey="0">
@@ -243,7 +242,7 @@ function Viewsupplier() {
                           <Accordion defaultActiveKey="0" flush>
                             <Accordion.Item eventKey="0">
                               <Accordion.Header>
-                                <h5> Product Details</h5>
+                                <h5 className="view__supplier__h5_color" > Product Details</h5>
                               </Accordion.Header>
                               <Accordion.Body>
                                 <div className="row">
@@ -312,7 +311,7 @@ function Viewsupplier() {
               </div>
             </div>
 
-            <div className="row">
+            {/* <div className="row">
               <div className="col-xl-12 col-lg-12 col-12">
                 <Accordion defaultActiveKey="0" flush>
                   <Accordion.Item eventKey="0">
@@ -333,6 +332,21 @@ function Viewsupplier() {
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>
+              </div>
+            </div> */}
+
+            <div className="row mx-5 ">
+              <div className="col-xl-12 col-lg-12 col-12">
+                <h4 className="view__supplier__moredetails">Your Notes</h4>
+                <div className="py-2" >
+                  <p className="px-4">
+                    {" "}
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Sunt veniam, alias laudantium commodi beatae omnis dolores
+                    illo aspernatur ex saepe sit perferendis nesciunt vitae
+                    labore dolor adipisci repudiandae assumenda voluptatum!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
