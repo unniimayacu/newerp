@@ -452,7 +452,7 @@ function AddNewCustomer() {
               </div>
               <div className="row mt-3 justify-content-center">
                 <div className="col-12">
-                  <Accordion defaultActiveKey={0} flush>
+                  <Accordion defaultActiveKey={0} flush className={`${styles.accordion_style}`}>
                     <Accordion.Item>
                       <Accordion.Header>
                         <h6 className={`${styles.bankheading}`}>
