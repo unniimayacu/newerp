@@ -90,7 +90,7 @@ function AddNewQuotation() {
 
   return (
     <div>
-      <div className="container-fluid">
+      <div className="">
         {/* <div className="row">
           <Header />
         </div> */}
