@@ -93,7 +93,7 @@ function Category() {
                   data={data}
                   columns={columns}
                   PageSize={true}
-                  Pagination={true}
+                  pagination={true}
                   Sorted={true}
                   className={true}
                   responsive={true}

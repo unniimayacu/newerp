@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTable, usePagination, useSortBy } from "react-table";
 import "./table.scss";
+import Pagination from "@mui/material/Pagination";
 
 export default function Table({
   columns,
@@ -9,7 +10,7 @@ export default function Table({
   paginate = true,
   responsive = false,
   PageSize = true,
-  Pagination = true,
+  pagination = false,
   Sorted = true,
   className = false,
   pagecenter = false,
@@ -43,6 +44,13 @@ export default function Table({
   console.log(data);
 
   // const [pagevalue, setPagevalue] = useState(0);
+
+
+ let [pagee, setPage] = useState(1);
+  const handleChange = (e, index) => {
+    setPage(index);
+    data.jump(index + 1);
+  };
 
   const PaginateBtn = ({ pageNum, children, onClick }) => {
     return (
@@ -90,7 +98,6 @@ export default function Table({
               </option>
             ))}
           </select>
-       
         )}
       </div>
       <div className="cif__table-wrapper">
@@ -189,10 +196,8 @@ export default function Table({
           </table>
 
           <div className={`${pagecenter && "page_div_center"}`}>
-         
-
-            {Pagination && (
-              <div className="d-flex algn-items-center" >
+            {pagination && (
+              <div className="d-flex algn-items-center">
                 <span
                   onClick={() => gotoPage(0)}
                   disabled={canPreviousPage}
@@ -208,15 +213,14 @@ export default function Table({
                     return (
                       <PaginateBtn
                         onClick={() => gotoPage(index)}
-                        pageNum={index + 1 }
+                        pageNum={index + 1}
                       >
-                        {index + 1 }
+                        {index + 1}
                       </PaginateBtn>
                     );
                   })
                 }
 
-           
                 <span
                   onClick={() => gotoPage(pageCount - 1)}
                   disabled={!canNextPage}
@@ -224,6 +228,15 @@ export default function Table({
                 >
                   chevron_right
                 </span>
+                <Pagination
+                  count={pageCount}
+                  color="primary"
+                  page={pagee}
+                  // onRowsPerPageChange={}
+                  // onPageChange={handleChangePage}
+                  // onClick={}
+                  onChange={handleChange}
+                />
               </div>
             )}
           </div>
