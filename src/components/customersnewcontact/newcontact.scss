@@ -20,3 +20,16 @@
   color: rgb(84, 170, 228);
   border: solid 2px rgb(84, 170, 228);
 }
+
+
+@media screen and (max-width:991px),(max-width:1400px) {
+  .newcontactfile_icon_size{
+    // display: flex;
+    align-items: center;
+    // font-size: 21px;
+    padding: auto;
+    margin: auto;
+    
+  }
+  
+}
