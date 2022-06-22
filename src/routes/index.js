@@ -9,7 +9,8 @@ export const ROUTES=Object.freeze({
     VIEWSUPPLIER:"/viewsupplier",
     CATEGORY:"/category",
     LAYOUT:"/layout",
-    SUPPLIERS:"/suppliers"
+    SUPPLIERS:"/suppliers",
+    DASHBOARD:"/dashboard"
 
 })
 // export const ROUTES = Object.freeze({
