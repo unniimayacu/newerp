@@ -7,6 +7,7 @@ import React, { useMemo } from "react";
 import "./supplier.scss";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
+import Layout from "Layout/Layout";
 
 import Makedata from "components/ddatas/Supplierdata";
 function Supplier() {
@@ -90,15 +91,16 @@ function Supplier() {
   //  );
   return (
     <>
-      <div className="container-fluid">
+      {/* <div className="container-fluid"> */}
+      <Layout>
         <div className="row ">
           <div className="col-xl-12 col-lg-12 col-12">
-            <div className="row ">
-              {/* <div className=""> */}
-              <Header />
-              {/* </div> */}
-            </div>
-            <div className="container">
+            {/* <div className="row ">
+               
+                <Header />
+               
+              </div> */}
+            {/* <div className="container"> */}
               <div className="row mt-5 border-bottom ">
                 <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
                   <h5 className="ms-0">Supplier</h5>
@@ -114,8 +116,7 @@ function Supplier() {
                 </div>
               </div>
               <div className="row mt-5">
-               
-                <div className="container">
+                {/* <div className="container"> */}
                   <div className="row ">
                     {/* <div className="col-xl-12 col-xl-12  col-12"> */}
                     <Table
@@ -128,13 +129,15 @@ function Supplier() {
 
                     {/* </div> */}
                   </div>
-                </div>
+                {/* </div> */}
               </div>
-            </div>
+            {/* </div> */}
             <div className="row"></div>
           </div>
         </div>
-      </div>
+       
+      </Layout>
+       {/* </div> */}
     </>
   );
 }

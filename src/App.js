@@ -16,6 +16,7 @@ const Addsupplier= lazy(()=> import ("./pages/addnewsupplier/Supplier") )
 const Viewcustomer = lazy(()=>import ("./pages/viewcustomer/Viewcustomer") )
 const Viewsupplier =lazy(()=>import ("./pages/viewsupplier/Viewsupplier") )
 const Supplier = lazy(()=>import ("./pages/supplierlist/Supplier"))
+const Addproduct = lazy(()=>import ("./pages/addnewproduct/Addproduct") )
 
 function App() {
   return (
@@ -30,12 +31,10 @@ function App() {
             <Route path={ROUTES.VIEWCUSTOMER} element={<Viewcustomer />} />
             <Route path={ROUTES.VIEWSUPPLIER} element={<Viewsupplier />} />
             <Route path={ROUTES.SUPPLIERS } element={<Supplier/>} />
-            <Route
-              path={ROUTES.ADDNEWQUOTATION}
-              element={<AddNewQuotation />}
-            />
+            <Route path={ROUTES.ADDNEWQUOTATION} element={<AddNewQuotation />}/>
             <Route path={ROUTES.CATEGORY} element={<Category />} />
             <Route path={ROUTES.LAYOUT} element={<Layout />} />
+            <Route path={ROUTES.ADDPRODUCT } element={<Addproduct/>}/>
           </Routes>
         </Suspense>
       </BrowserRouter>
