@@ -9,6 +9,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { TbDownload } from "react-icons/tb";
 import { IoMdSearch } from "react-icons/io";
 import Table from "components/table/Table";
+import Layout from "Layout/Layout";
 
 const actionIcons = () => {
   return (
@@ -119,12 +120,13 @@ function Viewsupplier() {
   );
   return (
     <>
-      <div className="container-fluid">
+      {/* <div className="container-fluid"> */}
+      <Layout>
         <div className="row ">
           <div className="col-xl-12 col-lg-12 col-12">
-            <div className="row ">
+            {/* <div className="row ">
               <Header />
-            </div>
+            </div> */}
 
             <div className="row mt-4 mx-5">
               <div className="col-xl-3 col-lg-3 col-12 mt-0 p-0">
@@ -242,7 +244,10 @@ function Viewsupplier() {
                           <Accordion defaultActiveKey="0" flush>
                             <Accordion.Item eventKey="0">
                               <Accordion.Header>
-                                <h5 className="view__supplier__h5_color" > Product Details</h5>
+                                <h5 className="view__supplier__h5_color">
+                                  {" "}
+                                  Product Details
+                                </h5>
                               </Accordion.Header>
                               <Accordion.Body>
                                 <div className="row">
@@ -338,7 +343,7 @@ function Viewsupplier() {
             <div className="row mx-5 ">
               <div className="col-xl-12 col-lg-12 col-12">
                 <h4 className="view__supplier__moredetails">Your Notes</h4>
-                <div className="py-2" >
+                <div className="py-2">
                   <p className="px-4">
                     {" "}
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -351,7 +356,8 @@ function Viewsupplier() {
             </div>
           </div>
         </div>
-      </div>
+      </Layout>
+      {/* </div> */}
     </>
   );
 }

@@ -5,6 +5,14 @@ import DropdownList from "react-widgets/DropdownList";
 import "react-widgets/styles.css";
 
 function InputDropdown(props) {
+   const {
+     placeholder,
+     className,
+     appendIcon = null,
+     prependIcon=null,
+     onChange,
+     ...rest
+   } = props;
   return (
     <div className={`${styles.dropdowndiv} ${props.className} dropdownWrapper`}>
       {/* <Select
@@ -18,6 +26,7 @@ function InputDropdown(props) {
         defaultValue=" "
         data={[" ", " ", " ", " "]}
         className={`${styles.inputdropdown} ${props.dropdown}`}
+
       />
     </div>
   );
