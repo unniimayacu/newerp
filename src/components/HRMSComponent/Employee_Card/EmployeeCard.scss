@@ -1,0 +1,61 @@
+.hrms_card{
+   
+    // width: 230px;
+    // height: 120px;
+    border-radius: 10px;
+    padding: 15px;
+
+    background-color: white;
+    box-shadow: 0px 2px 1px 2px #e0e0e0 ;
+}
+.colum_card_small{
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.mdgroup_rounded{
+    border-radius: 100%;
+    background-color: whitesmoke;
+    padding: 15px;
+    margin-right: 10px;
+}
+.small_card_heading{
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+    
+}
+.small_card_number{
+    font-size: 20px;
+    font-weight: 400;
+    color: #166da3;
+}
+
+.wrapper {
+  border-top: 1px solid rgba(53,42,255,1) 97%;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+.container_progress {
+  background: rgb(19,217,148);
+background: linear-gradient(90deg, rgba(19,217,148,1) 54%, rgba(53,42,255,1) 97%);
+  border-radius: 30px;
+}
+
+.barCompleted {
+  background-color: whitesmoke;
+  width: 50%;
+  height: 12px;
+  margin-top: 2px;
+  border-top: 1px solid rgba(53,42,255,1) 97%;
+  border-top-left-radius: 30px ;
+  border-bottom-left-radius: 30px;
+}
+
+.label {
+  font-size: 20px;
+  color: whitesmoke;
+}

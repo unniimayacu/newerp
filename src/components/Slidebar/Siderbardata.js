@@ -34,6 +34,8 @@ export const Siderbardata = [
   {
     title: "Add New Product",
     path: "/addproduct",
+    title: "View Customer",
+    path: "/viewcustomer",
     cName: "nav-text",
   },
 ];

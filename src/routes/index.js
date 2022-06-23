@@ -14,6 +14,13 @@ export const ROUTES=Object.freeze({
     SUPPLIERS:"/suppliers",
     ADDPRODUCT:"/addproduct"
 
+    // ADDSUPPLIER:"/addsupplier",
+    // VIEWCUSTOMER:"/viewcustomer",
+    // VIEWSUPPLIER:"/viewsupplier",
+    // CATEGORY:"/category",
+    // LAYOUT:"/layout",
+    // SUPPLIERS:"/suppliers",
+    // DASHBOARD:"/dashboard"
 
 })
 // export const ROUTES = Object.freeze({

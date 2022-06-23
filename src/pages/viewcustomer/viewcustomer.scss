@@ -7,3 +7,44 @@
     font-size: 28px;
     font-weight: bold;
 }
+.h4__color{
+    color:#36b4f7 ;
+    flex-shrink: 0;
+    //  font-weight: bold;
+}
+.p_color{
+    flex-shrink: 0;
+    width:fit-content;
+    overflow: hidden;
+    overflow-wrap:break-word;
+    color: #9b9b9b ;
+    
+}
+.accordion_p_header{
+    font-size: 18px;
+    color: black;
+}
+
+.customer_h6__color{
+    color:#36b4f7 ; 
+    font-size: 18px; 
+}
+.customericon__size {
+    font-size: 25px;
+   
+}
+.customer_table_p{
+    font-size: 15px;
+    color: black;
+}
+.accordion_p_content{
+    font-size: 15px;
+    color: #9b9b9b;
+}
+.accordion_accordion{
+    background-color: white;
+    :hover{
+        background-color: white;
+    }
+    
+}
