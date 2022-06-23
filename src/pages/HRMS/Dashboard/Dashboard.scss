@@ -6,6 +6,10 @@
     padding-left: 5px;
     padding-right: 10px;
     border-radius: 10px;
+    @media screen and (max-width:991px),(max-width:1400px),(max-width: 992px) {
+        width: fit-content;
+        
+    }
     
 }
 .hrms_input_search{
@@ -13,7 +17,7 @@
     border: 0;
     padding: 10px;
     font-size: 18px;
-    width: 350px;
+    width: 100%;
 }
 .dashboard_container_color{
     background-color: whitesmoke;
@@ -32,4 +36,7 @@
 }
 .empcard2amount{
     font-weight: 700;
+}
+.chart_card{
+    box-shadow: 1px 1px 2px 2px #e0e0e0;
 }

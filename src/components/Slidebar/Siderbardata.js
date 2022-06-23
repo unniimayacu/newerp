@@ -2,6 +2,11 @@ import React from "react";
 
 export const Siderbardata = [
   {
+    title: "Dashboard",
+    path: "/dashboard",
+    cName: "nav-text",
+  },
+  {
     title: "Category",
     path: "/category",
     cName: "nav-text",
