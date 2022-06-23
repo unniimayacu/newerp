@@ -22,6 +22,23 @@ export const Siderbardata = [
     cName: "nav-text",
   },
   {
+    title: "Add New Supplier",
+    path: "/addsupplier",
+    cName: "nav-text",
+  },
+  {
+    title: "View Supplier",
+    path: "/viewsupplier",
+    cName: "nav-text",
+  },
+  {
+    title: "View Supplier List",
+    path: "/suppliers",
+    cName: "nav-text",
+  },
+  {
+    title: "Add New Product",
+    path: "/addproduct",
     title: "View Customer",
     path: "/viewcustomer",
     cName: "nav-text",
