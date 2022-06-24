@@ -11,37 +11,58 @@ import Button from "components/button/Button";
 import { PlusCircleFilled } from "@ant-design/icons";
 import Profileupload from "components/profilepicture/Profileupload";
 import { Table, Modal } from "react-bootstrap";
-
-const AlternateUnit = () => (
-  <div className="row">
-    <div className="col-xl-3 col-lg-3 col-12">
-      <p className={`mb-0 ms-0`}>Product Type</p>
-      <InputDropdown />
-    </div>
-    <div className="col-xl-13 col-lg-3 col-12">
-      <p className={`mb-0 ms-0`}>Product Name</p>
-      <InputType />
-    </div>
-    <div className="col-xl-13 col-lg-3 col-12"></div>
-  </div>
-);
+import { AiOutlinePlus } from "react-icons/ai";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 function Addproduct() {
-     const [noofRows, setNoofRows] = useState(0);
-    const [name, setName] = useState("");
-    const [phone, setphone] = useState("");
-      const [contactPersonData, setContactPersonData] = useState([]);
-      const addData = () => {
-        console.log(name);
-        setContactPersonData([
-          ...contactPersonData,
-          {
-            name: name,
-            phone,
-           
-          },
-        ]);
-      };
+   const [deleteRow, setDeleterow] = useState(0);
+   const [count, setCount] = useState(0);
+  const [alternateUnit, setalternateUnit] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setphone] = useState("");
+  const [contactPersonData, setContactPersonData] = useState([]);
+  const addData = () => {
+    console.log(name);
+    setContactPersonData([
+      ...contactPersonData,
+      {
+        name: name,
+        phone,
+      },
+    ]);
+  };
+
+  const handleChange = (event) => {
+    setalternateUnit(event.target.checked);
+  };
+
+  const AddValue = () => (
+    <div className="row py-3">
+      <div className="col-xl-3 col-lg-3 col-12">
+        <InputDropdown />
+      </div>
+      <div className="col-xl-3 col-lg-3 col-12 ms-2">
+        <InputType />
+      </div>
+      <div className="col-xl-3 col-lg-3 col-12 ms-1  mt-3">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="radiobut"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Set Default
+          </label>
+        </div>
+      </div>
+      <div className="col-xl-2 col-lg-2 col-12 ">
+        <Button className="delte_btn__style"  prependIcon={   <  RiDeleteBin5Line />} ></Button>
+      </div>
+    </div>
+  );
+
   return (
     <>
       <Layout>
@@ -114,26 +135,66 @@ function Addproduct() {
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    value=""
-                    id="defaultCheck1"
-                    onClick={() => AlternateUnit()}
+                    value={alternateUnit}
+                    onChange={handleChange}
+                    // id="alternate"
+                    // name="alternate"
                   />
                   <label class="form-check-label" for="defaultCheck1">
                     Alternate Unit
                   </label>
                 </div>
-                {/* <InputDropdown /> */}
               </div>
             </div>
+            {alternateUnit && (
+              <div className="row py-3 mx-5">
+                <h5 className="h5__bg__color">Alternative Units</h5>
+                <div className="row py-3">
+                  <div className="col-xl-3 col-lg-3 col-12">
+                    <InputDropdown />
+                  </div>
+                  <div className="col-xl-3 col-lg-3 col-12">
+                    <InputType />
+                  </div>
+                  <div className="col-xl-3 col-lg-3 col-12 mt-3">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radiobut"
+                        id="flexRadioDefault1"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Set Default
+                      </label>
+                    </div>
+                  </div>
+                  <div className="col-xl-3 col-lg-3 col-12">
+                    <Button
+                      prependIcon={<AiOutlinePlus />}
+                      fullhalfrounded={true}
+                      onClick={() => setCount(count + 1)}
+                    >
+                      Add value
+                    </Button>
+                  </div>
+                </div>
+                <div className="row ">
+                  {[...Array(count)].map((_, i) => (
+                    <AddValue key={i} />
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="row mx-5 py-2">
-              <div className="col-xl-3 col-lg-3 col-12">
+              <div className="col-xl-4 col-lg-4 col-12">
                 <p className={`mb-0 ms-0`}>Bar code</p>
                 <InputDropdown />
               </div>
-              <div className="col-xl-1 col-lg-1 col-12 pt-4">
+              {/* <div className="col-xl-1 col-lg-1 col-12 pt-4">
                 <PlusCircleFilled className="ms-2 product_plusicon__size" />
-              </div>
+              </div> */}
               <div className="col-xl-3 col-lg-3 col-12">
                 <p className={`mb-0 ms-0`}>Brand</p>
                 <InputDropdown />

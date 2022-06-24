@@ -13,6 +13,7 @@ import "./button.scss";
       children,
       className,
       sharp = false,
+      fullhalfrounded=false,
       ...rest
     } = props;
     var classNames = "";
@@ -23,9 +24,9 @@ import "./button.scss";
       if (btnType ==="secondary" ) {
         classNames += " erp__btn_secondary";
       }
-if (btnType === "ternary") {
-  classNames += " erp__btn_ternary";
-}
+    if (btnType === "ternary") {
+    classNames += " erp__btn_ternary";
+    }
     if (prependIcon) {
       classNames += " erp__btn-prepend-icon";
     }
@@ -46,6 +47,10 @@ if (btnType === "ternary") {
     if (halfrounded) {
       classNames += " erp__half-rounded"
     }
+     if (fullhalfrounded) {
+       classNames += " erp__full_half-rounded";
+     }
+
     return (
       <>
         <button
