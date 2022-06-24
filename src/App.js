@@ -9,6 +9,8 @@ import Category from "pages/Category/Category";
 import Layout from "Layout/Layout";
 import Slidebar from "components/Slidebar/Slidebar";
 import Dashboard from "pages/HRMS/Dashboard/Dashboard";
+import DesignationView from "pages/HRMS/Designation/DesignationView";
+import Designation from "pages/HRMS/Designation/Designation";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -37,6 +39,10 @@ function App() {
             <Route path={ROUTES.LAYOUT} element={<Layout />} />
             <Route path={ROUTES.ADDPRODUCT } element={<Addproduct/>}/>
             <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+            <Route path={ROUTES.DESIGNATIONVIEW} element={<DesignationView />} />
+            <Route path={ROUTES.DESIGNATIONVIEW} element={<DesignationView />} />
+            <Route path={ROUTES.DESIGNATION} element={<Designation />} />
+
           </Routes>
         </Suspense>
       </BrowserRouter>

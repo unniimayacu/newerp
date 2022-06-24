@@ -5,7 +5,7 @@ import './EmployeeCard2.scss'
 function EmployeeCard2(props) {
   return (
     <div>
-      <div className="container ">
+      <div className="container  " onClick={props.onClick}>
         <div className="row">
           <div className="card  employee_card_2 mt-3 ">
             <div className="container_fluid">

@@ -12,15 +12,12 @@ export const ROUTES=Object.freeze({
     CATEGORY:"/category",
     LAYOUT:"/layout",
     SUPPLIERS:"/suppliers",
-    ADDPRODUCT:"/addproduct"
+    ADDPRODUCT:"/addproduct",
 
-    // ADDSUPPLIER:"/addsupplier",
-    // VIEWCUSTOMER:"/viewcustomer",
-    // VIEWSUPPLIER:"/viewsupplier",
-    // CATEGORY:"/category",
-    // LAYOUT:"/layout",
-    // SUPPLIERS:"/suppliers",
-    // DASHBOARD:"/dashboard"
+
+    DASHBOARD:"/dashboard",
+    DESIGNATIONVIEW:"/designationview",
+    DESIGNATION:"/designation",
 
 })
 // export const ROUTES = Object.freeze({
@@ -34,3 +31,9 @@ export const ROUTES=Object.freeze({
 //     CATEGORY: "/category",
 //     LAYOUT: "/layout",
 // });
+    // ADDSUPPLIER:"/addsupplier",
+    // VIEWCUSTOMER:"/viewcustomer",
+    // VIEWSUPPLIER:"/viewsupplier",
+    // CATEGORY:"/category",
+    // LAYOUT:"/layout",
+    // SUPPLIERS:"/suppliers",
