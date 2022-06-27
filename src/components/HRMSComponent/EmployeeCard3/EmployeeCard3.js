@@ -5,7 +5,7 @@ import './EmployeeCard3.scss'
 function EmployeeCard3(props) {
   return (
     <div>
-      <div className="container">
+      <div className="container" onClick={props.onClick}>
         <div className="row justify-content-center">
           <div className="card align-items-center p-3 pb-0 border-0 employee_card3">
             <div className="container-fluid">

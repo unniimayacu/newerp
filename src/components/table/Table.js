@@ -14,6 +14,7 @@ export default function Table({
   Sorted = true,
   className = false,
   pagecenter = false,
+  Hrms_dash_table_header_color= false ,
 }) {
   const {
     getTableProps,
@@ -49,11 +50,9 @@ export default function Table({
   const handleChange = (e, index) => {
     console.log("page index : ", index - 1);
     gotoPage(index - 1);
-    setPage(index)
+    setPage(index);
     // data.jump(index + 1);
   };
-
-
 
   return (
     <>
@@ -124,7 +123,10 @@ export default function Table({
                 {headerGroups.map((headerGroup) => (
                   <tr
                     {...headerGroup.getHeaderGroupProps()}
-                    className={`${className && "table_header_color"}`}
+                    className={`${className && "table_header_color"} ${
+                      Hrms_dash_table_header_color &&
+                      "hrms_table_dash_header_color"
+                    }`}
                   >
                     {headerGroup.headers.map((column) => (
                       <th
@@ -193,7 +195,6 @@ export default function Table({
                   count={pageCount}
                   color="primary"
                   page={pagee}
-                 
                   onChange={handleChange}
                 />
               </div>

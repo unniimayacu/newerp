@@ -3,6 +3,26 @@ import { RiFileSearchFill } from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiFillPrinter } from "react-icons/ai";
 import { Form } from "react-bootstrap";
+import { MdDelete } from 'react-icons/md';
+
+
+
+const action = () => {
+  return (
+    <div className="d-flex align-items-center justify-content-center ">
+      <span className="cust_icon_edit  ">
+        <BsPencilSquare />
+      </span>
+      <span className="cust_icon_edit ms-2">
+        <RiFileSearchFill />{" "}
+      </span>
+      <span className="cust_icon_edit ms-2">
+        <MdDelete color='gray' />{" "}
+      </span>
+    </div>
+  );
+};
+
 
 const actionIcons = () => {
   return (
@@ -39,9 +59,13 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         // col7: "3%",
-         // col8: "30",
-         // col9: " ",
+         dcode: "jk-3456547",
+         name: "Manager",
+         aff: "Year 1 Ticket",
+         atc: "Normal Class",
+         details: "kl-dfs334563kljh6565478",
+         action: action(),
+         status: activeSwitch(),
        },
        {
          id: 2,
@@ -51,9 +75,13 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         // col7: "3%",
-         // col8: "30",
-         // col9: " ",
+         dcode: "Yk-3456547",
+         name: "Manager",
+         aff: "Year 1 Ticket",
+         atc: "Normal Class",
+         details: "kl-dfs334563kljh6565478",
+         action: action(),
+         status: activeSwitch(),
        },
        {
          id: 3,
@@ -315,9 +343,9 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         // col7: "3%",
-         // col8: "30",
-         // col9: " ",
+         col7: "3%",
+         col8: "30",
+         col9: " ",
        },
        {
          id: 25,
@@ -327,9 +355,9 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         // col7: "3%",
-         // col8: "30",
-         // col9: " ",
+         col7: "3%",
+         col8: "30",
+         col9: " ",
        },
        {
          id: 26,
@@ -339,9 +367,9 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         // col7: "3%",
-         // col8: "30",
-         // col9: " ",
+         col7: "3%",
+         col8: "30",
+         col9: " ",
        },
        {
          id: 27,
@@ -351,9 +379,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         // col7: "3%",
-         // col8: "30",
-         // col9: " ",
+       
        },
        {
          id: 28,
@@ -363,9 +389,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         // col7: "3%",
-         // col8: "30",
-         // col9: " ",
+        
        },
        {
          id: 29,
@@ -375,7 +399,6 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         
        },
        {
          id: 30,
@@ -385,7 +408,6 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-         
        },
      ];
 

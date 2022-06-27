@@ -4,10 +4,15 @@
     // height: 120px;
     border-radius: 10px;
     padding: 15px;
-
+    cursor: pointer;
     background-color: white;
     box-shadow: 0px 2px 1px 2px #e0e0e0 ;
+ 
 }
+// .hrms_card1:hover{
+//      transition: 5px;
+//     transform: scale(1.2);
+//     }
 .colum_card_small{
     display: flex !important;
     justify-content: flex-start;
@@ -21,7 +26,7 @@
     margin-right: 10px;
 }
 .small_card_heading{
-    font-size: 12px;
+    font-size: 15px;
     color: black;
     font-weight: 500;
     

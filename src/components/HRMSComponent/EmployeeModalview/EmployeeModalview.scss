@@ -1,0 +1,24 @@
+.table_color{
+    background-color: #1198d0;
+    color: white;
+}
+.model_body_hrms{
+    height: 300px;
+    overflow:hidden;
+    overflow-y: scroll;
+    text-align: center;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: lightgray;
+}
