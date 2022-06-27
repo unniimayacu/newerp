@@ -11,13 +11,13 @@ const action = () => {
   return (
     <div className="d-flex align-items-center justify-content-center ">
       <span className="cust_icon_edit  ">
-        <BsPencilSquare />
+        <BsPencilSquare color="whitesmoke" />
       </span>
       <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill />{" "}
+        <RiFileSearchFill color="gray" />{" "}
       </span>
       <span className="cust_icon_edit ms-2">
-        <MdDelete color='gray' />{" "}
+        <MdDelete color="gray" />{" "}
       </span>
     </div>
   );
@@ -28,13 +28,13 @@ const actionIcons = () => {
   return (
     <div className="d-flex align-items-center justify-content-center ">
       <span className="cust_icon_edit  ">
-        <BsPencilSquare />
+        <BsPencilSquare color="lightgray" />
       </span>
       <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill />{" "}
+        <RiFileSearchFill color="gray" />{" "}
       </span>
       <span className="cust_icon_edit ms-2">
-        <AiFillPrinter />{" "}
+        <AiFillPrinter color="gray" />{" "}
       </span>
     </div>
   );

@@ -98,6 +98,7 @@ function Category() {
                   className={true}
                   responsive={true}
                   pagecenter={true}
+                  Tbody_style={true}
                 />
               </div>
             </div>
