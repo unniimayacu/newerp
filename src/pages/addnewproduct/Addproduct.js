@@ -10,17 +10,35 @@ import Editor from "components/Text Editor/Editor";
 import Button from "components/button/Button";
 import { PlusCircleFilled } from "@ant-design/icons";
 import Profileupload from "components/profilepicture/Profileupload";
-import { Table, Modal } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RiDeleteBin5Line } from "react-icons/ri";
+import CustomModal from "components/modal/CustomModal";
 
 function Addproduct() {
-   const [deleteRow, setDeleterow] = useState(0);
-   const [count, setCount] = useState(0);
+  const [deleteRow, setDeleterow] = useState(0);
+  const [count, setCount] = useState(0);
   const [alternateUnit, setalternateUnit] = useState(false);
   const [name, setName] = useState("");
   const [phone, setphone] = useState("");
   const [contactPersonData, setContactPersonData] = useState([]);
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [brandshow, setBrandshow] =useState(false);
+  const handlebrandClose = () =>setBrandshow(false);
+  const handlebrandShow = () => setBrandshow(true);
+
+  const [categoryshow , setcategoryshow] = useState(false);
+  const handlecategoryClose =() => setcategoryshow(false);
+  const handlecategoryShow = ()=> setcategoryshow(true);
+
+  const [subcategoryshow, setsubcategoryshow] = useState(false);
+  const handlesubcategoryClose = () => setsubcategoryshow(false);
+  const handlesubcategoryShow = () => setsubcategoryshow(true);
+
   const addData = () => {
     console.log(name);
     setContactPersonData([
@@ -58,7 +76,11 @@ function Addproduct() {
         </div>
       </div>
       <div className="col-xl-2 col-lg-2 col-12 ">
-        <Button className="delte_btn__style"  prependIcon={   <  RiDeleteBin5Line />} ></Button>
+        <Button
+          className="delte_btn__style"
+          // onClick={() => setDeleterow(delete - 1)}
+          prependIcon={<RiDeleteBin5Line />}
+        ></Button>
       </div>
     </div>
   );
@@ -117,18 +139,82 @@ function Addproduct() {
                 </div>
               </div>
 
-              <div className="col-xl-3 col-lg- col-12 ">
+              <div className="col-xl-3 col-lg-3 col-12 ">
                 <p className={`mb-0 ms-0`}>Basic Unit</p>
-                {/* <div className="d-flex "> */}
+
                 <InputDropdown />
-                {/* <div className=" ">
-                  <PlusCircleFilled className="ms-2 product_plusicon__size" />
-                </div> */}
-                {/* </div> */}
               </div>
               <div className="col-xl-1 col-lg-1 col-12 pt-4">
-                <PlusCircleFilled className="ms-2 product_plusicon__size" />
+                {/* <Button
+                  btnType="terneryicon"
+                  className="ms-0 product_plusicon__size"
+                  prependIcon={<PlusCircleFilled />}
+                  onClick={handleShow}
+                ></Button> */}
+
+                <PlusCircleFilled
+                  onClick={handleShow}
+                  className="ms-2 product_plusicon__size"
+                />
               </div>
+
+              <CustomModal
+                onHide={handleClose}
+                show={show}
+                modalTitle="Add Unit Type"
+              >
+                <div className="row">
+                  <div className="">
+                    <p>Name</p>
+                    <InputType />
+                  </div>
+                  <div className="">
+                    <p>Description</p>
+                    <InputType />
+                  </div>
+                  <div className="">
+                    <p>Unit Category</p>
+                    <InputDropdown />
+                  </div>
+                  <div className="row py-4">
+                    <p>Status</p>
+                    <div className="col-xl-3 col-lg-3 col-12">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2">
+                          Active
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-3 col-12">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2">
+                          Deactive
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row py-3">
+                    <div className="col-xl-12 col-lg-12 col-12  d-flex justify-content-center">
+                      <Button rounded={true}>Add Unit Type</Button>
+                    </div>
+                  </div>
+                </div>
+              </CustomModal>
+
               <div className="col-xl-4 col-lg-4 col-12 pt-3">
                 {/* <p className={`mb-0 ms-0`}>Business Type</p> */}
                 <div class="form-check">
@@ -200,8 +286,66 @@ function Addproduct() {
                 <InputDropdown />
               </div>
               <div className="col-xl-1 col-lg-1 col-12 pt-4">
-                <PlusCircleFilled className="ms-2 product_plusicon__size" />
+                <PlusCircleFilled
+                  onClick={handlebrandShow}
+                  className="ms-2 product_plusicon__size"
+                />
               </div>
+
+              <CustomModal
+                onHide={handlebrandClose}
+                show={brandshow}
+                modalTitle="Add Brand"
+              >
+                <div className="row">
+                  <div className="">
+                    <p>Name</p>
+                    <InputType />
+                  </div>
+                  <div className="">
+                    <p>Description</p>
+                    <InputType />
+                  </div>
+
+                  <div className="row py-4">
+                    <p>Status</p>
+                    <div className="col-xl-3 col-lg-3 col-12">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2">
+                          Active
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-3 col-12">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2">
+                          Deactive
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row py-3">
+                    <div className="col-xl-12 col-lg-12 col-12  d-flex justify-content-center">
+                      <Button rounded={true}>Add Brand</Button>
+                    </div>
+                  </div>
+                </div>
+              </CustomModal>
+
               <div className="col-xl-4 col-lg-4 col-12">
                 <p className={`mb-0 ms-0`}>Dimension</p>
                 <InputType />
@@ -213,15 +357,146 @@ function Addproduct() {
                 <InputDropdown />
               </div>
               <div className="col-xl-1 col-lg-1 col-12 pt-4">
-                <PlusCircleFilled className="ms-2 product_plusicon__size" />
+                <PlusCircleFilled
+                  onClick={handlecategoryShow}
+                  className="ms-2 product_plusicon__size"
+                />
               </div>
+
+              <CustomModal
+                onHide={handlecategoryClose}
+                show={categoryshow}
+                modalTitle="Add Category"
+              >
+                <div className="row">
+                  <div className="">
+                    <p>Name</p>
+                    <InputType />
+                  </div>
+                  <div className="">
+                    <p>Code</p>
+                    <InputType />
+                  </div>
+                  <div className="">
+                    <p>Description</p>
+                    <InputType />
+                  </div>
+
+                  <div className="row py-4">
+                    <p>Status</p>
+                    <div className="col-xl-3 col-lg-3 col-12">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2">
+                          Active
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-3 col-12">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2">
+                          Deactive
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row py-3">
+                    <div className="col-xl-12 col-lg-12 col-12  d-flex justify-content-center">
+                      <Button rounded={true} className="px-5">
+                        Add
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CustomModal>
+
               <div className="col-xl-3 col-lg-3 col-12">
                 <p className={`mb-0 ms-0`}>Select Sub Category</p>
                 <InputDropdown />
               </div>
               <div className="col-xl-1 col-lg-1 col-12 pt-4">
-                <PlusCircleFilled className="ms-2 product_plusicon__size" />
+                <PlusCircleFilled
+                  onClick={handlesubcategoryShow}
+                  className="ms-2 product_plusicon__size"
+                />
               </div>
+
+              <CustomModal
+                onHide={handlesubcategoryClose}
+                show={subcategoryshow}
+                modalTitle="Add Brand"
+              >
+                <div className="row">
+                  <div className="">
+                    <p>Name</p>
+                    <InputType />
+                  </div>
+                  <div className="">
+                    <p>Code</p>
+                    <InputType />
+                  </div>
+                  <div className="">
+                    <p>Description</p>
+                    <InputType />
+                  </div>
+
+                  <div className="row py-4">
+                    <p>Status</p>
+                    <div className="col-xl-3 col-lg-3 col-12">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2">
+                          Active
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-3 col-12">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2">
+                          Deactive
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p>Select Parent Category</p>
+                    <InputDropdown />
+                  </div>
+                  <div className="row py-3">
+                    <div className="col-xl-12 col-lg-12 col-12   d-flex justify-content-center">
+                      <Button className="px-5" rounded={true}>
+                        Add
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CustomModal>
             </div>
 
             <div className="row py-3">
@@ -375,7 +650,7 @@ function Addproduct() {
                 <div className="row  py-4">
                   <div className="col-xl-7 col-lg-7 col-12">
                     <Table responsive bordered size="sm">
-                      <thead>
+                      <thead className="prodtable__head__bgcolor">
                         <tr>
                           <th>Name</th>
                           <th>Mobile Number</th>

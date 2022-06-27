@@ -1,0 +1,22 @@
+.erp__modal_header{
+    background-color: rgb(91, 152, 233);
+//    border-radius: 10px;
+    // min-height: 180px;
+    
+}
+.erp__modal__body{
+    border-top-right-radius: 25%; 
+    //  background-color: rgb(91, 152, 233);
+    background-color: white;
+    // min-height: 190px;
+}
+.erp__modal__footer{
+    height: 25px;
+    width: 100%;
+    background-color: rgb(91, 152, 233);
+}
+.erp_modal_radius{
+   border-radius: 10px !important;
+   overflow: hidden;
+//    border: 1px solid white !important;
+}
