@@ -14,7 +14,8 @@ export default function Table({
   Sorted = true,
   className = false,
   pagecenter = false,
-  Hrms_dash_table_header_color= false ,
+  Hrms_dash_table_header_color = false,
+  Tbody_style = false,
 }) {
   const {
     getTableProps,
@@ -153,7 +154,10 @@ export default function Table({
                 ))}
               </thead>
             )}
-            <tbody {...getTableBodyProps()}>
+            <tbody
+              {...getTableBodyProps()}
+              className={`${Tbody_style && "table_body_style"}`}
+            >
               {paginate
                 ? page.map((row, i) => {
                     console.log(page);

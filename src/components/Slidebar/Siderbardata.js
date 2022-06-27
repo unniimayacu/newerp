@@ -7,6 +7,11 @@ export const Siderbardata = [
     cName: "nav-text",
   },
   {
+    title: "Designation",
+    path: "/designationview",
+    cName: "nav-text",
+  },
+  {
     title: "Category",
     path: "/category",
     cName: "nav-text",

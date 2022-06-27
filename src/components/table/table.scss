@@ -77,6 +77,7 @@
 .table_header_color{
   border-radius: 100%;
   background-color: rgb(245, 255, 255);
+  text-align: center;
 }
 
 .page_div_center{
@@ -88,4 +89,9 @@
   background-color: #1198d0;
   color: white;
   font-size: 16px;
+}
+
+.table_body_style{
+  font-size: 15px;
+  text-align: center;
 }
