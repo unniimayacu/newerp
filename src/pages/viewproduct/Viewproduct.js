@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import Button from "components/button/Button";
 import { Accordion, Card } from "react-bootstrap";
 import Layout from "Layout/Layout";
-import "./viewproduct.scss"
+import "./viewproduct.scss";
 function Viewproduct() {
   return (
     <>
@@ -10,17 +10,28 @@ function Viewproduct() {
         <div className="row ">
           <div className="col-xl-12 col-lg-12 col-12">
             <div className="row mt-5 mx-5 ">
-              <div className="col-xl-4 col-lg-4 col-12 mt-0 p-0 border-end">
-                <div className=" ">
-                  <div className="d-flex justify-content-center ">
-                    <div className="p-4  product__img "></div>
-                  </div>
-                  <div>
-                    <h5>Savtest Name</h5>
-                    <p>Reon technologies</p>
-                    <p>savtest@gmail.com</p>
+              <div className="col-xl-4 col-lg-4 col-12 mt-0 p-0 border-end ">
+                {/* <div className=" "> */}
+                <div className="d-flex justify-content-center ">
+                  <div className="p-4  product__img ">
+                    <span class="badge bg-primary  badge_text__position p-1 px-3 ">
+                      SOLD
+                    </span>
                   </div>
                 </div>
+                <div className=" mt-2 row viewproduct__erp__imgtext ">
+                  <h5>Product Name</h5>
+
+                  <div className="d-flex justify-content-center">
+                    <h6 className="product_brandname__color  ">Brand Name </h6>
+                    <div className=" ">
+                      <h6 className="product_brandname__color ms-3"> Model</h6>
+                    </div>
+                  </div>
+
+                  <p>SKU8mjfjnkm</p>
+                </div>
+                {/* </div> */}
               </div>
               <div className="col-xl-8 col-lg-8 col-12 mt-5 p-4">
                 <div className="viewprof_btn__radius">
@@ -100,10 +111,7 @@ function Viewproduct() {
                                 <h5> Dimensions</h5>
                               </Accordion.Header>
                               <Accordion.Body>
-                                <p>Account Name</p>
-                                <p>Bank Name</p>
-                                <p>Account Number</p>
-                                <p>IFSC code</p>
+                                <p>Purchase</p>
                               </Accordion.Body>
                             </Accordion.Item>
                           </Accordion>
@@ -117,10 +125,11 @@ function Viewproduct() {
                                 <h5>Invoicing Policy</h5>
                               </Accordion.Header>
                               <Accordion.Body>
-                                <p>Account Name</p>
-                                <p>Bank Name</p>
-                                <p>Account Number</p>
-                                <p>IFSC code</p>
+                                <h6>On Ordered Quantity</h6>
+                                <p>Purchase Price</p>
+                                <p>1000</p>
+                                <p>Selling Price</p>
+                                <p>1200</p>
                               </Accordion.Body>
                             </Accordion.Item>
                           </Accordion>
@@ -134,88 +143,16 @@ function Viewproduct() {
                                 <h5>Control purchase Bills</h5>
                               </Accordion.Header>
                               <Accordion.Body>
-                                <h6>Country</h6>
-                                <p>India</p>
-                                <h6>State</h6>
-                                <p>Kerala</p>
-                                <h6>City</h6>
-                                <p>Ekm</p>
+                                <h6>On Ordered Quantity</h6>
+                                <p>Tax</p>
+                                <p>tax amount</p>
+                                <p>Warranty</p>
+                                <p>Months</p>
                               </Accordion.Body>
                             </Accordion.Item>
                           </Accordion>
                         </div>
                       </div>
-                      {/* <div className="row px-4">
-                        <div className="col-xl-11 col-lg-11 col-12">
-                          <Accordion defaultActiveKey="0" flush>
-                            <Accordion.Item eventKey="0">
-                              <Accordion.Header>
-                                <h5 className="view__supplier__h5_color">
-                                  {" "}
-                                  Product Details
-                                </h5>
-                              </Accordion.Header>
-                              <Accordion.Body>
-                                <div className="row">
-                                  <div className="col-xl-7 col-lg-7 col-12">
-                                    <Table
-                                      data={data}
-                                      columns={columns}
-                                      paginate={false}
-                                      Pagination={false}
-                                      PageSize={false}
-                                    />
-                                  </div>
-                                </div>
-                              </Accordion.Body>
-                            </Accordion.Item>
-                          </Accordion>
-                        </div>
-                      </div> */}
-                      {/* <div className="row px-4">
-                        <div className="col-xl-11 col-lg-11 col-12">
-                          <Accordion defaultActiveKey="0" flush>
-                            <Accordion.Item eventKey="0">
-                              <Accordion.Header>
-                                <h5>Attached Document</h5>
-                              </Accordion.Header>
-                              <Accordion.Body>
-                                <div className="col-xl-6 col-lg-6 col-12">
-                                  <Table
-                                    data={datadoc}
-                                    columns={columnsdoc}
-                                    paginate={false}
-                                    Pagination={false}
-                                    PageSize={false}
-                                  />
-                                </div>
-                              </Accordion.Body>
-                            </Accordion.Item>
-                          </Accordion>
-                        </div>
-                      </div> */}
-                      {/* <div className="row px-4">
-                        <div className="col-xl-11 col-lg-11 col-12">
-                          <Accordion defaultActiveKey="0" flush>
-                            <Accordion.Item eventKey="0">
-                              <Accordion.Header>
-                                <h5> Contact Person </h5>
-                              </Accordion.Header>
-                              <Accordion.Body>
-                                <div className="col-xl-6 col-lg-6 col-12">
-                                  <Table
-                                    data={datacont}
-                                    columns={columnscont}
-                                    paginate={false}
-                                    Pagination={false}
-                                    PageSize={false}
-                                  />
-                                </div>
-                              </Accordion.Body>
-                            </Accordion.Item>
-                          </Accordion>
-                        </div>
-                      </div> */}
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>
@@ -243,4 +180,4 @@ function Viewproduct() {
   );
 }
 
-export default Viewproduct
+export default Viewproduct;

@@ -1,29 +1,41 @@
 
-export const ROUTES=Object.freeze({
-    CUSTOMERS:"/customers",
-    ADDNEWCUSTOMER:"/AddNewcustomer",
-    ADDNEWQUOTATION:"/AddNewQuotation",
-    PRODUCTS:"/products",
-
-    ADDSUPPLIER:"/addsupplier",
-    VIEWCUSTOMER:"/viewcustomer",
-    VIEWSUPPLIER:"/viewsupplier",
-
-    CATEGORY:"/category",
-    LAYOUT:"/layout",
-    SUPPLIERS:"/suppliers",
-    ADDPRODUCT:"/addproduct",
-
-
-    DASHBOARD:"/dashboard",
-    DESIGNATIONVIEW:"/designationview",
-    DESIGNATION:"/designation",
-    CREATEDESIGNATION:"/createdesignation",
-    EMPLOYEECATEGORYVIEW:"/employeecategoryview",
+export const ROUTES = Object.freeze({
+  CUSTOMERS: "/customers",
+  ADDNEWCUSTOMER: "/AddNewcustomer",
+  ADDNEWQUOTATION: "/AddNewQuotation",
+  PRODUCTS: "/products",
+  ADDSUPPLIER: "/addsupplier",
+  VIEWCUSTOMER: "/viewcustomer",
+  VIEWSUPPLIER: "/viewsupplier",
+  CATEGORY: "/category",
+  LAYOUT: "/layout",
+  SUPPLIERS: "/suppliers",
+  ADDPRODUCT: "/addproduct",
+  VIEWPRODUCT: "/viewproduct",
+  DASHBOARD: "/dashboard",
+  DESIGNATIONVIEW: "/designationview",
+  DESIGNATION: "/designation",
+  DASHBOARD: "/dashboard",
+  DESIGNATIONVIEW: "/designationview",
+  DESIGNATION: "/designation",
+  CREATEDESIGNATION: "/createdesignation",
+   EMPLOYEECATEGORYVIEW:"/employeecategoryview",
     EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
     EMPLOYEECATEGORY:"/employeecategory",
+});
 
-})
+
+    // DASHBOARD:"/dashboard",
+    // DESIGNATIONVIEW:"/designationview",
+    // DESIGNATION:"/designation",
+    // CREATEDESIGNATION:"/createdesignation",
+   
+    // DASHBOARD:"/dashboard",
+    // DESIGNATIONVIEW:"/designationview",
+    // DESIGNATION:"/designation",
+    // CREATEDESIGNATION:"/createdesignation",
+
+//})
 // export const ROUTES = Object.freeze({
 //     CUSTOMERS: "/customers",
 //     ADDNEWCUSTOMER: "/AddNewcustomer",
