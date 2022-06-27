@@ -1,25 +1,23 @@
 
-export const ROUTES=Object.freeze({
-    CUSTOMERS:"/customers",
-    ADDNEWCUSTOMER:"/AddNewcustomer",
-    ADDNEWQUOTATION:"/AddNewQuotation",
-    PRODUCTS:"/products",
+export const ROUTES = Object.freeze({
+  CUSTOMERS: "/customers",
+  ADDNEWCUSTOMER: "/AddNewcustomer",
+  ADDNEWQUOTATION: "/AddNewQuotation",
+  PRODUCTS: "/products",
+  ADDSUPPLIER: "/addsupplier",
+  VIEWCUSTOMER: "/viewcustomer",
+  VIEWSUPPLIER: "/viewsupplier",
+  CATEGORY: "/category",
+  LAYOUT: "/layout",
+  SUPPLIERS: "/suppliers",
+  ADDPRODUCT: "/addproduct",
+  VIEWPRODUCT: "/viewproduct",
+  DASHBOARD: "/dashboard",
+  DESIGNATIONVIEW: "/designationview",
+  DESIGNATION: "/designation",
+});
 
-    ADDSUPPLIER:"/addsupplier",
-    VIEWCUSTOMER:"/viewcustomer",
-    VIEWSUPPLIER:"/viewsupplier",
 
-    CATEGORY:"/category",
-    LAYOUT:"/layout",
-    SUPPLIERS:"/suppliers",
-    ADDPRODUCT:"/addproduct",
-
-
-    DASHBOARD:"/dashboard",
-    DESIGNATIONVIEW:"/designationview",
-    DESIGNATION:"/designation",
-
-})
 // export const ROUTES = Object.freeze({
 //     CUSTOMERS: "/customers",
 //     ADDNEWCUSTOMER: "/AddNewcustomer",

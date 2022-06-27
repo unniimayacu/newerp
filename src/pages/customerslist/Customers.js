@@ -3,19 +3,15 @@ import Newcontact from "components/customersnewcontact/Newcontact";
 import Header from "components/header/Header";
 import Table from "components/table/Table";
 import React, { useMemo } from "react";
-import {
-  useTable,
-  usePagination,
-  useSortBy
-} from "react-table/dist/react-table.development";
 import "./customers.scss";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
+import Makedata from "components/ddatas/Customerdatas";
+import Layout from "Layout/Layout";
 // import { RiFileSearchFill } from "react-icons/ri";
 // import { BsPencilSquare } from "react-icons/bs";
 // import { AiFillPrinter } from "react-icons/ai";
 // import {Form } from "react-bootstrap"
-import Makedata from "components/ddatas/Customerdatas";
 
 
 
@@ -70,40 +66,6 @@ function Customers() {
   //       col9: "Ue Amount",
   //       col10: "Invoiced Amount",
   //       col11: riskcategoryred(),
-  //       col12: "RoI",
-  //       col13: actionIcons(),
-  //       col14: activeSwitch(),
-  //     },
-  //     {
-  //       slno: 2,
-  //       col1: "anna",
-  //       col2: "Contact Person",
-  //       col3: "Email",
-  //       col4: "Phone",
-  //       col5: "Payment Period",
-  //       col6: "Tax Number",
-  //       col7: "Credit Limit",
-  //       col8: "Payment Type",
-  //       col9: "Ue Amount",
-  //       col10: "Invoiced Amount",
-  //       col11: riskcategorygreen(),
-  //       col12: "RoI",
-  //       col13: actionIcons(),
-  //       col14: activeSwitch(),
-  //     },
-  //     {
-  //       slno: 3,
-  //       col1: "Name",
-  //       col2: "Contact Person",
-  //       col3: "Email",
-  //       col4: "Phone",
-  //       col5: "Payment Period",
-  //       col6: "Tax Number",
-  //       col7: "Credit Limit",
-  //       col8: "Payment Type",
-  //       col9: "Ue Amount",
-  //       col10: "Invoiced Amount",
-  //       col11: riskcategoryyellow(),
   //       col12: "RoI",
   //       col13: actionIcons(),
   //       col14: activeSwitch(),
@@ -178,34 +140,14 @@ function Customers() {
   );
 const data = React.useMemo(() => Makedata(), []);
 
-  const {
-    canPreviousPage,
-    canNextPage,
-    pageOptions,
-    pageCount,
-    gotoPage,
-    nextPage,
-    previousPage,
-    setPageSize,
-    state: { pageIndex, pageSize },
-  } = useTable(
-    {
-      columns,
-      data,
-      initialState: { pageIndex: 2 },
-    },
-    usePagination
-  );
+ 
 
   return (
-    <div className="container-fluid">
+    // <div className="container-fluid">
+    <Layout>
       <div className="row ">
         <div className="col-xl-12 col-lg-12 col-12">
-          <div className="row ">
-            {/* <div className=""> */}
-            <Header />
-            {/* </div> */}
-          </div>
+         
           <div className="container">
             <div className="row mt-5 border-bottom ">
               <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
@@ -221,43 +163,30 @@ const data = React.useMemo(() => Makedata(), []);
                 <Newcontact />
               </div>
             </div>
-            <div className="row mt-5">
-              {/* <div className="col-4  ">
-              <select
-                className="p-2 px-3 select__custom "
-                value={pageSize}
-                onChange={(e) => {
-                  setPageSize(Number(e.target.value));
-                }}
-              >
-                {[10, 20, 30, 40, 50].map((pageSize) => (
-                  <option key={pageSize} value={pageSize}>
-                    Show Entries | {pageSize}
-                  </option>
-                ))}
-              </select>
-            </div> */}
-              <div className="container">
-                <div className="row ">
+            <div className="row mt-4">
+              {/* <div className="container"> */}
+                {/* <div className="row "> */}
                   {/* <div className="col-xl-12 col-xl-12  col-12"> */}
                   <Table
                     data={data}
                     columns={columns}
-                    // paginate={true}
-                    issorted={true}
-                    // responsive={true}
+                    PageSize={true}
+                    pagination={true}
+                    Sorted={true}
+                    className={true}
+                    responsive={true}
+                    pagecenter={true}
                   />
                   {/* </div> */}
-                </div>
-              </div>
+                {/* </div> */}
+              {/* </div> */}
             </div>
           </div>
-          <div className="row">
-            
-          </div>
+          <div className="row"></div>
         </div>
       </div>
-    </div>
+    </Layout>
+    // </div>
   );
 }
 

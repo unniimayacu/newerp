@@ -295,7 +295,7 @@ export default function Makedata() {
     },
     {
       slno: 21,
-      col1: "annu",
+      col1: "ISO 2409-ISO 8502-3",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
