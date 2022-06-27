@@ -71,73 +71,55 @@ function Supplier() {
    );
    const data = React.useMemo(() => Makedata(), []);
 
-  //  const {
-  //   //  canPreviousPage,
-  //   //  canNextPage,
-  //   //  pageOptions,
-  //   //  pageCount,
-  //   //  gotoPage,
-  //   //  nextPage,
-  //    previousPage,
-  //    setPageSize,
-  //    state: { pageIndex, pageSize },
-  //  } = useTable(
-  //    {
-  //      columns,
-  //      data,
-  //      initialState: { pageIndex: 2 },
-  //    },
-  //    usePagination
-  //  );
   return (
     <>
       {/* <div className="container-fluid"> */}
       <Layout>
         <div className="row ">
           <div className="col-xl-12 col-lg-12 col-12">
-            {/* <div className="row ">
-               
-                <Header />
-               
-              </div> */}
             {/* <div className="container"> */}
-              <div className="row mt-5 border-bottom ">
-                <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
-                  <h5 className="ms-0">Supplier</h5>
-                  <div className="ms-3 ">
-                    <Button appendIcon={<AiOutlinePlus />}>New Contact</Button>
-                  </div>
-                  <div className="ms-3 ">
-                    <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
-                  </div>
+            <div className="row mt-4 border-bottom ">
+              <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
+                <h4 className="ms-0">Supplier</h4>
+                <div className="ms-3 ">
+                  <Button appendIcon={<AiOutlinePlus />}>New Contact</Button>
                 </div>
-                <div className="d-flex justify-content-end col-xl-6 col-lg-6 col-12 py-3">
-                  <Newcontact />
+                <div className="ms-3 ">
+                  <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
                 </div>
               </div>
-              <div className="row mt-5">
-                {/* <div className="container"> */}
-                  <div className="row ">
-                    {/* <div className="col-xl-12 col-xl-12  col-12"> */}
-                    <Table
-                      data={data}
-                      columns={columns}
-                      // paginate={true}
-                      issorted={true}
-                      // responsive={true}
-                    />
+              <div className="d-flex justify-content-end col-xl-6 col-lg-6 col-12 py-3">
+                <Newcontact />
+              </div>
+            </div>
+            <div className="row mt-4">
+              {/* <div className="container"> */}
+              <div className="row ">
+                {/* <div className="col-xl-12 col-xl-12  col-12"> */}
+                <Table
+                  data={data}
+                  columns={columns}
+                  PageSize={true}
+                  pagination={true}
+                  Sorted={true}
+                  className={true}
+                  responsive={true}
+                  pagecenter={true}
+                  // paginate={true}
+                  // issorted={true}
+                  // responsive={true}
+                />
 
-                    {/* </div> */}
-                  </div>
                 {/* </div> */}
               </div>
+              {/* </div> */}
+            </div>
             {/* </div> */}
             <div className="row"></div>
           </div>
         </div>
-       
       </Layout>
-       {/* </div> */}
+      {/* </div> */}
     </>
   );
 }

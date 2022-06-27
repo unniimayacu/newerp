@@ -35,7 +35,7 @@ function CustomModal(props) {
         size="lg"
         className=""
       >
-        <div className="erp_modal_radius">
+        <div className="modal-content">
           {/* <Modal.Header closeButton closeVariant="white"></Modal.Header> */}
 
           <div

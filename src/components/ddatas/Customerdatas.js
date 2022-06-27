@@ -58,7 +58,7 @@ export default function Makedata() {
     },
     {
       slno: 2,
-      col1: "anna",
+      col1: "REON TECHNOLOGIES",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -75,7 +75,7 @@ export default function Makedata() {
     },
     {
       slno: 3,
-      col1: "Name",
+      col1: "REON TECHNOLOGIES",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -92,7 +92,7 @@ export default function Makedata() {
     },
     {
       slno: 4,
-      col1: "ann",
+      col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -109,7 +109,7 @@ export default function Makedata() {
     },
     {
       slno: 5,
-      col1: "anna",
+      col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -126,7 +126,7 @@ export default function Makedata() {
     },
     {
       slno: 6,
-      col1: "ann",
+      col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -143,7 +143,7 @@ export default function Makedata() {
     },
     {
       slno: 7,
-      col1: "alan",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -160,7 +160,7 @@ export default function Makedata() {
     },
     {
       slno: 8,
-      col1: "ann",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -177,7 +177,7 @@ export default function Makedata() {
     },
     {
       slno: 9,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -194,7 +194,7 @@ export default function Makedata() {
     },
     {
       slno: 10,
-      col1: "ann",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -211,7 +211,7 @@ export default function Makedata() {
     },
     {
       slno: 11,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -228,7 +228,7 @@ export default function Makedata() {
     },
     {
       slno: 12,
-      col1: "ann",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -245,7 +245,7 @@ export default function Makedata() {
     },
     {
       slno: 13,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -262,7 +262,7 @@ export default function Makedata() {
     },
     {
       slno: 14,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -279,7 +279,7 @@ export default function Makedata() {
     },
     {
       slno: 15,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -296,9 +296,9 @@ export default function Makedata() {
     },
     {
       slno: 16,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
-      col3: "Email",
+      col3: "naveen@gmail.com",
       col4: "Phone",
       col5: "Payment Period",
       col6: "Tax Number",
@@ -313,9 +313,9 @@ export default function Makedata() {
     },
     {
       slno: 17,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
-      col3: "Email",
+      col3: "naveen@gmail.com",
       col4: "Phone",
       col5: "Payment Period",
       col6: "Tax Number",
@@ -330,9 +330,9 @@ export default function Makedata() {
     },
     {
       slno: 18,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
-      col3: "Email",
+      col3: "naveen@gmail.com",
       col4: "Phone",
       col5: "Payment Period",
       col6: "Tax Number",
@@ -347,9 +347,9 @@ export default function Makedata() {
     },
     {
       slno: 19,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
-      col3: "Email",
+      col3: "naveen@gmail.com",
       col4: "Phone",
       col5: "Payment Period",
       col6: "Tax Number",
@@ -364,7 +364,7 @@ export default function Makedata() {
     },
     {
       slno: 20,
-      col1: "anna",
+      col1: "AL-RAWAHY EST.DUBAIn",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -381,9 +381,9 @@ export default function Makedata() {
     },
     {
       slno: 21,
-      col1: "anna",
+      col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
-      col3: "Email",
+      col3: "naveen@gmail.com",
       col4: "Phone",
       col5: "Payment Period",
       col6: "Tax Number",
@@ -398,7 +398,7 @@ export default function Makedata() {
     },
     {
       slno: 22,
-      col1: "anna",
+      col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
       col3: "Email",
       col4: "Phone",
@@ -415,9 +415,9 @@ export default function Makedata() {
     },
     {
       slno: 23,
-      col1: "anna",
+      col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
-      col3: "Email",
+      col3: "naveen@gmail.com",
       col4: "Phone",
       col5: "Payment Period",
       col6: "Tax Number",
@@ -432,9 +432,9 @@ export default function Makedata() {
     },
     {
       slno: 24,
-      col1: "anna",
+      col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
-      col3: "Email",
+      col3: "naveen@gmail.com",
       col4: "Phone",
       col5: "Payment Period",
       col6: "Tax Number",

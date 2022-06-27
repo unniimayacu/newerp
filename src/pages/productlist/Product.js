@@ -2,11 +2,6 @@ import Button from 'components/button/Button';
 import Newcontact from 'components/customersnewcontact/Newcontact';
 import Header from 'components/header/Header';
 import React, { useMemo } from "react";
-// import {
-//   useTable,
-//   usePagination,
-
-// } from "react-table/dist/react-table.development";
 import "./product.scss"
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
@@ -16,6 +11,7 @@ import { AiFillPrinter } from "react-icons/ai";
 import { Form } from "react-bootstrap";
 import Table from 'components/table/Table';
 import Makedata from "components/ddatas/Dataas";
+import Layout from "Layout/Layout";
 
 
 // const actionIcons = () => {
@@ -113,35 +109,13 @@ function Product() {
 
    const data = React.useMemo(()=>Makedata(),[])
 
-//   const {
-//     canPreviousPage,
-//     canNextPage,
-//     pageOptions,
-//     pageCount,
-//     gotoPage,
-//     nextPage,
-//     previousPage,
-//     setPageSize,
-//     state: { pageIndex, pageSize },
-//   } = useTable(
-//     {
-//       columns,
-//       data,
-//       initialState: { pageIndex: 2 },
-//     },
-//     usePagination
-//   );
-
   return (
     <>
-      <div className="container-fluid">
+      {/* <div className="container-fluid"> */}
+      <Layout>
         <div className="row ">
           <div className="col-xl-12 col-lg-12 col-12">
-            <div className="row ">
-              {/* <div className=""> */}
-              <Header />
-              {/* </div> */}
-            </div>
+            <div className="row "></div>
             <div className="container">
               <div className="row mt-5 border-bottom ">
                 <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
@@ -158,38 +132,30 @@ function Product() {
                 </div>
               </div>
               <div className="row mt-5">
-                {/* <div className="col-4  ">
-                <select
-                  className="p-2 px-3 select__custom "
-                  value={pageSize}
-                  onChange={(e) => {
-                    setPageSize(Number(e.target.value));
-                  }}
-                >
-                  {[10, 20, 30, 40].map((pageSize) => (
-                    <option key={pageSize} value={pageSize}>
-                      Show Entries | {pageSize}
-                    </option>
-                  ))}
-                </select>
-              </div> */}
-                <div className="container">
-                  <div className="row mx-2">
+                {/* <div className="container">
+                  <div className="row mx-2"> */}
                     <div className="col-xl-12 col-xl-12  col-12"></div>
                     <Table
                       data={data}
                       columns={columns}
+                      PageSize={true}
+                      pagination={true}
+                      Sorted={true}
+                      className={true}
+                      responsive={true}
+                      pagecenter={true}
                       //  paginate={true}
-                      issorted={true}
+                      // issorted={true}
                     />
-                  </div>
-                </div>
+                  {/* </div>
+                </div> */}
               </div>
             </div>
             <div className="row"></div>
           </div>
         </div>
-      </div>
+      </Layout>
+      {/* </div> */}
     </>
   );
 }
