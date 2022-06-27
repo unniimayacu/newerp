@@ -84,6 +84,15 @@ function EmployeeModalview(props) {
                       accessor: "document",
                     },
                     {
+                      Header: "Doc Type",
+                      accessor: "doctype",
+                    },
+                    {
+                      Header: "Required fund (For Renew The Document)",
+                      accessor: "fundreq",
+                    },
+
+                    {
                       Header: "Expiry Date",
                       accessor: "expdate",
                     },
@@ -91,7 +100,6 @@ function EmployeeModalview(props) {
                       Header: " ",
                       accessor: "search",
                     },
-                    
                   ],
                   []
                 );
@@ -126,9 +134,10 @@ function EmployeeModalview(props) {
     <div>
       <Modal
         {...props}
-        size="lg"
+        size="xl"
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        width="100%"
       >
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body className="model_body_hrms">
@@ -197,6 +206,7 @@ function EmployeeModalview(props) {
                   responsive={false}
                   pagecenter={false}
                   Hrms_dash_table_header_color={true}
+                  
                 />
               )}
             </div>

@@ -2,13 +2,15 @@ import React from 'react'
 import { BsFillCircleFill } from 'react-icons/bs';
 
 import { BiSearch } from "react-icons/bi";
+import { FiLogIn } from 'react-icons/fi';
 
 
 
 const search = () => {
   return (
-    <div className="custswitch_color">
-      <BiSearch color="lightgray" fontSize={20} />
+    <div className="custswitch_color d-flex ">
+      <BiSearch color="gray" fontSize={20}  />
+      <FiLogIn  color='gray' fontSize={20} />
     </div>
   );
 };
@@ -35,6 +37,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -46,6 +50,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "passport",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -57,6 +63,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -68,6 +76,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -79,6 +89,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -90,6 +102,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -101,6 +115,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -112,6 +128,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -123,6 +141,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -134,6 +154,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
   {
     blank: activeSwitch(),
@@ -145,6 +167,8 @@ const tableData = [
     leave: "sick",
     reqdate: "22/03/2022",
     totalfund: "2000",
+    doctype: "visa",
+    fundreq: "2000",
   },
 ];
 
