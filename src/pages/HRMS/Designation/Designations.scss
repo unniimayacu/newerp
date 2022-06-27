@@ -1,3 +1,22 @@
 .designation_view_heading{
     color: #0092ce;
+    font-size: 20px;
+}
+.container_designation{
+    box-shadow: 1px 1px 2px 2px lightgray;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.designation_p_color{
+    color: #000000;
+    font-weight: 500;
+}
+.designation_sub_p_color{
+    color: #838383;
+    font-weight: 500;
+}
+.designation_sub_active_p_color{
+    color: #47ba55;
+    font-weight: 500;
 }

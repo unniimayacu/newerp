@@ -15,9 +15,19 @@ export const ROUTES = Object.freeze({
   DASHBOARD: "/dashboard",
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",
+  DASHBOARD: "/dashboard",
+  DESIGNATIONVIEW: "/designationview",
+  DESIGNATION: "/designation",
+  CREATEDESIGNATION: "/createdesignation",
 });
 
 
+    // DASHBOARD:"/dashboard",
+    // DESIGNATIONVIEW:"/designationview",
+    // DESIGNATION:"/designation",
+    // CREATEDESIGNATION:"/createdesignation",
+
+//})
 // export const ROUTES = Object.freeze({
 //     CUSTOMERS: "/customers",
 //     ADDNEWCUSTOMER: "/AddNewcustomer",
