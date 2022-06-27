@@ -27,6 +27,10 @@ import "./button.scss";
     if (btnType === "ternary") {
     classNames += " erp__btn_ternary";
     }
+   if(btnType === "terneryicon") {
+    classNames += "erp__btn_terneryicon"
+   }
+
     if (prependIcon) {
       classNames += " erp__btn-prepend-icon";
     }
