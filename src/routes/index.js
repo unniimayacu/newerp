@@ -19,9 +19,17 @@ export const ROUTES = Object.freeze({
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",
   CREATEDESIGNATION: "/createdesignation",
+   EMPLOYEECATEGORYVIEW:"/employeecategoryview",
+    EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
+    EMPLOYEECATEGORY:"/employeecategory",
 });
 
 
+    // DASHBOARD:"/dashboard",
+    // DESIGNATIONVIEW:"/designationview",
+    // DESIGNATION:"/designation",
+    // CREATEDESIGNATION:"/createdesignation",
+   
     // DASHBOARD:"/dashboard",
     // DESIGNATIONVIEW:"/designationview",
     // DESIGNATION:"/designation",

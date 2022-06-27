@@ -12,6 +12,9 @@ import Dashboard from "pages/HRMS/Dashboard/Dashboard";
 import DesignationView from "pages/HRMS/Designation/DesignationView";
 import Designation from "pages/HRMS/Designation/Designation";
 import DesignationCreate from "pages/HRMS/Designation/DesignationCreate";
+import EmployeeCategoryView from "pages/HRMS/EmployeeCategory/EmployeeCategoryView";
+import EmployeeCategoryCreate from "pages/HRMS/EmployeeCategory/EmployeeCategoryCreate";
+import EmployeeCategory from "pages/HRMS/EmployeeCategory/EmployeeCategory";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -47,6 +50,9 @@ function App() {
 
             <Route path={ROUTES.VIEWPRODUCT} element={<Viewproduct/> } />
             <Route path={ROUTES.CREATEDESIGNATION} element={<DesignationCreate />} />
+            <Route path={ROUTES.EMPLOYEECATEGORYVIEW} element={<EmployeeCategoryView />} />
+            <Route path={ROUTES.EMPLOYEECATEGORYCREATE} element={<EmployeeCategoryCreate />} />
+            <Route path={ROUTES.EMPLOYEECATEGORY} element={<EmployeeCategory />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

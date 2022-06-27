@@ -9,10 +9,10 @@ const action = () => {
   return (
     <div className="d-flex align-items-center justify-content-center ">
       <span className="cust_icon_edit  ">
-        <BsPencilSquare />
+        <BsPencilSquare color="gray" />
       </span>
       <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill />{" "}
+        <RiFileSearchFill color="gray" />{" "}
       </span>
       <span className="cust_icon_edit ms-2">
         <MdDelete color="gray" />{" "}
@@ -49,6 +49,7 @@ function HrmsdesignationTabledata() {
       {
         dcode: "jk-3456547",
         name: "Manager",
+        category: "worker",
         aff: "Year 1 Ticket",
         atc: "Normal Class",
         details: "kl-dfs334563kljh6565478",
@@ -58,6 +59,7 @@ function HrmsdesignationTabledata() {
       {
         dcode: "jk-3456547",
         name: "Manager",
+        category: "worker",
         aff: "Year 1 Ticket",
         atc: "Normal Class",
         details: "kl-dfs334563kljh6565478",

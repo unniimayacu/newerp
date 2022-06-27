@@ -40,7 +40,7 @@ function Slidebar() {
               return (
                 <li key={index} className={`${item.cName} px-0`}>
                   <Link to={item.path}>
-                    <span>{item.title}</span>
+                    <span>{item.icon} {item.title}</span>
                   </Link>
                 </li>
               );
