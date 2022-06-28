@@ -12,13 +12,20 @@ export const ROUTES = Object.freeze({
   SUPPLIERS: "/suppliers",
   ADDPRODUCT: "/addproduct",
   VIEWPRODUCT: "/viewproduct",
-  DASHBOARD: "/dashboard",
-  DESIGNATIONVIEW: "/designationview",
-  DESIGNATION: "/designation",
+
+
+//   {" HRMS "}
+
   DASHBOARD: "/dashboard",
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",
   CREATEDESIGNATION: "/createdesignation",
+   EMPLOYEECATEGORYVIEW:"/employeecategoryview",
+    EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
+    EMPLOYEECATEGORY:"/employeecategory",
+    DEPARTMENTMASTERVIEW:"/departmentmasterview",
+    DEPARTMENTMASTERCREATE:"/departmentmastercreate",
+    DEPARTMENTMASTER:"/departmentmaster",
   EMPLOYEELIST:"/employeelist",
   CREATEEMPLOYEE:"/createemployee",
   EMPLOYEEDETAILS:"/employeedetails",
