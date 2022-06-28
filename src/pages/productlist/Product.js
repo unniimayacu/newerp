@@ -80,11 +80,11 @@ function Product() {
         accessor: "col4",
       },
       {
-        Header: "PURCHASE QUANTITY",
+        Header: "PURCHASE QTY",
         accessor: "col5",
       },
       {
-        Header: "SALES QUANTITY",
+        Header: "SALES QTY",
         accessor: "col6",
       },
       {
@@ -92,7 +92,7 @@ function Product() {
         accessor: "col7",
       },
       {
-        Header: "RECORDING QUANTITY",
+        Header: "RECORDING QTY",
         accessor: "col8",
       },
       {

@@ -26,6 +26,12 @@ export const ROUTES = Object.freeze({
     DEPARTMENTMASTERVIEW:"/departmentmasterview",
     DEPARTMENTMASTERCREATE:"/departmentmastercreate",
     DEPARTMENTMASTER:"/departmentmaster",
+  EMPLOYEELIST:"/employeelist",
+  CREATEEMPLOYEE:"/createemployee",
+  EMPLOYEEDETAILS:"/employeedetails",
+  EMPLOYEECATEGORYVIEW:"/employeecategoryview",
+  EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
+  EMPLOYEECATEGORY:"/employeecategory",
 });
 
 
