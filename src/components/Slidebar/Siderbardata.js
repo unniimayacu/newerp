@@ -12,6 +12,12 @@ export const Siderbardata = [
     cName: "nav-text",
   },
   {
+    title: "Employee Master",
+    path: "/employeelist",
+    cName: "nav-text",
+  },
+
+  {
     title: "Category",
     path: "/category",
     cName: "nav-text",
