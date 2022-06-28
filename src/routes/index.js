@@ -21,10 +21,18 @@ export const ROUTES = Object.freeze({
   CREATEDESIGNATION: "/createdesignation",
   EMPLOYEELIST:"/employeelist",
   CREATEEMPLOYEE:"/createemployee",
-  EMPLOYEEDETAILS:"/employeedetails"
+  EMPLOYEEDETAILS:"/employeedetails",
+  EMPLOYEECATEGORYVIEW:"/employeecategoryview",
+  EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
+  EMPLOYEECATEGORY:"/employeecategory",
 });
 
 
+    // DASHBOARD:"/dashboard",
+    // DESIGNATIONVIEW:"/designationview",
+    // DESIGNATION:"/designation",
+    // CREATEDESIGNATION:"/createdesignation",
+   
     // DASHBOARD:"/dashboard",
     // DESIGNATIONVIEW:"/designationview",
     // DESIGNATION:"/designation",

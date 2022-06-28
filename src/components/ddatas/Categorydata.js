@@ -28,7 +28,7 @@ const actionIcons = () => {
   return (
     <div className="d-flex align-items-center justify-content-center ">
       <span className="cust_icon_edit  ">
-        <BsPencilSquare color="lightgray" />
+        <BsPencilSquare color="gray" />
       </span>
       <span className="cust_icon_edit ms-2">
         <RiFileSearchFill color="gray" />{" "}

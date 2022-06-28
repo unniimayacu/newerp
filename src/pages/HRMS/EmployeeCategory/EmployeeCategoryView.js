@@ -6,33 +6,22 @@ import { FiUpload } from "react-icons/fi";
 import DesignationData from "../../../components/ddatas/Hrms_Dummy_datas/HrmsdesignationTabledata";
 import Newcontact from "components/customersnewcontact/Newcontact";
 import Table from "components/table/Table";
-import './Designations.scss'
+import './EmployeeCategory.scss'
 import Layout from "Layout/Layout";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-function DesignationView() {
+function EmployeeCategoryView() {
   const columns = useMemo(
     () => [
       {
-        Header: "DESIGNATION CODE",
+        Header: "CATEGORY CODE",
         accessor: "dcode",
       },
       {
-        Header: "NAME",
-        accessor: "name",
+        Header: "CATEGORY",
+        accessor: "category",
       },
-      {
-        Header: "AIR FAIR FREQUENCY",
-        accessor: "aff",
-      },
-      {
-        Header: "AIR TICKET CLASS",
-        accessor: "atc",
-      },
-      {
-        Header: "DETAILS",
-        accessor: "details",
-      },
+ 
       {
         Header: "ACTION",
         accessor: "action",
@@ -48,19 +37,21 @@ function DesignationView() {
   return (
     <div>
       <Layout>
-        <div className="container mt-5 justify-content-center p-5 container_designation">
+        <div className="container mt-5 justify-content-center p-5 container_empcategory">
           <div className="row justify-content-center">
             <div className=" d-flex justify-content-evenly pb-3  border-bottom gap-4">
               <div className="col-6 m-0 p-0 d-flex gap-4">
                 <div>
-                  <h4 className="designation_view_heading">Designation</h4>
+                  <h4 className="designation_view_heading">
+                    Employee Category
+                  </h4>
                 </div>
                 <div className=" m-0 p-0 d-flex  gap-2">
-                  <Link to="/createdesignation">
+                  <Link to="/employeecategorycreate">
                     <Button
                     //  appendIcon={}
                     >
-                      New Designation <AiOutlinePlus />
+                      New Emp Category <AiOutlinePlus />
                     </Button>
                   </Link>
                   {/* </div>
@@ -99,4 +90,4 @@ function DesignationView() {
   );
 }
 
-export default DesignationView;
+export default EmployeeCategoryView;

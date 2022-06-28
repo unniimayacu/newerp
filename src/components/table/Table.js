@@ -16,6 +16,7 @@ export default function Table({
   pagecenter = false,
   Hrms_dash_table_header_color = false,
   Tbody_style = false,
+  table_header_fixed = false ,
 }) {
   const {
     getTableProps,
@@ -127,7 +128,7 @@ export default function Table({
                     className={`${className && "table_header_color"} ${
                       Hrms_dash_table_header_color &&
                       "hrms_table_dash_header_color"
-                    }`}
+                    } ${table_header_fixed && "table_header_fix"}`}
                   >
                     {headerGroup.headers.map((column) => (
                       <th
