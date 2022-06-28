@@ -7,6 +7,9 @@ import {ROUTES} from "./routes"
 // import AddNewQuotation from "pages/AddNewQuotation/AddNewQuotation";
 // import Category from "pages/Category/Category";
 import Layout from "Layout/Layout";
+// import OverTimeMaster from "pages/HRMS/OverTime Master/OverTimeMaster";
+// import OverTimeMasterCreate from "pages/HRMS/OverTime Master/OverTimeMasterCreate";
+// import OverTimeMasterView from "./pages/HRMS/OverTime Master/OverTimeMasterView";
 // import Slidebar from "components/Slidebar/Slidebar";
 // import Dashboard from "pages/HRMS/Dashboard/Dashboard";
 // import DesignationView from "pages/HRMS/Designation/DesignationView";
@@ -45,6 +48,9 @@ const DepartmentMaster = lazy(()=>import('./pages/HRMS/DepartmentMaster/Departme
 const Employeelist = lazy(()=> import ("./pages/HRMS/Employeemaster/Employeelist") )
 const Createemployee = lazy(()=> import ("./pages/HRMS/Employeemaster/Createemployee") )
 const Employeedetails = lazy(()=> import ("./pages/HRMS/Employeemaster/Employeedetails") )
+const OverTimeMasterView =lazy(()=>import('./pages/HRMS/OverTime Master/OverTimeMasterView'))
+const OverTimeMasterCreate =lazy(()=>import('./pages/HRMS/OverTime Master/OverTimeMasterCreate'))
+const OverTimeMaster =lazy(()=>import('./pages/HRMS/OverTime Master/OverTimeMaster'))
 
 function App() {
   return (
@@ -77,6 +83,9 @@ function App() {
             <Route path={ROUTES.DEPARTMENTMASTERVIEW} element={<DepartmentMasterView />} />
             <Route path={ROUTES.DEPARTMENTMASTERCREATE} element={<DepartmentMasterCreate />} />
             <Route path={ROUTES.DEPARTMENTMASTER} element={<DepartmentMaster />} />
+            <Route path={ROUTES.OVERTIMEMASTERVIEW} element={<OverTimeMasterView />} />
+            <Route path={ROUTES.OVERTIMEMASTERCREATE} element={<OverTimeMasterCreate />} />
+            <Route path={ROUTES.OVERTIMEMASTER} element={<OverTimeMaster />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

@@ -6,6 +6,7 @@ import award from './img/Icon awesome-award.svg'
 import dashboard from './img/Group 3.svg'
 import work from './img/Icon material-work.svg'
 import star from './img/Icon awesome-star.svg'
+import emp from './img/Icon awesome-users.svg'
 
 export const Siderbardata = [
   {
@@ -27,7 +28,7 @@ export const Siderbardata = [
     cName: "nav-text",
   },
   {
-    icon: <img src={work} alt="" height={18} width={18} />,
+    icon: <img src={emp} alt="" height={18} width={18} />,
     title: "Employee Master",
     path: "/employeelist",
     cName: "nav-text",
@@ -36,6 +37,11 @@ export const Siderbardata = [
     icon: <img src={work} alt="" height={18} width={18} />,
     title: "Employee Category",
     path: "/employeecategoryview",
+    cName: "nav-text",
+  },
+  {
+    title: "OverTime Rate Master",
+    path: "/overtimemasterview",
     cName: "nav-text",
   },
   {

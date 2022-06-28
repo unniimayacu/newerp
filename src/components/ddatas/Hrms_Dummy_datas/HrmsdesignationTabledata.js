@@ -1,7 +1,7 @@
 import React from 'react'
 import { RiFileSearchFill } from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
-import { AiFillPrinter } from "react-icons/ai";
+// import { AiFillPrinter } from "react-icons/ai";
 import { Form } from "react-bootstrap";
 import { MdDelete } from "react-icons/md";
 
@@ -58,6 +58,12 @@ function HrmsdesignationTabledata() {
         details: "kl-dfs334563kljh6565478",
         action: action(),
         status: activeSwitch(),
+        normalothours: "4",
+        bonusotapp: "yes",
+        normalotrate: "1.25",
+        bonusotrate: "1.50",
+        w_h_otrate: "1.58",
+        p_h_otrate: "2.0",
       },
       {
         dcode: "jk-3456547",
@@ -71,6 +77,12 @@ function HrmsdesignationTabledata() {
         details: "kl-dfs334563kljh6565478",
         action: action(),
         status: activeSwitch(),
+        normalothours: "4",
+        bonusotapp: "yes",
+        normalotrate: "1.25",
+        bonusotrate: "1.50",
+        w_h_otrate: "1.58",
+        p_h_otrate: "2.0",
       },
     ];
       let dataChunk = [];
