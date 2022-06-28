@@ -20,6 +20,11 @@ export const Siderbardata = [
     cName: "nav-text",
   },
   {
+    title: "Employee Master",
+    path: "/employeelist",
+    cName: "nav-text",
+  },
+{
     icon:<img src={work} alt="" />,
     title: "Employee Category",
     path: "/employeecategoryview",

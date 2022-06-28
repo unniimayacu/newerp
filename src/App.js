@@ -25,6 +25,9 @@ const Viewsupplier =lazy(()=>import ("./pages/viewsupplier/Viewsupplier") )
 const Supplier = lazy(()=>import ("./pages/supplierlist/Supplier"))
 const Addproduct = lazy(()=>import ("./pages/addnewproduct/Addproduct") )
 const Viewproduct = lazy(()=>import ("./pages/viewproduct/Viewproduct"))
+const Employeelist = lazy(()=> import ("./pages/HRMS/Employeemaster/Employeelist") )
+const Createemployee = lazy(()=> import ("./pages/HRMS/Employeemaster/Createemployee") )
+const Employeedetails = lazy(()=> import ("./pages/HRMS/Employeemaster/Employeedetails") )
 
 function App() {
   return (
@@ -45,17 +48,19 @@ function App() {
             <Route path={ROUTES.ADDPRODUCT } element={<Addproduct/>}/>
             <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
             <Route path={ROUTES.DESIGNATIONVIEW} element={<DesignationView />} />
-           
             <Route path={ROUTES.DESIGNATION} element={<Designation />} />
-
             <Route path={ROUTES.VIEWPRODUCT} element={<Viewproduct/> } />
             <Route path={ROUTES.CREATEDESIGNATION} element={<DesignationCreate />} />
+            <Route path={ROUTES.EMPLOYEELIST} element={<Employeelist/>}/>
+            <Route path={ROUTES.CREATEEMPLOYEE} element={<Createemployee/>} />
+            <Route path={ROUTES.EMPLOYEEDETAILS} element={<Employeedetails/>}/>
             <Route path={ROUTES.EMPLOYEECATEGORYVIEW} element={<EmployeeCategoryView />} />
             <Route path={ROUTES.EMPLOYEECATEGORYCREATE} element={<EmployeeCategoryCreate />} />
             <Route path={ROUTES.EMPLOYEECATEGORY} element={<EmployeeCategory />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
+
 
       {/* <BrowserRouter>
         <Slidebar />
