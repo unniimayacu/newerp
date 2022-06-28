@@ -49,6 +49,9 @@ function HrmsdesignationTabledata() {
       {
         dcode: "jk-3456547",
         name: "Manager",
+        dname: "Purchase",
+        empname: "john wick",
+        empid: "jk-3456547",
         category: "worker",
         aff: "Year 1 Ticket",
         atc: "Normal Class",
@@ -59,6 +62,9 @@ function HrmsdesignationTabledata() {
       {
         dcode: "jk-3456547",
         name: "Manager",
+        dname: "Purchase",
+        empname: "john wick",
+        empid: "jk-3456547",
         category: "worker",
         aff: "Year 1 Ticket",
         atc: "Normal Class",

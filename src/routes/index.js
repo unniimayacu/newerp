@@ -12,9 +12,10 @@ export const ROUTES = Object.freeze({
   SUPPLIERS: "/suppliers",
   ADDPRODUCT: "/addproduct",
   VIEWPRODUCT: "/viewproduct",
-  DASHBOARD: "/dashboard",
-  DESIGNATIONVIEW: "/designationview",
-  DESIGNATION: "/designation",
+
+
+//   {" HRMS "}
+
   DASHBOARD: "/dashboard",
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",
@@ -22,6 +23,9 @@ export const ROUTES = Object.freeze({
    EMPLOYEECATEGORYVIEW:"/employeecategoryview",
     EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
     EMPLOYEECATEGORY:"/employeecategory",
+    DEPARTMENTMASTERVIEW:"/departmentmasterview",
+    DEPARTMENTMASTERCREATE:"/departmentmastercreate",
+    DEPARTMENTMASTER:"/departmentmaster",
 });
 
 

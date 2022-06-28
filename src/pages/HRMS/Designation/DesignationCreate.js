@@ -1,11 +1,11 @@
-import Button from 'components/button/Button';
-import InputDropdown from 'components/Input dropdown/InputDropdown';
-import InputType from 'components/Input type/InputType';
-import TextArea from 'components/Text Area/TextArea';
-import Layout from 'Layout/Layout';
-import React from 'react'
-import { BsFillPlusCircleFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import Button from "components/button/Button";
+import InputDropdown from "components/Input dropdown/InputDropdown";
+import InputType from "components/Input type/InputType";
+import TextArea from "components/Text Area/TextArea";
+import Layout from "Layout/Layout";
+import React from "react";
+import { BsFillPlusCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import "./Designations.scss";
 
 function DesignationCreate() {
@@ -62,7 +62,7 @@ function DesignationCreate() {
                       htmlFor="normalclass"
                       className="me-3 mt-3 d-flex  justify-content-start"
                     >
-                      <p className="me-2 mt-2 designation_sub_p_color">
+                      <p className="me-2 mt-3 designation_sub_p_color">
                         Normal Class
                       </p>
                       <input type="radio" id="normalclass" name="classType" />
@@ -71,7 +71,7 @@ function DesignationCreate() {
                       htmlFor="businessclass"
                       className="me-3 mt-3 d-flex justify-content-center text-end"
                     >
-                      <p className="me-2 mt-2 designation_sub_p_color">
+                      <p className="me-2 mt-3 designation_sub_p_color">
                         Business Class
                       </p>
                       <input type="radio" id="businessclass" name="classType" />
@@ -87,7 +87,7 @@ function DesignationCreate() {
                       htmlFor="active"
                       className="me-3 mt-3 d-flex  justify-content-start"
                     >
-                      <p className="me-2 mt-2 designation_sub_p_color">
+                      <p className="me-2 mt-3 designation_sub_p_color">
                         Active
                       </p>
                       <input type="radio" id="active" name="statusType" />
@@ -96,7 +96,7 @@ function DesignationCreate() {
                       htmlFor="inactive"
                       className="me-3 mt-3 d-flex justify-content-center text-center"
                     >
-                      <p className="me-2 mt-2 designation_sub_p_color">
+                      <p className="me-2 mt-3 designation_sub_p_color">
                         Inactive
                       </p>
                       <input type="radio" id="inactive" name="statusType" />
@@ -119,4 +119,4 @@ function DesignationCreate() {
   );
 }
 
-export default DesignationCreate
+export default DesignationCreate;
