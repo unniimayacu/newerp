@@ -7,6 +7,7 @@ import Layout from "Layout/Layout";
 
 import { Link } from "react-router-dom";
 import "./OverTimeMaster.scss";
+import {ROUTES} from 'routes'
 
 function OverTimeMasterCreate() {
   return (
@@ -93,7 +94,7 @@ function OverTimeMasterCreate() {
             </div>
             <div className="row mt-5">
               <div className="col-12 d-flex justify-content-center">
-                <Link to="/overtimemaster">
+                <Link to={ROUTES.OVERTIMEMASTER}>
                   <Button halfrounded={true}>Create</Button>
                 </Link>
               </div>

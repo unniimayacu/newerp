@@ -9,6 +9,7 @@ import Table from "components/table/Table";
 import './Designations.scss'
 import Layout from "Layout/Layout";
 import {Link} from 'react-router-dom'
+import {ROUTES} from 'routes'
 
 function DesignationView() {
   const columns = useMemo(
@@ -56,7 +57,7 @@ function DesignationView() {
                   <h4 className="designation_view_heading">Designation</h4>
                 </div>
                 <div className=" m-0 p-0 d-flex  gap-2">
-                  <Link to="/createdesignation">
+                  <Link to={ROUTES.CREATEDESIGNATION}>
                     <Button
                     //  appendIcon={}
                     >

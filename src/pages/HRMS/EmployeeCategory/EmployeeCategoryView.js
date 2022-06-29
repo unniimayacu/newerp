@@ -9,6 +9,7 @@ import Table from "components/table/Table";
 import './EmployeeCategory.scss'
 import Layout from "Layout/Layout";
 import { Link } from "react-router-dom";
+import {ROUTES} from 'routes'
 
 function EmployeeCategoryView() {
   const columns = useMemo(
@@ -47,7 +48,7 @@ function EmployeeCategoryView() {
                   </h4>
                 </div>
                 <div className=" m-0 p-0 d-flex  gap-2">
-                  <Link to="/employeecategorycreate">
+                  <Link to={ROUTES.EMPLOYEECATEGORYCREATE}>
                     <Button
                     //  appendIcon={}
                     >

@@ -9,6 +9,7 @@ import Table from "components/table/Table";
 import './DepartmentMaster.scss'
 import Layout from "Layout/Layout";
 import { Link } from "react-router-dom";
+import {ROUTES } from 'routes'
 
 function DepartmentMasterView() {
      const columns = useMemo(
@@ -56,7 +57,7 @@ function DepartmentMasterView() {
                   <h4 className="department_view_heading">Department</h4>
                 </div>
                 <div className=" m-0 p-0 d-flex  gap-2">
-                  <Link to="/departmentmastercreate">
+                  <Link to={ROUTES.DEPARTMENTMASTERCREATE}>
                     <Button
                     //  appendIcon={}
                     >

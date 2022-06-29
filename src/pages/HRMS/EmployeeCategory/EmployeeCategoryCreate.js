@@ -6,6 +6,7 @@ import Layout from "Layout/Layout";
 import React from "react";
 import { Link } from "react-router-dom";
 import './EmployeeCategory.scss'
+import {ROUTES} from 'routes'
 
 function EmployeeCategoryCreate() {
   return (
@@ -102,7 +103,7 @@ function EmployeeCategoryCreate() {
             </div>
             <div className="row mt-5">
               <div className="col-12 d-flex justify-content-center">
-                <Link to="/employeecategory">
+                <Link to={ROUTES.EMPLOYEECATEGORY}>
                   <Button halfrounded={true}>Create</Button>
                 </Link>
               </div>

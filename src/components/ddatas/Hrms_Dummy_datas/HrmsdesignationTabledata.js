@@ -64,6 +64,10 @@ function HrmsdesignationTabledata() {
         bonusotrate: "1.50",
         w_h_otrate: "1.58",
         p_h_otrate: "2.0",
+        sectorname: "DBX-OCK-SCD",
+        sector_start: "DBX",
+        sector_end: "CFD",
+        rate: "1123",
       },
       {
         dcode: "jk-3456547",
@@ -83,6 +87,10 @@ function HrmsdesignationTabledata() {
         bonusotrate: "1.50",
         w_h_otrate: "1.58",
         p_h_otrate: "2.0",
+        sectorname: "DBX-OCK-SCD",
+        sector_start: "DBX",
+        sector_end: "CFD",
+        rate: "1123",
       },
     ];
       let dataChunk = [];

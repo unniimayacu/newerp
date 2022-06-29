@@ -7,6 +7,7 @@ import React from "react";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./Designations.scss";
+import {ROUTES} from 'routes'
 
 function DesignationCreate() {
   return (
@@ -107,7 +108,7 @@ function DesignationCreate() {
             </div>
             <div className="row mt-5">
               <div className="col-12 d-flex justify-content-center">
-                <Link to="/designation">
+                <Link to={ROUTES.DESIGNATION}>
                   <Button halfrounded={true}>Create</Button>
                 </Link>
               </div>
