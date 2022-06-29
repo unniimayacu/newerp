@@ -20,7 +20,7 @@ export const ROUTES = Object.freeze({
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",
   CREATEDESIGNATION: "/createdesignation",
-   EMPLOYEECATEGORYVIEW:"/employeecategoryview",
+    EMPLOYEECATEGORYVIEW:"/employeecategoryview",
     EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
     EMPLOYEECATEGORY:"/employeecategory",
     DEPARTMENTMASTERVIEW:"/departmentmasterview",
@@ -32,6 +32,9 @@ export const ROUTES = Object.freeze({
     OVERTIMEMASTERVIEW:"/overtimemasterview",
     OVERTIMEMASTERCREATE:"/overtimemastercreate",
     OVERTIMEMASTER:"/overtimemaster",
+    SECTORMASTERVIEW:"/sectormasterview",
+    SECTORMASTERCREATE:"/sectormastercreate",
+    SECTORMASTER:"/sectormaster",
 
 
 });

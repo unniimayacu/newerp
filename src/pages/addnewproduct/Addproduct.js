@@ -501,7 +501,7 @@ function Addproduct() {
 
             <div className="row py-3">
               <div className="col-12  d-flex justify-content-center">
-                <FileUpload />
+                <FileUpload filebuttons />
               </div>
             </div>
             <div className="row mx-5  ">
