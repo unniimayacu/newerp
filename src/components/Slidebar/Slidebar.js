@@ -39,8 +39,10 @@ function Slidebar() {
             {Siderbardata.map((item, index) => {
               return (
                 <li key={index} className={`${item.cName} px-0`}>
-                  <Link to={item.path}>
-                    <span>{item.icon} {item.title}</span>
+                  <Link to={item.path} activeClassName="selected">
+                    <span>
+                      {item.icon} {item.title}
+                    </span>
                   </Link>
                 </li>
               );

@@ -52,7 +52,7 @@ function LeaveTypeMasterCreate() {
                       htmlFor="s_no"
                       className="me-3 mt-1 d-flex justify-content-center "
                     >
-                      <p className="me-2 leavetypemaster_sub_p_colorr">No</p>
+                      <p className="me-2 leavetypemaster_sub_p_color">No</p>
                       <input
                         type="radio"
                         id="s_no"

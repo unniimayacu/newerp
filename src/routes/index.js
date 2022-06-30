@@ -12,6 +12,7 @@ export const ROUTES = Object.freeze({
   SUPPLIERS: "/suppliers",
   ADDPRODUCT: "/addproduct",
   VIEWPRODUCT: "/viewproduct",
+  VIEWCATEGORY:"/viewcategory",
 
 
 //   {" HRMS "}
