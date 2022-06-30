@@ -30,6 +30,9 @@ import "./button.scss";
    if(btnType === "terneryicon") {
     classNames += "erp__btn_terneryicon"
    }
+    if (btnType === "cancel") {
+      classNames += "erp__btn__emp_cancel";
+    }
 
     if (prependIcon) {
       classNames += " erp__btn-prepend-icon";
