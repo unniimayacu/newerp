@@ -5,7 +5,7 @@ function EmployeeCategory() {
   return (
     <div>
       <Layout>
-        <div className="container p-5 container_designation">
+        <div className="container p-5 container_empcategory">
           <div className="row mt-3">
             <h6 className="empcategory_view_heading">Employee Category</h6>
             <div className="row mt-4 justify-content-between">

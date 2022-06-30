@@ -9,6 +9,7 @@ import {ROUTES} from "./routes"
 import Layout from "Layout/Layout";
 // import SectorMasterView from "pages/HRMS/Sector Master/SectorMasterView";
 import SectorMasterCreate from "pages/HRMS/Sector Master/SectorMasterCreate";
+import ViewCategory from "pages/ViewCategory/ViewCategory";
 // import LeaveTypeMasterView from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterView";
 // import LeaveTypeMasterCreate from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate";
 // import LeaveTypeMaster from "pages/HRMS/LeaveTypeMaster/LeaveTypeMaster";
@@ -105,6 +106,7 @@ function App() {
             <Route path={ROUTES.LEAVETYPEMASTERVIEW} element={<LeaveTypeMasterView />} />
             <Route path={ROUTES.LEAVETYPEMASTERCREATE} element={<LeaveTypeMasterCreate />} />
             <Route path={ROUTES.LEAVETYPEMASTER} element={<LeaveTypeMaster />} />
+            <Route path={ROUTES.VIEWCATEGORY} element={<ViewCategory />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

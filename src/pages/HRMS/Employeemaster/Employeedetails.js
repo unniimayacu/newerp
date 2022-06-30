@@ -74,7 +74,7 @@ function Employeedetails() {
             <Tabs
               defaultActiveKey="profile"
               id="uncontrolled-tab-example"
-              className="mb-3"
+              className="mb-3 "
             >
               <Tab eventKey="Personal" title="Personal Info">
                 <div className="row mt-5 mx-4 py-5">
