@@ -5,29 +5,48 @@ import React from "react";
 import award from './img/Icon awesome-award.svg'
 import dashboard from './img/Group 3.svg'
 import work from './img/Icon material-work.svg'
+import star from './img/Icon awesome-star.svg'
+import emp from './img/Icon awesome-users.svg'
 
 export const Siderbardata = [
   {
-    icon:<img src={dashboard} alt='' />,
+    icon: <img src={dashboard} alt="" height={15} width={15} />,
     title: "Dashboard",
     path: "/dashboard",
     cName: "nav-text",
   },
   {
-    icon:<img src={award} alt='' />,
+    icon: <img src={star} alt="" height={18} width={18} />,
+    title: "Department",
+    path: "/departmentmasterview",
+    cName: "nav-text",
+  },
+  {
+    icon: <img src={award} alt="" height={18} width={18} />,
     title: "Designation",
     path: "/designationview",
     cName: "nav-text",
   },
   {
+    icon: <img src={emp} alt="" height={18} width={18} />,
     title: "Employee Master",
     path: "/employeelist",
     cName: "nav-text",
   },
-{
-    icon:<img src={work} alt="" />,
+  {
+    icon: <img src={work} alt="" height={18} width={18} />,
     title: "Employee Category",
     path: "/employeecategoryview",
+    cName: "nav-text",
+  },
+  {
+    title: "OverTime Rate Master",
+    path: "/overtimemasterview",
+    cName: "nav-text",
+  },
+  {
+    title: "Sector Master",
+    path: "/sectormasterview",
     cName: "nav-text",
   },
   {

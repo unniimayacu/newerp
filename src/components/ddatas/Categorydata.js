@@ -11,13 +11,13 @@ const action = () => {
   return (
     <div className="d-flex align-items-center justify-content-center ">
       <span className="cust_icon_edit  ">
-        <BsPencilSquare color="whitesmoke" />
+        <BsPencilSquare color="whitesmoke" fontSize={16} />
       </span>
       <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill color="gray" />{" "}
+        <RiFileSearchFill color="gray" fontSize={16} />{" "}
       </span>
       <span className="cust_icon_edit ms-2">
-        <MdDelete color="gray" />{" "}
+        <MdDelete color="gray" fontSize={16} />{" "}
       </span>
     </div>
   );
@@ -28,13 +28,13 @@ const actionIcons = () => {
   return (
     <div className="d-flex align-items-center justify-content-center ">
       <span className="cust_icon_edit  ">
-        <BsPencilSquare color="gray" />
+        <BsPencilSquare color="#a2adca" fontSize={16} />
       </span>
       <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill color="gray" />{" "}
+        <RiFileSearchFill color="#a2adca" fontSize={16} />{" "}
       </span>
       <span className="cust_icon_edit ms-2">
-        <AiFillPrinter color="gray" />{" "}
+        <AiFillPrinter color="#a2adca" fontSize={16} />{" "}
       </span>
     </div>
   );
@@ -42,7 +42,7 @@ const actionIcons = () => {
 const activeSwitch = () => {
   return (
     <div className="custswitch_color">
-      <Form.Check type="switch" id="custom-switch" />
+      <Form.Check type="switch" id="custom-switch" className=''/>
     </div>
   );
 };

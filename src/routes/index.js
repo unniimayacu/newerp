@@ -12,19 +12,31 @@ export const ROUTES = Object.freeze({
   SUPPLIERS: "/suppliers",
   ADDPRODUCT: "/addproduct",
   VIEWPRODUCT: "/viewproduct",
-  DASHBOARD: "/dashboard",
-  DESIGNATIONVIEW: "/designationview",
-  DESIGNATION: "/designation",
+
+
+//   {" HRMS "}
+
   DASHBOARD: "/dashboard",
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",
   CREATEDESIGNATION: "/createdesignation",
-  EMPLOYEELIST:"/employeelist",
-  CREATEEMPLOYEE:"/createemployee",
-  EMPLOYEEDETAILS:"/employeedetails",
-  EMPLOYEECATEGORYVIEW:"/employeecategoryview",
-  EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
-  EMPLOYEECATEGORY:"/employeecategory",
+    EMPLOYEECATEGORYVIEW:"/employeecategoryview",
+    EMPLOYEECATEGORYCREATE:"/employeecategorycreate",
+    EMPLOYEECATEGORY:"/employeecategory",
+    DEPARTMENTMASTERVIEW:"/departmentmasterview",
+    DEPARTMENTMASTERCREATE:"/departmentmastercreate",
+    DEPARTMENTMASTER:"/departmentmaster",
+    EMPLOYEELIST:"/employeelist",
+    CREATEEMPLOYEE:"/createemployee",
+    EMPLOYEEDETAILS:"/employeedetails",
+    OVERTIMEMASTERVIEW:"/overtimemasterview",
+    OVERTIMEMASTERCREATE:"/overtimemastercreate",
+    OVERTIMEMASTER:"/overtimemaster",
+    SECTORMASTERVIEW:"/sectormasterview",
+    SECTORMASTERCREATE:"/sectormastercreate",
+    SECTORMASTER:"/sectormaster",
+
+
 });
 
 

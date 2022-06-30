@@ -178,7 +178,7 @@ function AddNewQuotation() {
             <div className="row justify-content-center">
               <div className="col-12 mt-5 d-flex justify-content-center">
                 <div>
-                  <FileUpload />
+                  <FileUpload filebuttons />
                   <p className={`${styles.multipledocument}`}>
                     You can Add Multiple Documents
                   </p>

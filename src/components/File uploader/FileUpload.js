@@ -3,7 +3,7 @@ import styles from "./file.module.scss";
 import img from "./uploadIcon.svg";
 import { PlusCircleFilled } from "@ant-design/icons";
 
-function FileUpload() {
+function FileUpload(props) {
   return (
     <div>
       <div>
@@ -28,13 +28,15 @@ function FileUpload() {
               className={`${styles.fileuploader}`}
             />
           </label>
-          <div className={`${styles.buttonsdiv}`}>
-            <button className={`${styles.uploadchoose}`}>Choose File</button>
+          {props.filebuttons && (
+            <div className={`${styles.buttonsdiv}`}>
+              <button className={`${styles.uploadchoose}`}>Choose File</button>
 
-            <button type="submit" className={`${styles.uploadbutton}`}>
-              Add <PlusCircleFilled className={`${styles.plus}`} />
-            </button>
-          </div>
+              <button type="submit" className={`${styles.uploadbutton}`}>
+                Add <PlusCircleFilled className={`${styles.plus}`} />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
