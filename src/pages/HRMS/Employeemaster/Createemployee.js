@@ -75,7 +75,7 @@ function Createemployee() {
                   </div>
                   <div className="col-xl-4 col-lg-4 col-12">
                     <div className="ms-3 d-flex">
-                      <label class="form-check-label" for="inlineRadio2">
+                      <label class="form-check-label" for="inlineRadio3">
                         Inactive
                       </label>
                       <div class="ms-1 form-check form-check-inline">
@@ -83,7 +83,7 @@ function Createemployee() {
                           class="form-check-input"
                           type="radio"
                           name="inlineRadioOptions"
-                          id="inlineRadio2"
+                          id="inlineRadio3"
                           value="option2"
                         />
                       </div>

@@ -68,6 +68,8 @@ function HrmsdesignationTabledata() {
         sector_start: "DBX",
         sector_end: "CFD",
         rate: "1123",
+        leave: "casual",
+        leavecategory: "paid",
       },
       {
         dcode: "jk-3456547",
@@ -91,6 +93,8 @@ function HrmsdesignationTabledata() {
         sector_start: "DBX",
         sector_end: "CFD",
         rate: "1123",
+        leave: "sick",
+        leavecategory: "Un paid",
       },
     ];
       let dataChunk = [];

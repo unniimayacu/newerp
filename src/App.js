@@ -9,6 +9,9 @@ import {ROUTES} from "./routes"
 import Layout from "Layout/Layout";
 // import SectorMasterView from "pages/HRMS/Sector Master/SectorMasterView";
 import SectorMasterCreate from "pages/HRMS/Sector Master/SectorMasterCreate";
+// import LeaveTypeMasterView from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterView";
+// import LeaveTypeMasterCreate from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate";
+// import LeaveTypeMaster from "pages/HRMS/LeaveTypeMaster/LeaveTypeMaster";
 // import SectorMaster from "pages/HRMS/Sector Master/SectorMaster";
 // import OverTimeMaster from "pages/HRMS/OverTime Master/OverTimeMaster";
 // import OverTimeMasterCreate from "pages/HRMS/OverTime Master/OverTimeMasterCreate";
@@ -57,6 +60,9 @@ const OverTimeMaster =lazy(()=>import('./pages/HRMS/OverTime Master/OverTimeMast
 const SectorMasterView =lazy(()=>import("./pages/HRMS/Sector Master/SectorMasterView"))
 const SectorMaster =lazy(()=>import('./pages/HRMS/Sector Master/SectorMaster'))
 // const SectorMasterCreate =lazy(()=>import('./pages/HRMS/Sector Master/SectorMasterCreate'))
+const LeaveTypeMasterView =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMasterView'))
+const LeaveTypeMasterCreate =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate'))
+const LeaveTypeMaster =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMaster'))
 
 
 function App() {
@@ -96,6 +102,9 @@ function App() {
             <Route path={ROUTES.SECTORMASTERVIEW} element={<SectorMasterView />} />
             <Route path={ROUTES.SECTORMASTERCREATE} element={<SectorMasterCreate />} />
             <Route path={ROUTES.SECTORMASTER} element={<SectorMaster />} />
+            <Route path={ROUTES.LEAVETYPEMASTERVIEW} element={<LeaveTypeMasterView />} />
+            <Route path={ROUTES.LEAVETYPEMASTERCREATE} element={<LeaveTypeMasterCreate />} />
+            <Route path={ROUTES.LEAVETYPEMASTER} element={<LeaveTypeMaster />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

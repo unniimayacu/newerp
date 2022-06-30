@@ -35,6 +35,9 @@ export const ROUTES = Object.freeze({
     SECTORMASTERVIEW:"/sectormasterview",
     SECTORMASTERCREATE:"/sectormastercreate",
     SECTORMASTER:"/sectormaster",
+    LEAVETYPEMASTERVIEW:"/leavetypemasterview",
+    LEAVETYPEMASTERCREATE:"/leavetypemastercreate",
+    LEAVETYPEMASTER:"/leavetypemaster",
 
 
 });

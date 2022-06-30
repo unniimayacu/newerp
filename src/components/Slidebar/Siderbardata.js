@@ -7,6 +7,8 @@ import dashboard from './img/Group 3.svg'
 import work from './img/Icon material-work.svg'
 import star from './img/Icon awesome-star.svg'
 import emp from './img/Icon awesome-users.svg'
+import time from './img/Icon ionic-ios-timer.svg'
+import sector from './img/Icon material-verified-user.svg'
 
 export const Siderbardata = [
   {
@@ -40,13 +42,20 @@ export const Siderbardata = [
     cName: "nav-text",
   },
   {
+    icon: <img src={time} alt="" height={18} width={18} />,
     title: "OverTime Rate Master",
     path: "/overtimemasterview",
     cName: "nav-text",
   },
   {
+    icon: <img src={sector} alt="" height={18} width={18} />,
     title: "Sector Master",
     path: "/sectormasterview",
+    cName: "nav-text",
+  },
+  {
+    title: "Leave Type Master",
+    path: "/leavetypemasterview",
     cName: "nav-text",
   },
   {
