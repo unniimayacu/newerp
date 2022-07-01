@@ -57,6 +57,23 @@ function Product() {
 //     ],
 //     []
 //   );
+
+
+const productsku =()=>{
+  return <div className="product_heading__space">PRODUCT SKU</div>;
+}
+const purchaseqty = () => {
+  return <div className="product_heading__space">PURCHASE QTY</div>;
+};
+const salesqty = () => {
+  return <div className="product_heading__space">SALES QTY</div>;
+};
+
+const recordingqty=()=>{
+   return( 
+   <div className="product_heading__space">SALES QTY</div>
+   );
+}
   const columns = useMemo(
     () => [
       {
@@ -68,7 +85,7 @@ function Product() {
         accessor: "col1",
       },
       {
-        Header: "PRODUCT SKU",
+        Header: productsku(),
         accessor: "col2",
       },
       {
@@ -80,11 +97,11 @@ function Product() {
         accessor: "col4",
       },
       {
-        Header: "PURCHASE QTY",
+        Header: purchaseqty(),
         accessor: "col5",
       },
       {
-        Header: "SALES QTY",
+        Header: salesqty(),
         accessor: "col6",
       },
       {
@@ -92,7 +109,7 @@ function Product() {
         accessor: "col7",
       },
       {
-        Header: "RECORDING QTY",
+        Header: recordingqty(),
         accessor: "col8",
       },
       {
@@ -121,7 +138,7 @@ function Product() {
                 <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
                   <h5 className="ms-0">Product List</h5>
                   <div className="ms-3 ">
-                    <Button appendIcon={<AiOutlinePlus />}>New Contact</Button>
+                    <Button appendIcon={<AiOutlinePlus />}>Add New Product </Button>
                   </div>
                   <div className="ms-3 ">
                     <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>

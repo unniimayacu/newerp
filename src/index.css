@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.erp__h5_color{
+  color: #0092ce;
+}
+.product_heading__space{
+      white-space: nowrap;
+}

@@ -96,22 +96,22 @@ function Addproduct() {
               </div>
             </div>
 
-            <div className="row mx-5 py-4 ">
+            <div className="row  py-2 ">
               <div className="col-xl-4 col-lg-4 col-4">
-                <p className={`mb-0 ms-0`}>Product Name</p>
+                <label className={`mb-0 ms-0`}>Product Name</label>
                 <InputType />
               </div>
               <div className="col-xl-4 col-lg-4 col-4">
-                <p className={`mb-0 ms-0`}>Product Type</p>
+                <label className={`mb-0 ms-0`}>Product Type</label>
                 <InputDropdown />
               </div>
               <div className="col-xl-4 col-lg-4 col-4">
-                <p className={`mb-0 ms-0`}>Product SKU</p>
+                <label className={`mb-0 ms-0`}>Product SKU</label>
                 <InputType />
               </div>
             </div>
 
-            <div className="row mx-5 py-4 ">
+            <div className="row  py-4 ">
               <div className="col-xl-4 col-lg-4 col-4">
                 <div class="form-check form-check-inline pt-3">
                   <input
@@ -140,7 +140,7 @@ function Addproduct() {
               </div>
 
               <div className="col-xl-3 col-lg-3 col-12 ">
-                <p className={`mb-0 ms-0`}>Basic Unit</p>
+                <label className={`mb-0 ms-0`}>Basic Unit</label>
 
                 <InputDropdown />
               </div>
@@ -165,19 +165,19 @@ function Addproduct() {
               >
                 <div className="row">
                   <div className="">
-                    <p>Name</p>
+                    <label>Name</label>
                     <InputType />
                   </div>
                   <div className="">
-                    <p>Description</p>
+                    <label>Description</label>
                     <InputType />
                   </div>
                   <div className="">
-                    <p>Unit Category</p>
+                    <label>Unit Category</label>
                     <InputDropdown />
                   </div>
                   <div className="row py-4">
-                    <p>Status</p>
+                    <label>Status</label>
                     <div className="col-xl-3 col-lg-3 col-12">
                       <div class="form-check form-check-inline">
                         <input
@@ -273,16 +273,16 @@ function Addproduct() {
               </div>
             )}
 
-            <div className="row mx-5 py-2">
+            <div className="row  py-2">
               <div className="col-xl-4 col-lg-4 col-12">
-                <p className={`mb-0 ms-0`}>Bar code</p>
+                <label className={`mb-0 ms-0`}>Bar code</label>
                 <InputDropdown />
               </div>
               {/* <div className="col-xl-1 col-lg-1 col-12 pt-4">
                 <PlusCircleFilled className="ms-2 product_plusicon__size" />
               </div> */}
               <div className="col-xl-3 col-lg-3 col-12">
-                <p className={`mb-0 ms-0`}>Brand</p>
+                <label className={`mb-0 ms-0`}>Brand</label>
                 <InputDropdown />
               </div>
               <div className="col-xl-1 col-lg-1 col-12 pt-4">
@@ -299,16 +299,16 @@ function Addproduct() {
               >
                 <div className="row">
                   <div className="">
-                    <p>Name</p>
+                    <label>Name</label>
                     <InputType />
                   </div>
                   <div className="">
-                    <p>Description</p>
+                    <label>Description</label>
                     <InputType />
                   </div>
 
-                  <div className="row py-4">
-                    <p>Status</p>
+                  <div className="row py-2">
+                    <label>Status</label>
                     <div className="col-xl-3 col-lg-3 col-12">
                       <div class="form-check form-check-inline">
                         <input
@@ -347,13 +347,13 @@ function Addproduct() {
               </CustomModal>
 
               <div className="col-xl-4 col-lg-4 col-12">
-                <p className={`mb-0 ms-0`}>Dimension</p>
+                <label className={`mb-0 ms-0`}>Dimension</label>
                 <InputType />
               </div>
             </div>
-            <div className="row mx-5 py-4">
+            <div className="row  py-4">
               <div className="col-xl-3 col-lg-3 col-12">
-                <p className={`mb-0 ms-0`}>Select Category</p>
+                <label className={`mb-0 ms-0`}>Select Category</label>
                 <InputDropdown />
               </div>
               <div className="col-xl-1 col-lg-1 col-12 pt-4">
@@ -370,20 +370,20 @@ function Addproduct() {
               >
                 <div className="row">
                   <div className="">
-                    <p>Name</p>
+                    <label>Name</label>
                     <InputType />
                   </div>
                   <div className="">
-                    <p>Code</p>
+                    <label>Code</label>
                     <InputType />
                   </div>
                   <div className="">
-                    <p>Description</p>
+                    <label>Description</label>
                     <InputType />
                   </div>
 
                   <div className="row py-4">
-                    <p>Status</p>
+                    <label>Status</label>
                     <div className="col-xl-3 col-lg-3 col-12">
                       <div class="form-check form-check-inline">
                         <input
@@ -424,7 +424,7 @@ function Addproduct() {
               </CustomModal>
 
               <div className="col-xl-3 col-lg-3 col-12">
-                <p className={`mb-0 ms-0`}>Select Sub Category</p>
+                <label className={`mb-0 ms-0`}>Select Sub Category</label>
                 <InputDropdown />
               </div>
               <div className="col-xl-1 col-lg-1 col-12 pt-4">
@@ -441,20 +441,20 @@ function Addproduct() {
               >
                 <div className="row">
                   <div className="">
-                    <p>Name</p>
+                    <label>Name</label>
                     <InputType />
                   </div>
                   <div className="">
-                    <p>Code</p>
+                    <label>Code</label>
                     <InputType />
                   </div>
                   <div className="">
-                    <p>Description</p>
+                    <label>Description</label>
                     <InputType />
                   </div>
 
                   <div className="row py-4">
-                    <p>Status</p>
+                    <label>Status</label>
                     <div className="col-xl-3 col-lg-3 col-12">
                       <div class="form-check form-check-inline">
                         <input
@@ -485,7 +485,7 @@ function Addproduct() {
                     </div>
                   </div>
                   <div className="">
-                    <p>Select Parent Category</p>
+                    <label>Select Parent Category</label>
                     <InputDropdown />
                   </div>
                   <div className="row py-3">
@@ -499,17 +499,17 @@ function Addproduct() {
               </CustomModal>
             </div>
 
-            <div className="row py-3">
+            <div className="row py-2">
               <div className="col-12  d-flex justify-content-center">
                 <FileUpload filebuttons />
               </div>
             </div>
-            <div className="row mx-5  ">
+            <div className="row   ">
               <div className=" col-12 ">
-                <h5 className="ms-0">Invoicing Policy</h5>
+                <h5 className="erp__h5_color">Invoicing Policy</h5>
               </div>
             </div>
-            <div className="row mx-5 py-5">
+            <div className="row  py-1">
               <div className="col-xl-3 col-lg-3 col-12">
                 <div class="form-check form-check-inline">
                   <input
@@ -554,22 +554,22 @@ function Addproduct() {
               </div>
             </div>
 
-            <div className="row mx-5 py-4">
+            <div className="row  py-4">
               <div className="col-xl-4 col-lg-4 col-12">
-                <p className={`mb-0 ms-0`}>Product Price</p>
+                <label className={`mb-0 ms-0`}>Product Price</label>
                 <InputType />
               </div>
               <div className="col-xl-4 col-lg-4 col-12">
-                <p className={`mb-0 ms-0`}>Selling Price</p>
+                <label className={`mb-0 ms-0`}>Selling Price</label>
                 <InputDropdown />
               </div>
             </div>
-            <div className="row mx-5  ">
+            <div className="row   ">
               <div className=" col-12 ">
-                <h5 className="ms-0">Control Purchase Bills</h5>
+                <h5 className="ms-0 erp__h5_color">Control Purchase Bills</h5>
               </div>
             </div>
-            <div className="row mx-5 py-4">
+            <div className="row  py-4">
               <div className="col-xl-3 col-lg-3 col-12">
                 <div class="form-check form-check-inline">
                   <input
@@ -598,35 +598,35 @@ function Addproduct() {
                   </label>
                 </div>
               </div>
-              <div className="row  py-4">
+              <div className="row  py-2">
                 <div className="col-xl-4 col-lg-4 col-12">
-                  <p className={`mb-0 ms-0`}>Tax</p>
+                  <label className={`mb-0 ms-0`}>Tax</label>
                   <InputType />
                 </div>
                 <div className="col-xl-4 col-lg-4 col-12">
-                  <p className={`mb-0 ms-0`}>Warranty</p>
+                  <label className={`mb-0 ms-0`}>Warranty</label>
                   <InputDropdown />
                 </div>
                 <div className="col-xl-4 col-lg-4 col-12">
-                  <p className={`mb-0 ms-0`}>Customer Lead Time</p>
+                  <label className={`mb-0 ms-0`}>Customer Lead Time</label>
                   <InputDropdown />
                 </div>
               </div>
               <div className="row ">
                 <div className=" col-12 ">
-                  <h5 className="ms-0">Supplier</h5>
+                  <h5 className="ms-0 erp__h5_color">Supplier</h5>
                 </div>
               </div>
               <div className="row ">
                 <div className="col-xl-4 col-lg-4 col-12">
-                  <p className={`mb-0 ms-0`}>Name</p>
+                  <label className={`mb-0 ms-0`}>Name</label>
                   <InputType
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                   />
                 </div>
                 <div className="col-xl-4 col-lg-4 col-12">
-                  <p className={`mb-0 ms-0`}>Mobile Number</p>
+                  <label className={`mb-0 ms-0`}>Mobile Number</label>
                   <PhoneInputt
                     value={phone.phone}
                     onChange={(phone) => setphone(phone)}
@@ -647,7 +647,7 @@ function Addproduct() {
                   </div>
                 </div>
 
-                <div className="row  py-4">
+                <div className="row  py-2">
                   <div className="col-xl-7 col-lg-7 col-12">
                     <Table responsive bordered size="sm">
                       <thead className="prodtable__head__bgcolor">
