@@ -32,7 +32,7 @@ const actionIcons = (props) => {
         <BsPencilSquare color="#a2adca" />
       </span>
       <span className="cust_icon_edit ms-2">
-        <Link to={ROUTES.VIEWCATEGORY}>
+        <Link to={ROUTES.UNITCATEGORYVIEW}>
           <RiFileSearchFill color="#a2adca"  />{" "}
         </Link>
       </span>
@@ -69,6 +69,7 @@ export default function Categorydata() {
          details: "kl-dfs334563kljh6565478",
          action: action(),
          status: activeSwitch(),
+         unit_Cat_name: "weight",
        },
        {
          id: 2,
@@ -85,6 +86,7 @@ export default function Categorydata() {
          details: "kl-dfs334563kljh6565478",
          action: action(),
          status: activeSwitch(),
+         unit_Cat_name: "length",
        },
        {
          id: 3,
@@ -94,6 +96,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "litre",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -106,6 +109,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -118,6 +122,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "length",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -130,6 +135,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -142,6 +148,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "litre",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -154,6 +161,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -166,6 +174,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "length",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -178,6 +187,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "litre",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -190,6 +200,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -202,6 +213,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -214,6 +226,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "length",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -226,6 +239,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -238,6 +252,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "length",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -250,6 +265,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -262,6 +278,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "length",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -274,6 +291,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "litre",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -286,6 +304,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -298,6 +317,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "litre",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -310,6 +330,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -322,6 +343,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "length",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -334,6 +356,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
          // col7: "3%",
          // col8: "30",
          // col9: " ",
@@ -349,6 +372,7 @@ export default function Categorydata() {
          col7: "3%",
          col8: "30",
          col9: " ",
+         unit_Cat_name: "length",
        },
        {
          id: 25,
@@ -361,6 +385,7 @@ export default function Categorydata() {
          col7: "3%",
          col8: "30",
          col9: " ",
+         unit_Cat_name: "length",
        },
        {
          id: 26,
@@ -373,6 +398,7 @@ export default function Categorydata() {
          col7: "3%",
          col8: "30",
          col9: " ",
+         unit_Cat_name: "litre",
        },
        {
          id: 27,
@@ -382,7 +408,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-       
+         unit_Cat_name: "length",
        },
        {
          id: 28,
@@ -392,7 +418,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
-        
+         unit_Cat_name: "litre",
        },
        {
          id: 29,
@@ -402,6 +428,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
        },
        {
          id: 30,
@@ -411,6 +438,7 @@ export default function Categorydata() {
          col4: "N/A",
          col5: actionIcons(),
          col6: activeSwitch(),
+         unit_Cat_name: "weight",
        },
      ];
 

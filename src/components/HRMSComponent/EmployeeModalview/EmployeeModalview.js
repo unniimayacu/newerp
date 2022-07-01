@@ -1,8 +1,9 @@
 import Table from 'components/table/Table';
-import {React,useState,useMemo} from 'react'
+import {React,useMemo} from 'react'
 import Modal from "react-bootstrap/Modal";
 import TableData from '../../ddatas/Hrms_Dummy_datas/HRMSTableDummyData'
 import './EmployeeModalview.scss'
+import { FiLogIn } from "react-icons/fi";
 
 function EmployeeModalview(props) {
 
@@ -142,6 +143,12 @@ function EmployeeModalview(props) {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body className="model_body_hrms">
           <>
+            {props.document_exp && (
+              <div className='mx-3 d-flex justify-content-end'>
+                <FiLogIn color="white" fontSize={20} className="login_button_style_document_exp"/>
+              </div>
+            )}
+
             <div>
               {props.totalEmployee && (
                 <Table
@@ -206,7 +213,6 @@ function EmployeeModalview(props) {
                   responsive={false}
                   pagecenter={false}
                   Hrms_dash_table_header_color={true}
-                  
                 />
               )}
             </div>

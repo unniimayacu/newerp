@@ -10,6 +10,9 @@ import Layout from "Layout/Layout";
 // import SectorMasterView from "pages/HRMS/Sector Master/SectorMasterView";
 import SectorMasterCreate from "pages/HRMS/Sector Master/SectorMasterCreate";
 import ViewCategory from "pages/ViewCategory/ViewCategory";
+import UnitCategory from "pages/Unit Category/UnitCategory";
+import UnitCategoryView from "pages/Unit Category/UnitCategoryView";
+
 // import LeaveTypeMasterView from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterView";
 // import LeaveTypeMasterCreate from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate";
 // import LeaveTypeMaster from "pages/HRMS/LeaveTypeMaster/LeaveTypeMaster";
@@ -107,6 +110,9 @@ function App() {
             <Route path={ROUTES.LEAVETYPEMASTERCREATE} element={<LeaveTypeMasterCreate />} />
             <Route path={ROUTES.LEAVETYPEMASTER} element={<LeaveTypeMaster />} />
             <Route path={ROUTES.VIEWCATEGORY} element={<ViewCategory />} />
+            <Route path={ROUTES.UNITCATEGORY} element={<UnitCategory />} />
+            <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
+           
           </Routes>
         </Suspense>
       </BrowserRouter>

@@ -2,15 +2,18 @@ import React from 'react'
 import { BsFillCircleFill } from 'react-icons/bs';
 
 import { BiSearch } from "react-icons/bi";
-import { FiLogIn } from 'react-icons/fi';
+// import { FiLogIn } from 'react-icons/fi';
 
 
 
 const search = () => {
   return (
     <div className="custswitch_color d-flex ">
-      <BiSearch color="gray" fontSize={20}  />
-      <FiLogIn  color='gray' fontSize={20} />
+      <BiSearch
+        color="white"
+        fontSize={20}
+        className="login_button_style_document_exp"
+      />
     </div>
   );
 };
