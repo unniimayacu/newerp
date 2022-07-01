@@ -15,19 +15,19 @@ function Newcontact() {
       <div className="newcontactfile_icon_size  new_rounded_border p-1 px-2 ">
         <ImFilesEmpty />
       </div>
-      <div className="newcontactfile_icon_size new_rounded_border p-1 px-2  ms-3">
+      <div className="newcontactfile_icon_size new_rounded_border p-1 px-1  ms-1">
         <AiFillFileExcel />
       </div>
-      <div className="newcontactfile_icon_size new_rounded_border p-1 px-2 ms-3">
+      <div className="newcontactfile_icon_size new_rounded_border p-1 px-1 ms-1">
         <AiOutlineFileJpg />
       </div>
-      <div className="newcontactfile_icon_size new_rounded_border p-1 px-2 ms-3">
+      <div className="newcontactfile_icon_size new_rounded_border p-1 px-1 ms-1">
         <AiFillFilePdf />
       </div>
-      <div className="newcontactfile_icon_size new_rounded_border p-1 px-2 ms-3">
+      <div className="newcontactfile_icon_size new_rounded_border p-1 px-1 ms-1">
         <AiFillPrinter />
       </div>
-      <div className="newcontactfile_icon_size new_rounded_border p-1 px-2 ms-3">
+      <div className="newcontactfile_icon_size new_rounded_border p-1 px-1 ms-1">
         <IoBook />
       </div>
       {/* </div> */}

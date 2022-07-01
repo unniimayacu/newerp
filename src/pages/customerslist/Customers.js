@@ -49,6 +49,25 @@ import Layout from "Layout/Layout";
 // };
 
 
+const contactperson = () => {
+  return <div className="product_heading__space">CONTACT PERSON</div>;
+};
+const paymentperiod = () => {
+  return <div className="product_heading__space">PAYMENT PERIOD</div>;
+};
+const creditLimit = () => {
+  return <div className="product_heading__space">CREDIT LIMIT</div>;
+};
+const paymentType = () => {
+  return <div className="product_heading__space">PAYMENT TYPE</div>;
+};
+const ueamount =()=>{
+   return <div className="product_heading__space">UE AMOUNT</div>;
+}
+const invoicedamount = () => {
+  return <div className="product_heading__space">INVOICED AMOUNT</div>;
+};
+
 function Customers() {
 
   // const data = useMemo(
@@ -84,7 +103,7 @@ function Customers() {
         accessor: "col1",
       },
       {
-        Header: "CONTACT PERSON",
+        Header: contactperson(),
         accessor: "col2",
       },
       {
@@ -96,7 +115,7 @@ function Customers() {
         accessor: "col4",
       },
       {
-        Header: "PAYMENT PERIOD",
+        Header: paymentperiod(),
         accessor: "col5",
       },
       {
@@ -104,19 +123,19 @@ function Customers() {
         accessor: "col6",
       },
       {
-        Header: "CREDIT LIMIT",
+        Header: creditLimit(),
         accessor: "col7",
       },
       {
-        Header: "PAYMENT TYPE",
+        Header: paymentType(),
         accessor: "col8",
       },
       {
-        Header: "UE AMOUNT",
+        Header: ueamount(),
         accessor: "col9",
       },
       {
-        Header: "INVOICED AMOUNT",
+        Header: invoicedamount(),
         accessor: "col10",
       },
       {
