@@ -44,10 +44,10 @@ function OverTimeMasterView() {
       <Layout>
         <div className="container mt-5 justify-content-center p-5 container_otmaster">
           <div className="row justify-content-center">
-            <div className=" d-flex justify-content-evenly pb-3  border-bottom gap-4">
-              <div className="col-6 m-0 p-0 d-flex gap-4">
+            <div className="row  pb-3  border-bottom">
+              <div className="col-xxl-6 col-xl-8 col-lg-10 col-md-12 col-12  mt-3 p-0 d-flex gap-2">
                 <div>
-                  <h4 className="otmaster_view_heading">OT Rate Master</h4>
+                  <h4 className="otmaster_view_heading mt-1">OT Rate Master</h4>
                 </div>
                 <div className=" m-0 p-0 d-flex  gap-2">
                   <Link to={ROUTES.OVERTIMEMASTERCREATE}>
@@ -66,7 +66,7 @@ function OverTimeMasterView() {
                   </Button>
                 </div>
               </div>
-              <div className="d-flex justify-content-end col-xl-6 col-lg-6 m-0 p-0">
+              <div className="d-flex justify-content-end col-xxl-6 col-xl-4 col-lg-6 col-md-7 mt-3 p-0">
                 <Newcontact />
               </div>
             </div>

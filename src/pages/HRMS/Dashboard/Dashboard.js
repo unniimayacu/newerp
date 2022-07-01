@@ -122,6 +122,7 @@ function Dashboard() {
                           show={modal5Show}
                           onHide={() => setModal5Show(false)}
                           Document
+                          document_exp
                         />
                       </div>
                       <div className="col-xl-4 col-lg-6  mt-5">

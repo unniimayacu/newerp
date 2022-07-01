@@ -12,7 +12,7 @@ function Newcontact() {
   return (
     <>
       {/* <div className="d-flex  col-6 "> */}
-      <div className="newcontactfile_icon_size  new_rounded_border p-1 px-2 ms-4">
+      <div className="newcontactfile_icon_size  new_rounded_border p-1 px-2 ">
         <ImFilesEmpty />
       </div>
       <div className="newcontactfile_icon_size new_rounded_border p-1 px-2  ms-3">

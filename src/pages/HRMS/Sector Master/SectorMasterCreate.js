@@ -44,7 +44,7 @@ function SectorMasterCreate() {
                 </div>
               </div>
 
-              <div className="col-3">
+              <div className="col-6">
                 <div className="">
                   <p className="sectormaster_p_color_blue">Air Fare List</p>
                   <div className="">
@@ -65,7 +65,8 @@ function SectorMasterCreate() {
                       {/* <li className=" "> */}
                       <div className="row border">
                         <div className="col-8 ms-0 me-0 ps-0 pe-0 ">
-                          <select
+                          <InputDropdown />
+                          {/* <select
                             className="form-select border-0 mt-1   text-center"
                             aria-label="Default select example"
                           >
@@ -73,26 +74,26 @@ function SectorMasterCreate() {
                             <option value="1">worker</option>
                             <option value="2">driver</option>
                             <option value="3">Manager</option>
-                          </select>
+                          </select> */}
                         </div>
                         {/* <div className='col-2'></div> */}
                         <div className="col-4 me-0 pe-0 ms-0 ps-1">
                           <input
                             type="text"
                             className="pt-2 pb-2 sector_create_rate_input"
-                            placeholder='Enter....'
+                            // placeholder='Enter....'
                           />{" "}
                           {/* <InputType /> */}
                         </div>
                       </div>
                       {/* </li> */}
-                      <div className="row border">
+                      {/* <div className="row border">
                         <div className="col-12 p-4">
                           <p> </p>
                           <p> </p>
                           <p> </p>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
