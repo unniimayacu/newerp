@@ -12,7 +12,7 @@ function EmployeeCategoryCreate() {
   return (
     <div>
       <Layout>
-        <div className="container p-5 container_designation">
+        <div className="container p-5 container_empcategory">
           <div className="row mt-3">
             <h6 className="empcategory_view_heading">
               Create Employee Category
@@ -62,18 +62,22 @@ function EmployeeCategoryCreate() {
                   <p className="empcategory_p_color">Fixed Salary</p>
                   <div className="d-flex justify-content-start">
                     <label
-                      htmlFor="s-yes"
+                      htmlFor="fixed-yes"
                       className="me-3 mt-1 d-flex  justify-content-start"
                     >
-                      <p className="me-2 mt-3 empcategory_sub_p_color">Yes</p>
-                      <input type="checkbox" id="s-yes" name="checkbox" />
+                      <p className="me-2  empcategory_sub_p_color">Yes</p>
+                      <input
+                        type="radio"
+                        id="fixed-yes"
+                        name="fixed-checkbox"
+                      />
                     </label>
                     <label
-                      htmlFor="s_no"
+                      htmlFor="fixed_no"
                       className="me-3 mt-1 d-flex justify-content-center text-end"
                     >
-                      <p className="me-2 mt-3 empcategory_sub_p_colorr">No</p>
-                      <input type="checkbox" id="s_no" name="checkbox" />
+                      <p className="me-2  empcategory_sub_p_color">No</p>
+                      <input type="radio" id="fixed_no" name="fixed-checkbox" />
                     </label>
                   </div>
                 </div>
@@ -83,18 +87,18 @@ function EmployeeCategoryCreate() {
                   <p className="empcategory_p_color">OT Applicable</p>
                   <div className="d-flex justify-content-start">
                     <label
-                      htmlFor="yes"
+                      htmlFor="yess"
                       className="me-3 mt-1 d-flex  justify-content-start"
                     >
-                      <p className="me-2 mt-3 empcategory_sub_p_color">Yes</p>
-                      <input type="checkbox" id="yes" name="checkbox" />
+                      <p className="me-2  empcategory_sub_p_color">Yes</p>
+                      <input type="radio" id="yess" name="checkbox" />
                     </label>
                     <label
-                      htmlFor="no"
+                      htmlFor="noo"
                       className="me-3 mt-1 d-flex justify-content-center text-end"
                     >
-                      <p className="me-2 mt-3 empcategory_sub_p_color">No</p>
-                      <input type="checkbox" id="no" name="checkbox" />
+                      <p className="me-2  empcategory_sub_p_color">No</p>
+                      <input type="radio" id="noo" name="checkbox" />
                     </label>
                   </div>
                 </div>

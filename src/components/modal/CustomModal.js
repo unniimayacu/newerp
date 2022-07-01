@@ -28,13 +28,7 @@ function CustomModal(props) {
 
   return (
     <>
-      <Modal
-        centered={true}
-        onHide={onHide}
-        show={show}
-        size="lg"
-        className=""
-      >
+      <Modal centered={true} onHide={onHide} show={show} size="lg" className="">
         <div className="modal-content">
           {/* <Modal.Header closeButton closeVariant="white"></Modal.Header> */}
 
@@ -43,9 +37,16 @@ function CustomModal(props) {
             closeButton
             closeVariant="white"
           >
-            <div className="p-3">
+            <div className="p-3 d-flex justify-content-between">
               {" "}
-              <h5> {modalTitle} </h5>{" "}
+              <h5 className={`${props.classname}`}> {modalTitle} </h5>{" "}
+              <button
+                type="button"
+                className="btn-close erp_custom_model_close_color"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                onClick={props.erp_custom_model_close}
+              ></button>
             </div>
 
             <div className="erp__modal__body m-0 p-0 ">

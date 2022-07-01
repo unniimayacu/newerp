@@ -4,7 +4,8 @@ import { BsPencilSquare } from "react-icons/bs";
 import { AiFillPrinter } from "react-icons/ai";
 import { Form } from "react-bootstrap";
 import { MdDelete } from 'react-icons/md';
-
+import {Link} from "react-router-dom"
+import {ROUTES} from "routes/index"
 
 
 const action = () => {
@@ -24,17 +25,19 @@ const action = () => {
 };
 
 
-const actionIcons = () => {
+const actionIcons = (props) => {
   return (
     <div className="d-flex align-items-center justify-content-center ">
       <span className="cust_icon_edit  ">
-        <BsPencilSquare color="#a2adca" fontSize={16} />
+        <BsPencilSquare color="#a2adca" />
       </span>
       <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill color="#a2adca" fontSize={16} />{" "}
+        <Link to={ROUTES.VIEWCATEGORY}>
+          <RiFileSearchFill color="#a2adca"  />{" "}
+        </Link>
       </span>
       <span className="cust_icon_edit ms-2">
-        <AiFillPrinter color="#a2adca" fontSize={16} />{" "}
+        <AiFillPrinter color="#a2adca" />{" "}
       </span>
     </div>
   );

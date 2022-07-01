@@ -192,7 +192,7 @@ function Viewcustomer() {
 
               <div className="row py-3">
                 <div className="col-xl-12 col-lg-12 col-12 ">
-                  <Accordion defaultActiveKey="0" flush >
+                  <Accordion defaultActiveKey="0" flush>
                     <Accordion.Item eventKey="0">
                       <Accordion.Header>
                         <h4 className="view__supplier__moredetails">
@@ -202,7 +202,7 @@ function Viewcustomer() {
                       <Accordion.Body>
                         <div className="row px-4">
                           <div className="col-xl-11 col-lg-11 col-12">
-                            <Accordion defaultActiveKey="0" flush >
+                            <Accordion defaultActiveKey={0} flush>
                               <Accordion.Item eventKey="0">
                                 <Accordion.Header>
                                   <h5>Address</h5>
@@ -230,7 +230,7 @@ function Viewcustomer() {
                         </div>
                         <div className="row px-4">
                           <div className="col-xl-11 col-lg-11 col-12">
-                            <Accordion defaultActiveKey="0" flush>
+                            <Accordion defaultActiveKey={0} flush>
                               <Accordion.Item eventKey="0">
                                 <Accordion.Header>
                                   <h5> Account Details</h5>
@@ -275,7 +275,7 @@ function Viewcustomer() {
                         </div>
                         <div className="row px-4">
                           <div className="col-xl-11 col-lg-11 col-12">
-                            <Accordion defaultActiveKey="0" flush>
+                            <Accordion defaultActiveKey={0} flush>
                               <Accordion.Item eventKey="0">
                                 <Accordion.Header>
                                   <h5>Payment Details</h5>
@@ -322,7 +322,7 @@ function Viewcustomer() {
                         </div>
                         <div className="row px-4">
                           <div className="col-xl-11 col-lg-11 col-12">
-                            <Accordion defaultActiveKey="0" flush>
+                            <Accordion defaultActiveKey={0} flush>
                               <Accordion.Item eventKey="0">
                                 <Accordion.Header>
                                   <h5>Other Info</h5>
@@ -367,7 +367,7 @@ function Viewcustomer() {
                       </div> */}
                         <div className="row px-4">
                           <div className="col-xl-11 col-lg-11 col-12">
-                            <Accordion defaultActiveKey="0" flush>
+                            <Accordion defaultActiveKey={0} flush>
                               <Accordion.Item eventKey="0">
                                 <Accordion.Header>
                                   <h5>Attached Document</h5>
@@ -389,7 +389,7 @@ function Viewcustomer() {
                         </div>
                         <div className="row px-4">
                           <div className="col-xl-11 col-lg-11 col-12">
-                            <Accordion defaultActiveKey="0" flush>
+                            <Accordion defaultActiveKey={0} flush>
                               <Accordion.Item eventKey="0">
                                 <Accordion.Header>
                                   <h5> Contact Person </h5>

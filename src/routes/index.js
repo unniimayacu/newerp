@@ -12,6 +12,7 @@ export const ROUTES = Object.freeze({
   SUPPLIERS: "/suppliers",
   ADDPRODUCT: "/addproduct",
   VIEWPRODUCT: "/viewproduct",
+  VIEWCATEGORY:"/viewcategory",
 
 
 //   {" HRMS "}
@@ -35,6 +36,9 @@ export const ROUTES = Object.freeze({
     SECTORMASTERVIEW:"/sectormasterview",
     SECTORMASTERCREATE:"/sectormastercreate",
     SECTORMASTER:"/sectormaster",
+    LEAVETYPEMASTERVIEW:"/leavetypemasterview",
+    LEAVETYPEMASTERCREATE:"/leavetypemastercreate",
+    LEAVETYPEMASTER:"/leavetypemaster",
 
 
 });
