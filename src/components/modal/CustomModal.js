@@ -2,7 +2,7 @@ import React from 'react'
 import {  Modal } from "react-bootstrap";
 import { useState } from "react";
 import "./modal.scss"
-
+import { AiOutlineClose } from "react-icons/ai";
 
 function CustomModal(props) {
 
@@ -15,14 +15,12 @@ function CustomModal(props) {
         children,
         onHide,
         size,
+        btnOnclick,
         show = false,
         ...rest } = props;
          var classNames = "";
 
-    //   const [show, setShow] = useState(false);
-
-    //   const handleClose = () => setShow(false);
-    //   const handleShow = () => setShow(true);
+  
 
 
 
@@ -40,13 +38,16 @@ function CustomModal(props) {
             <div className="p-3 d-flex justify-content-between">
               {" "}
               <h5 className={`${props.classname}`}> {modalTitle} </h5>{" "}
-              <button
+              {/* <button
                 type="button"
                 className="btn-close erp_custom_model_close_color"
                 data-bs-dismiss="modal"
                 aria-label="Close"
                 onClick={props.erp_custom_model_close}
-              ></button>
+              ></button> */}
+              <button onClick={btnOnclick} className="erp_modal_closebtn" >
+                <AiOutlineClose />
+              </button>
             </div>
 
             <div className="erp__modal__body m-0 p-0 ">

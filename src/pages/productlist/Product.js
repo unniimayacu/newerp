@@ -135,13 +135,17 @@ const recordingqty=()=>{
             <div className="row "></div>
             <div className="container">
               <div className="row mt-5 border-bottom ">
-                <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
-                  <h5 className="ms-0">Product List</h5>
-                  <div className="ms-3 ">
-                    <Button appendIcon={<AiOutlinePlus />}>Add New Product </Button>
-                  </div>
-                  <div className="ms-3 ">
-                    <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+                <div className="  col-xl-6 col-lg-6 col-12   py-3 ">
+                  <div className='d-flex'>
+                    <h5 className="ms-0">Product List</h5>
+                    {/* <div className="ms-3 "> */}
+                    <Button className="ms-2" appendIcon={<AiOutlinePlus />}>
+                      Add New Product{" "}
+                    </Button>
+                    {/* </div> */}
+                    <div className="ms-3 ">
+                      <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+                    </div>
                   </div>
                 </div>
                 <div className="d-flex justify-content-end col-xl-6 col-lg-6 col-12 py-3">
@@ -151,20 +155,20 @@ const recordingqty=()=>{
               <div className="row mt-5">
                 {/* <div className="container">
                   <div className="row mx-2"> */}
-                    <div className="col-xl-12 col-xl-12  col-12"></div>
-                    <Table
-                      data={data}
-                      columns={columns}
-                      PageSize={true}
-                      pagination={true}
-                      Sorted={true}
-                      className={true}
-                      responsive={true}
-                      pagecenter={true}
-                      //  paginate={true}
-                      // issorted={true}
-                    />
-                  {/* </div>
+                <div className="col-xl-12 col-xl-12  col-12"></div>
+                <Table
+                  data={data}
+                  columns={columns}
+                  PageSize={true}
+                  pagination={true}
+                  Sorted={true}
+                  className={true}
+                  responsive={true}
+                  pagecenter={true}
+                  //  paginate={true}
+                  // issorted={true}
+                />
+                {/* </div>
                 </div> */}
               </div>
             </div>

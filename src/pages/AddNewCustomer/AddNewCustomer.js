@@ -447,12 +447,24 @@ function AddNewCustomer() {
             </div>
           </div>
 
-          <div className="row d-flex justify-content-center">
+          <div className="row  d-flex justify-content-center">
             <div
               className={`col-12 d-flex justify-content-center mt-5 ${styles.columndiv}`}
             >
               <div>
-                <FileUpload filebuttons />
+                <FileUpload />
+                <div className="row  py-3">
+                  <div className="col-12 d-flex justify-content-center">
+                    <Button rounded={true}>Choose File</Button>
+                    <Button className=" ms-3 px-4"
+                      appendIcon={<BsFillPlusCircleFill />}
+                      rounded={true}
+                      btnType="secondary"
+                    >
+                      Add{" "}
+                    </Button>
+                  </div>
+                </div>
                 <p className={`${styles.multipledocument}`}>
                   You can Add Multiple Documents
                 </p>

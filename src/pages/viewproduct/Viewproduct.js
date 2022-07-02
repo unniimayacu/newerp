@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import Button from "components/button/Button";
-import { Accordion, Card } from "react-bootstrap";
+import { Accordion,  } from "react-bootstrap";
 import Layout from "Layout/Layout";
 import "./viewproduct.scss";
 function Viewproduct() {
@@ -9,7 +9,7 @@ function Viewproduct() {
       <Layout>
         <div className="row ">
           <div className="col-xl-12 col-lg-12 col-12">
-            <div className="row mt-5 mx-5 ">
+            <div className="row mt-5  ">
               <div className="col-xl-4 col-lg-4 col-12 mt-0 p-0 border-end ">
                 {/* <div className=" "> */}
                 <div className="d-flex justify-content-center ">
@@ -93,14 +93,15 @@ function Viewproduct() {
               </div>
             </div>
 
-            <div className="row py-3 mx-4">
+            <div className="row py-3 ">
               <div className="col-xl-12 col-lg-12 col-12 ">
                 <Accordion defaultActiveKey="0" flush>
                   <Accordion.Item eventKey="0">
-                    <Accordion.Header>
-                      <h4 className="view__supplier__moredetails">
-                        More Details
-                      </h4>
+                    <Accordion.Header bsPrefix={'border-0'}>
+                    
+                        <h5 className="view__supplier__moredetails">
+                          More Details
+                        </h5>
                     </Accordion.Header>
                     <Accordion.Body>
                       <div className="row px-4">
@@ -159,7 +160,7 @@ function Viewproduct() {
               </div>
             </div>
 
-            <div className="row mx-5 ">
+            <div className="row ">
               <div className="col-xl-12 col-lg-12 col-12">
                 <h4 className="view__supplier__moredetails">Your Notes</h4>
                 <div className="py-2">

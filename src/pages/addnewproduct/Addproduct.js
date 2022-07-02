@@ -14,6 +14,7 @@ import { Table } from "react-bootstrap";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RiDeleteBin5Line } from "react-icons/ri";
 import CustomModal from "components/modal/CustomModal";
+import { BsFillPlusCircleFill } from "react-icons/bs";
 
 function Addproduct() {
   const [deleteRow, setDeleterow] = useState(0);
@@ -159,8 +160,9 @@ function Addproduct() {
               </div>
 
               <CustomModal
-                onHide={handleClose}
+                // onHide={handleClose}
                 show={show}
+                btnOnclick={handleClose}
                 modalTitle="Add Unit Type"
               >
                 <div className="row">
@@ -234,7 +236,7 @@ function Addproduct() {
             </div>
             {alternateUnit && (
               <div className="row py-3 mx-5">
-                <h5 className="h5__bg__color">Alternative Units</h5>
+                <h5 className="erp__h5_color">Alternative Units</h5>
                 <div className="row py-3">
                   <div className="col-xl-3 col-lg-3 col-12">
                     <InputDropdown />
@@ -501,7 +503,25 @@ function Addproduct() {
 
             <div className="row py-2">
               <div className="col-12  d-flex justify-content-center">
-                <FileUpload filebuttons />
+                <div>
+                  <FileUpload />
+                  <div className="row  py-3">
+                    <div className="col-12 d-flex justify-content-center">
+                      <Button rounded={true}>Choose File</Button>
+                      <Button
+                        className=" ms-3 px-4"
+                        appendIcon={<BsFillPlusCircleFill />}
+                        rounded={true}
+                        btnType="secondary"
+                      >
+                        Add{" "}
+                      </Button>
+                    </div>
+                  </div>
+                  <p className=" d-flex justify-content-center">
+                    You can Add Multiple Documents
+                  </p>
+                </div>
               </div>
             </div>
             <div className="row   ">
