@@ -71,9 +71,34 @@ const handleShow = () => setShow(true);
             <Header />
           </div> */}
 
-          <div className="container mt-5 justify-content-center">
+          <div className="container mt-2 justify-content-center">
             <div className="row justify-content-center">
-              <div className="row pb-3 ps-0 pe-0  border-bottom">
+              <div className="row p-2 mt-3">
+                <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
+                  <div className="d-flex gap-2">
+                    <h5 className="erp__h5_color ">Category</h5>
+                    {/* <Link to={ROUTES.CREATEEMPLOYEE}> */}
+                    <Button
+                      className=""
+                      rounded={true}
+                      appendIcon={<AiOutlinePlus />}
+                    >
+                      New Category
+                    </Button>
+                    {/* </Link> */}
+                    <Button rounded={true} appendIcon={<FiUpload />}>
+                      Upload Via CSV
+                    </Button>
+                  </div>
+                </div>
+                <div className="  col-xl-4 col-lg-4 col-md-3 col-12">
+                  <div className="d-flex justify-content-end">
+                    <Newcontact />
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className="row pb-3 ps-0 pe-0  border-bottom">
                 <div className="col-xxl-6 col-xl-7 col-lg-9 col-md-12 col-12 mt-3 p-0 d-flex gap-2">
                   <div className="">
                     <h4>Category</h4>
@@ -82,17 +107,16 @@ const handleShow = () => setShow(true);
                     <Button appendIcon={<AiOutlinePlus />} onClick={handleShow}>
                       New Category
                     </Button>
-                    {/* </div>
-                <div className="col-2 m-0 p-0"> */}
+                    
                     <Button
-                    // appendIcon={}
+                  
                     >
                       Upload Via CSV <FiUpload />
                     </Button>
                   </div>
                   <CustomModal
                     onHide={handleClose}
-                    // erp_custom_model_close={handleClose}
+                   
                     btnOnclick={handleClose}
                     show={show}
                     modalTitle="Add New Category"
@@ -170,7 +194,7 @@ const handleShow = () => setShow(true);
                 <div className="d-flex justify-content-end col-xxl-6 col-xl-5 col-lg-6 col-md-6 col-12 mt-3 p-0">
                   <Newcontact />
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="row mt-5 justify-content-center">

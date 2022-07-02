@@ -1,7 +1,5 @@
 import React from "react";
 import "./newcontact.scss"
-// import { AiOutlinePlus } from "react-icons/ai";
-// import { FiUpload } from "react-icons/fi";
 import { AiFillFileExcel } from "react-icons/ai";
 import { ImFilesEmpty } from "react-icons/im";
 import { AiOutlineFileJpg } from "react-icons/ai";
@@ -11,8 +9,37 @@ import { IoBook } from "react-icons/io5";
 function Newcontact() {
   return (
     <>
-      {/* <div className="d-flex  col-6 "> */}
-      <div className="newcontactfile_icon_size  new_rounded_border p-1 px-2 ">
+      <div className="d-flex gap-2  ">
+        <div className=" new_rounded_border border__radius ">
+          <ImFilesEmpty className="erp_dwnld__icon__size " />
+        </div>
+        <div className=" new_rounded_border border__radius">
+          <AiFillFileExcel className="erp_dwnld__icon__size " />
+        </div>
+        <div className=" new_rounded_border border__radius">
+          <AiOutlineFileJpg className="erp_dwnld__icon__size " />
+        </div>
+        <div className=" new_rounded_border border__radius">
+          <AiFillFilePdf className="erp_dwnld__icon__size " />
+        </div>
+        <div className=" new_rounded_border border__radius">
+          <AiFillPrinter className="erp_dwnld__icon__size " />
+        </div>
+        <div className=" new_rounded_border border__radius">
+          <IoBook className="erp_dwnld__icon__size " />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Newcontact;
+
+
+
+
+     {
+       /* <div className="newcontactfile_icon_size  new_rounded_border p-1 px-2 ">
         <ImFilesEmpty />
       </div>
       <div className="newcontactfile_icon_size new_rounded_border p-1 px-1  ms-1">
@@ -29,13 +56,16 @@ function Newcontact() {
       </div>
       <div className="newcontactfile_icon_size new_rounded_border p-1 px-1 ms-1">
         <IoBook />
-      </div>
-      {/* </div> */}
-    </>
-  );
-}
+      </div> */
+     }
 
-export default Newcontact;
+
+
+
+
+
+
+
 
  {
    /* <div className="d-flex justify-content-start  col-6  ">

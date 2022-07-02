@@ -45,40 +45,48 @@ function Employeelist() {
   return (
     <>
       <Layout>
-        <div className="container mt-5 justify-content-center p-5 container_designation">
-          <div className="row justify-content-center">
-            <div className=" d-flex justify-content-evenly pb-3  border-bottom gap-4">
-              <div className="col-6 m-0 p-0 d-flex gap-4">
-                <div>
-                  <h4 className="designation_view_heading">Employee</h4>
+        <div className="container mt-2 justify-content-center  ">
+          <div className="row justify-content-center ">
+            <div className="card shadow-sm border border-2">
+              <div className="row p-2 mt-3">
+                <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
+                  <div className="d-flex gap-2">
+                    <h5 className="erp__h5_color ">Employee</h5>
+                    <Link to={ROUTES.CREATEEMPLOYEE}>
+                      <Button
+                        className=""
+                        rounded={true}
+                        appendIcon={<AiOutlinePlus />}
+                      >
+                        New Employee
+                      </Button>
+                    </Link>
+                    <Button rounded={true} appendIcon={<FiUpload />}>
+                      Upload Via CSV
+                    </Button>
+                  </div>
                 </div>
-                <div className=" m-0 p-0 d-flex  gap-2">
-                  <Link to={ROUTES.CREATEEMPLOYEE}>
-                    <Button appendIcon={<AiOutlinePlus />}>New Employee</Button>
-                  </Link>
-                  {/* </div>
-                <div className="col-2 m-0 p-0"> */}
-                  <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+                <div className="  col-xl-4 col-lg-4 col-md-3 col-12">
+                  <div className="d-flex justify-content-end">
+                    <Newcontact />
+                  </div>
                 </div>
               </div>
-              <div className="d-flex justify-content-end col-xl-6 col-lg-6 m-0 p-0">
-                <Newcontact />
-              </div>
-            </div>
-          </div>
 
-          <div className="row mt-5 justify-content-center">
-            <div className="text-center">
-              <Table
-                data={data}
-                columns={columns}
-                PageSize={false}
-                pagination={false}
-                Sorted={false}
-                className={true}
-                responsive={true}
-                pagecenter={false}
-              />
+              <div className="row mt-5 justify-content-center">
+                <div className="text-center">
+                  <Table
+                    data={data}
+                    columns={columns}
+                    PageSize={false}
+                    pagination={false}
+                    Sorted={false}
+                    className={true}
+                    responsive={true}
+                    pagecenter={false}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -88,3 +96,24 @@ function Employeelist() {
 }
 
 export default Employeelist
+
+
+   {
+     /* <div className=" row pb-3  border-bottom gap-4">
+              <div className="col-xl-8 col-lg-8 col-md-9 col-12 m-0 p-0 d-flex  gap-4">
+                <div>
+                  <h4 className="designation_view_heading">Employee</h4>
+                </div>
+                <div className=" m-0 p-0 d-flex  gap-2">
+                  <Link to={ROUTES.CREATEEMPLOYEE}>
+                    <Button appendIcon={<AiOutlinePlus />}>New Employee</Button>
+                  </Link>
+
+                  <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+                </div>
+              </div>
+              <div className="d-flex justify-content-end col-xl-4 col-lg-4 col-md-9 col-12 m-0 p-2">
+                <Newcontact />
+              </div>
+            </div> */
+   }

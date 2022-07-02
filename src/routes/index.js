@@ -20,7 +20,7 @@ export const ROUTES = Object.freeze({
 
 //   {" HRMS "}
 
-  DASHBOARD: "/dashboard",
+  DASHBOARD: "/",
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",
   CREATEDESIGNATION: "/createdesignation",
