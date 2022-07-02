@@ -11,7 +11,7 @@ import { FiBook } from "react-icons/fi";
 function Header() {
   return (
     <>
-      <Navbar expand="lg" className="navbar__color  p-4">
+      <Navbar expand="lg" className="navbar__color  p-4  erp__navbar_small">
         {/* <Container> */}
         <Navbar.Brand href="#home" className="">
           <AiOutlineMenu className="header_icon__size" />{" "}

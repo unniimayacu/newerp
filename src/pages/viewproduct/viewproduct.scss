@@ -1,8 +1,9 @@
 .view__supplier__moredetails {
   // border: none;
   // background: none !important;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 19px;
+  font-weight:700;
+
 }
 .h4__color {
   color: #36b4f7;
@@ -45,4 +46,11 @@
   padding: 10px;
   border-radius: 8px;
   background-color: whitesmoke;
+}
+.custom-button{
+  padding: 0px;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }

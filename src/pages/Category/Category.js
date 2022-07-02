@@ -95,7 +95,8 @@ const handleShow = () => setShow(true);
                   </div>
                   <CustomModal
                     onHide={handleClose}
-                    erp_custom_model_close={handleClose}
+                    // erp_custom_model_close={handleClose}
+                    btnOnclick={handleClose}
                     show={show}
                     modalTitle="Add New Category"
                     classname="heading_custom_model"
@@ -198,3 +199,5 @@ const handleShow = () => setShow(true);
 }
 
 export default Category;
+
+//AiOutlineClose
