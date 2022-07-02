@@ -50,10 +50,10 @@ function LeaveTypeMasterView() {
       <Layout>
         <div className="container mt-5 justify-content-center p-5 container_leavetypemaster">
           <div className="row justify-content-center">
-            <div className=" d-flex justify-content-evenly pb-3  border-bottom gap-4">
-              <div className="col-6 m-0 p-0 d-flex gap-4">
+            <div className="row pb-3 ps-0 pe-0  border-bottom ">
+              <div className="col-xxl-8 col-xl-9 col-lg-12 col-md-12 col-12 mt-3 p-0 d-flex gap-2">
                 <div>
-                  <h4 className="leavetypemaster_view_heading">
+                  <h4 className="leavetypemaster_view_heading mt-1">
                     Leave Type Master
                   </h4>
                 </div>
@@ -74,7 +74,7 @@ function LeaveTypeMasterView() {
                   </Button>
                 </div>
               </div>
-              <div className="d-flex justify-content-end col-xl-6 col-lg-6 m-0 p-0">
+              <div className="d-flex justify-content-end col-xxl-4 col-xl-6 col-lg-6 col-md-7 col-12 mt-3 p-0">
                 <Newcontact />
               </div>
             </div>

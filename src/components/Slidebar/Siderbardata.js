@@ -9,6 +9,8 @@ import star from './img/Icon awesome-star.svg'
 import emp from './img/Icon awesome-users.svg'
 import time from './img/Icon ionic-ios-timer.svg'
 import sector from './img/Icon material-verified-user.svg'
+// import { ROUTES } from "routes";
+// import { Link } from "react-router-dom";
 
 export const Siderbardata = [
   {
@@ -61,6 +63,11 @@ export const Siderbardata = [
   {
     title: "Category",
     path: "/category",
+    cName: "nav-text",
+  },
+  {
+    title: "Unit Category",
+    path: "/unitcategory",
     cName: "nav-text",
   },
   {

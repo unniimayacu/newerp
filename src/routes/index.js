@@ -13,6 +13,9 @@ export const ROUTES = Object.freeze({
   ADDPRODUCT: "/addproduct",
   VIEWPRODUCT: "/viewproduct",
   VIEWCATEGORY:"/viewcategory",
+  UNITCATEGORY:"/unitcategory",
+  UNITCATEGORYVIEW:"/unitcategoryview",
+ 
 
 
 //   {" HRMS "}

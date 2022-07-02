@@ -1,4 +1,4 @@
-import Header from "components/header/Header";
+
 import { React, useMemo,useState } from "react";
 import Button from "components/button/Button";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -73,17 +73,14 @@ const handleShow = () => setShow(true);
 
           <div className="container mt-5 justify-content-center">
             <div className="row justify-content-center">
-              <div className=" d-flex justify-content-evenly pb-3  border-bottom">
-                <div className="col-6 m-0 p-0 d-flex gap-4">
-                  <div>
+              <div className="row pb-3 ps-0 pe-0  border-bottom">
+                <div className="col-xxl-6 col-xl-7 col-lg-9 col-md-12 col-12 mt-3 p-0 d-flex gap-2">
+                  <div className="">
                     <h4>Category</h4>
                   </div>
                   <div className=" m-0 p-0 d-flex  gap-2">
-                    <Button
-                      //  appendIcon={}
-                      onClick={handleShow}
-                    >
-                      New Category <AiOutlinePlus />
+                    <Button appendIcon={<AiOutlinePlus />} onClick={handleShow}>
+                      New Category
                     </Button>
                     {/* </div>
                 <div className="col-2 m-0 p-0"> */}
@@ -170,7 +167,7 @@ const handleShow = () => setShow(true);
                     </div>
                   </CustomModal>
                 </div>
-                <div className="d-flex justify-content-end col-6 m-0 p-0">
+                <div className="d-flex justify-content-end col-xxl-6 col-xl-5 col-lg-6 col-md-6 col-12 mt-3 p-0">
                   <Newcontact />
                 </div>
               </div>
