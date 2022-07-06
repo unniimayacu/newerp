@@ -77,13 +77,13 @@ function SectorMasterCreate() {
                           </select> */}
                         </div>
                         {/* <div className='col-2'></div> */}
-                        <div className="col-4 me-0 pe-0 ms-0 ps-1">
-                          <input
+                        <div className="col-4 me-0 pe-0 ms-0 ps-0">
+                          {/* <input
                             type="text"
-                            className="pt-2 pb-2 sector_create_rate_input"
+                            className="pt-2 pb- sector_create_rate_input"
                             // placeholder='Enter....'
-                          />{" "}
-                          {/* <InputType /> */}
+                          />{" "} */}
+                          <InputType className='text-center'/>
                         </div>
                       </div>
                       {/* </li> */}

@@ -70,6 +70,9 @@ function HrmsdesignationTabledata() {
         rate: "1123",
         leave: "casual",
         leavecategory: "paid",
+        desc: "Iorem ispem id sometime is that of the part of the that",
+        date: "22/04/2022",
+        holiday: "Onam",
       },
       {
         dcode: "jk-3456547",
@@ -81,6 +84,8 @@ function HrmsdesignationTabledata() {
         aff: "Year 1 Ticket",
         atc: "Normal Class",
         details: "kl-dfs334563kljh6565478",
+        desc: "Iorem ispem id sometime is that of the part of the that",
+        date: "22/04/2022",
         action: action(),
         status: activeSwitch(),
         normalothours: "4",
@@ -95,6 +100,7 @@ function HrmsdesignationTabledata() {
         rate: "1123",
         leave: "sick",
         leavecategory: "Un paid",
+        holiday: "Christmas",
       },
     ];
       let dataChunk = [];
