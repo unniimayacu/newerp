@@ -101,3 +101,26 @@
 // span{
 //  margin-left: 16px;
 // }
+
+.nav-textcolor{
+    color: white;
+//   font-size: 16px;
+   text-decoration: none;
+}
+.nav-textcolor :hover{
+  background-color: whitesmoke;
+
+    color: black;
+}
+
+
+
+
+.form-select-navbarleft {
+background: none !important;
+border: none !important;
+outline: none;
+}
+.navdropdwn__hrms{
+    height: 40px;
+}

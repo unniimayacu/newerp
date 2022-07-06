@@ -13,25 +13,6 @@ import ViewCategory from "pages/ViewCategory/ViewCategory";
 import UnitCategory from "pages/Unit Category/UnitCategory";
 import UnitCategoryView from "pages/Unit Category/UnitCategoryView";
 
-// import LeaveTypeMasterView from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterView";
-// import LeaveTypeMasterCreate from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate";
-// import LeaveTypeMaster from "pages/HRMS/LeaveTypeMaster/LeaveTypeMaster";
-// import SectorMaster from "pages/HRMS/Sector Master/SectorMaster";
-// import OverTimeMaster from "pages/HRMS/OverTime Master/OverTimeMaster";
-// import OverTimeMasterCreate from "pages/HRMS/OverTime Master/OverTimeMasterCreate";
-// import OverTimeMasterView from "./pages/HRMS/OverTime Master/OverTimeMasterView";
-// import Slidebar from "components/Slidebar/Slidebar";
-// import Dashboard from "pages/HRMS/Dashboard/Dashboard";
-// import DesignationView from "pages/HRMS/Designation/DesignationView";
-// import Designation from "pages/HRMS/Designation/Designation";
-// import DesignationCreate from "pages/HRMS/Designation/DesignationCreate";
-// import EmployeeCategoryView from "pages/HRMS/EmployeeCategory/EmployeeCategoryView";
-// import EmployeeCategoryCreate from "pages/HRMS/EmployeeCategory/EmployeeCategoryCreate";
-// import EmployeeCategory from "pages/HRMS/EmployeeCategory/EmployeeCategory";
-// import DepartmentMasterView from "pages/HRMS/DepartmentMaster/DepartmentMasterView";
-// import DepartmentMasterCreate from "pages/HRMS/DepartmentMaster/DepartmentMasterCreate";
-// import DepartmentMaster from "pages/HRMS/DepartmentMaster/DepartmentMaster";
-
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
 const Products = lazy(()=> import ("./pages/productlist/Product") )
@@ -67,6 +48,7 @@ const SectorMaster =lazy(()=>import('./pages/HRMS/Sector Master/SectorMaster'))
 const LeaveTypeMasterView =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMasterView'))
 const LeaveTypeMasterCreate =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate'))
 const LeaveTypeMaster =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMaster'))
+const Empcategoryleaveslist = lazy(()=>import('./pages/HRMS/EmployeeCategoryLeaves/Empcategoryleaveslist'))
 
 
 function App() {
@@ -75,6 +57,7 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<p>loading...</p>}>
           <Routes>
+             <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
             <Route path={ROUTES.CUSTOMERS} element={<Customers />} />
             <Route path={ROUTES.PRODUCTS} element={<Products />} />
             <Route path={ROUTES.ADDNEWCUSTOMER} element={<AddNewCustomer />} />
@@ -86,7 +69,7 @@ function App() {
             <Route path={ROUTES.CATEGORY} element={<Category />} />
             <Route path={ROUTES.LAYOUT} element={<Layout />} />
             <Route path={ROUTES.ADDPRODUCT } element={<Addproduct/>}/>
-            <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+           
             <Route path={ROUTES.DESIGNATIONVIEW} element={<DesignationView />} />
             <Route path={ROUTES.DESIGNATION} element={<Designation />} />
             <Route path={ROUTES.VIEWPRODUCT} element={<Viewproduct/> } />
@@ -112,6 +95,7 @@ function App() {
             <Route path={ROUTES.VIEWCATEGORY} element={<ViewCategory />} />
             <Route path={ROUTES.UNITCATEGORY} element={<UnitCategory />} />
             <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
+            <Route path={ROUTES.EMPCATEGORYLEAVELIST} element={<Empcategoryleaveslist/>} />
            
           </Routes>
         </Suspense>
@@ -123,3 +107,23 @@ function App() {
 }
 
 export default App;
+
+
+// import LeaveTypeMasterView from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterView";
+// import LeaveTypeMasterCreate from "pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate";
+// import LeaveTypeMaster from "pages/HRMS/LeaveTypeMaster/LeaveTypeMaster";
+// import SectorMaster from "pages/HRMS/Sector Master/SectorMaster";
+// import OverTimeMaster from "pages/HRMS/OverTime Master/OverTimeMaster";
+// import OverTimeMasterCreate from "pages/HRMS/OverTime Master/OverTimeMasterCreate";
+// import OverTimeMasterView from "./pages/HRMS/OverTime Master/OverTimeMasterView";
+// import Slidebar from "components/Slidebar/Slidebar";
+// import Dashboard from "pages/HRMS/Dashboard/Dashboard";
+// import DesignationView from "pages/HRMS/Designation/DesignationView";
+// import Designation from "pages/HRMS/Designation/Designation";
+// import DesignationCreate from "pages/HRMS/Designation/DesignationCreate";
+// import EmployeeCategoryView from "pages/HRMS/EmployeeCategory/EmployeeCategoryView";
+// import EmployeeCategoryCreate from "pages/HRMS/EmployeeCategory/EmployeeCategoryCreate";
+// import EmployeeCategory from "pages/HRMS/EmployeeCategory/EmployeeCategory";
+// import DepartmentMasterView from "pages/HRMS/DepartmentMaster/DepartmentMasterView";
+// import DepartmentMasterCreate from "pages/HRMS/DepartmentMaster/DepartmentMasterCreate";
+// import DepartmentMaster from "pages/HRMS/DepartmentMaster/DepartmentMaster";

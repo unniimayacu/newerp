@@ -16,7 +16,7 @@ export const Siderbardata = [
   {
     icon: <img src={dashboard} alt="" height={15} width={15} />,
     title: "Dashboard",
-    path: "/dashboard",
+    path: "/",
     cName: "nav-text",
   },
   {

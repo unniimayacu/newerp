@@ -1,5 +1,4 @@
-import React  from 'react'
-import "./employeemaster.scss"
+import React from 'react'
 import Button from "components/button/Button";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
@@ -10,38 +9,39 @@ import { useMemo } from "react";
 import EmployeelistData from "components/ddatas/Hrms_Dummy_datas/Employeelistdata";
 import { Link } from "react-router-dom";
 import { ROUTES } from "routes/index";
+function Empcategoryleaveslist() {
 
-function Employeelist() {
-    const columns = useMemo(
-      () => [
-        {
-          Header: "EMPLOYEE ID",
-          accessor: "col1",
-        },
-        {
-          Header: "NAME",
-          accessor: "col2",
-        },
-        {
-          Header: "PASSPORT NUMBER",
-          accessor: "col3",
-        },
-        {
-          Header: "PASSPORT EXPIRY DATE",
-          accessor: "col4",
-        },
-        {
-          Header: "ACTION",
-          accessor: "col5",
-        },
-        {
-          Header: "STATUS",
-          accessor: "col6",
-        },
-      ],
-      []
-    );
-      const data = useMemo(() => EmployeelistData(), []);
+const columns = useMemo(
+  () => [
+    {
+      Header: "EMPLOYEE ID",
+      accessor: "col1",
+    },
+    {
+      Header: "NAME",
+      accessor: "col2",
+    },
+    {
+      Header: "PASSPORT NUMBER",
+      accessor: "col3",
+    },
+    {
+      Header: "PASSPORT EXPIRY DATE",
+      accessor: "col4",
+    },
+    {
+      Header: "ACTION",
+      accessor: "col5",
+    },
+    {
+      Header: "STATUS",
+      accessor: "col6",
+    },
+  ],
+  []
+);
+const data = useMemo(() => EmployeelistData(), []);
+
   return (
     <>
       <Layout>
@@ -95,25 +95,4 @@ function Employeelist() {
   );
 }
 
-export default Employeelist
-
-
-   {
-     /* <div className=" row pb-3  border-bottom gap-4">
-              <div className="col-xl-8 col-lg-8 col-md-9 col-12 m-0 p-0 d-flex  gap-4">
-                <div>
-                  <h4 className="designation_view_heading">Employee</h4>
-                </div>
-                <div className=" m-0 p-0 d-flex  gap-2">
-                  <Link to={ROUTES.CREATEEMPLOYEE}>
-                    <Button appendIcon={<AiOutlinePlus />}>New Employee</Button>
-                  </Link>
-
-                  <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
-                </div>
-              </div>
-              <div className="d-flex justify-content-end col-xl-4 col-lg-4 col-md-9 col-12 m-0 p-2">
-                <Newcontact />
-              </div>
-            </div> */
-   }
+export default Empcategoryleaveslist

@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import Button from "components/button/Button";
-import { Accordion,  } from "react-bootstrap";
+import { Accordion,Table  } from "react-bootstrap";
 import Layout from "Layout/Layout";
 import "./viewproduct.scss";
 function Viewproduct() {
@@ -10,7 +10,7 @@ function Viewproduct() {
         <div className="row ">
           <div className="col-xl-12 col-lg-12 col-12">
             <div className="row mt-5  ">
-              <div className="col-xl-4 col-lg-4 col-12 mt-0 p-0 border-end ">
+              <div className="col-xl-4 col-lg-4 col-12 mt-0 p-0  border-end  viewproduct__border">
                 {/* <div className=" "> */}
                 <div className="d-flex justify-content-center ">
                   <div className="p-4  product__img ">
@@ -33,7 +33,99 @@ function Viewproduct() {
                 </div>
                 {/* </div> */}
               </div>
-              <div className="col-xl-8 col-lg-8 col-12 mt-5 p-4">
+
+              <div className="col-xl-8 col-lg-8  col-12 ">
+                <div className="mt-5">
+                  <Button btnType="secondary" rounded={true}>
+                    Product Details
+                  </Button>
+                </div>
+                <div className="row">
+                  <div className="col-xl-5 col-lg-6 col-md-5 col-12">
+                    <div className="  ">
+                      <table class="table">
+                        <thead></thead>
+                        <tbody>
+                          <tr className="border-0  ">
+                            <th scope="row" className="border-0">
+                              Product Type
+                            </th>
+                            <td className="border-0">:</td>
+                            <td className="border-0 department_sub_p_color">
+                              Single
+                            </td>
+                          </tr>
+                          <tr className="border-0">
+                            <th scope="row" className="border-0">
+                              Product SKU
+                            </th>
+                            <td className="border-0">:</td>
+                            <td className="border-0 department_sub_p_color">
+                              SKUhjH7Bgh8
+                            </td>
+                          </tr>
+                          <tr className="border-0">
+                            <th className="border-0" scope="row">
+                              Base Unit
+                            </th>
+                            <td className="border-0">:</td>
+                            <td className="border-0 department_sub_p_color">
+                              Nos
+                            </td>
+                          </tr>
+                          <tr className="border-0">
+                            <th className="border-0" scope="row">
+                              Alternative Unit
+                            </th>
+                            <td className="border-0">:</td>
+                            <td className="border-0 department_sub_active_p_color">
+                              Kg
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div className="col-xl-5 col-lg-5 col-md-5 col-12">
+                    <div className="  ">
+                      <table class="table">
+                        <thead></thead>
+                        <tbody>
+                          <tr className="border-0">
+                            <th scope="row" className="border-0">
+                              Barcode Type
+                            </th>
+                            <td className="border-0">:</td>
+                            <td className="border-0 department_sub_p_color">
+                              djuems
+                            </td>
+                          </tr>
+                          <tr className="border-0">
+                            <th scope="row" className="border-0">
+                              Category
+                            </th>
+                            <td className="border-0">:</td>
+                            <td className="border-0 department_sub_p_color">
+                              Nos
+                            </td>
+                          </tr>
+                          <tr className="border-0">
+                            <th className="border-0" scope="row">
+                              Sub Category
+                            </th>
+                            <td className="border-0">:</td>
+                            <td className="border-0 department_sub_p_color">
+                              kg
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className="col-xl-8 col-lg-8 col-12 mt-5 p-4">
                 <div className="viewprof_btn__radius">
                   <Button btnType="secondary" rounded={true}>
                     Product Details
@@ -90,18 +182,17 @@ function Viewproduct() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="row py-3 ">
               <div className="col-xl-12 col-lg-12 col-12 ">
                 <Accordion defaultActiveKey="0" flush>
                   <Accordion.Item eventKey="0">
-                    <Accordion.Header bsPrefix={'border-0'}>
-                    
-                        <h5 className="view__supplier__moredetails">
-                          More Details
-                        </h5>
+                    <Accordion.Header bsPrefix={"border-0"}>
+                      <h5 className="view__supplier__moredetails">
+                        More Details
+                      </h5>
                     </Accordion.Header>
                     <Accordion.Body>
                       <div className="row px-4">

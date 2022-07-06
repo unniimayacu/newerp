@@ -20,7 +20,8 @@ export const ROUTES = Object.freeze({
 
 //   {" HRMS "}
 
-  DASHBOARD: "/dashboard",
+  DASHBOARD: "/",
+
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",
   CREATEDESIGNATION: "/createdesignation",
@@ -42,7 +43,7 @@ export const ROUTES = Object.freeze({
     LEAVETYPEMASTERVIEW:"/leavetypemasterview",
     LEAVETYPEMASTERCREATE:"/leavetypemastercreate",
     LEAVETYPEMASTER:"/leavetypemaster",
-
+    EMPCATEGORYLEAVELIST:"/empcategory-leavelist"
 
 });
 
