@@ -1,22 +1,19 @@
-.newcontact__button {
-  border-radius: 35px;
-  background-color: rgb(35, 112, 156);
-  border: none;
+.erp_dwnld__icon__size{
+    color: gray;
+    font-size: 25px;
+    padding: 5px;
 }
-.newcontact_icon_size {
-  font-size: 22px;
-}
-.newcontactfile_icon_size {
-  font-size: 20px;
-
-  //    padding: 20px;
-  color: rgb(117, 137, 138);
+.border__radius{
+// border-radius: 50%;
 }
 .new_rounded_border {
-  border-radius: 100%;
-  border: solid 2px rgb(123, 141, 151);
+  border-radius: 50%;
+   border: 1px solid gray;
+  // border: solid 2px rgb(123, 141, 151);
+  
 }
 .new_rounded_border:hover {
+ 
   color: rgb(84, 170, 228);
   border: solid 2px rgb(84, 170, 228);
 }
@@ -33,3 +30,19 @@
   }
   
 }
+// .newcontact__button {
+//   border-radius: 35px;
+//   background-color: rgb(35, 112, 156);
+//   border: none;
+// }
+// .newcontact_icon_size {
+//   font-size: 22px;
+// }
+// .newcontactfile_icon_size {
+//   font-size: 16px;
+//   color: rgb(117, 137, 138);
+//   border: solid 2px rgb(123, 141, 151);
+//    border-radius: 50%;
+//   border: 2px solid brown;
+  
+// }

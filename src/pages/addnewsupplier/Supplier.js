@@ -92,20 +92,22 @@ function Supplier() {
             {/* <div className="row"> */}
 
             {/* </div> */}
-            <div className="row  ">
-              <div className="d-flex justify-content-between p-4 ">
+            <div className="row mt-3 ">
+              <div className="  ">
                 <h5 className="ms-0">Add New Supplier</h5>
-                {/* <div className="">
-                  <Profileupload/>
-                </div> */}
+                <div className="col-xl-3 col-xl-3 col-12   ">
+                  <div className="profile__custom_size">
+                    <Profileupload />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="row mx-4 py-4">
-              <div className="col-xl-4 col-lg-4 col-12">
-                <p className={`mb-0 ms-2`}>Contact Type</p>
+            <div className="row  py-4">
+              <div className="col-xl-4 col-lg-4 col-md-4 col-12">
+                <p className={`mb-0 `}>Contact Type</p>
                 <InputDropdown />
               </div>
-              <div className="col-xl-3 col-lg-3 col-12">
+              <div className="col-xl-4 col-lg-4  col-md-4  col-12">
                 <div className=" d-flex justify-content-evenly mt-4">
                   <div class="form-check mb-0 ms-0   ">
                     <input
@@ -130,29 +132,14 @@ function Supplier() {
                       Company
                     </label>
                   </div>
-                  {/* <p className={` mb-1 ms-0 pt-5  `}>
-                    {" "}
-                    Individual
-                    <input type="radio" className={`ms-2  `} />
-                  </p>
-                  <p className={`mb-1 ms-1 pt-5 `}>
-                    {" "}
-                    Company
-                    <input type="radio" className={`ms-2`} />
-                  </p> */}
                 </div>
               </div>
-              <div className="col-xl-3 col-lg-3 col-12">
+              <div className="col-xl-4 col-lg-4 col-md-4  col-12">
                 <p className={`mb-0 ms-0`}>Name</p>
                 <InputType placeholder="Name" />
               </div>
-              <div className="col-xl-2 col-xl-2 col-12 pt-3 d-flex justify-content-end  ">
-                <div className="profile__custom_size">
-                  <Profileupload />
-                </div>
-              </div>
             </div>
-            <div className="row mx-5 py-4 ">
+            <div className="row  py-4 ">
               <div className="col-xl-4 col-lg-4 col-4">
                 <p className={`mb-0 ms-0`}>Business Name</p>
                 <InputType />
@@ -167,7 +154,7 @@ function Supplier() {
               </div>
             </div>
 
-            <div className="row mx-5 py-4 ">
+            <div className="row  py-4 ">
               <div className="col-xl-4 col-lg-4 col-4">
                 <p className={`mb-0 ms-0`}>Payment Period</p>
                 <InputType />
@@ -181,7 +168,7 @@ function Supplier() {
                 <InputDropdown />
               </div>
             </div>
-            <div className="row mx-5 py-4 ">
+            <div className="row  py-4 ">
               <div className="col-xl-4 col-lg-4 col-4">
                 <p className={`mb-0 ms-0`}>Email</p>
                 <InputType />
@@ -195,39 +182,39 @@ function Supplier() {
                 <PhoneInputt />
               </div>
             </div>
-            <div className="row mx-5 py-4 ">
-              <div className="col-xl-4 col-lg-4 col-12">
+            <div className="row  py-4 ">
+              <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                 <p className={`mb-0 ms-0`}>Fax</p>
                 <InputType />
               </div>
-              <div className="col-xl-8 col-lg-8 col-12">
+              <div className="col-xl-8 col-lg-8 col-md-8 col-12">
                 <p className={`mb-0 ms-0`}>Website</p>
                 <InputType />
               </div>
             </div>
-            <div className="row mx-5 py-4 ">
-              <div className="col-xl-6 col-lg-6 col-12">
+            <div className="row  py-4 ">
+              <div className="col-xl-6 col-lg-6 col-md-6 col-12">
                 <p className={`mb-0 ms-0`}>Address</p>
                 <TextArea />
               </div>
             </div>
-            <div className="row mx-5 py-5 ">
-              <div className="col-xl-4 col-lg-4 col-12">
+            <div className="row  py-5 ">
+              <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                 <p className={`mb-0 ms-0`}>City</p>
                 <InputType />
               </div>
-              <div className="col-xl-4 col-lg-4 col-4">
+              <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                 <p className={`mb-0 ms-0`}>State</p>
                 <InputDropdown />
               </div>
-              <div className="col-xl-4 col-lg-4 col-4">
+              <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                 <p className={`mb-2 ms-0`}>Country</p>
                 <PhoneInputt />
               </div>
             </div>
 
             <div className="">
-              <div className="row mx-5 py-2">
+              <div className="row py-2">
                 <div className="col-xl-12 col-lg-12 col-12">
                   <h5 className="supplier__product_color py-4">
                     Product Details
@@ -391,14 +378,14 @@ function Supplier() {
               </div>
             </div>
 
-            <div className="row mx-5  ">
+            <div className="row   ">
               <div className="col-12">
                 <h5 className="supplier__product_color">
                   Bank Account Details
                 </h5>
               </div>
             </div>
-            <div className="row mx-5 py-4 ">
+            <div className="row  py-4 ">
               <div className="col-xl-4 col-lg-4 col-4 ">
                 <p className="ms-1">Account Name</p>
                 <InputType placeholder="Name" />
@@ -412,13 +399,13 @@ function Supplier() {
                 <InputType placeholder="Name" />
               </div>
             </div>
-            <div className="row mx-5 py-4 ">
+            <div className="row  py-4 ">
               <div className="col-xl-4 col-lg-4 col-4">
                 <p className={`mb-0 ms-0`}>IFSC</p>
                 <InputType placeholder="Name" />
               </div>
             </div>
-            <div className="row mx-5  mt-5 ">
+            <div className="row   mt-5 ">
               <div className="col-12 d-flex justify-content-center">
                 <FileUpload filebuttons />
 
@@ -427,12 +414,12 @@ function Supplier() {
                 </p> */}
               </div>
             </div>
-            <div className="row mx-5 py-5">
+            <div className="row  py-5">
               <div className="col-xl-12 col-lg-12 col-12 ">
                 <Editor />
               </div>
             </div>
-            <div className="row mx-5 mt-5 py-4 ">
+            <div className="row  mt-5 py-4 ">
               <div className="col-12">
                 <h5 className="supplier__product_color">Contact Person</h5>
               </div>
@@ -447,15 +434,15 @@ function Supplier() {
               </div>
             </div> */}
 
-            <div className="row mx-5 py-3">
-              <div className="col-xl-3 col-lg-3 col-12">
+            <div className="row  py-3">
+              <div className="col-xl-3 col-lg-3 col-md-3 col-12">
                 <InputType
                   placeholder="Name"
                   value={name}
                   onChange={(event) => setName(event.target.value)}
                 />
               </div>
-              <div className="col-xl-3 col-lg-3 col-12">
+              <div className="col-xl-3 col-lg-3 col-md-3 col-12">
                 <PhoneInputt
                   // value={phone}
                   // onChange={(event) => setphone(event.target.value)}
@@ -463,14 +450,14 @@ function Supplier() {
                   onChange={(phone) => setphone(phone)}
                 />
               </div>
-              <div className="col-xl-3 col-lg-3 col-12">
+              <div className="col-xl-3 col-lg-3 col-md-3 col-12">
                 <InputType
                   placeholder="Email"
                   value={email}
                   onChange={(event) => setemail(event.target.value)}
                 />
               </div>
-              <div className="col-xl-3 col-lg-3 col-12">
+              <div className="col-xl-3 col-lg-3 col-md-3 col-12">
                 <InputType
                   placeholder="Department"
                   value={department}
@@ -485,7 +472,7 @@ function Supplier() {
               ))} */}
             </div>
 
-            <div className="row mx-4 py-4">
+            <div className="row  py-4">
               <div className="col-12 d-flex justify-content-end ">
                 <div className="ms-1">
                   <Button
@@ -504,7 +491,7 @@ function Supplier() {
               </div>
             </div>
 
-            <div className="row mx-5">
+            <div className="row ">
               <div className="col-xl-12 col-lg-12 col-12"></div>
               <Table responsive bordered size="sm">
                 <thead>

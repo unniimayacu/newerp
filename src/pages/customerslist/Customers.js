@@ -13,8 +13,6 @@ import Layout from "Layout/Layout";
 // import { AiFillPrinter } from "react-icons/ai";
 // import {Form } from "react-bootstrap"
 
-
-
 // const actionIcons = () => {
 //   return (
 //     <div className="d-flex align-items-center">
@@ -48,7 +46,6 @@ import Layout from "Layout/Layout";
 //   return <div className=" cust_riskyellow_color"></div>;
 // };
 
-
 const contactperson = () => {
   return <div className="product_heading__space">CONTACT PERSON</div>;
 };
@@ -61,15 +58,14 @@ const creditLimit = () => {
 const paymentType = () => {
   return <div className="product_heading__space">PAYMENT TYPE</div>;
 };
-const ueamount =()=>{
-   return <div className="product_heading__space">UE AMOUNT</div>;
-}
+const ueamount = () => {
+  return <div className="product_heading__space">UE AMOUNT</div>;
+};
 const invoicedamount = () => {
   return <div className="product_heading__space">INVOICED AMOUNT</div>;
 };
 
 function Customers() {
-
   // const data = useMemo(
   //   () => [
   //     {
@@ -157,51 +153,67 @@ function Customers() {
     ],
     []
   );
-const data = React.useMemo(() => Makedata(), []);
-
- 
+  const data = React.useMemo(() => Makedata(), []);
 
   return (
     // <div className="container-fluid">
     <Layout>
-      <div className="row ">
-        <div className="col-xl-12 col-lg-12 col-12">
-         
-          <div className="container">
-            <div className="row mt-5 border-bottom ">
-              <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
-                <h5 className="ms-0">Customers</h5>
-                <div className="ms-3 ">
-                  <Button appendIcon={<AiOutlinePlus />}>New Contact</Button>
-                </div>
-                <div className="ms-3 ">
-                  <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
-                </div>
-              </div>
-              <div className="d-flex justify-content-end col-xl-6 col-lg-6 col-12 py-3">
-                <Newcontact />
-              </div>
-            </div>
-            <div className="row mt-4">
-              {/* <div className="container"> */}
-                {/* <div className="row "> */}
-                  {/* <div className="col-xl-12 col-xl-12  col-12"> */}
-                  <Table
-                    data={data}
-                    columns={columns}
-                    PageSize={true}
-                    pagination={true}
-                    Sorted={true}
-                    className={true}
-                    responsive={true}
-                    pagecenter={true}
-                  />
-                  {/* </div> */}
-                {/* </div> */}
-              {/* </div> */}
+      <div className="container mt-2">
+        <div className="row p-2 mt-3">
+          <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
+            <div className="d-flex gap-2">
+              <h5 className="erp__h5_color ">Customers</h5>
+              {/* <Link to={ROUTES.CREATEEMPLOYEE}> */}
+              <Button
+                className=""
+                rounded={true}
+                appendIcon={<AiOutlinePlus />}
+              >
+                New Contact
+              </Button>
+              {/* </Link> */}
+              <Button rounded={true} appendIcon={<FiUpload />}>
+                Upload Via CSV
+              </Button>
             </div>
           </div>
-          <div className="row"></div>
+          <div className="  col-xl-4 col-lg-4 col-md-3 col-12">
+            <div className="d-flex justify-content-end">
+              <Newcontact />
+            </div>
+          </div>
+        </div>
+        {/* <div className="row  border-bottom ">
+          <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
+            <h5 className="ms-0">Customers</h5>
+            <div className="ms-3 ">
+              <Button appendIcon={<AiOutlinePlus />}>New Contact</Button>
+            </div>
+            <div className="ms-3 ">
+              <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+            </div>
+          </div>
+          <div className="d-flex justify-content-end col-xl-6 col-lg-6 col-12 py-3">
+            <Newcontact />
+          </div>
+        </div> */}
+        <div className="row mt-4">
+          {/* <div className="container"> */}
+          {/* <div className="row "> */}
+          {/* <div className="col-xl-12 col-xl-12  col-12"> */}
+          <Table
+            data={data}
+            columns={columns}
+            PageSize={true}
+            pagination={true}
+            Sorted={true}
+            className={true}
+            responsive={true}
+            pagecenter={true}
+          />
+          {/* </div> */}
+          {/* </div> */}
+          {/* </div> */}
         </div>
       </div>
     </Layout>
@@ -213,5 +225,3 @@ export default Customers;
 
 //RiFileSearchFill
 //BsPencilSquare
-
-  

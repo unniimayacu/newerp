@@ -164,3 +164,19 @@ input[id="fixed_no"]:checked::before{
    text-align: center;
   border-radius: 5px;
 }
+
+
+  @media only screen and(max-width: 991px) {
+    .erp-md__h5_Size{
+        font-size: small;
+    }
+
+  }
+  @media only screen and(max-width: 1024px) {
+    .erp-lg__h5_size{
+        font-size: small;
+        margin-top: 6px;
+    }
+
+  }
+

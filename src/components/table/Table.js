@@ -58,21 +58,7 @@ export default function Table({
 
   return (
     <>
-      {/* <pre>
-        <code>
-          {JSON.stringify(
-            {
-              pageIndex,
-              pageSize,
-              pageCount,
-              canNextPage,
-              canPreviousPage,
-            },
-            null,
-            2
-          )}
-        </code>
-      </pre> */}
+     
       <div className="col-4  ">
         {PageSize && (
           <select

@@ -295,7 +295,8 @@ function Addproduct() {
               </div>
 
               <CustomModal
-                onHide={handlebrandClose}
+                // onHide={handlebrandClose}
+                btnOnclick={handlebrandClose}
                 show={brandshow}
                 modalTitle="Add Brand"
               >
@@ -367,6 +368,7 @@ function Addproduct() {
 
               <CustomModal
                 onHide={handlecategoryClose}
+                btnOnclick={handlecategoryClose}
                 show={categoryshow}
                 modalTitle="Add Category"
               >
