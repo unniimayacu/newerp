@@ -1,21 +1,24 @@
 import Header from "components/header/Header";
 import Slidebar from "components/Slidebar/Slidebar";
-import React from "react";
+import React, { useState } from "react";
 import "./layout.scss";
 
 function Layout(props) {
   const { children } = props;
+  const [showMenu, setShowMenu] = useState(true);
 
   return (
     <div>
       <div>
-        <Header />
+        <Header onMenuClick={() => {
+          setShowMenu(!showMenu)
+        }} />
       </div>
       <div className="d-flex">
-        <div className="sidebarWrapper">
+        <div className={`${showMenu ? 'sidebarWrapper' : 'd-none'}`}>
           <Slidebar />
         </div>
-        <div className="contentWrapper">
+        <div className={`${showMenu ? 'contentWrapper' : 'w-100'}`}>
           <div className="container">{children}</div>
         </div>
       </div>

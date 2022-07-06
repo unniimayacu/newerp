@@ -48,6 +48,7 @@ const SectorMaster =lazy(()=>import('./pages/HRMS/Sector Master/SectorMaster'))
 const LeaveTypeMasterView =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMasterView'))
 const LeaveTypeMasterCreate =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate'))
 const LeaveTypeMaster =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMaster'))
+const Empcategoryleaveslist = lazy(()=>import('./pages/HRMS/EmployeeCategoryLeaves/Empcategoryleaveslist'))
 
 
 function App() {
@@ -94,6 +95,7 @@ function App() {
             <Route path={ROUTES.VIEWCATEGORY} element={<ViewCategory />} />
             <Route path={ROUTES.UNITCATEGORY} element={<UnitCategory />} />
             <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
+            <Route path={ROUTES.EMPCATEGORYLEAVELIST} element={<Empcategoryleaveslist/>} />
            
           </Routes>
         </Suspense>

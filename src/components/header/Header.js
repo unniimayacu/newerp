@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.scss";
 import { Navbar, NavDropdown, Nav, Container } from "react-bootstrap";
 import { GrSearch } from "react-icons/gr";
@@ -7,14 +7,24 @@ import { BsPlusCircleFill } from "react-icons/bs";
 import { FaBell } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { FiBook } from "react-icons/fi";
+import Slidebar from "components/Slidebar/Slidebar";
 
-function Header() {
+
+function Header(props) {
+  const { onMenuClick } = props;
+  const [showsidebar, setShowsidebar] = useState(false);
+  // const handleClose = () => setShowsidebar(false);
+  // const handleShow = () => setShowsidebar(true);
+
   return (
     <>
-      <Navbar expand="lg" className="navbar__color  p-4  erp__navbar_small">
+      <Navbar expand="md" className="navbar__color  p-4  erp__navbar_small">
         {/* <Container> */}
-        <Navbar.Brand href="#home" className="">
-          <AiOutlineMenu className="header_icon__size" />{" "}
+        <Navbar.Brand className="">
+          <AiOutlineMenu
+            className="header_icon__size"
+            onClick={onMenuClick}
+          />{" "}
         </Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
         <Navbar.Collapse id="basic-navbar-nav">
