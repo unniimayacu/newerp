@@ -212,7 +212,7 @@ function Dashboard() {
               </div>
             </div>
             <div className="row mt-5 justify-content-center">
-              <div className="col-xl-7 col-lg-12">
+              <div className=" col-xl-7 col-lg-12">
                 <h4>Department Wise Staff List</h4>
                 <div className="card mt-5 border-0 chart_card">
                   <div className="mt-5">

@@ -22,7 +22,7 @@ function EmployeeCard2(props) {
                     <h1 className={`${props.empcard2_amount}`}>
                       ₹{props.emp_card2_amount}{" "}
                     </h1>
-                    <div className={`mx-5 ${props.empcard2_pending}`}>
+                    <div className={`mx-4 ${props.empcard2_pending}`}>
                       <p className={`${props.empcard2_req_or_pending}`}>
                         {props.emp_card2_req_or_pending}
                       </p>
