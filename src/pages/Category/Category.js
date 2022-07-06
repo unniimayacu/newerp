@@ -82,6 +82,7 @@ const handleShow = () => setShow(true);
                       className=""
                       rounded={true}
                       appendIcon={<AiOutlinePlus />}
+                      onClick={handleShow}
                     >
                       New Category
                     </Button>
@@ -195,6 +196,69 @@ const handleShow = () => setShow(true);
                   <Newcontact />
                 </div>
               </div> */}
+              <CustomModal
+                onHide={handleClose}
+                btnOnclick={handleClose}
+                show={show}
+                modalTitle="Add New Category"
+                classname="heading_custom_model"
+              >
+                <div className="container ">
+                  <div className="row">
+                    <div className="col-6">
+                      <div>
+                        <p className="category_model_p_color">Category Name</p>
+                        <InputType />
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div>
+                        <p className="category_model_p_color">Code</p>
+                        <InputType />
+                      </div>
+                    </div>
+                    <div className="col-12 mt-3">
+                      <div>
+                        <p className="category_model_p_color">Description</p>
+                        <TextArea />
+                      </div>
+                    </div>
+                    <div className="col-6 mt-2">
+                      <div>
+                        <p className="category_model_p_color">
+                          Parent Category
+                        </p>
+                        <InputDropdown />
+                      </div>
+                    </div>
+                    <div className="col-6 mt-2">
+                      <div className="mt-4 d-flex justify-content-start">
+                        <label
+                          htmlFor="active"
+                          className="me-3 mt-1 d-flex  justify-content-start"
+                        >
+                          <p className="me-2 mt-3 category_model_sub_p_color">
+                            Income Account
+                          </p>
+                          <input type="radio" id="active" name="statusType" />
+                        </label>
+                        <label
+                          htmlFor="inactive"
+                          className="me-3 mt-1 d-flex justify-content-center text-center"
+                        >
+                          <p className="me-2 mt-3 category_model_sub_p_color">
+                            Expence Account
+                          </p>
+                          <input type="radio" id="inactive" name="statusType" />
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-12 mt-5 d-flex justify-content-center py-4">
+                      <Button rounded={true}>Add</Button>
+                    </div>
+                  </div>
+                </div>
+              </CustomModal>
             </div>
 
             <div className="row mt-5 justify-content-center">

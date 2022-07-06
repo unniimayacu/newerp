@@ -146,7 +146,7 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="row mt-5 justify-content-center">
+            <div className="row mt-5 ">
               <div className="col-xl-6 col-lg-12 ">
                 <EmployeeCard2
                   emp_card_2_heading="Current Fund Required For Next Payroll "
@@ -222,15 +222,15 @@ function Dashboard() {
               </div>
               <div className="col-xl-5 col-lg-12">
                 <h4>List of Profiles Not Completed</h4>
-                <div className="card mt-5 border-0 chart_card">
-                  <div className="mt-5">
+                <div className="card mt-5  border-0 chart_card">
+                  <div className="mt-5 ">
                     <BarCharts />
                   </div>
                 </div>
               </div>
             </div>
             <div className="row justify-content-center">
-              <div className="col-6">
+              <div className="col-xl-6 col-lg-12">
                 <div>
                   <EmployeeCard4
                     onClick={() => setModal4Show(true)}
@@ -245,7 +245,7 @@ function Dashboard() {
                   />
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-xl-6 col-lg-12">
                 <div>
                   <EmployeeCard4
                     onClick={() => setModal4Show(true)}

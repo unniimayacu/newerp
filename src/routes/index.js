@@ -43,7 +43,12 @@ export const ROUTES = Object.freeze({
     LEAVETYPEMASTERVIEW:"/leavetypemasterview",
     LEAVETYPEMASTERCREATE:"/leavetypemastercreate",
     LEAVETYPEMASTER:"/leavetypemaster",
-    EMPCATEGORYLEAVELIST:"/empcategory-leavelist"
+    EMPCATEGORYLEAVELIST:"/empcategory-leavelist",
+    HOLIDAYMASTERVIEW:"/holidaymasterview",
+    HOLIDAYMASTERCREATE:"/holidaymastercreate",
+    HOLIDAYMASTER:"/holidaymaster",
+
+
 
 });
 
