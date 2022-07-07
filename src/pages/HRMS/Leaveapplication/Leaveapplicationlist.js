@@ -6,81 +6,92 @@ import Newcontact from "components/customersnewcontact/Newcontact";
 import Table from "components/table/Table";
 import Layout from "Layout/Layout";
 import { useMemo } from "react";
-// import { FiUpload } from "react-icons/fi";
-// import EmployeelistData from "components/ddatas/Hrms_Dummy_datas/Employeelistdata";
 import { Link } from "react-router-dom";
 import { ROUTES } from "routes/index";
 import { RiFileSearchFill } from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiFillPrinter } from "react-icons/ai";
 import { Form } from "react-bootstrap";
-function Empcategoryleaveslist() {
+function Leaveapplicationlist() {
 
+ const actionIcons = () => {
+   return (
+     <div className="d-flex align-items-center justify-content-center ">
+       <span className="cust_icon_edit  ">
+         <BsPencilSquare />
+       </span>
+       <span className="cust_icon_edit ms-2">
+         <RiFileSearchFill />{" "}
+       </span>
+       <span className="cust_icon_edit ms-2">
+         <AiFillPrinter />{" "}
+       </span>
+     </div>
+   );
+ };
+ const activeSwitch = () => {
+   return (
+     <div className="custswitch_color">
+       <Form.Check type="switch" id="custom-switch" />
+     </div>
+   );
+ };
 
-  const actionIcons = () => {
-    return (
-      <div className="d-flex align-items-center justify-content-center ">
-        <span className="cust_icon_edit  ">
-          <BsPencilSquare />
-        </span>
-        <span className="cust_icon_edit ms-2">
-          <RiFileSearchFill />{" "}
-        </span>
-        <span className="cust_icon_edit ms-2">
-          <AiFillPrinter />{" "}
-        </span>
-      </div>
-    );
-  };
-  const activeSwitch = () => {
-    return (
-      <div className="custswitch_color">
-        <Form.Check type="switch" id="custom-switch" />
-      </div>
-    );
-  };
+ const columns = useMemo(
+   () => [
+     {
+       Header: "EMPLOYEE ",
+       accessor: "col1",
+     },
+     {
+       Header: "DATE",
+       accessor: "col2",
+     },
 
-  const columns = useMemo(
-    () => [
-      {
-        Header: "EMPLOYEE CATEGORY",
-        accessor: "col1",
-      },
-      {
-        Header: "LEAVE TYPE",
-        accessor: "col2",
-      },
-    
-      {
-        Header: "ACTION",
-        accessor: "col3",
-      },
-      {
-        Header: "STATUS",
-        accessor: "col4",
-      },
-    ],
-    []
-  );
+     {
+       Header: "LEAVE APPLIED START DATE",
+       accessor: "col3",
+     },
+     {
+       Header: "END DATE",
+       accessor: "col4",
+     },
+     {
+       Header: "LEAVE TYPE",
+       accessor: "col5",
+     },
+     {
+       Header: "ACTION",
+       accessor: "col6",
+     },
+     {
+       Header: "STATUS",
+       accessor: "col7",
+     },
+   ],
+   []
+ );
 
-    const data = useMemo(
-      () => [
-        {
-          col1: "Worker",
-          col2: "Casual,Hajj",
-          col3: actionIcons(),
-          col4: activeSwitch(),
-        },
-        {
-          col1: "Driver",
-          col2: "Casual,Hajj",
-          col3: actionIcons(),
-          col4: activeSwitch(),
-        },
-      ],
-      []
-    );
-  // const data = useMemo(() => EmployeelistData(), []);
+ const data = useMemo(
+   () => [
+     {
+       col1: "Worker",
+       col2: "02/03/22",
+       col3: "02/03/22",
+       col4: "12/03/22",
+       col5: "casual",
+       col6: actionIcons(),
+       col7: activeSwitch(),
+     },
+     {
+       col1: "Driver",
+       col2: "Casual,Hajj",
+       col3: actionIcons(),
+       col4: activeSwitch(),
+     },
+   ],
+   []
+ );
 
   return (
     <>
@@ -91,14 +102,14 @@ function Empcategoryleaveslist() {
               <div className="row p-2 mt-3">
                 <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                   <div className="d-flex gap-2">
-                    <h5 className="erp__h5_color ">Emp Category Leaves</h5>
+                    <h5 className="erp__h5_color ">Leave Application</h5>
                     <Link to={ROUTES.CREATELEAVETYPE}>
                       <Button
                         className=""
                         rounded={true}
                         appendIcon={<AiOutlinePlus />}
                       >
-                        New Emp category Leaves
+                        New Leave Application
                       </Button>
                     </Link>
                     <Button rounded={true} appendIcon={<FiUpload />}>
@@ -135,4 +146,4 @@ function Empcategoryleaveslist() {
   );
 }
 
-export default Empcategoryleaveslist
+export default Leaveapplicationlist
