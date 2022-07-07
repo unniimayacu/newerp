@@ -15,6 +15,9 @@ import UnitCategoryView from "pages/Unit Category/UnitCategoryView";
 import HolidayMasterView from "pages/HRMS/Holiday Master/HolidayMasterView";
 import HolidayMasterCreate from "pages/HRMS/Holiday Master/HolidayMasterCreate";
 import HolidayMaster from "pages/HRMS/Holiday Master/HolidayMaster";
+import CategoryWiseWeekendMasterView from "pages/HRMS/CategoryWise Weekend Master/CategoryWiseWeekendMasterView";
+import CategoryWiseWeekendMasterCreate from "pages/HRMS/CategoryWise Weekend Master/CategoryWiseWeekendMasterCreate";
+import CategoryWiseWeekendMaster from "pages/HRMS/CategoryWise Weekend Master/CategoryWiseWeekendMaster";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -102,6 +105,9 @@ function App() {
             <Route path={ROUTES.HOLIDAYMASTERVIEW} element={<HolidayMasterView />} />
             <Route path={ROUTES.HOLIDAYMASTERCREATE} element={<HolidayMasterCreate />} />
             <Route path={ROUTES.HOLIDAYMASTER} element={<HolidayMaster />} />
+            <Route path={ROUTES.CATEGORYWISEWEEKENDMASTERVIEW} element={<CategoryWiseWeekendMasterView />} />
+            <Route path={ROUTES.CATEGORYWISEWEEKENDMASTERCREATE} element={<CategoryWiseWeekendMasterCreate />} />
+            <Route path={ROUTES.CATEGORYWISEWEEKENDMASTER} element={<CategoryWiseWeekendMaster />} />
            
           </Routes>
         </Suspense>

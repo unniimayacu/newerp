@@ -73,6 +73,7 @@ function HrmsdesignationTabledata() {
         desc: "Iorem ispem id sometime is that of the part of the that",
         date: "22/04/2022",
         holiday: "Onam",
+        weekend: "saturday",
       },
       {
         dcode: "jk-3456547",
@@ -101,6 +102,7 @@ function HrmsdesignationTabledata() {
         leave: "sick",
         leavecategory: "Un paid",
         holiday: "Christmas",
+        weekend: "sunday",
       },
     ];
       let dataChunk = [];

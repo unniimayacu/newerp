@@ -47,6 +47,10 @@ export const ROUTES = Object.freeze({
     HOLIDAYMASTERVIEW:"/holidaymasterview",
     HOLIDAYMASTERCREATE:"/holidaymastercreate",
     HOLIDAYMASTER:"/holidaymaster",
+    CATEGORYWISEWEEKENDMASTERVIEW:"/categorywiseweekendmasterview",
+    CATEGORYWISEWEEKENDMASTERCREATE:"/categorywiseweekendmastercreate",
+    CATEGORYWISEWEEKENDMASTER:"/categorywiseweekendmaster",
+    
 
 
 
