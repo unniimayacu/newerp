@@ -14,15 +14,15 @@ function Empcategoryleaveslist() {
 const columns = useMemo(
   () => [
     {
-      Header: "EMPLOYEE ID",
+      Header: "EMPLOYEE CATEGORY",
       accessor: "col1",
     },
     {
-      Header: "NAME",
+      Header: "LEAVE TYPE",
       accessor: "col2",
     },
     {
-      Header: "PASSPORT NUMBER",
+      Header: "ACTION",
       accessor: "col3",
     },
     {
@@ -51,14 +51,14 @@ const data = useMemo(() => EmployeelistData(), []);
               <div className="row p-2 mt-3">
                 <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                   <div className="d-flex gap-2">
-                    <h5 className="erp__h5_color ">Employee</h5>
-                    <Link to={ROUTES.CREATEEMPLOYEE}>
+                    <h5 className="erp__h5_color ">Emp Category Leaves</h5>
+                    <Link to={ROUTES.CREATELEAVETYPE}>
                       <Button
                         className=""
                         rounded={true}
                         appendIcon={<AiOutlinePlus />}
                       >
-                        New Employee
+                        New Emp category Leaves
                       </Button>
                     </Link>
                     <Button rounded={true} appendIcon={<FiUpload />}>

@@ -50,13 +50,13 @@ function SectorMasterView() {
   return (
     <>
       <Layout>
-        <div className="container mt-3 justify-content-center ">
+        <div className="container mt-2 justify-content-center ">
           <div className="row justify-content-center">
             <div className="card shadow-sm border border-2">
               <div className="row p-2 mt-3">
                 <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                   <div className="d-flex gap-2">
-                    <h5 className="erp__h5_color ">Designation</h5>
+                    <h5 className="erp__h5_color ">Sector Master</h5>
                     <Link to={ROUTES.SECTORMASTERCREATE}>
                       <Button
                         className=""

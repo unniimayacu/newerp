@@ -19,7 +19,7 @@ import DropdownList from "react-widgets/DropdownList";
 import "react-widgets/styles.css";
 // import styles from'./slidebar.module.scss'
 import "./slider.scss";
-import { Navbar, NavDropdown, Nav } from "react-bootstrap";
+// import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 
 
 
@@ -28,9 +28,9 @@ function Slidebar() {
 
   const showSidebar = () => setSidebar(!sidebar);
 
-    const [showDropdown, setShowDropdown] = useState(false);
-     const handledropClose = () => setShowDropdown(false);
-     const handledropShow = () => setShowDropdown(true);
+  const [subnav, setSubnav] = useState(false);
+
+  const showSubnav = () => setSubnav(!subnav);
 
   
 
@@ -58,21 +58,11 @@ function Slidebar() {
               <Link className="nav-textcolor" to="">
                 <div className="  px-3 p-3 ">
                   <div className="d-flex ">
-                    <span onClick={handledropShow}>Human Resource</span>
+                    <span onClick={subnav && setSubnav}>Human Resource</span>
                   </div>
                 </div>
               </Link>
             </div>
-
-            {/* <div className="row py-0 ">
-              <div className="  px-3 p-3 ">
-                <DropdownList
-                  data={category}
-                  value={value}
-                  onChange={(value) => setValue(value)}
-                />
-              </div>
-            </div> */}
 
             <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.DEPARTMENTMASTERVIEW}>
@@ -218,7 +208,13 @@ function Slidebar() {
                 </div>
               </Link>
             </div>
-
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.ADDSUPPLIER}>
+                <div className="  px-3 p-3 ">
+                  <label> Add Supplier</label>
+                </div>
+              </Link>
+            </div>
             {/* {Siderbardata.map((item, index) => {
               return (
                 <li key={index} className={`${item.cName} px-0`}>
