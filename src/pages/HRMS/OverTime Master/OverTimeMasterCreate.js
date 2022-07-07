@@ -39,14 +39,14 @@ function OverTimeMasterCreate() {
                       htmlFor="s-yes"
                       className="me-3 mt-1 d-flex  justify-content-start"
                     >
-                      <p className="me-2  empcategory_sub_p_color">Yes</p>
+                      <p className="me-2  otmaster_sub_p_color">Yes</p>
                       <input type="radio" id="s-yes" name="checkbox" />
                     </label>
                     <label
                       htmlFor="s_no"
                       className="me-3 mt-1 d-flex justify-content-center "
                     >
-                      <p className="me-2  empcategory_sub_p_colorr">No</p>
+                      <p className="me-2  otmaster_sub_p_color">No</p>
                       <input type="radio" id="s_no" name="checkbox" />
                     </label>
                   </div>

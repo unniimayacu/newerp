@@ -1,40 +1,36 @@
+import Layout from 'Layout/Layout'
 import React from 'react'
-import Layout from "Layout/Layout";
-import "./HolidayMaster.scss";
 
-function HolidayMaster() {
+function CategoryWiseWeekendMaster() {
   return (
     <div>
       <Layout>
-        <div className="container p-5 container_holiday">
+        <div className="container p-5 container_category_wise">
           <div className="row mt-3">
-            <h6 className="holiday_view_heading">Holiday Master</h6>
+            <h6 className="category_wise_view_heading">
+              Category wise Weekend Master
+            </h6>
             <div className="row mt-4 justify-content-between">
               <table class="table">
                 <thead></thead>
                 <tbody>
                   <tr className="border-0">
                     <th scope="row" className="border-0">
-                      Holiday Name
+                      Employee Category
                     </th>
                     <td className="border-0">:</td>
-                    <td className="border-0 holiday_sub_p_color">Onam</td>
-                  </tr>
-                  <tr className="border-0">
-                    <th scope="row" className="border-0">
-                      Description
-                    </th>
-                    <td className="border-0">:</td>
-                    <td className="border-0 holiday_sub_p_color">
-                      Iorem ispem id sometime is that of the part of the that
+                    <td className="border-0 category_wise_sub_p_color">
+                      Worker
                     </td>
                   </tr>
                   <tr className="border-0">
                     <th scope="row" className="border-0">
-                      Date
+                      Weekends
                     </th>
                     <td className="border-0">:</td>
-                    <td className="border-0 holiday_sub_p_color">22/03/2022</td>
+                    <td className="border-0 category_wise_sub_p_color">
+                      Sunday
+                    </td>
                   </tr>
 
                   <tr className="border-0">
@@ -42,7 +38,7 @@ function HolidayMaster() {
                       Status
                     </th>
                     <td className="border-0">:</td>
-                    <td className="border-0 holiday_sub_active_p_color">
+                    <td className="border-0 category_wise_sub_active_p_color">
                       Active
                     </td>
                   </tr>
@@ -56,4 +52,4 @@ function HolidayMaster() {
   );
 }
 
-export default HolidayMaster
+export default CategoryWiseWeekendMaster

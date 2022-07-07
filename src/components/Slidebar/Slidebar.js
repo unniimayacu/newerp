@@ -1,12 +1,12 @@
 // import Category from 'pages/Category/Category';
-import Category from "pages/Category/Category";
+// import Category from "pages/Category/Category";
 import React, { useEffect, useRef, useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import { FaBars } from "react-icons/fa";
+// import { AiOutlineClose } from "react-icons/ai";
+// import { FaBars } from "react-icons/fa";
 // import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
-import { Siderbardata } from "./Siderbardata";
+// import { Siderbardata } from "./Siderbardata";
 import dashboard from "./img/Group 3.svg";
 import award from "./img/Icon awesome-award.svg";
 import work from "./img/Icon material-work.svg";
@@ -15,11 +15,9 @@ import emp from "./img/Icon awesome-users.svg";
 import time from "./img/Icon ionic-ios-timer.svg";
 import sector from "./img/Icon material-verified-user.svg";
 import { ROUTES } from "routes/index";
-import DropdownList from "react-widgets/DropdownList";
+// import DropdownList from "react-widgets/DropdownList";
 import "react-widgets/styles.css";
-// import styles from'./slidebar.module.scss'
 import "./slider.scss";
-// import { Navbar, NavDropdown, Nav } from "react-bootstrap";
 
 
 
@@ -153,6 +151,16 @@ function Slidebar() {
                     <img src={sector} alt="" height={17} width={17} />
                   </div>
                   <label>Holiday Master</label>
+                </div>
+              </Link>
+            </div>
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.CATEGORYWISEWEEKENDMASTERVIEW}>
+                <div className="d-flex gap-2 px-3 p-3 ">
+                  <div>
+                    <img src={sector} alt="" height={17} width={17} />
+                  </div>
+                  <label>Category Wise Weekend Master</label>
                 </div>
               </Link>
             </div>
