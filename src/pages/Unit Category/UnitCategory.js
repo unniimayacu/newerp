@@ -80,7 +80,7 @@ function UnitCategory() {
                 </div>
                 <CustomModal
                   onHide={handleClose}
-                  erp_custom_model_close={handleClose}
+                  btnOnclick={handleClose}
                   show={show}
                   modalTitle="Add New Category"
                   classname="heading_custom_model"

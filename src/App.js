@@ -12,6 +12,9 @@ import SectorMasterCreate from "pages/HRMS/Sector Master/SectorMasterCreate";
 import ViewCategory from "pages/ViewCategory/ViewCategory";
 import UnitCategory from "pages/Unit Category/UnitCategory";
 import UnitCategoryView from "pages/Unit Category/UnitCategoryView";
+import HolidayMasterView from "pages/HRMS/Holiday Master/HolidayMasterView";
+import HolidayMasterCreate from "pages/HRMS/Holiday Master/HolidayMasterCreate";
+import HolidayMaster from "pages/HRMS/Holiday Master/HolidayMaster";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -97,6 +100,9 @@ function App() {
             <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
             <Route path={ROUTES.EMPCATEGORYLEAVELIST} element={<Empcategoryleaveslist/>} />
             <Route path={ROUTES.CREATELEAVETYPE}  element={<Createleavetype/>} />
+            <Route path={ROUTES.HOLIDAYMASTERVIEW} element={<HolidayMasterView />} />
+            <Route path={ROUTES.HOLIDAYMASTERCREATE} element={<HolidayMasterCreate />} />
+            <Route path={ROUTES.HOLIDAYMASTER} element={<HolidayMaster />} />
            
           </Routes>
         </Suspense>

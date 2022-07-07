@@ -50,7 +50,7 @@ function SectorMaster() {
                       Rate
                     </th>
                     <td className="border-0">:</td>
-                    <td className="border-0 sectormastersub_p_color">1150</td>
+                    <td className="border-0 sectormaster_sub_p_color">1150</td>
                   </tr>
 
                   <tr className="border-0">

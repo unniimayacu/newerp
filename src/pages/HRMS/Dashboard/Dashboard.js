@@ -20,7 +20,7 @@ function Dashboard() {
    const [modal5Show, setModal5Show] = useState(false);
    
   return (
-    <div className="container-fluid m-0 p-0 dashboard_container_color ">
+    // <div className="container-fluid m-0 p-0 dashboard_container_color ">
       <Layout>
         <div className="container-fluid  dashboard_container_color pb-2">
           <div className="row justify-content-center dashboard_row">
@@ -148,6 +148,8 @@ function Dashboard() {
             </div>
             <div className="row py-4 justify-content-center">
               <div className="col-xl-6 col-lg-6 col-12 ">
+            <div className="row mt-5 ">
+              <div className="col-xl-6 col-lg-12 ">
                 <EmployeeCard2
                   emp_card_2_heading="Current Fund Required For Next Payroll "
                   emp_card2_amount=" 75000"
@@ -155,6 +157,7 @@ function Dashboard() {
                   empcard2_req_or_pending="emp_card2_req"
                   emp_card2_req_or_pending=" Required"
                 />
+              </div>
               </div>
               <div className="col-xl-6 col-lg-6 col-12 ">
                 <EmployeeCard2
@@ -172,6 +175,7 @@ function Dashboard() {
                   totalRefund
                 />
               </div>
+            </div>
             </div>
             <div className="row py-4 justify-content-center">
               <h4>Pending Leaves</h4>
@@ -217,22 +221,34 @@ function Dashboard() {
                 <h5>Department Wise Staff List</h5>
                 <div className="card mt-4 border-0 chart_card">
                   <div className="mt-4">
+            {/* <div className="row mt-5 justify-content-center">
+              <div className=" col-xl-7 col-lg-12">
+                <h4>Department Wise Staff List</h4>
+                <div className="card mt-5 border-0 chart_card">
+                  <div className="mt-5">
                     <LineCharts />
                   </div>
                 </div>
               </div>
+              </div> */}
               <div className="col-xl-6 col-lg-6  col-12">
                 <div className="py-3"></div>
                 <h5>List of Profiles Not Completed</h5>
                 <div className="card mt-4 border-0 chart_card">
                   <div className="mt-4">
+              {/* <div className="col-xl-5 col-lg-12">
+                <h4>List of Profiles Not Completed</h4>
+                <div className="card mt-5  border-0 chart_card">
+                  <div className="mt-5 ">
                     <BarCharts />
                   </div>
                 </div>
+              </div> */}
               </div>
             </div>
+            </div>
             <div className="row justify-content-center">
-              <div className="col-6">
+              <div className="col-xl-6 col-lg-12">
                 <div>
                   <EmployeeCard4
                     onClick={() => setModal4Show(true)}
@@ -247,7 +263,7 @@ function Dashboard() {
                   />
                 </div>
               </div>
-              <div className="col-6">
+              <div className="col-xl-6 col-lg-12">
                 <div>
                   <EmployeeCard4
                     onClick={() => setModal4Show(true)}
@@ -258,12 +274,16 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            {/* {" "} */}
+           
           </div>
         </div>
+        </div>
+        </div>
+        </div>
+        </div>
       </Layout>
-    </div>
+   
   );
 }
 
-export default Dashboard
+export default Dashboard;

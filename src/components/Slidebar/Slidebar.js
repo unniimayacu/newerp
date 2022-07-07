@@ -139,6 +139,16 @@ function Slidebar() {
                 </div>
               </Link>
             </div>
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.HOLIDAYMASTERVIEW}>
+                <div className="d-flex gap-2 px-3 p-3 ">
+                  <div>
+                    <img src={sector} alt="" height={17} width={17} />
+                  </div>
+                  <label>Holiday Master</label>
+                </div>
+              </Link>
+            </div>
 
             <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.CATEGORY}>
