@@ -59,16 +59,16 @@ const data = [
 function BarCharts() {
   return (
     <div>
-      {/* <ResponsiveContainer width="100%" aspect={3}> */}
+      <ResponsiveContainer width="100%" aspect={3}>
         <BarChart
-          width={500}
+          width={450}
           height={240}
           data={data}
           margin={{
             top: 5,
-            right: 0,
-            left: 0,
-            bottom: 0,
+            right: 20,
+            left: 20,
+            bottom: 5,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -79,7 +79,7 @@ function BarCharts() {
           {/* <Bar dataKey="pv" fill="#8884d8" /> */}
           <Bar dataKey="uv" fill="#007bc5" width={10} />
         </BarChart>
-      {/* </ResponsiveContainer> */}
+      </ResponsiveContainer>
     </div>
   );
 }

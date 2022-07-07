@@ -49,7 +49,7 @@ const LeaveTypeMasterView =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTy
 const LeaveTypeMasterCreate =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMasterCreate'))
 const LeaveTypeMaster =lazy(()=>import('./pages/HRMS/LeaveTypeMaster/LeaveTypeMaster'))
 const Empcategoryleaveslist = lazy(()=>import('./pages/HRMS/EmployeeCategoryLeaves/Empcategoryleaveslist'))
-
+const Createleavetype = lazy(() =>import('./pages/HRMS/EmployeeCategoryLeaves/Createleavetype') )
 
 function App() {
   return (
@@ -96,6 +96,7 @@ function App() {
             <Route path={ROUTES.UNITCATEGORY} element={<UnitCategory />} />
             <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
             <Route path={ROUTES.EMPCATEGORYLEAVELIST} element={<Empcategoryleaveslist/>} />
+            <Route path={ROUTES.CREATELEAVETYPE}  element={<Createleavetype/>} />
            
           </Routes>
         </Suspense>

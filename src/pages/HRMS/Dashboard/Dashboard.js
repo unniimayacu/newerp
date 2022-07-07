@@ -61,7 +61,7 @@ function Dashboard() {
                           totalEmployee
                         />
                       </div>
-                      <div className="col-xl-4 col-lg-6  mt-5">
+                      <div className="col-xl-4 col-lg-6   mt-5">
                         <EmployeeCard
                           onClick={() => setModal1Show(true)}
                           icon={
@@ -146,8 +146,8 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="row mt-5 justify-content-center">
-              <div className="col-xl-6 col-lg-12 ">
+            <div className="row py-4 justify-content-center">
+              <div className="col-xl-6 col-lg-6 col-12 ">
                 <EmployeeCard2
                   emp_card_2_heading="Current Fund Required For Next Payroll "
                   emp_card2_amount=" 75000"
@@ -156,7 +156,7 @@ function Dashboard() {
                   emp_card2_req_or_pending=" Required"
                 />
               </div>
-              <div className="col-xl-6 col-lg-12 ">
+              <div className="col-xl-6 col-lg-6 col-12 ">
                 <EmployeeCard2
                   onClick={() => setModal3Show(true)}
                   emp_card_2_heading="Pending Amount in Last Payroll "
@@ -173,7 +173,7 @@ function Dashboard() {
                 />
               </div>
             </div>
-            <div className="row mt-5 justify-content-center">
+            <div className="row py-4 justify-content-center">
               <h4>Pending Leaves</h4>
             </div>
             <div className="row mt-4 justify-content-center">
@@ -211,19 +211,21 @@ function Dashboard() {
                 />
               </div>
             </div>
-            <div className="row mt-5 justify-content-center">
-              <div className="col-xl-7 col-lg-12">
-                <h4>Department Wise Staff List</h4>
-                <div className="card mt-5 border-0 chart_card">
-                  <div className="mt-5">
+            <div className="row  justify-content-center">
+              <div className="col-xl-6 col-lg-6   col-12">
+                <div className="py-3"></div>
+                <h5>Department Wise Staff List</h5>
+                <div className="card mt-4 border-0 chart_card">
+                  <div className="mt-4">
                     <LineCharts />
                   </div>
                 </div>
               </div>
-              <div className="col-xl-5 col-lg-12">
-                <h4>List of Profiles Not Completed</h4>
-                <div className="card mt-5 border-0 chart_card">
-                  <div className="mt-5">
+              <div className="col-xl-6 col-lg-6  col-12">
+                <div className="py-3"></div>
+                <h5>List of Profiles Not Completed</h5>
+                <div className="card mt-4 border-0 chart_card">
+                  <div className="mt-4">
                     <BarCharts />
                   </div>
                 </div>
