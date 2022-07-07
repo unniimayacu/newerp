@@ -38,3 +38,11 @@
     color: #47ba55;
     font-weight: 500;
 }
+
+ @media only screen and(max-width: 991px){
+.file__sector_master_991{
+    padding-top: 4px !important;
+    // font-size: 15px;
+    // margin-top: 7px !important;
+}
+ }

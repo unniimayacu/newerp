@@ -56,7 +56,7 @@ function SectorMasterView() {
               <div className="row p-2 mt-3">
                 <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                   <div className="d-flex gap-2">
-                    <h5 className="erp__h5_color ">Sector Master</h5>
+                    <h5 className="erp__h5_color  ">Sector Master</h5>
                     <Link to={ROUTES.SECTORMASTERCREATE}>
                       <Button
                         className=""
@@ -71,8 +71,8 @@ function SectorMasterView() {
                     </Button>
                   </div>
                 </div>
-                <div className="  col-xl-4 col-lg-4 col-md-3 col-12">
-                  <div className="d-flex justify-content-end">
+                <div className="  col-xl-4 col-lg-4 col-md-12 col-12">
+                  <div className="d-flex justify-content-end  file__sector_master_991 ">
                     <Newcontact />
                   </div>
                 </div>

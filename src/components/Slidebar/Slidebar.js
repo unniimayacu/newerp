@@ -127,16 +127,23 @@ function Slidebar() {
             </div>
             <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.LEAVETYPEMASTERVIEW}>
-                <div className=" px-3 p-3 ">
+                <div className="d-flex gap-2 px-3 p-3 ">
+                  <div>
+                    <img src={time} alt="" height={17} width={17} />
+                  </div>
                   <label>Leave Type Master</label>
                 </div>
               </Link>
             </div>
             <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.EMPCATEGORYLEAVELIST}>
-                <div className=" px-3 p-3 ">
-                  <label>Emp categoryleaves</label>
+                <div className="d-flex gap-2 px-3 p-3 ">
+                  <div>
+                    <img src={time} alt="" height={17} width={17} />
+                  </div>
+                  <label>Employee Category Leaves</label>
                 </div>
+                
               </Link>
             </div>
             <div className="row py-0 ">
@@ -146,6 +153,17 @@ function Slidebar() {
                     <img src={sector} alt="" height={17} width={17} />
                   </div>
                   <label>Holiday Master</label>
+                </div>
+              </Link>
+            </div>
+
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.LEAVEAPPLICATIONLIST}>
+                <div className="d-flex gap-2 px-3 p-3 ">
+                  <div>
+                    <img src={sector} alt="" height={17} width={17} />
+                  </div>
+                  <label>Leave Application</label>
                 </div>
               </Link>
             </div>
