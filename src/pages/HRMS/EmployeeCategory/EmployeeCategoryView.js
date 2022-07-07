@@ -38,7 +38,7 @@ function EmployeeCategoryView() {
   return (
     <>
       <Layout>
-        <div className="container mt-3 justify-content-center ">
+        <div className="container mt-2 justify-content-center ">
           <div className="row p-0 justify-content-center">
             <div className="card shadow-sm border border-2">
               <div className="row p-1 mt-3">

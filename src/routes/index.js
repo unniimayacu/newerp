@@ -44,6 +44,8 @@ export const ROUTES = Object.freeze({
     LEAVETYPEMASTERCREATE:"/leavetypemastercreate",
     LEAVETYPEMASTER:"/leavetypemaster",
     EMPCATEGORYLEAVELIST:"/empcategory-leavelist",
+    CREATELEAVETYPE :"/create-leavetype",
+    EMPCATEGORYLEAVES:"/empcategory-leaves",
     HOLIDAYMASTERVIEW:"/holidaymasterview",
     HOLIDAYMASTERCREATE:"/holidaymastercreate",
     HOLIDAYMASTER:"/holidaymaster",
@@ -52,6 +54,8 @@ export const ROUTES = Object.freeze({
     CATEGORYWISEWEEKENDMASTER:"/categorywiseweekendmaster",
     
 
+    LEAVEAPPLICATIONLIST:"/leaveapplication-list",
+    
 
 
 });

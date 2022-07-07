@@ -50,7 +50,7 @@ function SectorMasterView() {
   return (
     <>
       <Layout>
-        <div className="container mt-3 justify-content-center ">
+        <div className="container mt-2 justify-content-center ">
           <div className="row justify-content-center">
             <div className="card shadow-sm border border-2">
               <div className="row p-2 mt-3">
@@ -71,8 +71,8 @@ function SectorMasterView() {
                     </Button>
                   </div>
                 </div>
-                <div className="  col-xl-4 col-lg-4 col-md-3 col-12">
-                  <div className="d-flex justify-content-end">
+                <div className="  col-xl-4 col-lg-4 col-md-12 col-12">
+                  <div className="d-flex justify-content-end  file__sector_master_991 ">
                     <Newcontact />
                   </div>
                 </div>

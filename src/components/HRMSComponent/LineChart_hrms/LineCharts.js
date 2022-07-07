@@ -66,12 +66,12 @@ function LineCharts() {
     <div>
       <ResponsiveContainer width="100%" aspect={3}>
         <LineChart
-          width={500}
-          height={300}
+          width={450}
+          height={240}
           data={data}
           margin={{
             top: 5,
-            right: 30,
+            right: 20,
             left: 20,
             bottom: 5,
           }}
@@ -81,7 +81,7 @@ function LineCharts() {
           <YAxis dataKey="amt" />
           <Tooltip />
           <Legend />
-          
+
           <Line
             type="monotone"
             dataKey="Department01"
