@@ -50,8 +50,8 @@ export const ROUTES = Object.freeze({
     HOLIDAYMASTERCREATE:"/holidaymastercreate",
     HOLIDAYMASTER:"/holidaymaster",
     LEAVEAPPLICATIONLIST:"/leaveapplication-list",
-    
-
+    CREATELEAVEAPPLICATION:"/createleaveapplication",
+    LEAVEAPPLICATION:"/leave-application"
 
 });
 

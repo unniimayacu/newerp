@@ -10,7 +10,8 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "routes/index";
 import { RiFileSearchFill } from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
-import { AiFillPrinter } from "react-icons/ai";
+
+import { MdDelete } from "react-icons/md";
 import { Form } from "react-bootstrap";
 function Leaveapplicationlist() {
 
@@ -21,10 +22,10 @@ function Leaveapplicationlist() {
          <BsPencilSquare />
        </span>
        <span className="cust_icon_edit ms-2">
-         <RiFileSearchFill />{" "}
+         <RiFileSearchFill color="gray" />{" "}
        </span>
        <span className="cust_icon_edit ms-2">
-         <AiFillPrinter />{" "}
+         <MdDelete color="gray" />{" "}
        </span>
      </div>
    );
@@ -75,19 +76,22 @@ function Leaveapplicationlist() {
  const data = useMemo(
    () => [
      {
-       col1: "Worker",
+       col1: "John Wick[id-jefn34jdefn3]",
        col2: "02/03/22",
        col3: "02/03/22",
        col4: "12/03/22",
-       col5: "casual",
+       col5: "casual Leave",
        col6: actionIcons(),
        col7: activeSwitch(),
      },
      {
-       col1: "Driver",
-       col2: "Casual,Hajj",
-       col3: actionIcons(),
-       col4: activeSwitch(),
+       col1: "John Wick[id-jefn34jdefn3]",
+       col2: "02/03/22",
+       col3: "02/03/22",
+       col4: "12/03/22",
+       col5: "Sick Leave",
+       col6: actionIcons(),
+       col7: activeSwitch(),
      },
    ],
    []
@@ -103,7 +107,7 @@ function Leaveapplicationlist() {
                 <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                   <div className="d-flex gap-2">
                     <h5 className="erp__h5_color ">Leave Application</h5>
-                    <Link to={ROUTES.CREATELEAVETYPE}>
+                    <Link to={ROUTES.CREATELEAVEAPPLICATION}>
                       <Button
                         className=""
                         rounded={true}
