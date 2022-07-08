@@ -14,26 +14,26 @@ function HolidayMasterCreate() {
   return (
     <div>
       <Layout>
-        <div className="container p-5 container_empcategory">
+        <div className="container p-5 container_holiday">
           <div className="row mt-3">
-            <h6 className="empcategory_view_heading">Holiday Master</h6>
+            <h6 className="holiday_view_heading">Holiday Master</h6>
             <div className="row mt-5">
               <div className="col-4">
                 <div>
-                  <p className="empcategory_p_color">Holiday Name</p>
+                  <p className="holiday_p_color">Holiday Name</p>
                   <InputType />
                 </div>
               </div>
               <div className="col-4">
                 <div>
-                  <p className="empcategory_p_color">Date</p>
+                  <p className="holiday_p_color">Date</p>
                   <DatePicker />
                 </div>
               </div>
 
               <div className="col-4">
                 <div>
-                  <p className="empcategory_p_color">Description</p>
+                  <p className="holiday_p_color">Description</p>
                   <TextArea />
                 </div>
               </div>
