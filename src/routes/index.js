@@ -55,8 +55,8 @@ export const ROUTES = Object.freeze({
     
 
     LEAVEAPPLICATIONLIST:"/leaveapplication-list",
-    
-
+    CREATELEAVEAPPLICATION:"/createleaveapplication",
+    LEAVEAPPLICATION:"/leave-application"
 
 });
 

@@ -58,6 +58,9 @@ const Empcategoryleaveslist = lazy(()=>import('./pages/HRMS/EmployeeCategoryLeav
 const Createleavetype = lazy(() =>import('./pages/HRMS/EmployeeCategoryLeaves/Createleavetype') )
 const Empcategoryleaves= lazy(()=> import('./pages/HRMS/EmployeeCategoryLeaves/Empcategoryleaves') )
 const Leaveapplicationlist =lazy(()=> import('./pages/HRMS/Leaveapplication/Leaveapplicationlist') )
+const Createleaveapplication = lazy(() => import ('./pages/HRMS/Leaveapplication/Createleaveapplication'))
+const Leaveapplication =lazy(()=>import('./pages/HRMS/Leaveapplication/Leaveapplication') )
+
 function App() {
   return (
     <div className="App">
@@ -113,6 +116,8 @@ function App() {
            
             <Route path={ROUTES.EMPCATEGORYLEAVES} element={<Empcategoryleaves/>} />
             <Route path={ROUTES.LEAVEAPPLICATIONLIST} element={<Leaveapplicationlist/>} />
+            <Route path={ROUTES.CREATELEAVEAPPLICATION} element={<Createleaveapplication/>}/>
+            <Route path={ROUTES.LEAVEAPPLICATION} element={<Leaveapplication/>}/>
           </Routes>
         </Suspense>
       </BrowserRouter>
