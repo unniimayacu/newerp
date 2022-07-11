@@ -18,6 +18,9 @@ import HolidayMaster from "pages/HRMS/Holiday Master/HolidayMaster";
 import CategoryWiseWeekendMasterView from "pages/HRMS/CategoryWise Weekend Master/CategoryWiseWeekendMasterView";
 import CategoryWiseWeekendMasterCreate from "pages/HRMS/CategoryWise Weekend Master/CategoryWiseWeekendMasterCreate";
 import CategoryWiseWeekendMaster from "pages/HRMS/CategoryWise Weekend Master/CategoryWiseWeekendMaster";
+import LeaveSalarySettlement from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlement";
+import LeaveSalarySettlementView from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlementView";
+import LeaveSalarySettlementCreate from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlementCreate";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -118,6 +121,10 @@ function App() {
             <Route path={ROUTES.LEAVEAPPLICATIONLIST} element={<Leaveapplicationlist/>} />
             <Route path={ROUTES.CREATELEAVEAPPLICATION} element={<Createleaveapplication/>}/>
             <Route path={ROUTES.LEAVEAPPLICATION} element={<Leaveapplication/>}/>
+
+            <Route path={ROUTES.LEAVESALARYSETTLEMENT} element={<LeaveSalarySettlement />} />
+            <Route path={ROUTES.LEAVESALARYSETTLEMENTVIEW} element={<LeaveSalarySettlementView />} />
+            <Route path={ROUTES.LEAVESALARYSETTLEMENTCREATE} element={<LeaveSalarySettlementCreate />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

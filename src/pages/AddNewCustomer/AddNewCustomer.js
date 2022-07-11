@@ -72,22 +72,42 @@ function AddNewCustomer() {
           {/* </div> */}
         </div>
 
+        <div className="row">
+          <div className=" mt-4">
+            <p className={`  ${styles.ptype}`}>Profile Picture</p>
+            <label htmlFor="file">
+              <div
+                className={`card p-3 bg-whitesmoke border-0 ${styles.profilecard}`}
+              >
+                <CgProfile fontSize={50} color="lightgray" />
+              </div>
+              <input
+                type="file"
+                id="file"
+                accept="image/*"
+                style={{ display: "none" }}
+              />
+            </label>
+            <p className={`  ${styles.browse}`}>Browse</p>
+          </div>
+        </div>
+
         <div className="row  justify-content-center">
           <div className={`col-4  ${styles.columndiv}`}>
-            <div className="mt-5 pt-4 ms-2">
+            <div className="mt-3 pt-4 ms-2">
               <p className={`mb-0  ${styles.ptype}`}>Contact Type</p>
               <InputDropdown dropdown={` ${styles.drop}`} />
             </div>
           </div>
           <div className={`col-4  ${styles.columndiv}`}>
-            <div className="mt-5 pt-4">
+            <div className="mt-3 pt-4">
               <p className={`mb-1  ${styles.ptype}`}>Name</p>
               <InputType />
             </div>
           </div>
           <div className={`col-4  ${styles.columndiv}`}>
             <div className="d-flex justify-content-evenly ">
-              <div className="mt-5 pt-5 d-flex justify-content-evenly">
+              <div className="mt-3 pt-5 d-flex justify-content-evenly">
                 {" "}
                 <label htmlFor="individual">
                   <p className={`mb-1 pt-3  ${styles.ptype}`}>
@@ -114,7 +134,7 @@ function AddNewCustomer() {
                   </p>
                 </label>
               </div>
-              <div className=" ">
+              {/* <div className=" ">
                 <p className={`  ${styles.ptype}`}>Profile Picture</p>
                 <label htmlFor="file">
                   <div
@@ -130,26 +150,26 @@ function AddNewCustomer() {
                   />
                 </label>
                 <p className={`  ${styles.browse}`}>Browse</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
         <div className="row justify-content-center">
           <div className="row justify-content-center">
             <div className={`col-4  ${styles.columndiv}`}>
-              <div className="mt-2">
+              <div className="mt-3">
                 <p className={`mb-1  ${styles.ptype}`}>Business Name</p>
                 <InputType />
               </div>
             </div>
             <div className={`col-4  ${styles.columndiv}`}>
-              <div className="mt-2">
+              <div className="mt-3">
                 <p className={`mb-1  ${styles.ptype}`}>Tax Number</p>
                 <InputType />
               </div>
             </div>
             <div className={`col-4  ${styles.columndiv}`}>
-              <div className="mt-2">
+              <div className="mt-3">
                 <p className={`mb-1  ${styles.ptype}`}>Openning Balance</p>
                 <InputType />
               </div>
@@ -456,7 +476,8 @@ function AddNewCustomer() {
                 <div className="row  py-3">
                   <div className="col-12 d-flex justify-content-center">
                     <Button rounded={true}>Choose File</Button>
-                    <Button className=" ms-3 px-4"
+                    <Button
+                      className=" ms-3 px-4"
                       appendIcon={<BsFillPlusCircleFill />}
                       rounded={true}
                       btnType="secondary"
@@ -475,7 +496,7 @@ function AddNewCustomer() {
             <div className={`col-12  mt-3  ${styles.columndiv}`}>
               <div className="mt-2">
                 <p className={`mb-1  ${styles.ptype}`}>Note</p>
-                <Editor className="mt-5" />
+                <Editor className="" />
               </div>
             </div>
           </div>

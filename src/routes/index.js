@@ -52,6 +52,9 @@ export const ROUTES = Object.freeze({
     CATEGORYWISEWEEKENDMASTERVIEW:"/categorywiseweekendmasterview",
     CATEGORYWISEWEEKENDMASTERCREATE:"/categorywiseweekendmastercreate",
     CATEGORYWISEWEEKENDMASTER:"/categorywiseweekendmaster",
+    LEAVESALARYSETTLEMENT:"/leavesalarysettlement",
+    LEAVESALARYSETTLEMENTVIEW:"/leavesalarysettlementview",
+    LEAVESALARYSETTLEMENTCREATE:"/leavesalarysettlementcreate",
     
 
     LEAVEAPPLICATIONLIST:"/leaveapplication-list",
