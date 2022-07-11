@@ -21,6 +21,7 @@ import CategoryWiseWeekendMaster from "pages/HRMS/CategoryWise Weekend Master/Ca
 import LeaveSalarySettlement from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlement";
 import LeaveSalarySettlementView from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlementView";
 import LeaveSalarySettlementCreate from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlementCreate";
+import Viewunittype from "./pages/viewunittype/Viewunittype";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -34,7 +35,12 @@ const Viewproduct = lazy(()=>import ("./pages/viewproduct/Viewproduct"))
 const AddNewCustomer = lazy(()=>import('./pages/AddNewCustomer/AddNewCustomer'))
 const AddNewQuotation = lazy(()=>import('./pages/AddNewQuotation/AddNewQuotation'))
 const Category = lazy(()=>import ('./pages/Category/Category'))
+const Unittype =lazy(()=>import("./pages/unitType/Unittypelist") )
+const ViewUnitType = lazy(()=>import ("./pages/viewunittype/Viewunittype") )
+
 const Dashboard = lazy(() =>import ('./pages/HRMS/Dashboard/Dashboard'))
+//hrms
+
 const DesignationView = lazy(()=>import('./pages/HRMS/Designation/DesignationView'))
 const Designation = lazy(()=>import('./pages/HRMS/Designation/Designation'))
 const DesignationCreate = lazy(()=>import('./pages/HRMS/Designation/DesignationCreate'))
@@ -44,7 +50,6 @@ const EmployeeCategory = lazy(()=>import('./pages/HRMS/EmployeeCategory/Employee
 const DepartmentMasterView = lazy (()=>import('./pages/HRMS/DepartmentMaster/DepartmentMasterView'))
 const DepartmentMasterCreate =lazy(()=>import('./pages/HRMS/DepartmentMaster/DepartmentMasterCreate'))
 const DepartmentMaster = lazy(()=>import('./pages/HRMS/DepartmentMaster/DepartmentMaster'))
-
 const Employeelist = lazy(()=> import ("./pages/HRMS/Employeemaster/Employeelist") )
 const Createemployee = lazy(()=> import ("./pages/HRMS/Employeemaster/Createemployee") )
 const Employeedetails = lazy(()=> import ("./pages/HRMS/Employeemaster/Employeedetails") )
@@ -63,6 +68,7 @@ const Empcategoryleaves= lazy(()=> import('./pages/HRMS/EmployeeCategoryLeaves/E
 const Leaveapplicationlist =lazy(()=> import('./pages/HRMS/Leaveapplication/Leaveapplicationlist') )
 const Createleaveapplication = lazy(() => import ('./pages/HRMS/Leaveapplication/Createleaveapplication'))
 const Leaveapplication =lazy(()=>import('./pages/HRMS/Leaveapplication/Leaveapplication') )
+const Leaveapplicationapproval = lazy(()=>import('./pages/HRMS/Leavapplication approval/Leaveapplicationappoval'))
 
 function App() {
   return (
@@ -70,7 +76,7 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<p>loading...</p>}>
           <Routes>
-             <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+            <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
             <Route path={ROUTES.CUSTOMERS} element={<Customers />} />
             <Route path={ROUTES.PRODUCTS} element={<Products />} />
             <Route path={ROUTES.ADDNEWCUSTOMER} element={<AddNewCustomer />} />
@@ -82,10 +88,17 @@ function App() {
             <Route path={ROUTES.CATEGORY} element={<Category />} />
             <Route path={ROUTES.LAYOUT} element={<Layout />} />
             <Route path={ROUTES.ADDPRODUCT } element={<Addproduct/>}/>
-           
+            <Route path={ROUTES.VIEWPRODUCT} element={<Viewproduct/> } />
+            <Route path={ROUTES.VIEWCATEGORY} element={<ViewCategory />} />
+            <Route path={ROUTES.UNITCATEGORY} element={<UnitCategory />} />
+            <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
+            <Route path={ROUTES.UNITTYPE} element={<Unittype/>} />
+            <Route path={ROUTES.VIEWUNITTYPE} element={<Viewunittype/>} />
+
+{/* hrms */}
+
             <Route path={ROUTES.DESIGNATIONVIEW} element={<DesignationView />} />
             <Route path={ROUTES.DESIGNATION} element={<Designation />} />
-            <Route path={ROUTES.VIEWPRODUCT} element={<Viewproduct/> } />
             <Route path={ROUTES.CREATEDESIGNATION} element={<DesignationCreate />} />
             <Route path={ROUTES.EMPLOYEELIST} element={<Employeelist/>}/>
             <Route path={ROUTES.CREATEEMPLOYEE} element={<Createemployee/>} />
@@ -105,9 +118,7 @@ function App() {
             <Route path={ROUTES.LEAVETYPEMASTERVIEW} element={<LeaveTypeMasterView />} />
             <Route path={ROUTES.LEAVETYPEMASTERCREATE} element={<LeaveTypeMasterCreate />} />
             <Route path={ROUTES.LEAVETYPEMASTER} element={<LeaveTypeMaster />} />
-            <Route path={ROUTES.VIEWCATEGORY} element={<ViewCategory />} />
-            <Route path={ROUTES.UNITCATEGORY} element={<UnitCategory />} />
-            <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
+          
             <Route path={ROUTES.EMPCATEGORYLEAVELIST} element={<Empcategoryleaveslist/>} />
             <Route path={ROUTES.CREATELEAVETYPE}  element={<Createleavetype/>} />
             <Route path={ROUTES.HOLIDAYMASTERVIEW} element={<HolidayMasterView />} />
@@ -125,7 +136,9 @@ function App() {
             <Route path={ROUTES.LEAVESALARYSETTLEMENT} element={<LeaveSalarySettlement />} />
             <Route path={ROUTES.LEAVESALARYSETTLEMENTVIEW} element={<LeaveSalarySettlementView />} />
             <Route path={ROUTES.LEAVESALARYSETTLEMENTCREATE} element={<LeaveSalarySettlementCreate />} />
-          </Routes>
+          
+            <Route path={ROUTES.LEAVEAPPLICATIONAPPROVAL} element={<Leaveapplicationapproval/>}/>
+            </Routes>
         </Suspense>
       </BrowserRouter>
 

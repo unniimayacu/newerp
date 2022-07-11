@@ -324,6 +324,13 @@ function Slidebar() {
                 </div>
               </Link>
             </div>
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.UNITTYPE}>
+                <div className="  px-3 p-3 ">
+                  <label> UnitType List</label>
+                </div>
+              </Link>
+            </div>
             {/* {Siderbardata.map((item, index) => {
               return (
                 <li key={index} className={`${item.cName} px-0`}>
