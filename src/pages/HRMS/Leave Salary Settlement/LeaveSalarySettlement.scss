@@ -1,0 +1,52 @@
+.approved_hrms_dummy{
+    color: #3d9146;
+    font-weight: 500;
+}
+.disbursed_hrms_dummy{
+    color: #e47a7a;
+    font-weight: 500;
+}
+.pending_hrms_dummy{
+    color: #dbdb02;
+    font-weight: 500;
+}
+
+
+.container_leave_salary{
+    box-shadow: 1px 1px 2px 2px lightgray;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.leave_salary_view_heading{
+    color: #0092ce;
+    font-size: 20px;
+}
+.leave_salary_p_color{
+    color: #000000;
+    font-weight: 500;
+}
+.leave_salary_sub_p_color{
+    color: #838383;
+    font-weight: 500;
+}
+.leave_salary_sub_active_p_color{
+    color: #47ba55;
+    font-weight: 500;
+}
+
+
+
+  @media only screen and(max-width: 991px) {
+    .erp-md__h5_Size{
+        font-size: small;
+    }
+
+  }
+  @media only screen and(max-width: 1024px) {
+    .erp-lg__h5_size{
+        font-size: small;
+        margin-top: 6px;
+    }
+
+  }
