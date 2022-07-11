@@ -1,7 +1,8 @@
 import React from "react";
 import Layout from "Layout/Layout";
 import InputType from "components/Input type/InputType";
-import { DatePicker } from "react-widgets/cjs";
+// import { DatePicker } from "react-widgets/cjs";
+import DatePicker from "components/Datepicker/DatePicker";
 import InputDropdown from "components/Input dropdown/InputDropdown";
 import TextArea from "components/Text Area/TextArea";
 import Button from "components/button/Button";

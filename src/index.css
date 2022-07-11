@@ -17,3 +17,19 @@ code {
 .product_heading__space{
       white-space: nowrap;
 }
+.erp_status_active_p_color{
+    color: #47ba55;
+    font-weight: 400;
+}
+.erp_edit_delte_icon__size{
+  font-size: 17px;
+ color: gray;
+}
+.erp_hrms_status_reject_p_color{
+color: #f10b0b;
+font-weight: 400;
+
+}
+.erp_status_switch-color{
+  font-size: 20px;
+}

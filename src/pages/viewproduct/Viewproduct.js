@@ -3,6 +3,7 @@ import Button from "components/button/Button";
 import { Accordion,Table  } from "react-bootstrap";
 import Layout from "Layout/Layout";
 import "./viewproduct.scss";
+
 function Viewproduct() {
   return (
     <>

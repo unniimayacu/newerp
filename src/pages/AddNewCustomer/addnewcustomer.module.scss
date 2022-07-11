@@ -1,5 +1,7 @@
+@use "../.././variables.scss" ;
+
 .profilecard{
-    background-color: whitesmoke;
+    background-color:variables.$secondary;
 }
 // .columndiv{
 //     width: fit-content;
@@ -14,7 +16,7 @@
       margin-left: 15px;
 }
 .bankheading{
-     color: #0092ce;
+     color:variables.$primary;
     //  margin-left: 150px;
 }
 .multipledocument{
