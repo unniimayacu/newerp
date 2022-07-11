@@ -139,11 +139,17 @@ const recordingqty=()=>{
                 <div className="d-flex gap-1">
                   <h5 className="erp__h5_color ">Product List</h5>
                   {/* <Link to={ROUTES.CREATEEMPLOYEE}> */}
-                  <Button className="" appendIcon={<AiOutlinePlus />}>
+                  <Button
+                    className=""
+                    appendIcon={<AiOutlinePlus />}
+                    rounded={true}
+                  >
                     Add New Product
                   </Button>
                   {/* </Link> */}
-                  <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
+                  <Button appendIcon={<FiUpload />} rounded={true}>
+                    Upload Via CSV
+                  </Button>
                 </div>
               </div>
               <div className="  col-xl-4 col-lg-4 col-md-3 col-12">

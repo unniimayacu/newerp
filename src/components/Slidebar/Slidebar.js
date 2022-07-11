@@ -23,8 +23,8 @@ import "./slider.scss";
 
 function Slidebar() {
   const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
+
 
   const [subnav, setSubnav] = useState(false);
 
@@ -52,15 +52,48 @@ function Slidebar() {
               </Link>
             </div>
 
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to="">
-                <div className="  px-3 p-3 ">
-                  <div className="d-flex ">
-                    <span onClick={subnav && setSubnav}>Human Resource</span>
+            <li>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to="/">
+                  <div className="  px-3 p-3 ">
+                    <div className="d-flex ">
+                      <span>Human Resource</span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </div>
+                </Link>
+              </div>
+
+              <ul class="feat-show">
+                <li>
+                  <div className="row py-0 ">
+                    <Link
+                      className="nav-textcolor"
+                      to={ROUTES.DEPARTMENTMASTERVIEW}
+                    >
+                      <div className="d-flex gap-2 px-3 p-3 ">
+                        <div>
+                          <img src={star} alt="" height={17} width={17} />
+                        </div>
+                        <label>Department</label>
+                      </div>
+                    </Link>
+                  </div>{" "}
+                </li>
+                <li>
+                  {" "}
+                  <div className="row py-0 ">
+                    <Link className="nav-textcolor" to={ROUTES.DESIGNATIONVIEW}>
+                      <div className="d-flex gap-2 px-3 p-3 ">
+                        <div>
+                          <img src={award} alt="" height={17} width={17} />
+                        </div>
+                        <label>Designation</label>
+                      </div>
+                    </Link>
+                  </div>
+                </li>
+              </ul>
+            </li>
 
             <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.DEPARTMENTMASTERVIEW}>
@@ -141,7 +174,6 @@ function Slidebar() {
                   </div>
                   <label>Employee Category Leaves</label>
                 </div>
-                
               </Link>
             </div>
             <div className="row py-0 ">
@@ -155,7 +187,10 @@ function Slidebar() {
               </Link>
             </div>
             <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.CATEGORYWISEWEEKENDMASTERVIEW}>
+              <Link
+                className="nav-textcolor"
+                to={ROUTES.CATEGORYWISEWEEKENDMASTERVIEW}
+              >
                 <div className="d-flex gap-2 px-3 p-3 ">
                   <div>
                     <img src={sector} alt="" height={17} width={17} />
@@ -171,7 +206,20 @@ function Slidebar() {
                   <div>
                     <img src={sector} alt="" height={17} width={17} />
                   </div>
-                  <label>Leave Application</label>
+                  <label>Leave Application </label>
+                </div>
+              </Link>
+            </div>
+            <div className="row py-0 ">
+              <Link
+                className="nav-textcolor"
+                to={ROUTES.LEAVEAPPLICATIONAPPROVAL}
+              >
+                <div className="d-flex gap-2 px-3 p-3 ">
+                  <div>
+                    <img src={sector} alt="" height={17} width={17} />
+                  </div>
+                  <label>Leave Application Approval </label>
                 </div>
               </Link>
             </div>
@@ -238,6 +286,13 @@ function Slidebar() {
               <Link className="nav-textcolor" to={ROUTES.ADDSUPPLIER}>
                 <div className="  px-3 p-3 ">
                   <label> Add Supplier</label>
+                </div>
+              </Link>
+            </div>
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.UNITTYPE}>
+                <div className="  px-3 p-3 ">
+                  <label> UnitType List</label>
                 </div>
               </Link>
             </div>

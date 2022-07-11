@@ -25,8 +25,8 @@ function Dashboard() {
         <Layout>
           <div className="container-fluid  dashboard_container_color pb-2">
             <div className="row justify-content-center dashboard_row">
-              <div className="row mt-5">
-                <div className="col-xl-3 col-lg-4 ">
+              <div className="row mt-3">
+                <div className="col-xl-3 col-lg-4 col-12">
                   <div className="input_search ">
                     <label className="d-flex justify-content-between align-items-center">
                       <input
@@ -43,10 +43,10 @@ function Dashboard() {
                 </div>
                 <div className="col-xl-9 col-lg-11 "></div>
               </div>
-              <div className="row mt-5 justify-content-center">
+              <div className="row py-3 justify-content-center">
                 <h4>Employee</h4>
                 <div className="col-12">
-                  <div className="card mt-5  border-0">
+                  <div className="card mt-2  border-0">
                     <div className="container-fluid">
                       <div className="row ms-2 me-2 mt-2 mb-5 justify-content-center">
                         <div className="col-xl-4 col-lg-6 mt-5">
