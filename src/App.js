@@ -22,6 +22,7 @@ import LeaveSalarySettlement from "pages/HRMS/Leave Salary Settlement/LeaveSalar
 import LeaveSalarySettlementView from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlementView";
 import LeaveSalarySettlementCreate from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlementCreate";
 import Viewunittype from "./pages/viewunittype/Viewunittype";
+import PageNotFound from "components/PageNotFound/PageNotFound";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -138,6 +139,7 @@ function App() {
             <Route path={ROUTES.LEAVESALARYSETTLEMENTCREATE} element={<LeaveSalarySettlementCreate />} />
           
             <Route path={ROUTES.LEAVEAPPLICATIONAPPROVAL} element={<Leaveapplicationapproval/>}/>
+            <Route path="*" element={<PageNotFound />} />
             </Routes>
         </Suspense>
       </BrowserRouter>
