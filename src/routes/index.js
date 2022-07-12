@@ -1,4 +1,5 @@
 export const ROUTES = Object.freeze({
+  DASHBOARD: "/",
   CUSTOMERS: "/customers",
   ADDNEWCUSTOMER: "/AddNewcustomer",
   ADDNEWQUOTATION: "/AddNewQuotation",
@@ -15,11 +16,9 @@ export const ROUTES = Object.freeze({
   UNITCATEGORY: "/unitcategory",
   UNITCATEGORYVIEW: "/unitcategoryview",
   UNITTYPE: "/unit-typelist",
-  VIEWUNITTYPE:"/view-unittype",
+  VIEWUNITTYPE: "/view-unittype",
 
   //   {" HRMS "}
-
-  DASHBOARD: "/",
 
   DESIGNATIONVIEW: "/designationview",
   DESIGNATION: "/designation",

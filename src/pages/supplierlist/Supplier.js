@@ -8,7 +8,8 @@ import "./supplier.scss";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
 import Layout from "Layout/Layout";
-
+import { Link } from "react-router-dom";
+import { ROUTES } from "routes";
 import Makedata from "components/ddatas/Supplierdata";
 function Supplier() {
   const columns = useMemo(
@@ -79,7 +80,7 @@ function Supplier() {
               <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                 <div className="d-flex gap-2">
                   <h5 className="erp__h5_color ">Supplier</h5>
-                  {/* <Link to={ROUTES.CREATEEMPLOYEE}> */}
+                  <Link to={ROUTES.ADDSUPPLIER}>
                   <Button
                     className=""
                     rounded={true}
@@ -87,7 +88,7 @@ function Supplier() {
                   >
                     New Contact
                   </Button>
-                  {/* </Link> */}
+                  </Link>
                   <Button rounded={true} appendIcon={<FiUpload />}>
                     Upload Via CSV
                   </Button>

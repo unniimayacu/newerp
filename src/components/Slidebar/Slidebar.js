@@ -19,8 +19,6 @@ import { ROUTES } from "routes/index";
 import "react-widgets/styles.css";
 import "./slider.scss";
 
-
-
 function Slidebar() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -62,38 +60,9 @@ function Slidebar() {
                   </div>
                 </Link>
               </div>
-
-              <ul class="feat-show">
-                <li>
-                  <div className="row py-0 ">
-                    <Link
-                      className="nav-textcolor"
-                      to={ROUTES.DEPARTMENTMASTERVIEW}
-                    >
-                      <div className="d-flex gap-2 px-3 p-3 ">
-                        <div>
-                          <img src={star} alt="" height={17} width={17} />
-                        </div>
-                        <label>Department</label>
-                      </div>
-                    </Link>
-                  </div>{" "}
-                </li>
-                <li>
-                  {" "}
-                  <div className="row py-0 ">
-                    <Link className="nav-textcolor" to={ROUTES.DESIGNATIONVIEW}>
-                      <div className="d-flex gap-2 px-3 p-3 ">
-                        <div>
-                          <img src={award} alt="" height={17} width={17} />
-                        </div>
-                        <label>Designation</label>
-                      </div>
-                    </Link>
-                  </div>
-                </li>
-              </ul>
             </li>
+
+            
 
             <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.DEPARTMENTMASTERVIEW}>

@@ -34,8 +34,8 @@ const [list, setList] = useState([]);
     <>
       <Layout>
         <div className="container container_designation">
-          <div className="row mt-3">
-            <h5 className="erp__h5_color">Create Leave Type Master</h5>
+          <div className="row mt-3 ">
+            <h5 className="erp__h5_color mx-3">Create Leave Type Master</h5>
             <div className="row py-4">
               <div className="col-xl-4 col-lg-4 col-md-4 col-12 mx-3">
                 <label>Employee category</label>
