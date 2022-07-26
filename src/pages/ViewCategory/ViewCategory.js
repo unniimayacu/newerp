@@ -34,7 +34,7 @@ function ViewCategory() {
                     <div className="col-xl-4 col-lg-4 col-12">
                       <div className="text-center">
                         <h6 className="h4__color">Parent Category</h6>
-                        <p className="p_color">parent Category</p>
+                        <p className="p_color text-center">parent Category</p>
                       </div>
                     </div>
                     <div className="col-xl-5 col-lg-5 col-12">

@@ -6,7 +6,7 @@ function SectorMaster() {
   return (
     <div>
       <Layout>
-        <div className="container p-5 container_sectormaster">
+        <div className="container px-5 container_sectormaster">
           <div className="row mt-3">
             <h6 className="sectormaster_view_heading">Sector Master</h6>
             <div className="row mt-4 justify-content-between">

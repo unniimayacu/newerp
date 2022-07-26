@@ -28,18 +28,19 @@ function Slidebar() {
 
   const showSubnav = () => setSubnav(!subnav);
 
-  
+
 
   return (
     <>
       <div className="w-100 navWrapper h-100">
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items px-0 mt-3">
-            <div className="row  ">
+            <div className="row " data-bs-target="dashboard">
               <Link
                 // className="col-12 col-lg-6 text-center navigation__left-item navigation__link"
-                className="nav-textcolor"
+                className="nav-textcolor "
                 to={ROUTES.DASHBOARD}
+                id="dashboard"
               >
                 <div className="d-flex gap-2  px-3 p-3  ">
                   <div>
@@ -49,149 +50,209 @@ function Slidebar() {
                 </div>
               </Link>
             </div>
-
             <li>
               <div className="row py-0 ">
-                <Link className="nav-textcolor" to="/">
+                <Link className="nav-textcolor" to="#">
                   <div className="  px-3 p-3 ">
                     <div className="d-flex ">
-                      <span>Human Resource</span>
+                      <span onClick={showSubnav}>Human Resource</span>
                     </div>
                   </div>
                 </Link>
               </div>
+              <nav
+                show={setSubnav}
+                className={subnav ? "ul_resourse active" : "ul_resourse"}
+              >
+                <ul>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.DEPARTMENTMASTERVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div>
+                          <label>Department</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.DESIGNATIONVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={award} alt="" height={17} width={17} />
+                          </div>
+                          <label>Designation</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.EMPLOYEELIST}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={emp} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.EMPLOYEECATEGORYVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={work} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee Category</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.OVERTIMEMASTERVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={time} alt="" height={17} width={17} />
+                          </div>
+                          <label>OverTime Rate Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.SECTORMASTERVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Sector Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.LEAVETYPEMASTERVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={time} alt="" height={17} width={17} />
+                          </div>
+                          <label>Leave Type Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.EMPCATEGORYLEAVELIST}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={time} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee Category Leaves</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.HOLIDAYMASTERVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Holiday Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.CATEGORYWISEWEEKENDMASTERVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Category Wise Weekend Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.LEAVEAPPLICATIONLIST}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Leave Application</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.LEAVESALARYSETTLEMENTVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Leave Salary Settlement</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
             </li>
 
             
-
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.DEPARTMENTMASTERVIEW}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={star} alt="" height={17} width={17} />
-                  </div>
-                  <label>Department</label>
-                </div>
-              </Link>
-            </div>
-
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.DESIGNATIONVIEW}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={award} alt="" height={17} width={17} />
-                  </div>
-                  <label>Designation</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.EMPLOYEELIST}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={emp} alt="" height={17} width={17} />
-                  </div>
-                  <label>Employee Master</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.EMPLOYEECATEGORYVIEW}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={work} alt="" height={17} width={17} />
-                  </div>
-                  <label>Employee Category</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.OVERTIMEMASTERVIEW}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={time} alt="" height={17} width={17} />
-                  </div>
-                  <label>OverTime Rate Master</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.SECTORMASTERVIEW}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={sector} alt="" height={17} width={17} />
-                  </div>
-                  <label>Sector Master</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.LEAVETYPEMASTERVIEW}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={time} alt="" height={17} width={17} />
-                  </div>
-                  <label>Leave Type Master</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.EMPCATEGORYLEAVELIST}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={time} alt="" height={17} width={17} />
-                  </div>
-                  <label>Employee Category Leaves</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.HOLIDAYMASTERVIEW}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={sector} alt="" height={17} width={17} />
-                  </div>
-                  <label>Holiday Master</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link
-                className="nav-textcolor"
-                to={ROUTES.CATEGORYWISEWEEKENDMASTERVIEW}
-              >
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={sector} alt="" height={17} width={17} />
-                  </div>
-                  <label>Category Wise Weekend Master</label>
-                </div>
-              </Link>
-            </div>
-
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.LEAVEAPPLICATIONLIST}>
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={sector} alt="" height={17} width={17} />
-                  </div>
-                  <label>Leave Application </label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link
-                className="nav-textcolor"
-                to={ROUTES.LEAVEAPPLICATIONAPPROVAL}
-              >
-                <div className="d-flex gap-2 px-3 p-3 ">
-                  <div>
-                    <img src={sector} alt="" height={17} width={17} />
-                  </div>
-                  <label>Leave Application Approval </label>
-                </div>
-              </Link>
-            </div>
 
             <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.CATEGORY}>
@@ -204,6 +265,13 @@ function Slidebar() {
               <Link className="nav-textcolor" to={ROUTES.UNITCATEGORY}>
                 <div className="  px-3 p-3 ">
                   <label> Unit Category</label>
+                </div>
+              </Link>
+            </div>
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.VIEWCATEGORY}>
+                <div className="  px-3 p-3 ">
+                  <label> View Category</label>
                 </div>
               </Link>
             </div>

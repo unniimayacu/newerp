@@ -43,6 +43,28 @@ const activeSwitch = () => {
     </div>
   );
 };
+const status11 = () => {
+  return (
+    <div>
+      <p className="approved_hrms_dummy">Approved</p>
+    </div>
+  );
+}
+const status12 = () => {
+  return (
+    <div>
+      <p className="disbursed_hrms_dummy">Disbursed</p>
+    </div>
+  );
+};
+const status13 = () => {
+  return (
+    <div>
+      <p className="pending_hrms_dummy">Pending</p>
+    </div>
+  );
+};
+
 
 function HrmsdesignationTabledata() {
     const data = [
@@ -74,6 +96,10 @@ function HrmsdesignationTabledata() {
         date: "22/04/2022",
         holiday: "Onam",
         weekend: "saturday",
+        emp_leave: "John Wick [ID:HER231435FDV]",
+        leave_start: "02/07/2022",
+        leave_end: "20/07/2022",
+        status1: status11(),
       },
       {
         dcode: "jk-3456547",
@@ -103,6 +129,43 @@ function HrmsdesignationTabledata() {
         leavecategory: "Un paid",
         holiday: "Christmas",
         weekend: "sunday",
+        emp_leave: "John Wick [ID:HER231435FDV]",
+        leave_start: "02/07/2022",
+        leave_end: "20/07/2022",
+        status1: status12(),
+      },
+      {
+        dcode: "jk-3456547",
+        name: "Manager",
+        dname: "Purchase",
+        empname: "john wick",
+        empid: "jk-3456547",
+        category: "worker",
+        aff: "Year 1 Ticket",
+        atc: "Normal Class",
+        details: "kl-dfs334563kljh6565478",
+        desc: "Iorem ispem id sometime is that of the part of the that",
+        date: "22/04/2022",
+        action: action(),
+        status: activeSwitch(),
+        normalothours: "4",
+        bonusotapp: "yes",
+        normalotrate: "1.25",
+        bonusotrate: "1.50",
+        w_h_otrate: "1.58",
+        p_h_otrate: "2.0",
+        sectorname: "DBX-OCK-SCD",
+        sector_start: "DBX",
+        sector_end: "CFD",
+        rate: "1123",
+        leave: "sick",
+        leavecategory: "Un paid",
+        holiday: "Christmas",
+        weekend: "sunday",
+        emp_leave: "John Wick [ID:HER231435FDV]",
+        leave_start: "02/07/2022",
+        leave_end: "20/07/2022",
+        status1: status13(),
       },
     ];
       let dataChunk = [];

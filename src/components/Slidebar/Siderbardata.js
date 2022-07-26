@@ -30,7 +30,10 @@ export const Siderbardata = [
     title: "Designation",
     path: "/designationview",
     cName: "nav-text",
+
+  
   },
+
   {
     icon: <img src={emp} alt="" height={18} width={18} />,
     title: "Employee Master",
