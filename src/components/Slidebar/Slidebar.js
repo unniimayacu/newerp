@@ -17,54 +17,64 @@ import sector from "./img/Icon material-verified-user.svg";
 import { ROUTES } from "routes/index";
 // import DropdownList from "react-widgets/DropdownList";
 import "react-widgets/styles.css";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Nav from "react-bootstrap/Nav";
+import Offcanvas from "react-bootstrap/Offcanvas";
+
 import "./slider.scss";
+import { AiOutlineCaretDown } from "react-icons/ai";
 
 function Slidebar() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
-
   const [subnav, setSubnav] = useState(false);
 
   const showSubnav = () => setSubnav(!subnav);
 
-
+  const [open, setOpen] = useState(false);
 
   return (
     <>
       <div className="w-100 navWrapper h-100">
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items px-0 mt-3">
-            <div className="row " data-bs-target="dashboard">
-              <Link
-                // className="col-12 col-lg-6 text-center navigation__left-item navigation__link"
-                className="nav-textcolor "
-                to={ROUTES.DASHBOARD}
-                id="dashboard"
-              >
-                <div className="d-flex gap-2  px-3 p-3  ">
-                  <div>
-                    <img src={dashboard} alt="" height={17} width={17} />
-                  </div>
-                  <label className="">Dashboard</label>
-                </div>
-              </Link>
-            </div>
-            <li>
-              <div className="row py-0 ">
-                <Link className="nav-textcolor" to="#">
-                  <div className="  px-3 p-3 ">
-                    <div className="d-flex ">
-                      <span onClick={showSubnav}>Human Resource</span>
+            <li className="list_style">
+              <div className="row " data-bs-target="dashboard">
+                <Link
+                  // className="col-12 col-lg-6 text-center navigation__left-item navigation__link"
+                  className="nav-textcolor "
+                  to={ROUTES.DASHBOARD}
+                  id="dashboard"
+                >
+                  <div className="d-flex gap-2  px-3 p-3  ">
+                    <div>
+                      <img src={dashboard} alt="" height={17} width={17} />
                     </div>
+                    <label className="">Dashboard</label>
                   </div>
                 </Link>
               </div>
-              <nav
-                show={setSubnav}
-                className={subnav ? "ul_resourse active" : "ul_resourse"}
-              >
-                <ul>
+            </li>
+
+            <li
+              className={
+                open ? "list_style  items_hrms open" : "list_style  items_hrms "
+              }
+            >
+              <div className="nav-textcolor">
+                <div className="   p-3 ">
+                  <div
+                    className="d-flex justify-content-between align-items-center"
+                    onClick={() => setOpen(!open)}
+                  >
+                    <span>Human Resource</span>
+                    <AiOutlineCaretDown className="toggle_btn" />
+                  </div>
+                </div>
+              </div>
+              <nav>
+                <ul className="nav-menu-items hrms_content px-0 ">
                   <li className="list_style">
                     <div className="row py-0 ">
                       <Link
@@ -81,7 +91,6 @@ function Slidebar() {
                     </div>
                   </li>
                   <li className="list_style">
-                    {" "}
                     <div className="row py-0 ">
                       <Link
                         className="nav-textcolor"
@@ -97,7 +106,6 @@ function Slidebar() {
                     </div>
                   </li>
                   <li className="list_style">
-                    {" "}
                     <div className="row py-0 ">
                       <Link className="nav-textcolor" to={ROUTES.EMPLOYEELIST}>
                         <div className="d-flex gap-2 px-3 p-3 ">
@@ -110,7 +118,6 @@ function Slidebar() {
                     </div>
                   </li>
                   <li className="list_style">
-                    {" "}
                     <div className="row py-0 ">
                       <Link
                         className="nav-textcolor"
@@ -125,7 +132,24 @@ function Slidebar() {
                       </Link>
                     </div>
                   </li>
+                  {/* <li className="list_style">
+                  {" "}
+                  <div className="row py-0 ">
+                    <Link
+                      className="nav-textcolor"
+                      to={ROUTES.EMPLOYEECATEGORYVIEW}
+                    >
+                      <div className="d-flex gap-2 px-3 p-3 ">
+                        <div>
+                          <img src={work} alt="" height={17} width={17} />
+                        </div>
+                        <label>Employee Category</label>
+                      </div>
+                    </Link>
+                  </div>
+                </li> */}
                   <li className="list_style">
+                    {" "}
                     <div className="row py-0 ">
                       <Link
                         className="nav-textcolor"
@@ -173,6 +197,7 @@ function Slidebar() {
                     </div>
                   </li>
                   <li className="list_style">
+                    {" "}
                     <div className="row py-0 ">
                       <Link
                         className="nav-textcolor"
@@ -203,6 +228,23 @@ function Slidebar() {
                     </div>
                   </li>
                   <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.HOLIDAYMASTERVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Holiday Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
                     <div className="row py-0 ">
                       <Link
                         className="nav-textcolor"
@@ -218,6 +260,7 @@ function Slidebar() {
                     </div>
                   </li>
                   <li className="list_style">
+                    {" "}
                     <div className="row py-0 ">
                       <Link
                         className="nav-textcolor"
@@ -248,11 +291,73 @@ function Slidebar() {
                       </Link>
                     </div>
                   </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.LEAVESALARYSETTLEMENTVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Leave Application Approval</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.PAYELEMENTMASTER}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Pay Element Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.SETTLEMENTPAYELEMENT}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Settlement Pay Element </label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.EMPCATEGORYPAYELEMENT}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee category pay element </label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
                 </ul>
               </nav>
             </li>
-
-            
 
             <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.CATEGORY}>
@@ -276,63 +381,169 @@ function Slidebar() {
               </Link>
             </div>
 
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.ADDNEWCUSTOMER}>
-                <div className="  px-3 p-3 ">
-                  <label> Add Customer</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.VIEWCUSTOMER}>
-                <div className="  px-3 p-3 ">
-                  <label>View Customer</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.CUSTOMERS}>
-                <div className="  px-3 p-3 ">
-                  <label> Customerlist</label>
-                </div>
-              </Link>
-            </div>
+            {/* <NavDropdown
+              title="gshdg"
+              id={`offcanvasNavbarDropdown-expand`}
+              className="flex-grow-1 border-0"
+            >
+              <Nav.Item href="#action3"></Nav.Item>
+              <Nav.Item href="#action4"></Nav.Item>
 
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.ADDPRODUCT}>
-                <div className="  px-3 p-3 ">
-                  <label>Add Product</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.VIEWPRODUCT}>
-                <div className="  px-3 p-3 ">
-                  <label> View Product</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.PRODUCTS}>
-                <div className="  px-3 p-3 ">
-                  <label> ProductList</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.ADDSUPPLIER}>
-                <div className="  px-3 p-3 ">
-                  <label> Add Supplier</label>
-                </div>
-              </Link>
-            </div>
-            <div className="row py-0 ">
-              <Link className="nav-textcolor" to={ROUTES.UNITTYPE}>
-                <div className="  px-3 p-3 ">
-                  <label> UnitType List</label>
-                </div>
-              </Link>
-            </div>
+              <Nav.Item href="#action5"></Nav.Item>
+              <Nav.Item href="#action6"></Nav.Item>
+              <Nav.Item href="#action7"></Nav.Item>
+              <Nav.Item href="#action8"></Nav.Item>
+              <Nav.Item href="#action9"></Nav.Item>
+              <Nav.Item href="#action10"></Nav.Item>
+              <Nav.Item href="#action11"></Nav.Item>
+              <Nav.Item href="#action12"></Nav.Item>
+              <Nav.Item href="#action13"></Nav.Item>
+              <Nav.Item href="#action14"></Nav.Item>
+              <Nav.Item href="#action15"></Nav.Item>
+            </NavDropdown> */}
+
+            <Nav.Item eventKey="active">
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.CATEGORY}>
+                  <div className="  px-3 p-3 ">
+                    <label> Category</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.UNITCATEGORY}>
+                  <div className="  px-3 p-3 ">
+                    <label> Unit Category</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              {" "}
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.VIEWCATEGORY}>
+                  <div className="  px-3 p-3 ">
+                    <label> View Category</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              {" "}
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.ADDNEWCUSTOMER}>
+                  <div className="  px-3 p-3 ">
+                    <label> Add Customer</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              {" "}
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.VIEWCUSTOMER}>
+                  <div className="  px-3 p-3 ">
+                    <label>View Customer</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              {" "}
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.CUSTOMERS}>
+                  <div className="  px-3 p-3 ">
+                    <label> Customerlist</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              {" "}
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.ADDPRODUCT}>
+                  <div className="  px-3 p-3 ">
+                    <label>Add Product</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              {" "}
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.VIEWPRODUCT}>
+                  <div className="  px-3 p-3 ">
+                    <label> View Product</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              {" "}
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.PRODUCTS}>
+                  <div className="  px-3 p-3 ">
+                    <label> ProductList</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.ADDSUPPLIER}>
+                  <div className="  px-3 p-3 ">
+                    <label> Add Supplier</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.SUPPLIERS}>
+                  <div className="  px-3 p-3 ">
+                    <label> Supplier list</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.UNITTYPE}>
+                  <div className="  px-3 p-3 ">
+                    <label> UnitType List</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.ADDSALESENQUIRY}>
+                  <div className="  px-3 p-3 ">
+                    <label> Add Sales Enquiry</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.SALESENQUIRYLIST}>
+                  <div className="  px-3 p-3 ">
+                    <label>Sales Enquiry List</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.VIEWSUPPLIER}>
+                  <div className="  px-3 p-3 ">
+                    <label>View Supplier</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
             {/* {Siderbardata.map((item, index) => {
               return (
                 <li key={index} className={`${item.cName} px-0`}>
@@ -353,7 +564,8 @@ function Slidebar() {
 
 export default Slidebar;
 
-//  <nav className={slidebar ? 'nav-menu active' : 'nav-menu'}>
+{
+  /* //  <nav className={slidebar ? 'nav-menu active' : 'nav-menu'}>
 //             <ul className='nav-menu-items'>
 //               <li className='navbar-toggle'>
 //                 <Link to='#' className='menu-bars'>
@@ -361,7 +573,8 @@ export default Slidebar;
 //                 </Link>
 //               </li>
 //             </ul>
-//           </nav>
+//           </nav> */
+}
 
 {
   /* <ProSidebar>
@@ -382,4 +595,63 @@ export default Slidebar;
             <FaBars onClick={showSidebar} />
           </Link>
         </div> */
+}
+
+{
+  /* <li> */
+}
+{
+  /* <div className="row py-0 ">
+                <Link className="nav-textcolor" to="#">
+                  <div className="  px-3 p-3 ">
+                    <div className="d-flex ">
+                      <span>Human Resource</span>
+                    </div>
+                  </div>
+                </Link>
+              </div> */
+}
+{
+  /* <nav */
+}
+{
+  /* // show={setSubnav}
+              // className={subnav ? "ul_resourse active" : "ul_resourse"}
+              // > */
+}
+{
+  /* //   <ul> */
+}
+{
+  /* <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.DEPARTMENTMASTERVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div>
+                          <label>Department</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li> */
+}
+{
+  /* <li className="list_style"> </li>
+                  <li className="list_style"> </li>
+                  <li className="list_style"> </li>
+                  <li className="list_style"></li>
+                  <li className="list_style"> </li>
+                  <li className="list_style"> </li>
+                  <li className="list_style"></li>
+                  <li className="list_style"></li>
+                  <li className="list_style"></li>
+                  <li className="list_style"></li>
+                  <li className="list_style"> </li>
+                </ul>
+              </nav>
+            </li> */
 }
