@@ -9,13 +9,14 @@
 .new_rounded_border {
   border-radius: 50%;
    border: 1px solid gray;
+   color: gray;
   // border: solid 2px rgb(123, 141, 151);
   
 }
 .new_rounded_border:hover {
  
   color: rgb(84, 170, 228);
-  border: solid 2px rgb(84, 170, 228);
+  border: 2px solid  rgb(84, 170, 228);
 }
 
 

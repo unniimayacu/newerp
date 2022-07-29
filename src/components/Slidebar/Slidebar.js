@@ -291,10 +291,95 @@ function Slidebar() {
                       </Link>
                     </div>
                   </li>
-                  {/* <li></li> */}
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.LEAVESALARYSETTLEMENTVIEW}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Leave Application Approval</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.PAYELEMENTMASTER}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Pay Element Master</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.SETTLEMENTPAYELEMENT}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Settlement Pay Element </label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.EMPCATEGORYPAYELEMENT}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee category pay element </label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
                 </ul>
               </nav>
             </li>
+
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.CATEGORY}>
+                <div className="  px-3 p-3 ">
+                  <label> Category</label>
+                </div>
+              </Link>
+            </div>
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.UNITCATEGORY}>
+                <div className="  px-3 p-3 ">
+                  <label> Unit Category</label>
+                </div>
+              </Link>
+            </div>
+            <div className="row py-0 ">
+              <Link className="nav-textcolor" to={ROUTES.VIEWCATEGORY}>
+                <div className="  px-3 p-3 ">
+                  <label> View Category</label>
+                </div>
+              </Link>
+            </div>
 
             {/* <NavDropdown
               title="gshdg"
@@ -416,6 +501,15 @@ function Slidebar() {
             </Nav.Item>
             <Nav.Item>
               <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.SUPPLIERS}>
+                  <div className="  px-3 p-3 ">
+                    <label> Supplier list</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
                 <Link className="nav-textcolor" to={ROUTES.UNITTYPE}>
                   <div className="  px-3 p-3 ">
                     <label> UnitType List</label>
@@ -423,7 +517,33 @@ function Slidebar() {
                 </Link>
               </div>
             </Nav.Item>
-
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.ADDSALESENQUIRY}>
+                  <div className="  px-3 p-3 ">
+                    <label> Add Sales Enquiry</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.SALESENQUIRYLIST}>
+                  <div className="  px-3 p-3 ">
+                    <label>Sales Enquiry List</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.VIEWSUPPLIER}>
+                  <div className="  px-3 p-3 ">
+                    <label>View Supplier</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
             {/* {Siderbardata.map((item, index) => {
               return (
                 <li key={index} className={`${item.cName} px-0`}>

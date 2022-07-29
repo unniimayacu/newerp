@@ -12,6 +12,8 @@ import { Form } from "react-bootstrap";
 import Table from 'components/table/Table';
 import Makedata from "components/ddatas/Dataas";
 import Layout from "Layout/Layout";
+import { Link } from "react-router-dom";
+import { ROUTES } from "routes";
 
 
 // const actionIcons = () => {
@@ -138,7 +140,7 @@ const recordingqty=()=>{
               <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                 <div className="d-flex gap-1">
                   <h5 className="erp__h5_color ">Product List</h5>
-                  {/* <Link to={ROUTES.CREATEEMPLOYEE}> */}
+                  <Link to={ROUTES.ADDPRODUCT}>
                   <Button
                     className=""
                     appendIcon={<AiOutlinePlus />}
@@ -146,7 +148,7 @@ const recordingqty=()=>{
                   >
                     Add New Product
                   </Button>
-                  {/* </Link> */}
+                 </Link>
                   <Button appendIcon={<FiUpload />} rounded={true}>
                     Upload Via CSV
                   </Button>
@@ -158,26 +160,9 @@ const recordingqty=()=>{
                 </div>
               </div>
             </div>
-            {/* <div className="row mt-5 border-bottom ">
-                <div className="  col-xl-6 col-lg-6 col-12   py-3 ">
-                  <div className='d-flex'>
-                    <h5 className="ms-0">Product List</h5>
-                  
-                    <Button className="ms-2" appendIcon={<AiOutlinePlus />}>
-                      Add New Product{" "}
-                    </Button>
-                   
-                    <div className="ms-3 ">
-                      <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
-                    </div>
-                  </div>
-                </div>
-                <div className="d-flex justify-content-end col-xl-6 col-lg-6 col-12 py-3">
-                  <Newcontact />
-                </div>
-              </div> */}
+            
 
-            <div className="row mt-5">
+            <div className="row  mt-5">
               {/* <div className="container">
                   <div className="row mx-2"> */}
               <div className="col-xl-12 col-xl-12  col-12"></div>
@@ -242,3 +227,4 @@ export default Product
     //     col9: actionIcons(),
     //     col10: activeSwitch(),
     //   },
+   

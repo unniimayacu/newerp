@@ -23,6 +23,7 @@ import LeaveSalarySettlementView from "pages/HRMS/Leave Salary Settlement/LeaveS
 import LeaveSalarySettlementCreate from "pages/HRMS/Leave Salary Settlement/LeaveSalarySettlementCreate";
 import Viewunittype from "./pages/viewunittype/Viewunittype";
 import PageNotFound from "components/PageNotFound/PageNotFound";
+import Viewsalesenquiry from "./pages/viewsalesenquiry/Viewsalesenquiry";
 
 
 const Customers = lazy(()=> import ("./pages/customerslist/Customers") )
@@ -38,6 +39,9 @@ const AddNewQuotation = lazy(()=>import('./pages/AddNewQuotation/AddNewQuotation
 const Category = lazy(()=>import ('./pages/Category/Category'))
 const Unittype =lazy(()=>import("./pages/unitType/Unittypelist") )
 const ViewUnitType = lazy(()=>import ("./pages/viewunittype/Viewunittype") )
+const Addsalesenquiry =lazy(()=>import ("./pages/addnewsalesenquiry/Addsalesenquiry"))
+const Salesenquirylist =lazy(()=> import("./pages/salesenquirylist/Salesenquirylist") )
+const ViewsalesEnquiry =lazy(()=> import("./pages/viewsalesenquiry/Viewsalesenquiry"))
 
 const Dashboard = lazy(() =>import ('./pages/HRMS/Dashboard/Dashboard'))
 //hrms
@@ -70,6 +74,15 @@ const Leaveapplicationlist =lazy(()=> import('./pages/HRMS/Leaveapplication/Leav
 const Createleaveapplication = lazy(() => import ('./pages/HRMS/Leaveapplication/Createleaveapplication'))
 const Leaveapplication =lazy(()=>import('./pages/HRMS/Leaveapplication/Leaveapplication') )
 const Leaveapplicationapproval = lazy(()=>import('./pages/HRMS/Leavapplication approval/Leaveapplicationappoval'))
+const Payelementmaster = lazy(()=> import('./pages/HRMS/Payelement master/Payelementmaster') )
+const Payelementmasterview =lazy(()=> import('./pages/HRMS/Payelement master/Payelementmasterview') )
+const Settlementpayelement =lazy(() =>import ('./pages/HRMS/Settlement pay element/Settlementpayelement'))
+const Settlementpayelementcreate =lazy(() => import ('./pages/HRMS/Settlement pay element/Settlementpayelementcreate'))
+const Settlementpayelementview =lazy(()=>import ('./pages/HRMS/Settlement pay element/Settlementpayelementview'))
+const Empcategorypayelement = lazy(()=>import ('./pages/HRMS/Employeecategory pay element/Empcategorypayelement'))
+const Empcategorypayelementcreate= lazy(()=>import ('./pages/HRMS/Employeecategory pay element/Empcategorypayelementcreate'))
+const Empcategorypayelementview = lazy(()=>import('./pages/HRMS/Employeecategory pay element/Empcategoryelementview'))
+
 
 function App() {
   return (
@@ -95,7 +108,9 @@ function App() {
             <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
             <Route path={ROUTES.UNITTYPE} element={<Unittype/>} />
             <Route path={ROUTES.VIEWUNITTYPE} element={<Viewunittype/>} />
-
+            <Route path={ROUTES.ADDSALESENQUIRY} element={<Addsalesenquiry/>}/>
+           <Route path={ROUTES.SALESENQUIRYLIST} element={<Salesenquirylist/>}/>
+           <Route path={ROUTES.VIEWSALESENQUIRY} element={<Viewsalesenquiry/>}/>
 {/* hrms */}
 
             <Route path={ROUTES.DESIGNATIONVIEW} element={<DesignationView />} />
@@ -140,6 +155,14 @@ function App() {
           
             <Route path={ROUTES.LEAVEAPPLICATIONAPPROVAL} element={<Leaveapplicationapproval/>}/>
             <Route path="*" element={<PageNotFound />} />
+            <Route path={ROUTES.PAYELEMENTMASTER} element={<Payelementmaster/>}/>
+            <Route path={ROUTES.PAYELEMENTMASTERVIEW} element={<Payelementmasterview/>}/>
+            <Route path={ROUTES.SETTLEMENTPAYELEMENT} element={<Settlementpayelement/>} />
+            <Route path={ROUTES.SETTLEMENTPAYELEMENTCREATE} element={<Settlementpayelementcreate/>}/>
+            <Route path={ROUTES.SETTLEMENTPAYELEMENTVIEW} element={<Settlementpayelementview/>}/>
+            <Route path={ROUTES.EMPCATEGORYPAYELEMENT} element={<Empcategorypayelement/>}/>
+            <Route path={ROUTES.EMPCATEGORYPAYELEMENTCREATE} element={<Empcategorypayelementcreate/>}/>
+            <Route path={ROUTES.EMPCATEGORYPAYELEMENTVIEW} element={<Empcategorypayelementview/>}/>
             </Routes>
         </Suspense>
       </BrowserRouter>

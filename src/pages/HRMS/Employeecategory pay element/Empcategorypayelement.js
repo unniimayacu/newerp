@@ -12,76 +12,70 @@ import { Link } from "react-router-dom";
 import { ROUTES } from "routes/index";
 import { RiFileSearchFill } from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
-import { AiFillPrinter } from "react-icons/ai";
+import { MdDelete } from "react-icons/md";
 import { Form } from "react-bootstrap";
-function Empcategoryleaveslist() {
 
+function Empcategorypayelement() {
+     const actionIcons = () => {
+       return (
+         <div className="d-flex gap-3 align-items-center justify-content-center ">
+           <span className="erp_edit_delte_icon__size ">
+             <BsPencilSquare />
+           </span>
+           <span className="erp_edit_delte_icon__size ">
+             <RiFileSearchFill />{" "}
+           </span>
+           <span className="erp_edit_delte_icon__size ">
+             <MdDelete />{" "}
+           </span>
+         </div>
+       );
+     };
+     const activeSwitch = () => {
+       return (
+         <div className="erp_status_switch-color">
+           <Form.Check type="switch" id="custom-switch" />
+         </div>
+       );
+     };
 
-  const actionIcons = () => {
-    return (
-      <div className="d-flex gap-2 align-items-center justify-content-center ">
-        <span className="erp_edit_delte_icon__size ">
-          <BsPencilSquare />
-        </span>
-        <span className="erp_edit_delte_icon__size ">
-          <RiFileSearchFill />{" "}
-        </span>
-        <span className="erp_edit_delte_icon__size ">
-          <AiFillPrinter />{" "}
-        </span>
-      </div>
-    );
-  };
-  const activeSwitch = () => {
-    return (
-      <div className="custswitch_color">
-        <Form.Check type="switch" id="custom-switch" />
-      </div>
-    );
-  };
+     const columns = useMemo(
+       () => [
+         {
+           Header: "EMPLOYEE CATEGORY",
+           accessor: "col1",
+         },
+        
 
-  const columns = useMemo(
-    () => [
-      {
-        Header: "EMPLOYEE CATEGORY",
-        accessor: "col1",
-      },
-      {
-        Header: "LEAVE TYPE",
-        accessor: "col2",
-      },
-    
-      {
-        Header: "ACTION",
-        accessor: "col3",
-      },
-      {
-        Header: "STATUS",
-        accessor: "col4",
-      },
-    ],
-    []
-  );
+         {
+           Header: "ACTION",
+           accessor: "col2",
+         },
+         {
+           Header: "STATUS",
+           accessor: "col3",
+         },
+       ],
+       []
+     );
 
-    const data = useMemo(
-      () => [
-        {
-          col1: "Worker",
-          col2: "Casual,Hajj",
-          col3: actionIcons(),
-          col4: activeSwitch(),
-        },
-        {
-          col1: "Driver",
-          col2: "Casual,Hajj",
-          col3: actionIcons(),
-          col4: activeSwitch(),
-        },
-      ],
-      []
-    );
-  // const data = useMemo(() => EmployeelistData(), []);
-
+     const data = useMemo(
+       () => [
+         {
+           col1: "Worker",
+           
+           col2: actionIcons(),
+           col3: activeSwitch(),
+         },
+         {
+           col1: "Driver",
+          
+           col2: actionIcons(),
+           col3: activeSwitch(),
+         },
+       ],
+       []
+     );
   return (
     <>
       <Layout>
@@ -91,19 +85,19 @@ function Empcategoryleaveslist() {
               <div className="row p-2 mt-3">
                 <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                   <div className="d-flex gap-2">
-                    <h5 className="erp__h5_color ">Emp Category Leaves</h5>
-                    <Link to={ROUTES.CREATELEAVETYPE}>
+                    <h5 className="erp__h5_color ">
+                      {" "}
+                      Employee category Pay Element
+                    </h5>
+                    <Link to={ROUTES.EMPCATEGORYPAYELEMENTCREATE}>
                       <Button
                         className=""
                         rounded={true}
                         appendIcon={<AiOutlinePlus />}
                       >
-                        New Emp category Leaves
+                     Add
                       </Button>
                     </Link>
-                    <Button rounded={true} appendIcon={<FiUpload />}>
-                      Upload Via CSV
-                    </Button>
                   </div>
                 </div>
                 <div className="  col-xl-4 col-lg-4 col-md-3 col-12">
@@ -136,4 +130,4 @@ function Empcategoryleaveslist() {
   );
 }
 
-export default Empcategoryleaveslist
+export default Empcategorypayelement

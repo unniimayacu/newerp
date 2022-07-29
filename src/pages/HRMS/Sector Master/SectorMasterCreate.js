@@ -13,10 +13,10 @@ function SectorMasterCreate() {
   return (
     <div>
       <Layout>
-        <div className="container p-5 container_sectormaster">
-          <div className="row mt-3">
+        <div className="container  container_sectormaster">
+          <div className="row mt-2">
             <h6 className="sectormaster_view_heading">Create Sector Master</h6>
-            <div className="row mt-5">
+            <div className="row py-2">
               <div className="col-6">
                 <div>
                   <p className="sectormaster_p_color">Sector name</p>

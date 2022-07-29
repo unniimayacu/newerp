@@ -8,6 +8,8 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
 import Makedata from "components/ddatas/Customerdatas";
 import Layout from "Layout/Layout";
+import { Link } from "react-router-dom";
+import { ROUTES } from "routes";
 // import { RiFileSearchFill } from "react-icons/ri";
 // import { BsPencilSquare } from "react-icons/bs";
 // import { AiFillPrinter } from "react-icons/ai";
@@ -163,7 +165,7 @@ function Customers() {
           <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
             <div className="d-flex gap-2">
               <h5 className="erp__h5_color ">Customers</h5>
-              {/* <Link to={ROUTES.CREATEEMPLOYEE}> */}
+              <Link to={ROUTES.ADDNEWCUSTOMER}>
               <Button
                 className=""
                 rounded={true}
@@ -171,7 +173,7 @@ function Customers() {
               >
                 New Contact
               </Button>
-              {/* </Link> */}
+              </Link>
               <Button rounded={true} appendIcon={<FiUpload />}>
                 Upload Via CSV
               </Button>

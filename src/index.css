@@ -33,3 +33,9 @@ font-weight: 400;
 .erp_status_switch-color{
   font-size: 20px;
 }
+.supplier_plusicon__size{
+    font-size: 28px;
+}
+.table__head__color{
+   background-color: rgb(245, 255, 255);
+}
