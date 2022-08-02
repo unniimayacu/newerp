@@ -76,7 +76,11 @@ function Employeedetails() {
               id="uncontrolled-tab-example"
               className="mb-3 "
             >
-              <Tab eventKey="Personal" title="Personal Info">
+              <Tab
+                eventKey="Personal"
+                title="Personal Info"
+                className="active__tab"
+              >
                 <div className="row mt-5 mx-4 py-5">
                   <div className="col-xl-4 col-lg-4 col-12">
                     <p>Gender</p>
@@ -161,7 +165,11 @@ function Employeedetails() {
                   </div>
                 </div>
               </Tab>
-              <Tab eventKey="Contact" title="Contact Info">
+              <Tab
+                eventKey="Contact"
+                title="Contact Info"
+                className="active__tab"
+              >
                 <div className="row mx-4">
                   <div className="col-xl-4 col-lg-4 col-12">
                     <div>
@@ -227,7 +235,11 @@ function Employeedetails() {
                   </div>
                 </div>
               </Tab>
-              <Tab eventKey="Official Info" title="Official Info">
+              <Tab
+                eventKey="Official Info"
+                title="Official Info"
+                className="active__tab"
+              >
                 <div className="row py-4 mt-5 mx-4">
                   <div className="col-xl-4 col-lg-4 col-12">
                     <div>
@@ -285,7 +297,11 @@ function Employeedetails() {
                   </div>
                 </div>
               </Tab>
-              <Tab eventKey="Emp Benefits" title="Emp Benefits">
+              <Tab
+                eventKey="Emp Benefits"
+                title="Emp Benefits"
+                className="active__tab"
+              >
                 <div className="row mx-1">
                   <div className="col-xl-3 col-lg-3 col-12">
                     <label>Family Status</label>
@@ -665,7 +681,11 @@ function Employeedetails() {
                   </div>
                 </div>
               </Tab>
-              <Tab eventKey="Flight Info" title="Flight Info">
+              <Tab
+                eventKey="Flight Info"
+                title="Flight Info"
+                className="active__tab"
+              >
                 <div className="row py-4 mt-4 mx-1">
                   <div className="col-xl-4 col-lg-4 col-12">
                     <div>
@@ -746,7 +766,11 @@ function Employeedetails() {
                   </div>
                 </div>
               </Tab>
-              <Tab eventKey="Document Info" title="Document Info">
+              <Tab
+                eventKey="Document Info"
+                title="Document Info"
+                className="active__tab"
+              >
                 <div className="row mx-1">
                   <div className="col-xl-4 col-lg-4 col-12">
                     <label>Visa Number</label>

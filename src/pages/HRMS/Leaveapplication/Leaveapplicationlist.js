@@ -165,6 +165,7 @@ function Leaveapplicationlist() {
                     className={true}
                     responsive={true}
                     pagecenter={false}
+                    Tbody_style={true}
                   />
                 </div>
               </div>

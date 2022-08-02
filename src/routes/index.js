@@ -17,9 +17,11 @@ export const ROUTES = Object.freeze({
   UNITCATEGORYVIEW: "/unitcategoryview",
   UNITTYPE: "/unit-typelist",
   VIEWUNITTYPE: "/view-unittype",
-  ADDSALESENQUIRY:"/addsalesenquiry",
-  SALESENQUIRYLIST:"/salesenquiry",
-  VIEWSALESENQUIRY:"/viewsalesenquiry",
+  ADDSALESENQUIRY: "/addsalesenquiry",
+  SALESENQUIRYLIST: "/salesenquiry",
+  VIEWSALESENQUIRY: "/viewsalesenquiry",
+  QUOTATIONLIST: "/quotationlist",
+  VIEWQUOTATION: "/viewquotation",
 
   //   {" HRMS "}
 
@@ -61,17 +63,25 @@ export const ROUTES = Object.freeze({
   CREATELEAVEAPPLICATION: "/createleaveapplication",
   LEAVEAPPLICATION: "/leave-application",
   LEAVEAPPLICATIONAPPROVAL: "/leaveapplication-approval",
-  PAYELEMENTMASTER:"/payelement-master",
-  PAYELEMENTMASTERVIEW:"/payelementmaster-view",
-  SETTLEMENTPAYELEMENT:"/settlementpay-element",
-  SETTLEMENTPAYELEMENTCREATE:"/settlementpayelement-create",
-  SETTLEMENTPAYELEMENTVIEW:"/settlementpayelement-view",
-  EMPCATEGORYPAYELEMENT:"/empcategorypay-element",
-  EMPCATEGORYPAYELEMENTCREATE:"/empcategorypayelement-create",
-  EMPCATEGORYPAYELEMENTVIEW:"/empcategorypayelement-view"
-
-
-
+  PAYELEMENTMASTER: "/payelement-master",
+  PAYELEMENTMASTERVIEW: "/payelementmaster-view",
+  SETTLEMENTPAYELEMENT: "/settlementpay-element",
+  SETTLEMENTPAYELEMENTCREATE: "/settlementpayelement-create",
+  SETTLEMENTPAYELEMENTVIEW: "/settlementpayelement-view",
+  EMPCATEGORYPAYELEMENT: "/empcategorypay-element",
+  EMPCATEGORYPAYELEMENTCREATE: "/empcategorypayelement-create",
+  EMPCATEGORYPAYELEMENTVIEW: "/empcategorypayelement-view",
+  EMPSTATUSCHANGELIST: "/empstatuschange-list",
+  EMPSTATUSCHANGECREATE: "/empstatuschange-create",
+  EMPSTATUSCHANGEVIEW: "/empstatuschange-view",
+  EMPSTATUSCHANGEAPPROVAL: "/empstatuschange-approval",
+  EMPSTATUSCHANGEAPPROVE: "/empstatuschangeapprove",
+  EMPDEPARTMENTCHANGE: "/empdepartmentchange",
+  EMPDEPARTMENTCHANGECREATE: "/empdepartmentchange-create",
+  EMPDEPARTMENTCHANGEVIEW: "/empdepartmentchange-view",
+  EMPDEPARTMENTAPPROVAL: "/empdepartmentapproval-list",
+  EMPDEPARTMENTAPPROVALCREATE: "/empdepartmentapproval-create",
+  EMPDEPARTMENTAPPROVALVIEW: "/empdepartmentapproval-view",
 
   // EMPLOYEECATEGORYVIEW: "/employeecategoryview",
   // EMPLOYEECATEGORYCREATE: "/employeecategorycreate",
@@ -103,7 +113,6 @@ export const ROUTES = Object.freeze({
   // LEAVEAPPLICATIONLIST: "/leaveapplication-list",
   // CREATELEAVEAPPLICATION: "/createleaveapplication",
   // LEAVEAPPLICATION: "/leave-application",
- 
 });
 
 // DASHBOARD:"/dashboard",
