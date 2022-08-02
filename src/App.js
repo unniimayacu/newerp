@@ -42,6 +42,8 @@ const ViewUnitType = lazy(()=>import ("./pages/viewunittype/Viewunittype") )
 const Addsalesenquiry =lazy(()=>import ("./pages/addnewsalesenquiry/Addsalesenquiry"))
 const Salesenquirylist =lazy(()=> import("./pages/salesenquirylist/Salesenquirylist") )
 const ViewsalesEnquiry =lazy(()=> import("./pages/viewsalesenquiry/Viewsalesenquiry"))
+const Quotationlist = lazy(()=>import ("./pages/quatationlist/Quotation"))
+const Viewquotation = lazy(()=>import ("./pages/viewquotation/Viewquotation") )
 
 const Dashboard = lazy(() =>import ('./pages/HRMS/Dashboard/Dashboard'))
 //hrms
@@ -82,7 +84,17 @@ const Settlementpayelementview =lazy(()=>import ('./pages/HRMS/Settlement pay el
 const Empcategorypayelement = lazy(()=>import ('./pages/HRMS/Employeecategory pay element/Empcategorypayelement'))
 const Empcategorypayelementcreate= lazy(()=>import ('./pages/HRMS/Employeecategory pay element/Empcategorypayelementcreate'))
 const Empcategorypayelementview = lazy(()=>import('./pages/HRMS/Employeecategory pay element/Empcategoryelementview'))
-
+const Empstatuschangelist= lazy(()=>import("./pages/HRMS/Employeestatuschange/Empstatuschangelist"))
+const Empstatuschangecreate =lazy(()=>import('./pages/HRMS/Employeestatuschange/Empstatuschangecreate'))
+const Empstatuschangeview =lazy(()=>import ("./pages/HRMS/Employeestatuschange/Empstatuschangeview") )
+const Empstatuschangeapproval =lazy(()=>import("./pages/HRMS/Employeestatuschangeapproval/Empstatuschangeapproval"))
+const Empstatuschangeapprove =lazy(()=>import ("./pages/HRMS/Employeestatuschangeapproval/Empstatuschangeapprove"))
+const Empdepartmentchange =lazy(()=>import("./pages/HRMS/Employeedepartmentchange/Empdepartmentchange"))
+const Empdepartmentchangecreate =lazy(()=>import("./pages/HRMS/Employeedepartmentchange/Empdepartmentchangecreate"))
+const Empdepartmentchangeview =lazy(()=>import("./pages/HRMS/Employeedepartmentchange/Employeedepartmentview"))
+const Empdepartmentapproval =lazy(()=>import ("./pages/HRMS/Employeedepartmentchangeapproval/Empdepartmentapprovallist"))
+const Empdepartmentapprovalcreate= lazy(()=>import("./pages/HRMS/Employeedepartmentchangeapproval/Empdepartmentapprovalcreate"))
+const Empdepartmentapprovalview =lazy(()=>import("./pages/HRMS/Employeedepartmentchangeapproval/Empdepartmentapprovalview"))
 
 function App() {
   return (
@@ -109,8 +121,10 @@ function App() {
             <Route path={ROUTES.UNITTYPE} element={<Unittype/>} />
             <Route path={ROUTES.VIEWUNITTYPE} element={<Viewunittype/>} />
             <Route path={ROUTES.ADDSALESENQUIRY} element={<Addsalesenquiry/>}/>
-           <Route path={ROUTES.SALESENQUIRYLIST} element={<Salesenquirylist/>}/>
-           <Route path={ROUTES.VIEWSALESENQUIRY} element={<Viewsalesenquiry/>}/>
+            <Route path={ROUTES.SALESENQUIRYLIST} element={<Salesenquirylist/>}/>
+            <Route path={ROUTES.VIEWSALESENQUIRY} element={<ViewsalesEnquiry/>}/>
+            <Route path={ROUTES.QUOTATIONLIST} element={<Quotationlist/>}/>
+            <Route path={ROUTES.VIEWQUOTATION} element={<Viewquotation/>}/>
 {/* hrms */}
 
             <Route path={ROUTES.DESIGNATIONVIEW} element={<DesignationView />} />
@@ -134,7 +148,6 @@ function App() {
             <Route path={ROUTES.LEAVETYPEMASTERVIEW} element={<LeaveTypeMasterView />} />
             <Route path={ROUTES.LEAVETYPEMASTERCREATE} element={<LeaveTypeMasterCreate />} />
             <Route path={ROUTES.LEAVETYPEMASTER} element={<LeaveTypeMaster />} />
-          
             <Route path={ROUTES.EMPCATEGORYLEAVELIST} element={<Empcategoryleaveslist/>} />
             <Route path={ROUTES.CREATELEAVETYPE}  element={<Createleavetype/>} />
             <Route path={ROUTES.HOLIDAYMASTERVIEW} element={<HolidayMasterView />} />
@@ -143,7 +156,6 @@ function App() {
             <Route path={ROUTES.CATEGORYWISEWEEKENDMASTERVIEW} element={<CategoryWiseWeekendMasterView />} />
             <Route path={ROUTES.CATEGORYWISEWEEKENDMASTERCREATE} element={<CategoryWiseWeekendMasterCreate />} />
             <Route path={ROUTES.CATEGORYWISEWEEKENDMASTER} element={<CategoryWiseWeekendMaster />} />
-           
             <Route path={ROUTES.EMPCATEGORYLEAVES} element={<Empcategoryleaves/>} />
             <Route path={ROUTES.LEAVEAPPLICATIONLIST} element={<Leaveapplicationlist/>} />
             <Route path={ROUTES.CREATELEAVEAPPLICATION} element={<Createleaveapplication/>}/>
@@ -163,6 +175,18 @@ function App() {
             <Route path={ROUTES.EMPCATEGORYPAYELEMENT} element={<Empcategorypayelement/>}/>
             <Route path={ROUTES.EMPCATEGORYPAYELEMENTCREATE} element={<Empcategorypayelementcreate/>}/>
             <Route path={ROUTES.EMPCATEGORYPAYELEMENTVIEW} element={<Empcategorypayelementview/>}/>
+            <Route path={ROUTES.EMPSTATUSCHANGELIST} element={<Empstatuschangelist/>} />
+            <Route path={ROUTES.EMPSTATUSCHANGECREATE} element={<Empstatuschangecreate/>}/>
+            <Route path={ROUTES.EMPSTATUSCHANGEVIEW} element={<Empstatuschangeview/>}/>
+            <Route path={ROUTES.EMPSTATUSCHANGEAPPROVAL} element={<Empstatuschangeapproval/>}/>
+            <Route path={ROUTES.EMPSTATUSCHANGEAPPROVE} element={<Empstatuschangeapprove/>}/>
+            <Route path={ROUTES.EMPDEPARTMENTCHANGE} element={<Empdepartmentchange/>}/>
+            <Route path={ROUTES.EMPDEPARTMENTCHANGECREATE} element={<Empdepartmentchangecreate/>}/>
+            <Route path={ROUTES.EMPDEPARTMENTCHANGEVIEW} element={<Empdepartmentchangeview/>}/>
+            <Route path={ROUTES.EMPDEPARTMENTAPPROVAL} element={<Empdepartmentapproval/>}/>
+            <Route path={ROUTES.EMPDEPARTMENTAPPROVALCREATE} element={<Empdepartmentapprovalcreate/>}/>
+            <Route path={ROUTES.EMPDEPARTMENTAPPROVALVIEW} element={<Empdepartmentapprovalview/>}/>
+            
             </Routes>
         </Suspense>
       </BrowserRouter>

@@ -355,6 +355,70 @@ function Slidebar() {
                       </Link>
                     </div>
                   </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.EMPSTATUSCHANGELIST}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee Status Change </label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.EMPSTATUSCHANGEAPPROVAL}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee Status Change Approval </label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.EMPDEPARTMENTCHANGE}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee Deparment Change </label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    {" "}
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.EMPDEPARTMENTAPPROVAL}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={sector} alt="" height={17} width={17} />
+                          </div>
+                          <label>Employee Deparment Approval </label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
                 </ul>
               </nav>
             </li>
@@ -544,6 +608,34 @@ function Slidebar() {
                 </Link>
               </div>
             </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.VIEWSALESENQUIRY}>
+                  <div className="  px-3 p-3 ">
+                    <label>View Salesenquiry</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.QUOTATIONLIST}>
+                  <div className="  px-3 p-3 ">
+                    <label>Quotation List</label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+            <Nav.Item>
+              <div className="row py-0 ">
+                <Link className="nav-textcolor" to={ROUTES.VIEWQUOTATION}>
+                  <div className="  px-3 p-3 ">
+                    <label> View Quotation </label>
+                  </div>
+                </Link>
+              </div>
+            </Nav.Item>
+
             {/* {Siderbardata.map((item, index) => {
               return (
                 <li key={index} className={`${item.cName} px-0`}>

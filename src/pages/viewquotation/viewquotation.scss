@@ -23,14 +23,18 @@
 .view__enquiry__number {
   max-width: max-content;
   max-height: max-content;
-  background-color: rgb(46, 123, 240);
+//   background-color: rgb(9, 84, 197);
   border-radius: 50%;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
   color: white;
-  box-shadow: 1px 1px 2px 2px rgb(165, 202, 243);
+  box-shadow: 3px 3x 4px 4px rgb(165, 202, 243);
+  font-weight: 700;
+background: rgb(7,67,148);
+background: linear-gradient(131deg, rgba(7,67,148,1) 37%, rgba(10,89,158,1) 55%,
+ rgba(55,106,159,1) 67%, rgba(38,115,200,1) 84%, rgba(83,148,231,1) 96%);
 }
 .nav__bgcolor{
   background-color: white !important;

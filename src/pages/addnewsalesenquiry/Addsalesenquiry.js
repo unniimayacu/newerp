@@ -16,6 +16,7 @@ import CustomModal from "components/modal/CustomModal";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import DatePicker from "components/Datepicker/DatePicker";
 import { Select } from "antd";
+import TextArea from "components/Text Area/TextArea";
 
 function Addsalesenquiry() {
 
@@ -100,34 +101,36 @@ function Addsalesenquiry() {
               </div>
             </div>
 
-            <div className="row  py-3 ">
-              <div className="col-xl-4 col-lg-4 col-4">
-                <label className={`mb-0 ms-0`}>Date</label>
-                <DatePicker />
+            <div className="row">
+              <div className="col-xl-8 col-lg-8 col-12">
+                <div className="row  py-3 ">
+                  <div className="col-xl-6 col-lg-6 col-4">
+                    <label className={`mb-0 ms-0`}>Date</label>
+                    <DatePicker />
+                  </div>
+                  <div className="col-xl-6 col-lg-6 col-4">
+                    <label className={`mb-0 ms-0`}>Valid till</label>
+                    <DatePicker />
+                  </div>
+                </div>
+                <div className="row  py-3 ">
+                  <div className="col-xl-6 col-lg-6 col-4">
+                    <label className={`mb-0 ms-0`}>Payment term</label>
+                    <InputType />
+                  </div>
+                  <div className="col-xl-6 col-lg-6 col-4">
+                    <label className={`mb-0 ms-0`}>Payment Method</label>
+                    <InputDropdown />
+                  </div>
+                </div>
               </div>
-              <div className="col-xl-4 col-lg-4 col-4">
-                <label className={`mb-0 ms-0`}>Valid till</label>
-                <DatePicker />
-              </div>
-              <div className="col-xl-4 col-lg-4 col-4">
-                <label className={`mb-0 ms-0`}>Branch </label>
-                <InputType />
-              </div>
-            </div>
 
-            <div className="row  py-3 ">
-              <div className="col-xl-4 col-lg-4 col-4">
-                <label className={`mb-0 ms-0`}>Payment term</label>
-                <InputType />
+              <div className="col-xl-4 col-lg-4 col-12">
+                <div className="mt-3">
+                  <label className={`mb-0 ms-0`}>Shipping Address</label>
+                  <TextArea  />
+                </div>
               </div>
-              <div className="col-xl-4 col-lg-4 col-4">
-                <label className={`mb-0 ms-0`}>Payment Method</label>
-                <InputDropdown />
-              </div>
-              {/* <div className="col-xl-4 col-lg-4 col-4">
-                <label className={`mb-0 ms-0`}>Branch </label>
-                <InputType />
-              </div> */}
             </div>
 
             <div className="row  py-3 ">
