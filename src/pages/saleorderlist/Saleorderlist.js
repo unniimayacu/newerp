@@ -1,4 +1,3 @@
-
 import Button from "components/button/Button";
 import Newcontact from "components/customersnewcontact/Newcontact";
 import Header from "components/header/Header";
@@ -9,68 +8,67 @@ import { FiUpload } from "react-icons/fi";
 import Layout from "Layout/Layout";
 import { Link } from "react-router-dom";
 import { ROUTES } from "routes";
-import Makedata from "components/ddatas/Quotationdata";
+import Makedata from "components/ddatas/Saleorderdata";
 
-function Quotation() {
-
-     const columns = useMemo(
-       () => [
-         {
-           Header: "ACTION",
-           accessor: "action",
-         },
-         {
-           Header: "Sl.No",
-           accessor: "slno",
-         },
-         {
-           Header: "QUOTATION NO:",
-           accessor: "col1",
-         },
-         {
-           Header: "DATE",
-           accessor: "col2",
-         },
-         {
-           Header: "CUSTOMER",
-           accessor: "col3",
-         },
-         {
-           Header: "BRANCH/WAREHOUSE",
-           accessor: "col4",
-         },
-         {
-           Header: "SALES PERSON",
-           accessor: "col5",
-         },
-         {
-           Header: "TOTAL AMOUNT",
-           accessor: "col6",
-         },
-         //  {
-         //    Header: "ACTION",
-         //    accessor: "col7",
-         //  },
-       ],
-       []
-     );
-     const data = React.useMemo(() => Makedata(), []);
+function Saleorderlist() {
+         const columns = useMemo(
+           () => [
+             {
+               Header: "ACTION",
+               accessor: "action",
+             },
+             {
+               Header: "Sl.No",
+               accessor: "slno",
+             },
+             {
+               Header: "ORDER NO:",
+               accessor: "col1",
+             },
+             {
+               Header: "DATE",
+               accessor: "col2",
+             },
+             {
+               Header: "CUSTOMER",
+               accessor: "col3",
+             },
+             {
+               Header: "BRANCH/WAREHOUSE",
+               accessor: "col4",
+             },
+             {
+               Header: "SALES PERSON",
+               accessor: "col5",
+             },
+             {
+               Header: "TOTAL AMOUNT",
+               accessor: "col6",
+             },
+              {
+                Header: "INVOICE STATUS",
+                accessor: "status",
+              },
+           ],
+           []
+         );
+         const data = React.useMemo(() => Makedata(), []);
   return (
     <>
       <Layout>
         <div className="container  mt-2">
           <div className="row p-0">
-            <div className="row p-2 mt-3">
+            <div className="row p-2 mt-3  ">
               <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                 <div className="d-flex gap-2">
-                  <h5 className="erp__h5_color ">Quotation</h5>
-                  <Link to={ROUTES.ADDNEWQUOTATION}>
+                  <h5 className="erp__h5_color ">Sale Order List</h5>
+                  <Link to={ROUTES.ADDSALEORDER}>
                     <Button
                       className=""
                       rounded={true}
                       appendIcon={<AiOutlinePlus />}
                     >
-                      New Quotation
+                      New Sale Order
                     </Button>
                   </Link>
                 </div>
@@ -107,4 +105,4 @@ function Quotation() {
   );
 }
 
-export default Quotation
+export default Saleorderlist

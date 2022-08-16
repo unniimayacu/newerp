@@ -49,7 +49,7 @@ function Empcategorypayelement() {
 
          {
            Header: "ACTION",
-           accessor: "col2",
+           accessor: "action",
          },
          {
            Header: "STATUS",
@@ -62,16 +62,18 @@ function Empcategorypayelement() {
      const data = useMemo(
        () => [
          {
+           action: actionIcons(),
            col1: "Worker",
-           
-           col2: actionIcons(),
+
+           //  col2: actionIcons(),
            col3: activeSwitch(),
          },
          {
+           action: actionIcons(),
            col1: "Driver",
-          
-           col2: actionIcons(),
-           col3: activeSwitch(),
+
+           //  col2: actionIcons(),
+           col2: activeSwitch(),
          },
        ],
        []

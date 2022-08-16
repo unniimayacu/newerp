@@ -44,6 +44,10 @@ const Salesenquirylist =lazy(()=> import("./pages/salesenquirylist/Salesenquiryl
 const ViewsalesEnquiry =lazy(()=> import("./pages/viewsalesenquiry/Viewsalesenquiry"))
 const Quotationlist = lazy(()=>import ("./pages/quatationlist/Quotation"))
 const Viewquotation = lazy(()=>import ("./pages/viewquotation/Viewquotation") )
+const Saleorderlist =lazy(()=>import ("./pages/saleorderlist/Saleorderlist"))
+const Addsaleorder =lazy(()=>import("./pages/addnewsaleorder/Addsaleorder"))
+const Viewsaleorder =lazy(()=>import("./pages/viewsaleorder/Viewsaleorder"))
+
 
 const Dashboard = lazy(() =>import ('./pages/HRMS/Dashboard/Dashboard'))
 //hrms
@@ -96,6 +100,7 @@ const Empdepartmentapproval =lazy(()=>import ("./pages/HRMS/Employeedepartmentch
 const Empdepartmentapprovalcreate= lazy(()=>import("./pages/HRMS/Employeedepartmentchangeapproval/Empdepartmentapprovalcreate"))
 const Empdepartmentapprovalview =lazy(()=>import("./pages/HRMS/Employeedepartmentchangeapproval/Empdepartmentapprovalview"))
 
+
 function App() {
   return (
     <div className="App">
@@ -119,12 +124,15 @@ function App() {
             <Route path={ROUTES.UNITCATEGORY} element={<UnitCategory />} />
             <Route path={ROUTES.UNITCATEGORYVIEW} element={<UnitCategoryView />} />
             <Route path={ROUTES.UNITTYPE} element={<Unittype/>} />
-            <Route path={ROUTES.VIEWUNITTYPE} element={<Viewunittype/>} />
+            <Route path={ROUTES.VIEWUNITTYPE} element={<ViewUnitType/>} />
             <Route path={ROUTES.ADDSALESENQUIRY} element={<Addsalesenquiry/>}/>
             <Route path={ROUTES.SALESENQUIRYLIST} element={<Salesenquirylist/>}/>
             <Route path={ROUTES.VIEWSALESENQUIRY} element={<ViewsalesEnquiry/>}/>
             <Route path={ROUTES.QUOTATIONLIST} element={<Quotationlist/>}/>
             <Route path={ROUTES.VIEWQUOTATION} element={<Viewquotation/>}/>
+            <Route path={ROUTES.SALEORDERLIST} element={<Saleorderlist/>}/>
+            <Route path={ROUTES.ADDSALEORDER} element={<Addsaleorder/>}/>
+            <Route path={ROUTES.VIEWSALEORDER} element={<Viewsaleorder/>}/>
 {/* hrms */}
 
             <Route path={ROUTES.DESIGNATIONVIEW} element={<DesignationView />} />

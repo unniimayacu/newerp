@@ -48,6 +48,10 @@ function Leaveapplicationappoval() {
  const columns = useMemo(
    () => [
      {
+       Header: "ACTION",
+       accessor: "action",
+     },
+     {
        Header: "EMPLOYEE ",
        accessor: "col1",
      },
@@ -68,13 +72,13 @@ function Leaveapplicationappoval() {
        Header: "LEAVE TYPE",
        accessor: "col5",
      },
-     {
-       Header: "ACTION",
-       accessor: "col6",
-     },
+     //  {
+     //    Header: "ACTION",
+     //    accessor: "col6",
+     //  },
      {
        Header: "STATUS",
-       accessor: "col7",
+       accessor: "col6",
      },
    ],
    []
@@ -83,13 +87,14 @@ function Leaveapplicationappoval() {
  const data = useMemo(
    () => [
      {
+       action: actionIcons(),
        col1: "John Wick[id-jefn34jdefn3]",
        col2: "02/03/22",
        col3: "02/03/22",
        col4: "12/03/22",
        col5: "casual Leave",
-       col6: actionIcons(),
-       col7: statusApproval(),
+       //  col6: actionIcons(),
+       col6: statusApproval(),
      },
      {
        col1: "John Wick[id-jefn34jdefn3]",
@@ -97,8 +102,8 @@ function Leaveapplicationappoval() {
        col3: "02/03/22",
        col4: "12/03/22",
        col5: "Sick Leave",
-       col6: actionIcons(),
-       col7: statusReject(),
+       //  col6: actionIcons(),
+       col6: statusApproval(),
      },
    ],
    []

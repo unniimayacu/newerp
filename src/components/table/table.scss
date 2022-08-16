@@ -26,11 +26,12 @@
       color: white !important;
     }
   }
-  @media only screen and(max-width:320px),(max-width:425px),(max-width:768px) {
+  @media only screen and(max-width:320px),
+    (max-width: 425px),
+    (max-width: 768px) {
     table {
       color: black !important;
     }
-    
   }
 }
 
@@ -74,27 +75,58 @@
 //     padding: 0.5rem;
 //   }
 
-.table_header_color{
+.table_header_color {
   border-radius: 100%;
   background-color: rgb(245, 255, 255);
   text-align: center;
 }
 
-.page_div_center{
+.page_div_center {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
-.hrms_table_dash_header_color{
+.hrms_table_dash_header_color {
   background-color: #1198d0;
   color: white;
   font-size: 16px;
 }
 
-.table_body_style{
-  font-size: 15px;
+.table_body_style {
+  font-size: 13px;
   text-align: center;
 }
-.table_header_fix{
+.table_header_fix {
   position: fixed;
+}
+// .tbl__head_scroll {
+// overflow-x: auto;
+//       overflow-y: hidden;
+// }
+// .tbl__body_scroll {
+//   overflow-x: scroll;
+//   overflow-y: hidden;
+//   height: 250px;
+//   width: 200px;
+// }
+.table-responsive {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px !important;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888 !important;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555 !important;
+  }
 }

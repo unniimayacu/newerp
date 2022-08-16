@@ -32,6 +32,10 @@ function Empdepartmentchange() {
      const columns = useMemo(
        () => [
          {
+           Header: "ACTION",
+           accessor: "Action",
+         },
+         {
            Header: " EMPLOYEE",
            accessor: "Employee",
          },
@@ -51,10 +55,10 @@ function Empdepartmentchange() {
            Header: "LAST WORKING DATE",
            accessor: "Lastwrkingdate",
          },
-         {
-           Header: "ACTION",
-           accessor: "Action",
-         },
+         //  {
+         //    Header: "ACTION",
+         //    accessor: "Action",
+         //  },
        ],
        []
      );
@@ -62,28 +66,28 @@ function Empdepartmentchange() {
      const data = useMemo(
        () => [
          {
+           Action: actionIcons(),
            Employee: "worker",
            Employeename: "John",
            Date: "12/07/2022",
            Workingstatus: "Resignation",
            Lastwrkingdate: "21/08/2022",
-           Action: actionIcons(),
          },
          {
+           Action: actionIcons(),
            Employee: "Manager",
            Employeename: "Richard James",
            Date: "02/07/2022",
            Workingstatus: "Termination",
            Lastwrkingdate: "25/06/2022",
-           Action: actionIcons(),
          },
          {
+           Action: actionIcons(),
            Employee: "Driver",
            Employeename: "Williams",
            Date: "10/04/2022",
            Workingstatus: "Working",
            Lastwrkingdate: "21/07/2022",
-           Action: actionIcons(),
          },
        ],
        []

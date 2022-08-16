@@ -15,6 +15,10 @@ function SectorMasterView() {
     const columns = useMemo(
       () => [
         {
+          Header: "ACTION",
+          accessor: "action",
+        },
+        {
           Header: "SECTOR NAME",
           accessor: "sectorname",
         },
@@ -35,10 +39,10 @@ function SectorMasterView() {
           accessor: "rate",
         },
 
-        {
-          Header: "ACTION",
-          accessor: "action",
-        },
+        // {
+        //   Header: "ACTION",
+        //   accessor: "action",
+        // },
         {
           Header: "STATUS",
           accessor: "status",

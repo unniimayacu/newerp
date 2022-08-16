@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTable, usePagination, useSortBy } from "react-table";
 import "./table.scss";
 import Pagination from "@mui/material/Pagination";
+import TableScrollbar from "react-table-scrollbar";
 
 export default function Table({
   columns,
@@ -16,7 +17,9 @@ export default function Table({
   pagecenter = false,
   Hrms_dash_table_header_color = false,
   Tbody_style = false,
-  table_header_fixed = false ,
+  table_header_fixed = false,
+  tbody_scroll = true,
+  
 }) {
   const {
     getTableProps,
@@ -58,7 +61,6 @@ export default function Table({
 
   return (
     <>
-     
       <div className="col-4  ">
         {PageSize && (
           <select
@@ -103,11 +105,11 @@ export default function Table({
         <div
           className={`cif__table-table-container ${
             responsive ? "table-responsive" : ""
-          }`}
+          } `}
         >
-          <table {...getTableProps()} className="table table-borderless">
+          <table {...getTableProps()} className={`table table-borderless  `}>
             {headerVisible && (
-              <thead>
+              <thead className={`  `}>
                 {headerGroups.map((headerGroup) => (
                   <tr
                     {...headerGroup.getHeaderGroupProps()}
@@ -143,7 +145,9 @@ export default function Table({
             )}
             <tbody
               {...getTableBodyProps()}
-              className={`${Tbody_style && "table_body_style"}`}
+              className={`${Tbody_style && "table_body_style"} 
+              ${tbody_scroll && "tbl__body_scroll"}
+              `}
             >
               {paginate
                 ? page.map((row, i) => {
@@ -178,19 +182,18 @@ export default function Table({
                   })}
             </tbody>
           </table>
-
-          <div className={`${pagecenter && "page_div_center"}`}>
-            {pagination && (
-              <div className="d-flex algn-items-center">
-                <Pagination
-                  count={pageCount}
-                  color="primary"
-                  page={pagee}
-                  onChange={handleChange}
-                />
-              </div>
-            )}
-          </div>
+        </div>
+        <div className={`${pagecenter && "page_div_center"}`}>
+          {pagination && (
+            <div className="d-flex algn-items-center">
+              <Pagination
+                count={pageCount}
+                color="primary"
+                page={pagee}
+                onChange={handleChange}
+              />
+            </div>
+          )}
         </div>
       </div>
     </>

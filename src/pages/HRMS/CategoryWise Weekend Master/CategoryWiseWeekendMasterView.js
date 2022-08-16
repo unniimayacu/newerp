@@ -16,6 +16,10 @@ function CategoryWiseWeekendMasterView() {
       const columns = useMemo(
         () => [
           {
+            Header: "ACTION",
+            accessor: "action",
+          },
+          {
             Header: "EMPLOYEE CATEGORY",
             accessor: "category",
           },
@@ -23,11 +27,11 @@ function CategoryWiseWeekendMasterView() {
             Header: "WEEKENDS",
             accessor: "weekend",
           },
-         
-          {
-            Header: "ACTION",
-            accessor: "action",
-          },
+
+          // {
+          //   Header: "ACTION",
+          //   accessor: "action",
+          // },
           {
             Header: "STATUS",
             accessor: "status",

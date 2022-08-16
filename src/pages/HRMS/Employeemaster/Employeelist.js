@@ -15,6 +15,10 @@ function Employeelist() {
     const columns = useMemo(
       () => [
         {
+          Header: "ACTION",
+          accessor: "action",
+        },
+        {
           Header: "EMPLOYEE ID",
           accessor: "col1",
         },
@@ -30,13 +34,13 @@ function Employeelist() {
           Header: "PASSPORT EXPIRY DATE",
           accessor: "col4",
         },
-        {
-          Header: "ACTION",
-          accessor: "col5",
-        },
+        // {
+        //   Header: "ACTION",
+        //   accessor: "col5",
+        // },
         {
           Header: "STATUS",
-          accessor: "col6",
+          accessor: "col5",
         },
       ],
       []

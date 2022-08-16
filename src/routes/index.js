@@ -22,6 +22,9 @@ export const ROUTES = Object.freeze({
   VIEWSALESENQUIRY: "/viewsalesenquiry",
   QUOTATIONLIST: "/quotationlist",
   VIEWQUOTATION: "/viewquotation",
+  SALEORDERLIST :"/saleorderlist",
+  ADDSALEORDER:"/addsaleorder",
+  VIEWSALEORDER:"/viewsaleorder",
 
   //   {" HRMS "}
 

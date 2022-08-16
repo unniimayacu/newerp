@@ -15,6 +15,10 @@ function EmployeeCategoryView() {
   const columns = useMemo(
     () => [
       {
+        Header: "ACTION",
+        accessor: "action",
+      },
+      {
         Header: "CATEGORY CODE",
         accessor: "dcode",
       },
@@ -22,11 +26,11 @@ function EmployeeCategoryView() {
         Header: "CATEGORY",
         accessor: "category",
       },
- 
-      {
-        Header: "ACTION",
-        accessor: "action",
-      },
+
+      // {
+      //   Header: "ACTION",
+      //   accessor: "action",
+      // },
       {
         Header: "STATUS",
         accessor: "status",

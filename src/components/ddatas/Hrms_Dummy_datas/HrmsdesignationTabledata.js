@@ -7,14 +7,14 @@ import { MdDelete } from "react-icons/md";
 
 const action = () => {
   return (
-    <div className="d-flex align-items-center justify-content-center ">
-      <span className="cust_icon_edit  ">
+    <div className="d-flex gap-2 align-items-center justify-content-center ">
+      <span className="erp_edit_delte_icon__size ">
         <BsPencilSquare color="gray" />
       </span>
-      <span className="cust_icon_edit ms-2">
+      <span className="erp_edit_delte_icon__size">
         <RiFileSearchFill color="gray" />{" "}
       </span>
-      <span className="cust_icon_edit ms-2">
+      <span className="erp_edit_delte_icon__size">
         <MdDelete color="gray" />{" "}
       </span>
     </div>
@@ -38,7 +38,7 @@ const action = () => {
 // };
 const activeSwitch = () => {
   return (
-    <div className="custswitch_color">
+    <div className="erp_status_switch-color">
       <Form.Check type="switch" id="custom-switch" />
     </div>
   );
@@ -69,6 +69,7 @@ const status13 = () => {
 function HrmsdesignationTabledata() {
     const data = [
       {
+        action: action(),
         dcode: "jk-3456547",
         name: "Manager",
         dname: "Purchase",
@@ -78,7 +79,7 @@ function HrmsdesignationTabledata() {
         aff: "Year 1 Ticket",
         atc: "Normal Class",
         details: "kl-dfs334563kljh6565478",
-        action: action(),
+        // action: action(),
         status: activeSwitch(),
         normalothours: "4",
         bonusotapp: "yes",
@@ -102,6 +103,7 @@ function HrmsdesignationTabledata() {
         status1: status11(),
       },
       {
+        action: action(),
         dcode: "jk-3456547",
         name: "Manager",
         dname: "Purchase",
@@ -113,7 +115,7 @@ function HrmsdesignationTabledata() {
         details: "kl-dfs334563kljh6565478",
         desc: "Iorem ispem id sometime is that of the part of the that",
         date: "22/04/2022",
-        action: action(),
+        // action: action(),
         status: activeSwitch(),
         normalothours: "4",
         bonusotapp: "yes",
@@ -135,6 +137,7 @@ function HrmsdesignationTabledata() {
         status1: status12(),
       },
       {
+        action: action(),
         dcode: "jk-3456547",
         name: "Manager",
         dname: "Purchase",
@@ -146,7 +149,7 @@ function HrmsdesignationTabledata() {
         details: "kl-dfs334563kljh6565478",
         desc: "Iorem ispem id sometime is that of the part of the that",
         date: "22/04/2022",
-        action: action(),
+        // action: action(),
         status: activeSwitch(),
         normalothours: "4",
         bonusotapp: "yes",

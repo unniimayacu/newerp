@@ -79,6 +79,10 @@ const recordingqty=()=>{
   const columns = useMemo(
     () => [
       {
+        Header: "ACTION",
+        accessor: "action",
+      },
+      {
         Header: "Sl.No",
         accessor: "slno",
       },
@@ -114,13 +118,13 @@ const recordingqty=()=>{
         Header: recordingqty(),
         accessor: "col8",
       },
-      {
-        Header: "ACTION",
-        accessor: "col9",
-      },
+      // {
+      //   Header: "ACTION",
+      //   accessor: "col9",
+      // },
       {
         Header: "ACTIVE",
-        accessor: "col10",
+        accessor: "col9",
       },
     ],
     []
@@ -141,14 +145,14 @@ const recordingqty=()=>{
                 <div className="d-flex gap-1">
                   <h5 className="erp__h5_color ">Product List</h5>
                   <Link to={ROUTES.ADDPRODUCT}>
-                  <Button
-                    className=""
-                    appendIcon={<AiOutlinePlus />}
-                    rounded={true}
-                  >
-                    Add New Product
-                  </Button>
-                 </Link>
+                    <Button
+                      className=""
+                      appendIcon={<AiOutlinePlus />}
+                      rounded={true}
+                    >
+                      Add New Product
+                    </Button>
+                  </Link>
                   <Button appendIcon={<FiUpload />} rounded={true}>
                     Upload Via CSV
                   </Button>
@@ -160,7 +164,6 @@ const recordingqty=()=>{
                 </div>
               </div>
             </div>
-            
 
             <div className="row  mt-5">
               {/* <div className="container">
@@ -175,6 +178,8 @@ const recordingqty=()=>{
                 className={true}
                 responsive={true}
                 pagecenter={true}
+                tbody_scroll={true}
+                Thead_scroll={true}
                 //  paginate={true}
                 // issorted={true}
               />

@@ -15,6 +15,10 @@ function LeaveSalarySettlementView() {
      const columns = useMemo(
        () => [
          {
+           Header: "ACTION",
+           accessor: "action",
+         },
+         {
            Header: "EMPLOYEE",
            accessor: "emp_leave",
          },
@@ -32,10 +36,6 @@ function LeaveSalarySettlementView() {
            accessor: "leave_end",
          },
 
-         {
-           Header: "ACTION",
-           accessor: "action",
-         },
          {
            Header: "STATUS",
            accessor: "status1",

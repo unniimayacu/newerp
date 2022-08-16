@@ -15,7 +15,9 @@ const action = () => {
         <BsPencilSquare color="whitesmoke" fontSize={16} />
       </span>
       <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill color="gray" fontSize={16} />{" "}
+        <Link to={ROUTES.VIEWCATEGORY}>
+          <RiFileSearchFill color="gray" fontSize={16} />{" "}
+        </Link>
       </span>
       <span className="cust_icon_edit ms-2">
         <MdDelete color="gray" fontSize={16} />{" "}
@@ -33,7 +35,7 @@ const actionIcons = (props) => {
       </span>
       <span className="cust_icon_edit ms-2">
         <Link to={ROUTES.UNITCATEGORYVIEW}>
-          <RiFileSearchFill color="#a2adca"  />{" "}
+          <RiFileSearchFill color="#4248f5" />{" "}
         </Link>
       </span>
       <span className="cust_icon_edit ms-2">
@@ -60,14 +62,14 @@ export default function Categorydata() {
          col2: "CCQ234F",
          col3: "Iorem ispem id sometime is that of the part of the that",
          col4: "N/A",
-         col5: actionIcons(),
+         col5: action(),
          col6: activeSwitch(),
          dcode: "jk-3456547",
          name: "Manager",
          aff: "Year 1 Ticket",
          atc: "Normal Class",
          details: "kl-dfs334563kljh6565478",
-         action: action(),
+         action: actionIcons(),
          status: activeSwitch(),
          unit_Cat_name: "weight",
        },

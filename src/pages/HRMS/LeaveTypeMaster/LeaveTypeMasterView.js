@@ -15,6 +15,10 @@ function LeaveTypeMasterView() {
   const columns = useMemo(
     () => [
       {
+        Header: "ACTION",
+        accessor: "action",
+      },
+      {
         Header: "LEAVE TYPE",
         accessor: "leave",
       },
@@ -31,10 +35,10 @@ function LeaveTypeMasterView() {
         accessor: "bonusotapp",
       },
 
-      {
-        Header: "ACTION",
-        accessor: "action",
-      },
+      // {
+      //   Header: "ACTION",
+      //   accessor: "action",
+      // },
       {
         Header: "STATUS",
         accessor: "status",

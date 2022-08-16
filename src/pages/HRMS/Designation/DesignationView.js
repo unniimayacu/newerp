@@ -15,6 +15,10 @@ function DesignationView() {
   const columns = useMemo(
     () => [
       {
+        Header: "ACTION",
+        accessor: "action",
+      },
+      {
         Header: "DESIGNATION CODE",
         accessor: "dcode",
       },
@@ -34,10 +38,7 @@ function DesignationView() {
         Header: "DETAILS",
         accessor: "details",
       },
-      {
-        Header: "ACTION",
-        accessor: "action",
-      },
+
       {
         Header: "STATUS",
         accessor: "status",

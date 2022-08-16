@@ -32,7 +32,12 @@ function Slidebar() {
 
   const showSubnav = () => setSubnav(!subnav);
 
+
   const [open, setOpen] = useState(false);
+  const [productopen,setProductopen] =useState(false);
+  const [saleopen,setSaleopen] =useState(false);
+  const [contactopen,setContactopen] =useState(false);
+
 
   return (
     <>
@@ -75,7 +80,7 @@ function Slidebar() {
               </div>
               <nav>
                 <ul className="nav-menu-items hrms_content px-0 ">
-                  <li className="list_style">
+                  <li className="list_style  sub__menu__style">
                     <div className="row py-0 ">
                       <Link
                         className="nav-textcolor"
@@ -90,7 +95,7 @@ function Slidebar() {
                       </Link>
                     </div>
                   </li>
-                  <li className="list_style">
+                  <li className="list_style ">
                     <div className="row py-0 ">
                       <Link
                         className="nav-textcolor"
@@ -423,7 +428,208 @@ function Slidebar() {
               </nav>
             </li>
 
-            <div className="row py-0 ">
+            <li
+              className={
+                saleopen
+                  ? "list_style  items_hrms open"
+                  : "list_style  items_hrms "
+              }
+            >
+              <div className="nav-textcolor">
+                <div className="   p-3 ">
+                  <div
+                    className="d-flex justify-content-between align-items-center"
+                    onClick={() => setSaleopen(!saleopen)}
+                  >
+                    {/* AiOutlineShop */}
+                    <span>Sale</span>
+                    <AiOutlineCaretDown className="toggle_btn" />
+                  </div>
+                </div>
+              </div>
+              <nav>
+                <ul className="nav-menu-items hrms_content px-0 ">
+                  <li className="list_style  sub__menu__style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.SALESENQUIRYLIST}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          {/* <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div> */}
+                          <label>Sale Enquiry</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style  sub__menu__style">
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.QUOTATIONLIST}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          {/* <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div> */}
+                          <label>Quotation</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style  sub__menu__style">
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.SALEORDERLIST}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          {/* <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div> */}
+                          <label>Saleorder</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </li>
+
+            <li
+              className={
+                contactopen
+                  ? "list_style  items_hrms open"
+                  : "list_style  items_hrms "
+              }
+            >
+              <div className="nav-textcolor">
+                <div className="   p-3 ">
+                  <div
+                    className="d-flex justify-content-between align-items-center"
+                    onClick={() => setContactopen(!contactopen)}
+                  >
+                    {/* AiFillFilePdf */}
+                    <span>Contacts</span>
+                    <AiOutlineCaretDown className="toggle_btn" />
+                  </div>
+                </div>
+              </div>
+              <nav>
+                <ul className="nav-menu-items hrms_content px-0 ">
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link
+                        className="nav-textcolor"
+                        to={ROUTES.ADDNEWCUSTOMER}
+                      >
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          {/* <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div> */}
+                          <label>Add Contacts</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.SUPPLIERS}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          {/* <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div> */}
+                          <label>Supplier</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.CUSTOMERS}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          {/* <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div> */}
+                          <label>Customer</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </li>
+
+            <li
+              className={
+                productopen
+                  ? "list_style  items_hrms open"
+                  : "list_style  items_hrms "
+              }
+            >
+              <div className="nav-textcolor">
+                <div className="   p-3 ">
+                  <div
+                    className="d-flex justify-content-between align-items-center"
+                    onClick={() => setProductopen(!productopen)}
+                  >
+                    {/* SiProducthunt */}
+                    <span>Products</span>
+                    <AiOutlineCaretDown className="toggle_btn" />
+                  </div>
+                </div>
+              </div>
+              <nav>
+                <ul className="nav-menu-items hrms_content px-0 ">
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.PRODUCTS}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div>
+                          <label>Product List</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.CATEGORY}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div>
+                          <label>Category</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.UNITCATEGORY}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div>
+                          <label>Unit Category</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                  <li className="list_style">
+                    <div className="row py-0 ">
+                      <Link className="nav-textcolor" to={ROUTES.UNITTYPE}>
+                        <div className="d-flex gap-2 px-3 p-3 ">
+                          <div>
+                            <img src={star} alt="" height={17} width={17} />
+                          </div>
+                          <label>Unit Type</label>
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </li>
+
+            {/* <div className="row py-0 ">
               <Link className="nav-textcolor" to={ROUTES.CATEGORY}>
                 <div className="  px-3 p-3 ">
                   <label> Category</label>
@@ -444,27 +650,6 @@ function Slidebar() {
                 </div>
               </Link>
             </div>
-
-            {/* <NavDropdown
-              title="gshdg"
-              id={`offcanvasNavbarDropdown-expand`}
-              className="flex-grow-1 border-0"
-            >
-              <Nav.Item href="#action3"></Nav.Item>
-              <Nav.Item href="#action4"></Nav.Item>
-
-              <Nav.Item href="#action5"></Nav.Item>
-              <Nav.Item href="#action6"></Nav.Item>
-              <Nav.Item href="#action7"></Nav.Item>
-              <Nav.Item href="#action8"></Nav.Item>
-              <Nav.Item href="#action9"></Nav.Item>
-              <Nav.Item href="#action10"></Nav.Item>
-              <Nav.Item href="#action11"></Nav.Item>
-              <Nav.Item href="#action12"></Nav.Item>
-              <Nav.Item href="#action13"></Nav.Item>
-              <Nav.Item href="#action14"></Nav.Item>
-              <Nav.Item href="#action15"></Nav.Item>
-            </NavDropdown> */}
 
             <Nav.Item eventKey="active">
               <div className="row py-0 ">
@@ -634,7 +819,7 @@ function Slidebar() {
                   </div>
                 </Link>
               </div>
-            </Nav.Item>
+            </Nav.Item> */}
 
             {/* {Siderbardata.map((item, index) => {
               return (
@@ -655,6 +840,30 @@ function Slidebar() {
 }
 
 export default Slidebar;
+
+
+{
+  /* <NavDropdown
+              title="gshdg"
+              id={`offcanvasNavbarDropdown-expand`}
+              className="flex-grow-1 border-0"
+            >
+              <Nav.Item href="#action3"></Nav.Item>
+              <Nav.Item href="#action4"></Nav.Item>
+
+              <Nav.Item href="#action5"></Nav.Item>
+              <Nav.Item href="#action6"></Nav.Item>
+              <Nav.Item href="#action7"></Nav.Item>
+              <Nav.Item href="#action8"></Nav.Item>
+              <Nav.Item href="#action9"></Nav.Item>
+              <Nav.Item href="#action10"></Nav.Item>
+              <Nav.Item href="#action11"></Nav.Item>
+              <Nav.Item href="#action12"></Nav.Item>
+              <Nav.Item href="#action13"></Nav.Item>
+              <Nav.Item href="#action14"></Nav.Item>
+              <Nav.Item href="#action15"></Nav.Item>
+            </NavDropdown> */
+}
 
 {
   /* //  <nav className={slidebar ? 'nav-menu active' : 'nav-menu'}>

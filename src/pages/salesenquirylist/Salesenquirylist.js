@@ -15,6 +15,10 @@ function Salesenquirylist() {
      const columns = useMemo(
        () => [
          {
+           Header: "ACTION",
+           accessor: "action",
+         },
+         {
            Header: "Sl.No",
            accessor: "slno",
          },
@@ -42,12 +46,10 @@ function Salesenquirylist() {
            Header: "EXPECTED DELIVERY DATE",
            accessor: "col6",
          },
-         {
-           Header: "ACTION",
-           accessor: "col7",
-         },
-         
-        
+         //  {
+         //    Header: "ACTION",
+         //    accessor: "col7",
+         //  },
        ],
        []
      );
@@ -88,7 +90,7 @@ function Salesenquirylist() {
               <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
                 <div className="d-flex gap-2">
                   <h5 className="erp__h5_color ">Sale Enquiry</h5>
-                  <Link to={ROUTES.ADDSUPPLIER}>
+                  <Link to={ROUTES.ADDSALESENQUIRY}>
                     <Button
                       className=""
                       rounded={true}

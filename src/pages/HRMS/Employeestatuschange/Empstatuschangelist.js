@@ -4,7 +4,6 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { FiUpload } from "react-icons/fi";
 import Newcontact from "components/customersnewcontact/Newcontact";
 import Table from "components/table/Table";
-
 import Layout from "Layout/Layout";
 import { Link } from "react-router-dom";
 import { ROUTES } from "routes";
@@ -34,6 +33,10 @@ function Empstatuschangelist() {
  const columns = useMemo(
    () => [
      {
+       Header: "ACTION",
+       accessor: "Action",
+     },
+     {
        Header: " EMPLOYEE",
        accessor: "Employee",
      },
@@ -53,39 +56,41 @@ function Empstatuschangelist() {
        Header: "LAST WORKING DATE",
        accessor: "Lastwrkingdate",
      },
-     {
-       Header: "ACTION",
-       accessor: "Action",
-     },
+     //  {
+     //    Header: "ACTION",
+     //    accessor: "Action",
+     //  },
    ],
    []
  );
- //    const data = useMemo(() => DesignationData(), []);
+
  const data = useMemo(
    () => [
      {
+       Action: actionIcons(),
        Employee: "worker",
        Employeename: "John",
        Date: "12/07/2022",
        Workingstatus: "Resignation",
        Lastwrkingdate: "21/08/2022",
-       Action: actionIcons(),
      },
      {
+       Action: actionIcons(),
        Employee: "Manager",
        Employeename: "Richard James",
        Date: "02/07/2022",
        Workingstatus: "Termination",
        Lastwrkingdate: "25/06/2022",
-       Action: actionIcons(),
+       //  Action: actionIcons(),
      },
      {
+       Action: actionIcons(),
        Employee: "Driver",
        Employeename: "Williams",
        Date: "10/04/2022",
        Workingstatus: "Working",
        Lastwrkingdate: "21/07/2022",
-       Action: actionIcons(),
+      //  Action: actionIcons(),
      },
    ],
    []

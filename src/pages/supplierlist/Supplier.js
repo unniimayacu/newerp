@@ -15,6 +15,10 @@ function Supplier() {
   const columns = useMemo(
     () => [
       {
+        Header: "ACTION",
+        accessor: "action",
+      },
+      {
         Header: "Sl.No",
         accessor: "slno",
       },
@@ -58,13 +62,13 @@ function Supplier() {
         Header: "ROI",
         accessor: "col10",
       },
-      {
-        Header: "ACTION",
-        accessor: "col11",
-      },
+      // {
+      //   Header: "ACTION",
+      //   accessor: "col11",
+      // },
       {
         Header: "ACTIVE",
-        accessor: "col12",
+        accessor: "col11",
       },
     ],
     []

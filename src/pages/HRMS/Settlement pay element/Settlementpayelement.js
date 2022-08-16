@@ -46,13 +46,17 @@ function Settlementpayelement() {
      const columns = useMemo(
        () => [
          {
-           Header: " SETTLEMENT TYPE",
-           accessor: "Type",
-         },
-         {
            Header: "ACTION",
            accessor: "Action",
          },
+         {
+           Header: " SETTLEMENT TYPE",
+           accessor: "Type",
+         },
+         //  {
+         //    Header: "ACTION",
+         //    accessor: "Action",
+         //  },
          {
            Header: "STATUS",
            accessor: "Active",
@@ -64,18 +68,21 @@ function Settlementpayelement() {
      const data = useMemo(
        () => [
          {
-           Type: "Leave salary settlement",
            Action: actionIcons(),
+           Type: "Leave salary settlement",
+           //  Action: actionIcons(),
            Active: activeSwitch(),
          },
          {
+           Action: actionIcons(),
            Type: "Final Settlement",
-           Action: actionIcons(),
+           //  Action: actionIcons(),
            Active: activeSwitch(),
          },
          {
-           Type: "Leave salary settlement",
            Action: actionIcons(),
+           Type: "Leave salary settlement",
+           //  Action: actionIcons(),
            Active: activeSwitch(),
          },
        ],

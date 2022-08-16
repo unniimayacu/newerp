@@ -15,6 +15,10 @@ function HolidayMasterView() {
       const columns = useMemo(
         () => [
           {
+            Header: "ACTION",
+            accessor: "action",
+          },
+          {
             Header: "HOLIDAY NAME",
             accessor: "holiday",
           },
@@ -27,10 +31,10 @@ function HolidayMasterView() {
             accessor: "date",
           },
 
-          {
-            Header: "ACTION",
-            accessor: "action",
-          },
+          // {
+          //   Header: "ACTION",
+          //   accessor: "action",
+          // },
           {
             Header: "STATUS",
             accessor: "status",

@@ -34,7 +34,7 @@ function Empcategoryleaveslist() {
   };
   const activeSwitch = () => {
     return (
-      <div className="custswitch_color">
+      <div className="erp_status_switch-color">
         <Form.Check type="switch" id="custom-switch" />
       </div>
     );
@@ -43,6 +43,10 @@ function Empcategoryleaveslist() {
   const columns = useMemo(
     () => [
       {
+        Header: "ACTION",
+        accessor: "action",
+      },
+      {
         Header: "EMPLOYEE CATEGORY",
         accessor: "col1",
       },
@@ -50,14 +54,10 @@ function Empcategoryleaveslist() {
         Header: "LEAVE TYPE",
         accessor: "col2",
       },
-    
-      {
-        Header: "ACTION",
-        accessor: "col3",
-      },
+
       {
         Header: "STATUS",
-        accessor: "col4",
+        accessor: "col3",
       },
     ],
     []
@@ -66,16 +66,25 @@ function Empcategoryleaveslist() {
     const data = useMemo(
       () => [
         {
+          action: actionIcons(),
           col1: "Worker",
           col2: "Casual,Hajj",
-          col3: actionIcons(),
-          col4: activeSwitch(),
+          // col3: actionIcons(),
+          col3: activeSwitch(),
         },
         {
+          action: actionIcons(),
           col1: "Driver",
           col2: "Casual,Hajj",
-          col3: actionIcons(),
-          col4: activeSwitch(),
+          // col3: actionIcons(),
+          col3: activeSwitch(),
+        },
+        {
+          action: actionIcons(),
+          col1: "Worker",
+          col2: "Casual,Hajj",
+          // col3: actionIcons(),
+          col3: activeSwitch(),
         },
       ],
       []

@@ -183,12 +183,17 @@
 
 .list_style{
     list-style: none;
+    // margin-left: 11px;
 }
 
 .active{
     background-color: whitesmoke;
     color: black;
 }
+.sub__menu__style{
+margin-left: 10px;
+}
+
 
 // .offcanvas{
 //     width: 250px;

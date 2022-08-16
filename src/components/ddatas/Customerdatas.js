@@ -3,6 +3,8 @@ import { RiFileSearchFill } from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiFillPrinter } from "react-icons/ai";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { ROUTES } from "routes";
 
 const actionIcons = () => {
   return (
@@ -11,7 +13,9 @@ const actionIcons = () => {
         <BsPencilSquare />
       </span>
       <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill />{" "}
+        <Link to={ROUTES.VIEWCUSTOMER}>
+          <RiFileSearchFill color="#4248f5" />{" "}
+        </Link>
       </span>
       <span className="cust_icon_edit ms-2">
         <AiFillPrinter />{" "}
@@ -40,6 +44,7 @@ const riskcategoryyellow = () => {
 export default function Makedata() {
   const data = [
     {
+      action: actionIcons(),
       slno: 1,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -53,10 +58,11 @@ export default function Makedata() {
       col10: "3456778",
       col11: riskcategoryred(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 2,
       col1: "REON TECHNOLOGIES",
       col2: "Contact Person",
@@ -70,10 +76,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 3,
       col1: "REON TECHNOLOGIES",
       col2: "Contact Person",
@@ -87,10 +94,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryyellow(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 4,
       col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
@@ -104,10 +112,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryred(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 5,
       col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
@@ -121,10 +130,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 6,
       col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
@@ -138,10 +148,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 7,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -155,10 +166,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 8,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -172,10 +184,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryred(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 9,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -189,10 +202,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 10,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -206,10 +220,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryyellow(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 11,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -223,10 +238,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 12,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -240,10 +256,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryyellow(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 13,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -257,10 +274,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 14,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -274,10 +292,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 15,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -291,10 +310,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryred(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 16,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -308,10 +328,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryyellow(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 17,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -325,10 +346,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryred(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 18,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -342,10 +364,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 19,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -359,10 +382,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryred(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 20,
       col1: "AL-RAWAHY EST.DUBAIn",
       col2: "Contact Person",
@@ -376,10 +400,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryred(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 21,
       col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
@@ -393,10 +418,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryyellow(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 22,
       col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
@@ -410,10 +436,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategorygreen(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 23,
       col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
@@ -427,10 +454,11 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryyellow(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 24,
       col1: "ALMOORJ SOLUTION",
       col2: "Contact Person",
@@ -444,8 +472,8 @@ export default function Makedata() {
       col10: "Invoiced Amount",
       col11: riskcategoryred(),
       col12: "RoI",
-      col13: actionIcons(),
-      col14: activeSwitch(),
+      // col13: actionIcons(),
+      col13: activeSwitch(),
     },
   ];
 

@@ -60,12 +60,12 @@ const creditLimit = () => {
 const paymentType = () => {
   return <div className="product_heading__space">PAYMENT TYPE</div>;
 };
-const ueamount = () => {
-  return <div className="product_heading__space">UE AMOUNT</div>;
-};
-const invoicedamount = () => {
-  return <div className="product_heading__space">INVOICED AMOUNT</div>;
-};
+// const ueamount = () => {
+//   return <div className="product_heading__space">DUE AMT</div>;
+// };
+// const invoicedamount = () => {
+//   return <div className="product_heading__space">INVOICED AMT</div>;
+// };
 
 function Customers() {
   // const data = useMemo(
@@ -93,6 +93,10 @@ function Customers() {
   const columns = useMemo(
     () => [
       {
+        Header: "ACTION",
+        accessor: "action",
+      },
+      {
         Header: "Sl.No",
         accessor: "slno",
       },
@@ -117,7 +121,7 @@ function Customers() {
         accessor: "col5",
       },
       {
-        Header: "TAX NUMBER",
+        Header: "TAX NO:",
         accessor: "col6",
       },
       {
@@ -129,11 +133,11 @@ function Customers() {
         accessor: "col8",
       },
       {
-        Header: ueamount(),
+        Header: "DUE AMT",
         accessor: "col9",
       },
       {
-        Header: invoicedamount(),
+        Header: "INVOICED AMT",
         accessor: "col10",
       },
       {
@@ -144,13 +148,10 @@ function Customers() {
         Header: "ROI",
         accessor: "col12",
       },
-      {
-        Header: "ACTION",
-        accessor: "col13",
-      },
+
       {
         Header: "ACTIVE",
-        accessor: "col14",
+        accessor: "col13",
       },
     ],
     []
@@ -158,64 +159,54 @@ function Customers() {
   const data = React.useMemo(() => Makedata(), []);
 
   return (
-    // <div className="container-fluid">
     <Layout>
-      <div className="container mt-2">
-        <div className="row p-2 mt-3">
-          <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
-            <div className="d-flex gap-2">
-              <h5 className="erp__h5_color ">Customers</h5>
-              <Link to={ROUTES.ADDNEWCUSTOMER}>
-              <Button
-                className=""
-                rounded={true}
-                appendIcon={<AiOutlinePlus />}
-              >
-                New Contact
-              </Button>
-              </Link>
-              <Button rounded={true} appendIcon={<FiUpload />}>
-                Upload Via CSV
-              </Button>
+      <div className="container-fluid mt-2 ">
+        <div className="row  p-0">
+          <div className="row p-2 mt-3">
+            <div className="col-xl-8 col-lg-8 col-md-9 col-12 p-0">
+              <div className="d-flex gap-2">
+                <h5 className="erp__h5_color ">Customers</h5>
+                <Link to={ROUTES.ADDNEWCUSTOMER}>
+                  <Button
+                    className=""
+                    rounded={true}
+                    appendIcon={<AiOutlinePlus />}
+                  >
+                    New Contact
+                  </Button>
+                </Link>
+                <Button rounded={true} appendIcon={<FiUpload />}>
+                  Upload Via CSV
+                </Button>
+              </div>
+            </div>
+            <div className="  col-xl-4 col-lg-4 col-md-3 col-12">
+              <div className="d-flex justify-content-end">
+                <Newcontact />
+              </div>
             </div>
           </div>
-          <div className="  col-xl-4 col-lg-4 col-md-3 col-12">
-            <div className="d-flex justify-content-end">
-              <Newcontact />
-            </div>
+
+          <div className="row mt-4">
+            {/* <div className="container"> */}
+            {/* <div className="row "> */}
+            {/* <div className="col-xl-12 col-xl-12  col-12"> */}
+            <Table
+              data={data}
+              columns={columns}
+              PageSize={true}
+              pagination={true}
+              Sorted={true}
+              className={true}
+              responsive={true}
+              pagecenter={true}
+              tbody_scroll={true}
+             
+            />
+            {/* </div> */}
+            {/* </div> */}
+            {/* </div> */}
           </div>
-        </div>
-        {/* <div className="row  border-bottom ">
-          <div className="d-flex justify-content-start  col-xl-6 col-lg-6 col-12   py-3 ">
-            <h5 className="ms-0">Customers</h5>
-            <div className="ms-3 ">
-              <Button appendIcon={<AiOutlinePlus />}>New Contact</Button>
-            </div>
-            <div className="ms-3 ">
-              <Button appendIcon={<FiUpload />}>Upload Via CSV</Button>
-            </div>
-          </div>
-          <div className="d-flex justify-content-end col-xl-6 col-lg-6 col-12 py-3">
-            <Newcontact />
-          </div>
-        </div> */}
-        <div className="row mt-4">
-          {/* <div className="container"> */}
-          {/* <div className="row "> */}
-          {/* <div className="col-xl-12 col-xl-12  col-12"> */}
-          <Table
-            data={data}
-            columns={columns}
-            PageSize={true}
-            pagination={true}
-            Sorted={true}
-            className={true}
-            responsive={true}
-            pagecenter={true}
-          />
-          {/* </div> */}
-          {/* </div> */}
-          {/* </div> */}
         </div>
       </div>
     </Layout>

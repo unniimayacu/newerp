@@ -1,7 +1,6 @@
 import {React,useMemo} from 'react'
 import Button from "components/button/Button";
 import { AiOutlinePlus } from "react-icons/ai";
-
 import { FiUpload } from "react-icons/fi";
 import DesignationData from "../../../components/ddatas/Hrms_Dummy_datas/HrmsdesignationTabledata";
 import Newcontact from "components/customersnewcontact/Newcontact";
@@ -14,6 +13,10 @@ import {ROUTES } from 'routes'
 function DepartmentMasterView() {
      const columns = useMemo(
        () => [
+         {
+           Header: "ACTION",
+           accessor: "action",
+         },
          {
            Header: "DEPARTMENT CODE",
            accessor: "dcode",
@@ -34,10 +37,10 @@ function DepartmentMasterView() {
            Header: "DETAILS",
            accessor: "details",
          },
-         {
-           Header: "ACTION",
-           accessor: "action",
-         },
+         //  {
+         //    Header: "ACTION",
+         //    accessor: "action",
+         //  },
          {
            Header: "STATUS",
            accessor: "status",

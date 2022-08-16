@@ -3,17 +3,21 @@ import { RiFileSearchFill } from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiFillPrinter } from "react-icons/ai";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { ROUTES } from "routes";
 
 const actionIcons = () => {
   return (
-    <div className="d-flex align-items-center justify-content-center ">
-      <span className="cust_icon_edit  ">
+    <div className="d-flex gap-2 align-items-center justify-content-center ">
+      <span className="erp_edit_delte_icon__size ">
         <BsPencilSquare />
       </span>
-      <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill />{" "}
+      <span className="erp_edit_delte_icon__size ">
+        <Link to={ROUTES.VIEWPRODUCT}>
+          <RiFileSearchFill color="#4248f5" />{" "}
+        </Link>
       </span>
-      <span className="cust_icon_edit ms-2">
+      <span className="erp_edit_delte_icon__size">
         <AiFillPrinter />{" "}
       </span>
     </div>
@@ -34,6 +38,7 @@ const activeSwitch = () => {
 export default function Makedata() {
   const data = [
     {
+      action: actionIcons(),
       slno: 1,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "T9999358-1 ",
@@ -43,10 +48,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 2,
       col1: "anBLAST MACHINE 60 LTR WITH REMOTE CONTROL UNIT WITH FLAT SAND VALVE WITH STANDARD ACCESSORIESnie",
       col2: "T9999358",
@@ -56,10 +62,11 @@ export default function Makedata() {
       col6: "67",
       col7: "78",
       col8: "65",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 3,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -69,10 +76,11 @@ export default function Makedata() {
       col6: "33",
       col7: "33",
       col8: "34",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 4,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -82,10 +90,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 5,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -95,10 +104,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 6,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -108,10 +118,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 7,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -121,10 +132,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 8,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -134,10 +146,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 9,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -147,10 +160,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 10,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -160,10 +174,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 11,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",
@@ -173,10 +188,11 @@ export default function Makedata() {
       col6: "56",
       col7: "56",
       col8: "77",
-      col9: actionIcons(),
-      col10: activeSwitch(),
+      // col9: actionIcons(),
+      col9: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 12,
       col1: "ISO 2409-ISO 8502-3 ADHESIVE TAPE(1 ROLL)",
       col2: "Contact Person",

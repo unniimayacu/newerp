@@ -15,6 +15,10 @@ function OverTimeMasterView() {
      const columns = useMemo(
        () => [
          {
+           Header: "ACTION",
+           accessor: "action",
+         },
+         {
            Header: "EMP CATEGORY",
            accessor: "category",
          },
@@ -27,10 +31,10 @@ function OverTimeMasterView() {
            accessor: "bonusotapp",
          },
 
-         {
-           Header: "ACTION",
-           accessor: "action",
-         },
+         //  {
+         //    Header: "ACTION",
+         //    accessor: "action",
+         //  },
          {
            Header: "STATUS",
            accessor: "status",

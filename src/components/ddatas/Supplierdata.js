@@ -3,17 +3,21 @@ import { RiFileSearchFill } from "react-icons/ri";
 import { BsPencilSquare } from "react-icons/bs";
 import { AiFillPrinter } from "react-icons/ai";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { ROUTES } from "routes";
 
 const actionIcons = () => {
   return (
-    <div className="d-flex align-items-center justify-content-center ">
+    <div className="d-flex gap-2 align-items-center justify-content-center ">
       <span className="cust_icon_edit  ">
         <BsPencilSquare />
       </span>
-      <span className="cust_icon_edit ms-2">
-        <RiFileSearchFill />{" "}
+      <span className="cust_icon_edit ">
+        <Link to={ROUTES.VIEWSUPPLIER}>
+          <RiFileSearchFill color="#4248f5" />{" "}
+        </Link>
       </span>
-      <span className="cust_icon_edit ms-2">
+      <span className="cust_icon_edit ">
         <AiFillPrinter />{" "}
       </span>
     </div>
@@ -40,6 +44,7 @@ const riskcategoryyellow = () => {
 export default function Makedata() {
   const data = [
     {
+      action: actionIcons(),
       slno: 1,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -51,10 +56,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryred(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 2,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -66,10 +72,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategorygreen(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 3,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -81,10 +88,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryyellow(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 4,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -96,10 +104,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategorygreen(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 5,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -111,10 +120,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryred(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 6,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -126,10 +136,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryyellow(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 7,
       col1: "Reon Technologies",
       col2: "Contact Person",
@@ -141,10 +152,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryred(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 8,
       col1: "Reon Technologies",
       col2: "Contact Person",
@@ -156,10 +168,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryyellow(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 9,
       col1: "Reon Technologies",
       col2: "Contact Person",
@@ -171,10 +184,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategorygreen(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 10,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -186,10 +200,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryred(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 11,
       col1: "Almoorj Solutions",
       col2: "Contact Person",
@@ -201,10 +216,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryyellow(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 12,
       col1: "AL-RAWAHY EST.DUBAI",
       col2: "Contact Person",
@@ -216,10 +232,11 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategoryred(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
     {
+      action: actionIcons(),
       slno: 13,
       col1: "Reon Technologies",
       col2: "Contact Person",
@@ -231,8 +248,8 @@ export default function Makedata() {
       col8: "22337",
       col9: riskcategorygreen(),
       col10: "233",
-      col11: actionIcons(),
-      col12: activeSwitch(),
+      // col11: actionIcons(),
+      col11: activeSwitch(),
     },
   ];
 
